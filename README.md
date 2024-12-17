@@ -17,7 +17,7 @@ layout:
 
 Welcome to the SharpSync! Here you'll get an overview of all the amazing features it offers to help you setup your new integration.
 
-You'll see some of the best parts of SharpSync in action — and find help on how you can manage and setup your integrations with your CAD and ERP systems.
+You'll see some of the best parts of SharpSync in action — and find help on how you can manage and setup your integrations with your CAD and ERP systems. Testing
 
 
 
