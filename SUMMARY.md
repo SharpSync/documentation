@@ -26,7 +26,6 @@
 ## Derivatives
 
 * [Overview](derivatives/overview.md)
-* [Onshape](derivatives/onshape.md)
 
 ## Property Mappings
 
