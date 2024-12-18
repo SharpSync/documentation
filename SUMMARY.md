@@ -7,6 +7,7 @@
 * [Data Sources](fundamentals/quickstart.md)
 * [Property Mappings](fundamentals/publish-your-docs.md)
 * [Rule Templates](fundamentals/rule-templates.md)
+* [BOM Comparison](fundamentals/bom-comparison.md)
 
 ## Data Sources
 
