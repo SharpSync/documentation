@@ -1,14 +1,14 @@
-# Page 1
+---
+description: >-
+  Derivatives are files which can be derived from Assemblies or Parts
+  (components) or items
+---
 
-## Derivatives
+# Overview
 
-###
+<figure><img src="../.gitbook/assets/derivatives.png" alt=""><figcaption><p>Derivatives section icon</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/derivatives.png" alt=""><figcaption><p>Derivatives icon</p></figcaption></figure>
-
-#### Overview
-
-Derivatives are files or URLs that are derived from BOMs and Components in the CAD source, such as STEP, DWG, PDF, etc... files. SharpSync's derivatives feature allows the manual or automated transfer of CAD BOM derivatives from the CAD Source to the ERP source. The derivatives feature is currently only available for:
+Derivatives are files or URLs that are derived from BOMs and Components in the CAD source, such as STEP, DWG, PDF, etc... files. SharpSync's derivatives feature allows the manual or automated transfer of CAD BOM derivatives from the CAD Data Source to the ERP Data Source. The derivatives feature is currently only available for:
 
 * CAD
   * Onshape
@@ -27,7 +27,7 @@ Derivatives are files or URLs that are derived from BOMs and Components in the C
 2. Second, click on the `DERIVATIVE TEMPLATE NAME` input to list the available derivative types to select from, then select a derivative type, and finally click on the `ADD DERIVATIVE` button to add the derivative type.&#x20;
 3. After adding all the desired derivative types, you can now start to configure their settings
 
-#### Configure Derivative Types
+### Configure Derivative Types
 
 There are different types of mappings for derivatives:
 
@@ -64,18 +64,18 @@ It is important to note the following logic:
   * The derivative is _always_ generated based on the DRAWING Bom Row and its parent item metadata. This means that the application will use the found source DRAWING, and convert it to the supported format specified, and copy the link and/or the file to the destination.
   * The derivative is searched for (opt-in) (Not Yet Implemented)
 
-#### Configure Derivative Name (or Search) Patterns
+### Configure Derivative Name (or Search) Patterns
 
 1. You can double click on the `PATTERN` cell of each derivative type to change the file naming pattern of the derivative that will be transfered to your ERP source. If the naming pattern is for a DRAWING document type, then this will be the _search pattern_ used to search for drawings. Not that when searching for drawings, only exact matches are considered. Partial matching is not supported at the time of writing due to the possibility of 1000s of results being returned.&#x20;
 2. You can check/uncheck the `GENERATE FOR ASSEMBLIES` or the `GENERATE FOR COMPONENTS` or the `GENERATE FOR DRAWINGS` checkbox of a derivative type to control which BOM row derivatives can be generated for which BOM component type (assemblies or components or drawings). For example, if the "STEP" derivative type is checked for assemblies, then the "STEP" BOM row derivative can be generated for any assembly row of your loaded BOM. (See also Configure BOM Row Derivatives)&#x20;
 3. You can check/uncheck the `TRANSFER FILE` or the `TRANSFER URL` checkbox of a derivative type to have the corresponding BOM row derivative checkbox `Store File` or `Store Url` checked by default when the BOM row derivative is generated. (See also Configure BOM Row Derivatives)&#x20;
 4. You can uncheck the `ENABLED` checkbox of a derivative type to prevent it from being available to be generated as a BOM row derivative. You can set a derivative type as `READ ONLY` to prevent the related generated BOM row derivatives from being configured on a per row basis. (See also Configure BOM Row Derivatives)&#x20;
 
-#### Auto Generate Default Derivatives
+### Auto Generate Default Derivatives
 
 * In `Settings` -> `Display` , you can check/uncheck the `Generate default BOM row derivatives` in order to auto-generate the BOM row derivatives on SharpSync BOM load according to the derivative type configurations that you have set up in the previous section. (See also Configure BOM Row Derivatives)&#x20;
 
-#### Configure BOM Row Derivatives
+### Configure BOM Row Derivatives
 
 1. If you have the user setting `Generate default BOM row derivatives` checked, all the BOM row derivatives should be auto-generated each time you load your BOM according to the derivative types configurations that you have set up in the previous sections.
 2. Otherwise you can always manually add BOM row derivatives per row by:
@@ -86,6 +86,6 @@ It is important to note the following logic:
 4. You can further configure your generated BOM row derivative (if your derivative types settings permit it) on a per row basis. For example, you can manually change the `File Name` that will be stored in you ERP source. (Note: Some ERP sources such as Propel PLM have a pre-set logic on where to store component derivatives; other ERP sources have a more flexible logic where you can specify the secondary source mapping that will be used to store the url or file derivative. To specify the mapping the to be used to store derivative, in the corresponding DERIVATIVE type template simply select the associated property mapping from the drop down menu of available defined mappings)&#x20;
 5. You can also change the `Store File` or `Store Url` option on a per row basis.&#x20;
 
-#### Derivatives Transfer
+### Derivatives Transfer
 
 The CAD source derivatives will automatically be transferred to your ERP source as part of the SharpSync BOM Submittal process (when you click on the `SUBMIT BOM` button) according to your configured Derivative Types and BOM Row Derivatives settings.
