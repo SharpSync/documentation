@@ -25,6 +25,9 @@ Derivatives are files or URLs that are derived from BOMs and Components in the C
 
 1. First, make sure you have loaded all available derivatives from your source by clicking on the update source derivatives types button.&#x20;
 2. Second, click on the `DERIVATIVE TEMPLATE NAME` input to list the available derivative types to select from, then select a derivative type, and finally click on the `ADD DERIVATIVE` button to add the derivative type.&#x20;
+
+<figure><img src="../.gitbook/assets/derivative_add_type.png" alt=""><figcaption><p>Derivatives: Select from Source Templates</p></figcaption></figure>
+
 3. After adding all the desired derivative types, you can now start to configure their settings
 
 ### Configure Derivative Types
@@ -66,14 +69,29 @@ It is important to note the following logic:
 
 ### Configure Derivative Name (or Search) Patterns
 
-1. You can double click on the `PATTERN` cell of each derivative type to change the file naming pattern of the derivative that will be transfered to your ERP source. If the naming pattern is for a DRAWING document type, then this will be the _search pattern_ used to search for drawings. Not that when searching for drawings, only exact matches are considered. Partial matching is not supported at the time of writing due to the possibility of 1000s of results being returned.&#x20;
+1. You can double click on the `PATTERN` cell of each derivative type to change the file naming pattern of the derivative that will be transferred to your ERP source. If the naming pattern is for a DRAWING document type, then this will be the _search pattern_ used to search for drawings. Not that when searching for drawings, only exact matches are considered. Partial matching is not supported at the time of writing due to the possibility of 1000s of results being returned.&#x20;
+
+<figure><img src="../.gitbook/assets/derivatives_configure_naming_pattern.png" alt=""><figcaption><p>Derivatives: Configure Naming Pattern</p></figcaption></figure>
+
 2. You can check/uncheck the `GENERATE FOR ASSEMBLIES` or the `GENERATE FOR COMPONENTS` or the `GENERATE FOR DRAWINGS` checkbox of a derivative type to control which BOM row derivatives can be generated for which BOM component type (assemblies or components or drawings). For example, if the "STEP" derivative type is checked for assemblies, then the "STEP" BOM row derivative can be generated for any assembly row of your loaded BOM. (See also Configure BOM Row Derivatives)&#x20;
+
+<figure><img src="../.gitbook/assets/derivatives_select_auto_generation.png" alt=""><figcaption><p>Derivatives: Select Auto Generation</p></figcaption></figure>
+
 3. You can check/uncheck the `TRANSFER FILE` or the `TRANSFER URL` checkbox of a derivative type to have the corresponding BOM row derivative checkbox `Store File` or `Store Url` checked by default when the BOM row derivative is generated. (See also Configure BOM Row Derivatives)&#x20;
-4. You can uncheck the `ENABLED` checkbox of a derivative type to prevent it from being available to be generated as a BOM row derivative. You can set a derivative type as `READ ONLY` to prevent the related generated BOM row derivatives from being configured on a per row basis. (See also Configure BOM Row Derivatives)&#x20;
+
+<figure><img src="../.gitbook/assets/derivative_default_transfer_options.png" alt=""><figcaption><p>Derivatives: Default Transfer Options</p></figcaption></figure>
+
+4. You can uncheck the `ENABLED` checkbox of a derivative type to prevent it from being available to be generated as a BOM row derivative. You can set a derivative type as `READ ONLY` to prevent the related generated BOM row derivatives from being configured on a per row basis. (See also [Configure BOM Row Derivatives](overview.md#configure-bom-row-derivatives))&#x20;
+
+<figure><img src="../.gitbook/assets/derivative_default_user_options.png" alt=""><figcaption><p>Derivatives: Other Options</p></figcaption></figure>
 
 ### Auto Generate Default Derivatives
 
-* In `Settings` -> `Display` , you can check/uncheck the `Generate default BOM row derivatives` in order to auto-generate the BOM row derivatives on SharpSync BOM load according to the derivative type configurations that you have set up in the previous section. (See also Configure BOM Row Derivatives)&#x20;
+* In `Settings` -> `Display` , you can check/uncheck the `Generate default BOM row derivatives` in order to auto-generate the BOM row derivatives on SharpSync BOM load according to the derivative type configurations that you have set up in the previous section. (See also [Configure BOM Row Derivatives](overview.md#configure-bom-row-derivatives))&#x20;
+
+<figure><img src="../.gitbook/assets/derivatives_auto_generate.png" alt=""><figcaption><p>Derivatives: Enable Auto Generate</p></figcaption></figure>
+
+
 
 ### Configure BOM Row Derivatives
 
@@ -83,8 +101,20 @@ It is important to note the following logic:
    * Selecting the required derivative type from the selection list
    * Clicking on the `ADD DERIVATIVE` button
 3. Note that the available derivative type list changes based on you configured derivative types.&#x20;
+
+<figure><img src="../.gitbook/assets/derivatives_bom_comparison.png" alt=""><figcaption><p>Derivatives: BOM Comparison</p></figcaption></figure>
+
+
+
 4. You can further configure your generated BOM row derivative (if your derivative types settings permit it) on a per row basis. For example, you can manually change the `File Name` that will be stored in you ERP source. (Note: Some ERP sources such as Propel PLM have a pre-set logic on where to store component derivatives; other ERP sources have a more flexible logic where you can specify the secondary source mapping that will be used to store the url or file derivative. To specify the mapping the to be used to store derivative, in the corresponding DERIVATIVE type template simply select the associated property mapping from the drop down menu of available defined mappings)&#x20;
+
+<figure><img src="../.gitbook/assets/derivatives_edit_name.png" alt=""><figcaption><p>Derivatives: Edit name</p></figcaption></figure>
+
 5. You can also change the `Store File` or `Store Url` option on a per row basis.&#x20;
+
+<figure><img src="../.gitbook/assets/derivatives_individual_change_upload_options.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ### Derivatives Transfer
 
