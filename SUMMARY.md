@@ -8,6 +8,7 @@
 * [Property Mappings](fundamentals/publish-your-docs.md)
 * [Rule Templates](fundamentals/rule-templates.md)
 * [BOM Comparison](fundamentals/bom-comparison.md)
+* [Registration](fundamentals/registration.md)
 
 ## Data Sources
 
