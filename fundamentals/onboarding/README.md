@@ -1,3 +1,7 @@
+---
+icon: arrow-right-to-bracket
+---
+
 # Onboarding
 
 For pricing information and up to date information on the available modules, head over to [SharpSync.net](https://sharpsync.net) for material related to the application as well as contact information.
