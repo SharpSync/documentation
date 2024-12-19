@@ -53,6 +53,8 @@ _NOTE:_ The rule running for NetSuite _is not aware of the data being imported f
 
 The final result for both rules are overlaid in the user interface (default would be a blue rectangle)
 
+<figure><img src="../../.gitbook/assets/property_mapping_overlay.png" alt=""><figcaption></figcaption></figure>
+
 Pro tip: One way to get around this is to create an `Text evaluation` rule to match the value of a cell to that of another and return a display message to the user. Or use a `Text manipulation` rule to write a message to a cell value and give the user a message onscreen.
 
 For example: Let's suppose that we have Data Source 1 (DS1) and Data Source 2 (DS2), the process would be:
