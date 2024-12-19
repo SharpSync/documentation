@@ -28,13 +28,13 @@
 * [SolidWorks PDM](data-sources/solidworks-pdm.md)
 * [OpenAPI](data-sources/openapi.md)
 
-## Derivatives
-
-* [Overview](derivatives/overview.md)
-
 ## Property Mappings
 
 * [Settings](property-mappings/settings.md)
 * [Rule templates](property-mappings/rule-templates/README.md)
   * [Import / Export](property-mappings/rule-templates/import-export.md)
   * [Display](property-mappings/rule-templates/display.md)
+
+## Derivatives
+
+* [Overview](derivatives/overview.md)
