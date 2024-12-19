@@ -7,9 +7,11 @@
 * [Onboarding](fundamentals/onboarding/README.md)
   * [Registration](fundamentals/onboarding/registration.md)
   * [Support](fundamentals/onboarding/support.md)
+  * [Subscription](fundamentals/onboarding/subscription.md)
 * [Data Sources](fundamentals/quickstart.md)
 * [Property Mappings](fundamentals/publish-your-docs.md)
-* [Rule Templates](fundamentals/rule-templates.md)
+* [Rule Templates](fundamentals/rule-templates/README.md)
+  * [Rule Template Parameters](fundamentals/rule-templates/rule-template-parameters.md)
 * [BOM Comparison](fundamentals/bom-comparison.md)
 
 ## Data Sources
