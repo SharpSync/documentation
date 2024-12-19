@@ -4,11 +4,13 @@
 
 ## Fundamentals
 
+* [Onboarding](fundamentals/onboarding/README.md)
+  * [Registration](fundamentals/onboarding/registration.md)
+  * [Support](fundamentals/onboarding/support.md)
 * [Data Sources](fundamentals/quickstart.md)
 * [Property Mappings](fundamentals/publish-your-docs.md)
 * [Rule Templates](fundamentals/rule-templates.md)
 * [BOM Comparison](fundamentals/bom-comparison.md)
-* [Registration](fundamentals/registration.md)
 
 ## Data Sources
 
