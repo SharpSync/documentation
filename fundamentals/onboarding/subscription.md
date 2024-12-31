@@ -12,7 +12,7 @@ The functionality matrix below details the difference between the versions
 
 \
 \
-Subscriptions are a way for a customer to make full use of the software after trialing it. Sometimes your not ready to commit to a payment yet - that's ok. Reach out to us at the [Help Center](https://sharpsync.atlassian.net/servicedesk/customer/user/login) and we'll gladly assist with any queries
+Subscriptions are a way for a customer to make full use of the software after trialing it. Sometimes your not ready to commit to a payment yet - that's ok. Reach out to us at the [Help Center](https://sharpsync.atlassian.net/servicedesk/customer/user/login) and we'll gladly assist with any queries.
 
 ### Subscription scenarios
 
