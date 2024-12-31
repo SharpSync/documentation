@@ -18,31 +18,31 @@ Subscriptions are a way for a customer to make full use of the software after tr
 
 To explain what the different options are, below you will find some scenarios to illustrate how a customer may make use of subscriptions. Note that a subscription is a recurring payment that is made on an annual basis for the maintenance and use of the software.
 
-#### Scenario: Free trial - no subscription
+### Scenario: Free trial - no subscription
 
 You have registered with SharpSync and have tried out some of the features. No payment is required, but you have an upper limit of 5 BOMs that you can submit and play around with.
 
-#### Scenario: Signup
+### Scenario: Signup
 
 You have registered with SharpSync, tested the features to your heart's content, and wish to subscribe to the application.
 
-* Navigate to Organization > Fill in the required billing details
-* Navigate to Billing > The base plan is already chosen (this includes a single user)
+* Navigate to `Organization`: Fill in the required billing details
+* Navigate to `Billing`: The base plan is already chosen (this includes a single user)
 * Choose the number of users in addition to the base plan (e.g. if you pick 2 here, you'll have access to 3 users total)
 * Click the `Subscribe` button
 * Confirm your details
 * Make a payment
-* Result: You're all set
+* Result: You're all set!
 
 Let's say that you signed up on January 1st. The software will include the paid for functions from Jan 1st to December 31st. On Dec 31st your subscription renewal is due should you wish to continue.&#x20;
 
 Subscription is done through Stripe, so renewals are automatic unless you explicitly cancel
 
-#### Scenario: Renewal
+### Scenario: Renewal
 
 You have registered with SharpSync on the base plan as shown above. Result: On Jan 1 of next year the subscription automatically renews, no need to do anything
 
-#### Scenario: Addition of more users
+### Scenario: Addition of more users
 
 You have registered with SharpSync on the base plan as shown above. In June you require access for an additional 2 users on top of the initial single user. You make the change in the app using Billing > modify.
 
@@ -60,13 +60,13 @@ At then end of Dec, when renewal is due, you will be automatically billed for 3 
 
 (1 `Base plan` + 2 users) on an annual basis.
 
-#### Scenario: Cancellation
+### Scenario: Cancellation
 
 You have registered with SharpSync on the base plan as shown above and added 2 additional users. In June you require the removal of the additional 2 users. You request the cancellation of the users using Billing > modify.
 
 Result: The subscription for the 2 additional users are immediately cancelled. Your users _still_ has access to the application since the users were paid for on an annual basis. The users can still make use of the software. In December the plan will renew with only 1 seat (part of the default base plan), at which point the maximum number of simultaneous users will be reduced to 1 again.
 
-#### Scenario: Refunds
+### Scenario: Refunds
 
 Should you find yourself in position where you made an incorrect payment, login on your customer profile and request a refund.
 
