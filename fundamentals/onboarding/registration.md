@@ -7,7 +7,7 @@ description: How to register and sign up your organization
 
 ### Getting Started
 
-1. From the [sharpsync.net](http://sharpsync.net) main page, click on the Log In button to begin. To begin your SharpSync experience, you must first register your organization. Click on _Registering a new Organization?_ as shown below.
+1. From the [sharpsync.net](https://app.sharpsync.net/login) main page, click on the Log In button to begin. To begin your SharpSync experience, you must first register your organization. Click on _Registering a new Organization?_ as shown below.
 
 <figure><img src="../../.gitbook/assets/registration_click_link.png" alt=""><figcaption></figcaption></figure>
 
