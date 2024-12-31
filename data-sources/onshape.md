@@ -29,21 +29,22 @@ description: '[docs in progress]'
 ### Setting up Onshape Data Source in SharpSync
 
 * In the Navigation Bar, select Data Sources
-* In Data Sources, select OnShape as the Primary Data Source and click the _ADD DATASOURCE_ button
+* In Data Sources, select OnShape as the Primary Data Source and click ADD DATASOURCE
 * Change the Server URL to:
 
 ```
 https://cad.onshape.com
 ```
 
-* Scroll to the bottom of the page and click Update
-* Change the Authentication Type to _OAuth2_
+* Scroll to the bottom of the page and click UPDATE
+* Change the Authentication Type to OAuth2
 * [Configure the authentication options](onshape.md#configure-the-authentication-options)
-* Click Authenticate. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
+* Click AUTHENTICATE. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
+* Scroll to the bottom of the page and click UPDATE
 
-### Configure the authentication options
+#### Configure the authentication options
 
-* Click the configure button
+* Click CONFIGURE
 * Choose one of the two paths below depending on your version of our product:
 
 {% tabs %}
@@ -70,7 +71,7 @@ Once you have selected the Authentication Type, the remainder of the form should
 
 <figure><img src="../.gitbook/assets/image.png" alt="Image of configuration settings"><figcaption><p>Configuration Settings</p></figcaption></figure>
 
-* Click Save to save and close the form
+* Click SAVE to save and close the form
 {% endtab %}
 
 {% tab title="Enterprise" %}
@@ -102,7 +103,7 @@ Once you have selected the Authentication Type, the remainder of the form should
 
 <figure><img src="../.gitbook/assets/image (3).png" alt="Image of configuration settings" width="563"><figcaption><p>Configuration Settings</p></figcaption></figure>
 
-* Click Save to save and close the form
+* Click SAVE to save and close the form
 {% endtab %}
 {% endtabs %}
 
