@@ -4,23 +4,34 @@ icon: chart-tree-map
 
 # Data Sources
 
-A datasource is exactly that - a source of data that you configure to read/write data from, or a source of data with an add-in to push data to SharpSync. Each source may be registered as either a _primary_ or a _secondary_ datasource.
+A `Data Source` is exactly that - a source of data you configure to read/write data from, or a source of data with an add-in to push data to SharpSync.&#x20;
+
+A primary source will be a Bill of Materials (BOM) structure and metadata (e.g., part number, description, revision). A secondary source will be Inventory records and BOM data.
+
+Each source may be registered as either a _Primary_ or a _Secondary_ Data Source.&#x20;
 
 It works as follows:
 
-* _primary datasource_ ↔️ SharpSync ↔️ _secondary datasource_
+* _Primary Data Source_ ↔️ SharpSync ↔️ &#x53;_&#x65;condary Data Source_
 
 ### Core concepts
 
-* A _primary_ datasource is typically a CAD / PDM / PLM source. It is the origin of your CAD data.
-* A _secondary_ datasource is typically an ERP / MRP source.
-* SharpSync uses both sources to do bi-directional synchronization, meaning it pulls information from the _primary_ and writes to the _secondary_. It can also pull information from the _secondary_ and write to the _primary_.
-* Currently the application is limited to a single _primary_ source and a single _secondary_ source
+* A _Primary_ Data Source is typically a CAD / PDM / PLM source. It is the origin of your CAD data.
+* A &#x53;_&#x65;condary_ Data Source is typically an ERP / MRP source.
+* SharpSync uses both sources to do bi-directional synchronization, meaning it pulls information from the _Primary_ and writes to the _Secondary_. It can also pull information from the _Secondary_ and write to the _Primary_.
+* Currently the application is limited to a single _Primary_ source and a single _Secondary_ source
+
+### Core concepts: Setup
+
+To complete a Data Source's setup, you have to complete at least the following two items:
+
+* Setup authentication
+* Setup BOM configuration
 
 ### Resource links
 
-Select an individual datasource to view the configuration setup for that source.
+Select an individual Data Source to view the configuration setup for that source.
 
-<table data-full-width="false"><thead><tr><th>Name</th><th>Type</th><th>Sync</th><th>Status</th><th>Documentation</th></tr></thead><tbody><tr><td>CSV</td><td>Static / offline</td><td>single direction</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td><a href="../data-sources/editor.md">Documentation</a></td></tr><tr><td>Inventor</td><td>CAD</td><td>single-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td>MS Dynamics</td><td>ERP</td><td>bi-directional</td><td>[In progress]</td><td>Documentation</td></tr><tr><td>NetSuite</td><td>ERP</td><td>bi-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td><a href="../data-sources/netsuite/">Documentation</a></td></tr><tr><td>Odoo</td><td>ERP</td><td>bi-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td>Onshape</td><td>CAD</td><td>bi-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td>PropelPLM</td><td>PDM</td><td>bi-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td>SOLIDWORKS</td><td>PDM</td><td>bi-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td>SOLIDWORKS</td><td>CAD</td><td>single-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th>Data Source</th><th>Type</th><th>Sync</th><th>Status</th><th>Documentation</th></tr></thead><tbody><tr><td>CSV</td><td>Static / offline</td><td>single direction</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td><a href="../data-sources/editor.md">Documentation</a></td></tr><tr><td>Inventor</td><td>CAD</td><td>single-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td>MS Dynamics</td><td>ERP</td><td>bi-directional</td><td>[In progress]</td><td>Documentation</td></tr><tr><td>NetSuite</td><td>ERP</td><td>bi-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td><a href="../data-sources/netsuite/">Documentation</a></td></tr><tr><td>Odoo</td><td>ERP</td><td>bi-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td>Onshape</td><td>CAD</td><td>bi-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td>PropelPLM</td><td>PDM</td><td>bi-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td>SOLIDWORKS</td><td>PDM</td><td>bi-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td>SOLIDWORKS</td><td>CAD</td><td>single-directional</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr></tbody></table>
 
 See also [Troubleshooting](https://github.com/SharpSync/docs/blob/main/datasources/troubleshooting_datasources.md)

@@ -7,7 +7,7 @@ description: '[docs in progress]'
 
 ## Onshape Setup
 
-* Onshape App Store Subscribtion
+* [Onshape App Store Subscription](onshape.md#onshape-app-store-subscription)
 * Setting up Onshape
 * Configure the authentication options
 * Mapping values to ERP
@@ -26,26 +26,86 @@ description: '[docs in progress]'
 
 * For Onshape Enterprise users, make sure to add the related Onshape users to the list of users that have permission to access the Onhsape App Store&#x20;
 
-### Setting up Onshape Datasource
+### Setting up Onshape Data Source in SharpSync
 
-* Select + Add the Onshape datasource
-* Configure the authentication options
-* Click Authenticate
+* In the Navigation Bar, select Data Sources
+* In Data Sources, select OnShape as the Primary Data Source and click the _ADD DATASOURCE_ button
+* Change the Server URL to:
+
+```
+https://cad.onshape.com
+```
+
+* Scroll to the bottom of the page and click Update
+* Change the Authentication Type to _OAuth2_
+* [Configure the authentication options](onshape.md#configure-the-authentication-options)
+* Click Authenticate. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
 
 ### Configure the authentication options
 
 * Click the configure button
-* For Onshape Professional or the free version:
+* Choose one of the two paths below depending on your version of our product:
 
-<figure><img src="../.gitbook/assets/onshape_auth.png" alt=""><figcaption></figcaption></figure>
+{% tabs %}
+{% tab title="Professional or Free version" %}
+Base API path
 
-* For enterprise environments, fill in the values for your enterprise name. This means that, in the url, instead of
+<mark style="color:orange;">The Base API we use to connect</mark>
 
-> `https://cad.onshape.com/api`
+* Leave the default link to the OnShape instance as is<mark style="color:orange;">:</mark>
 
-you will have
+> [https://cad.onshape.com/api](https://cad.onshape.com/api)
 
-> `https://{enterpriseName}.onshape.com/api`
+#### Authentication Types (see below\*\*)
+
+<mark style="color:orange;">The type of authentication method to use when authenticating with OnShape.</mark>&#x20;
+
+We only support:
+
+> OAuth 2.0
+
+* Select OAuth 2.0
+
+Once you have selected the Authentication Type, the remainder of the form should autocomplete to the following:
+
+<figure><img src="../.gitbook/assets/image.png" alt="Configuration image"><figcaption></figcaption></figure>
+
+* Click Save to save and close the form
+{% endtab %}
+
+{% tab title="Enterprise" %}
+Base API path
+
+<mark style="color:orange;">Fill in the values for your enterprise name. This means that, in the url, instead of</mark>
+
+* https://cad.onshape.com/api
+
+<mark style="color:orange;">you will have</mark>
+
+```
+https://{enterpriseName}.onshape.com/api 
+
+```
+
+#### Authentication Types (see below\*\*)
+
+<mark style="color:orange;">The type of authentication method to use when authenticating with OnShape.</mark>&#x20;
+
+We only support:
+
+> OAuth 2.0
+
+* Select OAuth 2.0
+
+Once you have selected the Authentication Type, the remainder of the form should autocomplete to the following:
+
+<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure>
+
+* Click Save to save and close the form
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Mapping values to ERP
 
@@ -88,9 +148,25 @@ To map an Onshape document URL to a property in the ERP do the following:
 
 ### Troubleshooting
 
+#### Could not find data source
+
+The following response in the network tab with a 400 status code
+
+```
+Request Method: GET
+Status Code: 400 Bad Request
+
+Could not add file lookup to the server
+{"message":"Could not find datasource for organization {uuid} and module Onshape","data":[]}
+```
+
+You are trying to sync to an organization in SharpSync that have not yet been created.&#x20;
+
+First create the organization by following the steps in ...
+
 #### Cannot get properties
 
-The following response in the network tab with a 500 statuscode
+The following response in the network tab with a 500 status code
 
 ```json
 Request Method: GET
@@ -101,11 +177,11 @@ Status Code: 502 Bad Gateway
 }
 ```
 
-This means that you're attempting to use SharpSync with a free version. Free versions are not supported atm due to a limitation in Onshape that you cannot create custom properties (True at the time of writing this)
+This means that you're attempting to use SharpSync with a free version. Free versions are currently not supported due to a limitation in Onshape that you cannot create custom properties (True at the time of writing this)
 
 #### Cannot pull Onshape BOM
 
-The following response in the network tab with a 502 statuscode
+The following response in the network tab with a 502 status code
 
 ```json
 {
