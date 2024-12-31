@@ -52,9 +52,9 @@ Base API path
 
 <mark style="color:orange;">The Base API we use to connect</mark>
 
-* Leave the default link to the OnShape instance as is<mark style="color:orange;">:</mark>
+* Leave the default link to the OnShape instance as-is<mark style="color:orange;">:</mark>
 
-> [https://cad.onshape.com/api](https://cad.onshape.com/api)
+> https://cad.onshape.com/api
 
 #### Authentication Types (see below\*\*)
 
@@ -68,7 +68,7 @@ We only support:
 
 Once you have selected the Authentication Type, the remainder of the form should autocomplete to the following:
 
-<figure><img src="../.gitbook/assets/image.png" alt="Configuration image"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt="Image of configuration settings"><figcaption><p>Configuration Settings</p></figcaption></figure>
 
 * Click Save to save and close the form
 {% endtab %}
@@ -76,15 +76,16 @@ Once you have selected the Authentication Type, the remainder of the form should
 {% tab title="Enterprise" %}
 Base API path
 
-<mark style="color:orange;">Fill in the values for your enterprise name. This means that, in the url, instead of</mark>
+<mark style="color:orange;">The Base API we use to connect</mark>
 
-* https://cad.onshape.com/api
+* Fill in the values for your enterprise name. This means that, in the url, instead of
 
-<mark style="color:orange;">you will have</mark>
+> https://cad.onshape.com/api
+
+you will have
 
 ```
 https://{enterpriseName}.onshape.com/api 
-
 ```
 
 #### Authentication Types (see below\*\*)
@@ -99,7 +100,7 @@ We only support:
 
 Once you have selected the Authentication Type, the remainder of the form should autocomplete to the following:
 
-<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt="Image of configuration settings" width="563"><figcaption><p>Configuration Settings</p></figcaption></figure>
 
 * Click Save to save and close the form
 {% endtab %}
