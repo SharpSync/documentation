@@ -14,13 +14,13 @@ description: '[docs in progress]'
 * Export Assembly or Part from Onshape
 * Troubleshooting
 
-`Note:` Onshape integration for SharpSync is not currently supported for free versions. In order for SharpSync to work, you need to create custom properties in a company in Onshape. This is only possible with the Professional or Enterprise versions of Onshape. This is a limitation in Onshape
+`Note:` Onshape integration for SharpSync is not currently supported for free versions. For SharpSync to work, you need to create custom properties in a company in Onshape. This is only possible with the Professional or Enterprise versions of Onshape. This is a limitation of Onshape.
 
 ### Onshape App Store Subscription
 
 <figure><img src="../.gitbook/assets/onshape_subscribe.png" alt=""><figcaption></figcaption></figure>
 
-* Find and subscribe to the [SharpSync.net](https://appstore.onshape.com/apps/ERP%20Connector/D375UTR5KWRHUES3LFV56CCHA5VBYDFPXTGPXPQ=/description) onshape app in the Onshape App Store&#x20;
+* Find and subscribe to the [SharpSync.net](https://appstore.onshape.com/apps/ERP%20Connector/D375UTR5KWRHUES3LFV56CCHA5VBYDFPXTGPXPQ=/description) OnShape app in the Onshape App Store&#x20;
 
 <figure><img src="../.gitbook/assets/onshape_app_permissions (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -29,7 +29,7 @@ description: '[docs in progress]'
 ### Setting up Onshape Data Source in SharpSync
 
 * In the Navigation Bar, select Data Sources
-* In Data Sources, select OnShape as the Primary Data Source and click ADD DATASOURCE
+* On the right (in Data Sources), select OnShape as the Data Source and click ADD DATASOURCE
 * Change the Server URL to:
 
 ```
@@ -40,11 +40,13 @@ https://cad.onshape.com
 * Change the Authentication Type to OAuth2
 * [Configure the authentication options](onshape.md#configure-the-authentication-options)
 * Click AUTHENTICATE. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
-* Scroll to the bottom of the page and click UPDATE
 * Configure the Primary and Secondary Identifiers as follows:
   * Primary Identifier: partNumber
   * Secondary Identifier: `name`&#x20;
-* Scroll to the bottom of the page and click UPDATE
+
+After successfully authenticating with OnShape, the update should automatically trigger. If it does not, click the _Update_ button.
+
+The custom fields from OnShape have now successfully been pulled into SharpSync.
 
 Please make sure to set up your Secondary Data Source. For more information, refer to the other Data Sources listed in the Navigation Bar.
 
@@ -172,9 +174,9 @@ OR
 {"message":"Could not find datasource for organization {uuid} and module Onshape","data":[]}
 ```
 
-You are trying to sync to an organization in SharpSync that have not yet been created.&#x20;
+You are trying to sync to an organization in SharpSync that has not yet been created.&#x20;
 
-First create the organization by following the steps in ...
+First, create the organization by following the setup steps in [Data Sources](../fundamentals/data-sources.md).
 
 #### Cannot get properties
 
