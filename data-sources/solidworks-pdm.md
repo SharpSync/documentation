@@ -1,6 +1,6 @@
 ---
-icon: chart-tree-map
 description: '[docs in progress]'
+icon: chart-tree-map
 ---
 
 # SolidWorks PDM
@@ -36,7 +36,7 @@ Once the API is available, go back to the datasource configuration page and clic
 
 Where `{serverName}` is the name of the server that is hosting the PDM Web API
 
-<figure><img src="../../.gitbook/assets/swpdm_authentication_setup.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/swpdm_authentication_setup.png" alt=""><figcaption></figcaption></figure>
 
 ### Step: Add the SWPDM datasource
 
@@ -61,7 +61,7 @@ The PDM Client is only available for Windows machines. It is not available for M
 * Navigate to the Downloads section
 * Download the PDM Client&#x20;
 
-<figure><img src="../../.gitbook/assets/swpdm_client_download.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/swpdm_client_download.png" alt=""><figcaption></figcaption></figure>
 
 * If you're having trouble installing the add-in through the client, you can download the Admin Export (\*.cex) file
 * Extract all the files to a known location (e.g. Desktop)
@@ -69,11 +69,11 @@ The PDM Client is only available for Windows machines. It is not available for M
 * Open the administration tool and login on the vault
 * Right click Add-ins > New Add-in
 
-<figure><img src="../../.gitbook/assets/swpdm_client_addin_add.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/swpdm_client_addin_add.png" alt=""><figcaption></figcaption></figure>
 
 * Select the SharpSync add-in from the extracted files. Make sure to _select_ _all_ the files
 
-<figure><img src="../../.gitbook/assets/swpdm_client_addin_select_files.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/swpdm_client_addin_select_files.png" alt=""><figcaption></figcaption></figure>
 
 * Click Open
 
@@ -88,7 +88,7 @@ When configuring the add-in for the vault, there are 2 sections to configure:
 
 This image shows a landing screen of the setup.
 
-<figure><img src="../../.gitbook/assets/swpdm_client_configuration_general.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/swpdm_client_configuration_general.png" alt=""><figcaption></figcaption></figure>
 
 The following fields must be configured:
 
@@ -102,7 +102,7 @@ Click `Test Connectivity`. Upon success, the configured primary identifier will 
 
 NOTE: If you get an error saying that no source is configured,
 
-<figure><img src="../../.gitbook/assets/swpdm_client_datasource_not_found.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/swpdm_client_datasource_not_found.png" alt=""><figcaption></figcaption></figure>
 
 First go to SharpSync > Data Sources (you must be an admin) > Add the PDM Data Source > This will create a source in SharpSync which will be used to pull Bill of Material (BOM) information from your vault.
 
@@ -120,13 +120,13 @@ Setting up the BOM configuration allows you to customize how Bill of materials a
 | Sheetmetal          | Export a sheetmetal part as a assembly | Exports the weldment with the same qty referenced in the original BOM. _DOES_ add children items                         |
 | Excluded file types | Add file types on new lines            | If a linked reference is found in the PDM BOM, it is not exported to SharpSync                                           |
 
-<figure><img src="../../.gitbook/assets/swpdm_client_bom_configuration_bom_export.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/swpdm_client_bom_configuration_bom_export.png" alt=""><figcaption></figcaption></figure>
 
 #### SQL setup
 
 The SQL configuration page requires `data_reader` access for SQL Server.
 
-<figure><img src="../../.gitbook/assets/swpdm_client_sql_configuration.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/swpdm_client_sql_configuration.png" alt=""><figcaption></figcaption></figure>
 
 This image shows a screen of the setup&#x20;
 
@@ -152,10 +152,10 @@ To configure the add-in for the logged in user, follow these steps:
 * Login to the PDM Professional Vault
 * Right click in the background or on any file > SharpSync > Configure SharpSync user...
 
-<figure><img src="../../.gitbook/assets/swpdm_client_configure_user.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/swpdm_client_configure_user.png" alt=""><figcaption></figcaption></figure>
 
 Specify the user credentials that will be used to upload BOMs to SharpSync.
 
 _(This is the name of user that has access in SharpSync, not the details of the user in PDM)_
 
-<figure><img src="../../.gitbook/assets/swpdm_client_setup_user.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/swpdm_client_setup_user.png" alt=""><figcaption></figcaption></figure>

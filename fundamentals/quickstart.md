@@ -40,11 +40,13 @@ Typically in an ERP system, this would be something like `Number`, `PartNo`, `It
 
 Let's say we're working with a part called '123'. Our primary identifier is `'PartNumber'` and our alternative identifier is `'name'.`
 
-The way SharpSync works is that it searches the source for the _Primary_ identifier (in this case the primary identifier is `PartNumber`). So it  searches the source for an item with an identifier of `PartNumber` that has a value of `123.`&#x20;
+The way SharpSync works is that it searches the source for the _Primary_ identifier (in this case the primary identifier is `PartNumber`). So it  searches the source for a component identifier  `PartNumber` with a value of `123.`&#x20;
 
-TODO fix all iterations\*\*
+If nothing is found using an exact match (i.e. no component identifier `PartNumber` with a value of `123`), it will search the source using the _Alternative Component Identifier_. In this case, the alternative identifier is`name`, so the source is searched for a component identifier `name` with a value of `123`.
 
-If nothing is found using an exact match (i.e. no component with `PartNumber` of `123`), it will search the source using the _Alternative Component Identifier_. In this case, the alternative identifier is `'name'`, so the source is searched for a component property 'name' with a value of 123.
+As an example of a Primary Identifier, we have included a screenshot from OnShape. This will of course vary from other platforms:
+
+<figure><img src="../.gitbook/assets/image.png" alt="" width="563"><figcaption><p>OnShape Property Map</p></figcaption></figure>
 
 ### Core concepts: Setup
 

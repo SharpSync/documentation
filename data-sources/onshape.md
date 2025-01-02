@@ -41,6 +41,12 @@ https://cad.onshape.com
 * [Configure the authentication options](onshape.md#configure-the-authentication-options)
 * Click AUTHENTICATE. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
 * Scroll to the bottom of the page and click UPDATE
+* Configure the Primary and Secondary Identifiers as follows:
+  * Primary Identifier: partNumber
+  * Secondary Identifier: `name`&#x20;
+* Scroll to the bottom of the page and click UPDATE
+
+Please make sure to set up your Secondary Data Source. For more information, refer to the other Data Sources listed in the Navigation Bar.
 
 #### Configure the authentication options
 
@@ -69,7 +75,7 @@ We only support:
 
 Once you have selected the Authentication Type, the remainder of the form should autocomplete to the following:
 
-<figure><img src="../.gitbook/assets/image.png" alt="Image of configuration settings"><figcaption><p>Configuration Settings</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt="Image of configuration settings"><figcaption><p>Configuration Settings</p></figcaption></figure>
 
 * Click SAVE to save and close the form
 {% endtab %}
