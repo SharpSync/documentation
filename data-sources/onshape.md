@@ -159,6 +159,10 @@ Request Method: GET
 Status Code: 400 Bad Request
 
 Could not add file lookup to the server
+{"message":"Invalid id specified or bad request"}
+
+OR
+
 {"message":"Could not find datasource for organization {uuid} and module Onshape","data":[]}
 ```
 
