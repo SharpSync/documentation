@@ -4,7 +4,7 @@ description: >-
   (components) or items
 ---
 
-# Overview
+# Derivatives
 
 <figure><img src="../.gitbook/assets/derivatives.png" alt=""><figcaption><p>Derivatives section icon</p></figcaption></figure>
 
@@ -81,13 +81,13 @@ It is important to note the following logic:
 
 <figure><img src="../.gitbook/assets/derivative_default_transfer_options.png" alt=""><figcaption><p>Derivatives: Default Transfer Options</p></figcaption></figure>
 
-4. You can uncheck the `ENABLED` checkbox of a derivative type to prevent it from being available to be generated as a BOM row derivative. You can set a derivative type as `READ ONLY` to prevent the related generated BOM row derivatives from being configured on a per row basis. (See also [Configure BOM Row Derivatives](overview.md#configure-bom-row-derivatives))&#x20;
+4. You can uncheck the `ENABLED` checkbox of a derivative type to prevent it from being available to be generated as a BOM row derivative. You can set a derivative type as `READ ONLY` to prevent the related generated BOM row derivatives from being configured on a per row basis. (See also [Configure BOM Row Derivatives](derivatives.md#configure-bom-row-derivatives))&#x20;
 
 <figure><img src="../.gitbook/assets/derivative_default_user_options.png" alt=""><figcaption><p>Derivatives: Other Options</p></figcaption></figure>
 
 ### Auto Generate Default Derivatives
 
-* In `Settings` -> `Display` , you can check/uncheck the `Generate default BOM row derivatives` in order to auto-generate the BOM row derivatives on SharpSync BOM load according to the derivative type configurations that you have set up in the previous section. (See also [Configure BOM Row Derivatives](overview.md#configure-bom-row-derivatives))&#x20;
+* In `Settings` -> `Display` , you can check/uncheck the `Generate default BOM row derivatives` in order to auto-generate the BOM row derivatives on SharpSync BOM load according to the derivative type configurations that you have set up in the previous section. (See also [Configure BOM Row Derivatives](derivatives.md#configure-bom-row-derivatives))&#x20;
 
 <figure><img src="../.gitbook/assets/derivatives_auto_generate.png" alt=""><figcaption><p>Derivatives: Enable Auto Generate</p></figcaption></figure>
 

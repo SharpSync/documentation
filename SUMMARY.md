@@ -40,6 +40,7 @@
   * [Import / Export](property-mappings/rule-templates/import-export.md)
   * [Display](property-mappings/rule-templates/display.md)
 
-## Derivatives
+## Advanced
 
-* [Overview](derivatives/overview.md)
+* [Derivatives](advanced/derivatives.md)
+* [Advanced Scripting](advanced/advanced-scripting.md)
