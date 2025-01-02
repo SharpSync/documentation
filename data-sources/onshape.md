@@ -117,6 +117,8 @@ Once you have selected the Authentication Type, the remainder of the form should
 
 Please make sure to set up your Secondary Source. For more information, refer to the other Data Sources listed in the Navigation Bar.
 
+Once completed with the setup for both Primary and Secondary Data Sources, proceed to setup [Property Mappings](../fundamentals/property-mappings.md).
+
 ### Mapping values to ERP
 
 #### Mapping the URL to a field in the ERP
