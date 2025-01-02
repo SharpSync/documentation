@@ -1,10 +1,8 @@
 # Hosting Options
 
-## Odoo hosting options
+## Editions & Hosting
 
-### Editions + hosting
-
-There are 2 editions you can make use of
+There are different editions you can make use of, **Odoo Community** and **Odoo Enterprise**
 
 | Type                | Available on          | Platform name | Paid for | Comment                                                 |
 | ------------------- | --------------------- | ------------- | -------- | ------------------------------------------------------- |
