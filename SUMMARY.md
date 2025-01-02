@@ -29,6 +29,7 @@
 * [Onshape](data-sources/onshape.md)
 * [SolidWorks](data-sources/solidworks.md)
 * [SolidWorks PDM](data-sources/solidworks-pdm/README.md)
+  * [Downloading client files](data-sources/solidworks-pdm/downloading-client-files.md)
   * [Setting up the Solidworks PDM Web 2](data-sources/solidworks-pdm/setting-up-the-solidworks-pdm-web-2.md)
 * [OpenAPI](data-sources/openapi.md)
 
