@@ -107,7 +107,7 @@ Once you have selected the Authentication Type, the remainder of the form should
 {% endtab %}
 {% endtabs %}
 
-
+Please make sure to set up your Secondary Source. For more information, refer to the other Data Sources listed in the Navigation Bar.
 
 ### Mapping values to ERP
 

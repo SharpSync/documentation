@@ -23,26 +23,28 @@ It works as follows:
 
 ### Core concept: Primary and Alternative Component Identifiers
 
-SharpSync is a synchronization tool. It synchronizes data between 2 Data Sources. To do this, it uses the following to settings:
+SharpSync is a synchronization tool. It synchronizes data between two Data Sources. To do this, it uses the following two settings:
 
 * Primary Component Identifier: The preferred property or meta data name to search
-* Alternative Component Indentifier: The alternative property or meta data name to search if the primary returns an empty result.
+* Alternative Component Identifier: The alternative property or meta data name to search if the primary returns an empty result.
 
 A Primary (or alternative) component identifier is the meta data, part number or custom property that uniquely identifies the component item (part, assembly, item or drawing) in a Data Source.
 
 Typically this property (in a CAD environment) would be something like `Number`, `PartNumber`, `No`, `PartNo.`  or similar.
 
-Typically in an ERP system this would be something like `Number`, `PartNo`, `ItemId`, `Id` or similar.
+Typically in an ERP system, this would be something like `Number`, `PartNo`, `ItemId`, `Id` or similar.
 
 
 
 **Example**
 
-Let's say we're working with part called '123'. Our primary identifier is `'PartNumber'` and our alternative identifier is `'name'.`
+Let's say we're working with a part called '123'. Our primary identifier is `'PartNumber'` and our alternative identifier is `'name'.`
 
-&#x20;The way SharpSync works is that it searches the source for the _Primary_ identifier (in this case the primary identifier is `PartNumber`) . So it  searches the source for `PartNumber` = `123`&#x20;
+The way SharpSync works is that it searches the source for the _Primary_ identifier (in this case the primary identifier is `PartNumber`). So it  searches the source for an item with an identifier of `PartNumber` that has a value of `123.`&#x20;
 
-&#x20;If nothing is found using an exact match (i.e. no component with `PartNumber` of `123`), it will search the source using the _Alternative Component Identifier_. In this case the alternative identifier is `'name'`, so the source is searched for a component property 'name' with a value of 123.
+TODO fix all iterations\*\*
+
+If nothing is found using an exact match (i.e. no component with `PartNumber` of `123`), it will search the source using the _Alternative Component Identifier_. In this case, the alternative identifier is `'name'`, so the source is searched for a component property 'name' with a value of 123.
 
 ### Core concepts: Setup
 
