@@ -1,7 +1,5 @@
 # Settings
 
-
-
 ### Overview
 
 Property Mappings defines the BOM columns displayed in SharpSync. You can think of them as the mapping of meta data from one source to another source, or as the mapping of custom properties from one source to another source.
@@ -25,11 +23,11 @@ Property Mappings can display a variety of information including, but not limite
 * CAD model data captured in custom properties (or metadata)
 * Generated values based on metadata (if rules are setup)
 
-SharpSync has built-in rules and settings for each property mapping. These rules and settings are used to help codify, standardize, and push changes to the selected Data Sources. See also Property mapping rules
+SharpSync has built-in rules and settings for each property mapping. These rules and settings help codify, standardize, and push changes to the selected Data Sources. See also Property mapping rules
 
 ### Adding Property Mappings
 
-1. On the Property Mapping page, select the Property you wish to map to the BOM.
+1. On the Property Mapping page, select the Property you wish to map to the BOM and click `ADD MAPPING`.
    * The column headers you entered in the Data Source BOM Configuration will populate each Property Mapping.
    * Each Property Mapping will be displayed as a column on the Component Assembly BOM page.
 
@@ -37,7 +35,7 @@ SharpSync has built-in rules and settings for each property mapping. These rules
 
 
 
-2. Once you have selected the property mappings that you want to appear in the SharpSync BOM, confirm that the Accessors, Primary Data Source Accessors, and Secondary Data Source Accessors columns are correct. You can double click on the cells in each column to change the value SharpSync will be matching. The accessor must be present in the appropriate Data Source.
+2. Once you have selected the property mappings that you want to appear in the SharpSync BOM, confirm that the Accessors, Primary Data Source Accessors, and Secondary Data Source Accessors columns are correct. You can double-click on the cells in each column to change the value SharpSync will match. The accessor must be present in the appropriate Data Source.
 
 <figure><img src="../.gitbook/assets/property_mappings_view.png" alt=""><figcaption></figcaption></figure>
 
@@ -49,7 +47,8 @@ SharpSync has built-in rules and settings for each property mapping. These rules
 
 1. To change the settings of each Property Mapping, click on the gear in the Settings column.
 2. Verify that the accessor for each Data Source is correct. Click on the checkbox "Update Source on Submit" for each Data Source that you want to make changes to from SharpSync.
-   * If you only want the information from the CAD data (Primary Data Source) to change the ERP/PDM/PLM (Secondary Data Source), then check only the Secondary Data Source checkbox.
+   * Proposed: If you only want the information to update in one direction, i.e. you only want _one_ of the Data Sources to be updated, then you should select only the target Data Source checkbox.
+     * Example: If you only want the information from the CAD data (Primary Data Source) to change the ERP/PDM/PLM (Secondary Data Source), then check only the Secondary Data Source checkbox.
    * If you want both sources to change, check both checkboxes.
    * Settings are saved for each Property Mapping.
 
