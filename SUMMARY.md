@@ -6,6 +6,7 @@
 
 * [Onboarding](fundamentals/onboarding/README.md)
   * [Registration](fundamentals/onboarding/registration.md)
+  * [Landing Page](fundamentals/onboarding/landing-page.md)
   * [Support](fundamentals/onboarding/support.md)
   * [Subscription](fundamentals/onboarding/subscription.md)
 * [Data Sources](fundamentals/data-sources.md)
