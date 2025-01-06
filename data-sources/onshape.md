@@ -77,7 +77,7 @@ We only support:
 
 Once you have selected the Authentication Type, the remainder of the form should autocomplete to the following:
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="Image of configuration settings"><figcaption><p>Configuration Settings</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt="Image of configuration settings"><figcaption><p>Configuration Settings</p></figcaption></figure>
 
 * Click SAVE to save and close the form
 {% endtab %}

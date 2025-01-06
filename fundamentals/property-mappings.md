@@ -19,21 +19,7 @@ After setting up your Property Mappings and Rules, open one of the Primary [Data
 
 The following Property Mappings columns are available:
 
-| Name                         | Description                                                                                                |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Order                        | The order in which the columns appear in the Bill of Materials (double-click the cell to change the order) |
-| Property Name                | The name of the column as it appears in the Bill of Materials                                              |
-| Accessor                     | The unique internal name as it is used in SharpSync                                                        |
-| \*{Data Source 1} Property   | The property as it is known at the source                                                                  |
-| \*{Data Source 1} Type       | The approximated type as it is known at the source                                                         |
-| Update \*{Data Source 1}     | When checked, the source will be updated                                                                   |
-| \*\*{Data Source 2} Property | The property as it is known at the source                                                                  |
-| \*\*{Data Source 2} Type     | The approximated type as it is known at the source                                                         |
-| Update \*\*{Data Source 2}   | When checked, the source will be updated                                                                   |
-| Visible                      | Toggle Visibility Status                                                                                   |
-| Read Only                    | Toggle Read Only Status                                                                                    |
-| Settings                     | Click to edit the settings                                                                                 |
-| Delete                       | Click to delete Property Mapping (Cannot Undo)                                                             |
+<table><thead><tr><th width="248">Name</th><th>Description</th></tr></thead><tbody><tr><td>Order</td><td>The order in which the columns appear in the Bill of Materials (double-click the cell to change the order)</td></tr><tr><td>Property Name</td><td>The name of the column as it appears in the Bill of Materials</td></tr><tr><td>Accessor</td><td>The unique internal name as it is used in SharpSync</td></tr><tr><td>*{Data Source 1} Property</td><td>The property as it is known at the source</td></tr><tr><td>*{Data Source 1} Type</td><td>The approximated type as it is known at the source</td></tr><tr><td>Update *{Data Source 1}</td><td>When checked, the source will be updated</td></tr><tr><td>**{Data Source 2} Property</td><td>The property as it is known at the source</td></tr><tr><td>**{Data Source 2} Type</td><td>The approximated type as it is known at the source</td></tr><tr><td>Update **{Data Source 2}</td><td>When checked, the source will be updated</td></tr><tr><td>Visible</td><td>Toggle Visibility Status</td></tr><tr><td>Read Only</td><td>Toggle Read Only Status</td></tr><tr><td>Settings</td><td>Click to edit the settings</td></tr><tr><td>Delete</td><td>Click to delete Property Mapping (Cannot Undo)</td></tr></tbody></table>
 
 Depending on your screen size, columns related to \*{Data Source 1} and \*\*{Data Source 2} might not all fit in the table. Use the scrollbar at the bottom, as shown in the screenshot below, to scroll other property mappings into view.
 
