@@ -28,7 +28,3 @@ Depending on your screen size, columns related to \*{Data Source 1} and \*\*{Dat
 \* Data Source 1 refers to the Primary Data Source that you had created.
 
 \*\* Data Source 2 refers to the Secondary Data Source that you had created.
-
-
-
-Data related to \*\*{Data Source 2}
