@@ -1,9 +1,13 @@
 ---
 icon: table-list
-description: The view where all data is displayed overlayed on top of one another on screen
+description: >-
+  The view where all data is displayed overlayed on top of one another on
+  screen.
 ---
 
 # BOM Comparison
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 The BOM comparison screen is where you will ultimately spend most of your time
 

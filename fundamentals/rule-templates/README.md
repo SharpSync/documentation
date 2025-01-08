@@ -22,8 +22,12 @@ Rules for property mappings fall into 1 of 3 categories:
 * Import Rules (Data transformation)
 * Display Rules (Data validation)
 * Export Rules (Data transformation)
-* Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule
-* Import rules work on the raw source data and are applied to each individual data source's data.
+
+Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule
+
+Import/Export rules (Data transformation) work on the raw source data and are applied to each individual data source's data.
+
+Display Rules (Data validation) works on the data displayed onscreen after being retrieved from a Data Source.&#x20;
 
 ### Order of Rules
 
@@ -49,11 +53,11 @@ User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See 
 
 Start by navigating to Property Mappings and click on "Rules" for the Property Mapping you want to edit.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 A panel will appear on the side. Expand the Rules dropdown to reveal the available [list of rules ](./#list-of-rules)that can be applied. Select a rule and click `ADD RULE`.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="214"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="214"><figcaption></figcaption></figure>
 
 In the example below, the `Format as decimal number` rule runs for both Onshape and NetSuite. The rule runs on the individual strings of data imported.
 
@@ -95,105 +99,7 @@ The data from DS2 is imported after that of DS1. The rules start running for DS2
 
 Be sure also to read and understand [Rule Template Parameters](rule-template-parameters.md).
 
-### List of Rules
 
-| Rule name                                         | Type            | Description                                                                                               |
-| ------------------------------------------------- | --------------- | --------------------------------------------------------------------------------------------------------- |
-| Append Text                                       | Import / Export | Adds the specified text to the end of the cell value                                                      |
-| Calculate number                                  | Import / Export | Uses the cell value and performs a calculation. The result of the calculation replaces the cell value     |
-| Export manipulation                               | Export only     | Runs the specified javascript expression when data is exported. Has the ability to remove rowData values  |
-| Format as decimal                                 | Import / Export | Converts the cell value to a number and adds the specified number of decimals. This does round the number |
-| Number between                                    | Display         | The number in the cell value must be between (inclusive) the numbers specified                            |
-| Prepend text                                      | Import / Export | Adds the specified text to the beginning of the cell value                                                |
-| [Replace all instances](./#replace-all-instances) | Import / Export | Replaces all instances of the specified text with the new value                                           |
-| [Replace first instance](./#replace-text)         | Import / Export | Replaces the first instance of the specified text with the new value                                      |
-| Round to nearest X                                | Import / Export | Rounds the number to up or down the nearest specified digit                                               |
-| Select from Json                                  | Import / Export | Converts the cell value from text to a JSON object and returns the value given by the specified key       |
-| Set cell value                                    | Import / Export | Sets the cell value to the specified text. Existing text is replaced                                      |
-| Set empty cells                                   | Import / Export | Set an empty (any cell that has only whitespace or no value) cell value to the specified text             |
-| Text contains                                     | Display         | The cell value must contain the specified text                                                            |
-| Text ends with                                    | Display         | The cell value must end with the specified text                                                           |
-| Text evaluation                                   | Display         | Evaluates the cell value given the JavaScript expression                                                  |
-| Text is in list                                   | Display         | The cell value must be in the list of specified items (Comma separated)                                   |
-| Text is not in list                               | Display         | The cell value must not be in the list of specified items (Comma separated)                               |
-| Text is a number                                  | Display         | The cell value must not be numeric                                                                        |
-| Text is exactly                                   | Display         | The cell value must exactly match the specified text                                                      |
-| Text is not a number                              | Display         | The cell value must not be numeric                                                                        |
-| Text is not empty                                 | Display         | The cell value must contain text (1 or more characters)                                                   |
-| Text length between                               | Display         | The number of characters in the cell value must be between the lower and upper limit                      |
-| Text length is exactly                            | Display         | The number of characters in the cell value must be exactly the length specified                           |
-| Text manipulation                                 | Import / Export | Manipulates (and returns the result of) the cell value using the given the javascript expression          |
-| Text maximum length                               | Display         | Limits the length of the cell value text to a maximum number of characters                                |
-| Text minimum length                               | Display         | The number of characters in the cell value must be greater than the specified number                      |
-| Text not contains                                 | Display         | The cell value must not contain the specified text                                                        |
-| Text not ends with                                | Display         | The cell value text must not end with the specified text                                                  |
-| Text not starts with                              | Display         | The cell value must not start with the specified text                                                     |
-| Text starts with                                  | Display         | The cell value text must start with the specified text                                                    |
-| Remove property                                   | Import / Export | Removes the specified property when exporting the data                                                    |
-
-#### Example: Import rules
-
-Import rules are run when the data is imported from the source. The rule will change the incoming value from the data source. For example, if you have a value from a CSV file that is being imported as 0, you can transform the value using the `Text Manipulation` rule to change from `0` => `0.0`
-
-_Example_ You have a value that is received from the data source as a JSON object, say
-
-```json
- {
-   "id": 42,
-   "refName" : "Material Name"
- }
-```
-
-You can use the
-
-> `Select from Json`
-
-rule to select the key called `refName` from this Json object. The value displayed onscreen will be `Material Name`
-
-_Example_
-
-```json
-[
-{
-   "id": 41,
-   "refName" : "Material Name 1"
-},
-{
-   "id": 42,
-   "refName" : "Material Name 2"
- }
-]
-```
-
-You can use the
-
-> `Select from Json`
-
-rule to select the key called `[1].refName` from this JSON object. The value displayed onscreen will be `Material Name 2`. The selector `[1].refName` uses a text string to select the value from the array of values. In this case select the 2nd element (indexes start at 0, so element 1 is the 2nd element in the array of 2 elements), then select the `refName` key on the element. Nested properties are supported.
-
-#### Example: Display Rules
-
-Display rules are rules that trigger either warnings or errors _after_ the data has been imported. This plays out as:
-
-* Data is imported
-* Import rules are applied to transform data
-* Data is displayed onscreen
-* Rules are evaluated
-* Warnings or errors are displayed based on the rule conditions
-
-A Display Rule can be set to either `pass` or `block`.
-
-* A value of `pass` will show an orange border if it fails. The user is still able to submit the BOM
-* A value of `block` will show a red border if it fails. The user is not able to submit the BOM
-* (Colors are configurable)
-
-#### Example: Export Rules
-
-Export rules are run when the data is exported from SharpSync when using the `Submit BOM` button. The rule will change the value sent to the data source. For example, if you have value from a source, say Onshape, that was imported as `0`, the displayed onscreen as `0.0`, you can transform the value using the `Text Manipulation` rule to change from `0.0` => `0` so that the value may be accepted by Onshape.
-
-### Rule explanations
-
-Below is a comprehensive list of search Property Mapping Rules. Expand the Table of Contents and click a specific rule to jump to that rule. Learn more about Rule setup: Configure Rules
 
 ### Display Rules
 
@@ -296,383 +202,123 @@ The number of characters in the cell value must be between the lower and upper l
 #### **Append text**
 
 \
-Adds the specified text to the end of the cell value.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: this
-* Rule value: -item (applied to all cells in column)
-* Result: this-item
-
-</details>
 
 #### **Calculate Number**
 
 \
-Uses the cell value and performs a calculation. The result of the calculation replaces the cell value.
 
-<details>
 
-<summary>Example</summary>
-
-* Cell value: .07
-* Rule value: n \* 100
-* Result: 7 (.07 \* 100)
-
-</details>
-
-#### **Cell value manipulation**
+#### **Text manipulation**
 
 \
-Manipulates (and returns the result of) the cell value given the javascript expression. Available parameters:
 
-* s (original value)
-* rowData (the existing row containing rowData.cells which is the accessors)
 
 #### **Export manipulation**
 
 \
-Modifies the outgoing data before it is sent to the secondary source. It is important to note 2 things:
 
-1. That there can only be 1 of these rules as it modifies all outgoing data
-2. That it must always return `s` at the end of the statement. `s` here represents the `rowData.sourceExportData` to be modified. Failing to return it will result in corrupted data in the BOM.
-
-e.g. given this Javascript for an isPhantom setting
-
-```javascript
-const isNewAssemblyRow = 
-rowData.isAssemblyRow && 
-rowData.isMissingInSecondaryDatasource == true && 
-rowData.isFoundInSecondaryDatasource == false; 
-
-if (!isNewAssemblyRow) 
-{ delete s['phantomYN']; }  
-
-if (rowData.isAssemblyRow === true)  
-{ delete s['material']; }   
-
-return s;
-
-```
-
-<details>
-
-<summary>Example</summary>
-
-* Cell value: 12.53 m
-* Rule values:
-  * Number of decimals: 4
-  * Remove text: kg|Kg|g|mg|m|mm|each|L|ml|oz|fl
-* Result: 12.5300
-
-</details>
 
 #### **Format as decimal number**
 
 \
-Converts the cell value to a number and adds the specified number of decimals. This formats the number as it is viewed and does not round it. Any text specified to be removed will be replaced/ignored during the number format.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: 12.53 m
-* Rule values:
-  * Number of decimals: 4
-  * Remove text: kg|Kg|g|mg|m|mm|each|L|ml|oz|fl
-* Result: 12.5300
-
-</details>
 
 #### **Select from JSON**
 
 \
-Converts the cell value from text to a JSON object and returns the value given by the specified key. Supports nested key/values and arrays. You can use key.value\[2].key to retrieve value for a given key.
+
 
 Return to Top
 
 **Prepend text**
 
 \
-Adds the specified text to the beginning of the cell value.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: 123
-* Rule value: ABC-
-* Result: ABC-123
-
-</details>
-
-#### **Replace all instances**
-
-\
-Replace all instances of the specified text with the new value.
-
-<details>
-
-<summary>Example</summary>
-
-* Cell value: 1, 234, 567.89
-* Rule values:
-  * Replace text: ,    (a single comma)
-  * With text:     (an empty space)
-* Result: 1 234 567.00
-
-</details>
-
-{% hint style="info" %}
-If the specified text cannot be modified with a single iteration of a rule, additional rules should be created to modify the text.
-{% endhint %}
 
 #### **Replace first instance**
 
 \
-Replace the first instance of the specified text with the new value. Ignores all following instances.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: 1, 234, 567.89
-* Rule values:
-  * Replace text: ,    (a single comma)
-  * With text:     (an empty space)
-* Result: 1 234, 567.00
-
-</details>
 
 #### **Round to nearest X**
 
 \
-Rounds the number to the nearest specified number. Supports integers only. (Positive or negative whole number.)
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: 1234.5678 mm
-* Rule values:
-  * Round to nearest X: 10
-  * Ignore text: kg|Kg|g|mg|m|mm|each|L|ml|oz|fl
-* Result: 1230
-
-</details>
 
 #### **Set cell value**
 
 \
-Sets the cell value to the specified text.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Hello, world
-* Rule value: Description
-* Result: Description
-
-</details>
 
 Return to Top
 
 #### **Set empty cells**
 
 \
-Set an empty (any cell that has whitespace or no value) cell value to the specified text.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value is empty
-* Rule value: Description
-* Result: Description
-
-</details>
 
 #### **Text length must equal**
 
 \
-The number of characters in the cell value must be exactly the length specified.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Description
-* Rule value: 12
-* Result: Fail - Description is only 11 characters
-
-</details>
 
 #### **Text must be exactly**
 
 \
-The cell value must be an exact match with the specified text.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Description
-* Rule value: Description1
-* Result: Fail - Description1 does not match Description
-
-</details>
 
 #### **Text must contain string**
 
 \
-The cell value must contain the specified text.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Final Description
-* Rule value: Final
-* Result: Pass - Cell value contains text "Final"
-
-</details>
 
 #### **Text must end with string**
 
 \
-The cell value must end with the specified string.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Description
-* Rule value: abc
-* Result: Fail - Cell value does not have suffix of abc
-
-</details>
 
 #### **Text must not be empty**
 
 \
-The cell value must not be empty.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Description
-* Result: Pass - Cell value is not empty
-
-</details>
 
 #### **Text must not contain string**
 
 \
-The cell value must not contain the specified string.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Description
-* Rule value: rip
-* Result: Fail - Cell value "Description" contains "rip"
-
-</details>
 
 #### **Text must not end with string**
 
 \
-The cell value must not end with the specified string.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Description
-* Rule value: ion
-* Result: Fail - Cell value "Description" ends with "ion"
-
-</details>
 
 #### **Text must start with string**
 
 \
-The cell value must start with the specified string.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Description
-* Rule value: Desc
-* Result: Pass - Cell value "Description" begins with "Desc"
-
-</details>
 
 #### **Text is in list**
 
 \
-The cell value must match a value in a string list. Entries are separated by a comma.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Desc
-* Rule value: abc,def,ghi
-* Result: Fail - Cell value "Desc" does not match any list value
-
-</details>
 
 #### **Text is not in list**
 
 \
-The cell value must not match a value in a string list. Entries are separated by a comma.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Desc
-* Rule value: abc,def,ghi
-* Result: Pass - Cell value "Desc" does not match any list value
-
-</details>
 
 #### **Text must be a number**
 
 \
-The cell value must be a number.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: 12.5a
-* Result: Fail - Cell value contains non-numeric character "a"
-
-</details>
 
 #### **Text must not be a number**
 
 \
-The cell value must not be a number.
 
-<details>
 
-<summary>Example</summary>
-
-* Cell value: 12.5a
-* Result: Pass - Cell value contains non-numeric character "a"
-
-</details>
-
-#### Interpreting the Results
+### Interpreting the Results
 
 SharpSync processes and prioritizes each rule in order from top to bottom. Moving a rule up or down the list can change the result depending on the subsequent outcome. See the examples below to gain an idea of how results are evaluated:
 
