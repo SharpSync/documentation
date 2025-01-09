@@ -46,10 +46,9 @@ SharpSync has built-in rules and settings for each property mapping. These rules
 **Update** Data Source
 
 1. To change the settings of each Property Mapping, click on the gear in the Settings column.
-2. Verify that the accessor for each Data Source is correct. Click on the checkbox "Update Source on Submit" for each Data Source that you want to make changes to from SharpSync.
-   * Proposed: If you only want the information to update in one direction, i.e. you only want _one_ of the Data Sources to be updated, then you should select only the target Data Source checkbox.
-     * Example: If you only want the information from the CAD data (Primary Data Source) to change the ERP/PDM/PLM (Secondary Data Source), then check only the Secondary Data Source checkbox.
-   * If you want both sources to change, check both checkboxes.
+2. Verify that the accessor for each Data Source is correct.&#x20;
+   * Example: If you only want the CAD data (Primary Data Source) information to change the ERP/PDM/PLM (Secondary Data Source), then check only the Secondary Data Source checkbox for 'Update Source On Submit'. The opposite direction can be achieved by unchecking the Secondary Data Source and checking the Primary Data Source.
+   * If you want both sources to change, check the "Update Source on Submit" checkboxes for both sources.
    * Settings are saved for each Property Mapping.
 
 <figure><img src="../.gitbook/assets/property_mapping_update_sources.png" alt=""><figcaption><p>Property Mapping: Update sources</p></figcaption></figure>
@@ -58,9 +57,9 @@ SharpSync has built-in rules and settings for each property mapping. These rules
 
 **Rendering**
 
-Rendering defines how and accessor / mapping of a value is viewed and accessed in the Bill of Materials view.
+Rendering defines how an accessor/mapping of a value is viewed and accessed in the Bill of Materials view.
 
-Before we go to deep, let's define some terms:
+Before we go too deep, let's define some terms:
 
 | Term                | Description                                                                                                 |
 | ------------------- | ----------------------------------------------------------------------------------------------------------- |

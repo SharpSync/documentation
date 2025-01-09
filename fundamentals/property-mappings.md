@@ -5,13 +5,40 @@ description: Property mappings are 1:1 or 1:N mappings from the source to the de
 
 # Property Mappings
 
-Property Mappings defines the BOM columns displayed in SharpSync. You can think of them as the mapping of meta data from one source to another source, or as the mapping of custom properties from one source to another source.
+Property Mappings define the BOM columns displayed in SharpSync. You can think of them as the mapping of meta data from one source to another source, or as the mapping of custom properties from one source to another source.
 
 For each mapping you create, a column will be displayed on the screen. Property mappings are expanded upon in detail here.
+
+After setting up your Property Mappings and Rules, open one of the Primary [Data Sources](data-sources.md) to export the Bill Of Materials (BOM) to SharpSync. For more details on exporting a BOM, see the "Export Assembly Or Part" section for each Data Source.
 
 After setting up your Property Mappings and Rules, open one of the Primary [Data Sources](https://sharpsync.gitbook.io/sharpsync/~/changes/zcOMaRcqMhiRElzWzdJZ/fundamentals/data-sources) to export the Bill Of Materials (BOM) to SharpSync. For more details on exporting a BOM, see the "Export Assembly Or Part" section for each Data Source.
 
 <table data-view="cards"><thead><tr><th></th><th data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Property Mapping Settings</td><td><a href="../property-mappings/settings.md">settings.md</a></td><td><a href="../.gitbook/assets/automated-data.svg">automated-data.svg</a></td></tr><tr><td>Rule Template Settings</td><td><a href="../property-mappings/rule-templates/">rule-templates</a></td><td><a href="../.gitbook/assets/automated-data.svg">automated-data.svg</a></td></tr></tbody></table>
+
+
+
+### Default Property Mappings
+
+The following Property Mappings will be pre-populated:
+
+| Name                         | Description |
+| ---------------------------- | ----------- |
+| Order                        |             |
+| Property Name                |             |
+| Accessor                     |             |
+| \*{Data Source 1} Property   |             |
+| \*{Data Source 1} Type       |             |
+| Update \*{Data Source 1}     |             |
+| \*\*{Data Source 2} Property |             |
+| \*\*{Data Source 2} Type     |             |
+| Update \*\*{Data Source 2}   |             |
+| Visible                      |             |
+| Read Only                    |             |
+| Settings                     |             |
+| Rules                        |             |
+| Delete                       |             |
+
+
 
 
 
@@ -24,3 +51,5 @@ The following Property Mappings columns are available:
 Depending on your screen size, columns related to your Primary Data Source and Secondary Data Source might not all fit in the table. Use the scrollbar at the bottom, as shown in the screenshot below, to scroll other property mappings into view.
 
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+\*\* Data Source 2 refers to the Secondary Data Source that you had created

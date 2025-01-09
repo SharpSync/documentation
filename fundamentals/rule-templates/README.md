@@ -49,13 +49,17 @@ Import rules work on the raw source data and are applied to each individual data
 
 User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See [Rule Template Parameters](rule-template-parameters.md)
 
+### Adding new Rules
+
+A
+
 ### Setting up a Rule
 
 Start by navigating to Property Mappings and click on "Rules" for the Property Mapping you want to edit.
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-A panel will appear on the side. Expand the Rules dropdown to reveal the available [list of rules ](./#list-of-rules)that can be applied. Select a rule and click `ADD RULE`.
+A panel will appear on the side. Expand the Rules dropdown to reveal the available [list of rules ](../../property-mappings/rule-templates/)that can be applied. Select a rule and click `ADD RULE`.
 
 <figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="214"><figcaption></figcaption></figure>
 
@@ -75,7 +79,12 @@ For example: Let's suppose that we have Data Source 1 (DS1) and Data Source 2 (D
 
 **Step: Setup the property mappings**
 
-* Setup the 1st Property Mapping column. Give it an accessor of `description` with a column mapping of property `description` for DS1 and for DS2
+* Setup the 1st column. Give it an accessor of `description` with a column mapping of property `description` for DS1 and for DS2
+
+{% hint style="info" %}
+As a quick reference, here are the instructions for setting up a [Property Mapping](../../property-mappings/settings.md#adding-property-mappings).
+{% endhint %}
+
 * Setup a 2nd property column `description2` column. Give it an accessor of `description2`. Also map it to the `description` property.
 * Add a `Text evaluation` display rule to the 2nd column.
 
@@ -132,193 +141,9 @@ if ({conditionBasedOnMyValue2})
   return { message: `the message you want to return` };
 ```
 
-#### **Maximum text length**
 
-\
-Limits the length of the cell value text to a number of characters.
 
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Description
-* Rule value: 4
-* Result: Fail - number of characters > rule.
-
-</details>
-
-#### **Minimum text length**
-
-\
-The number of characters in the cell value must be greater than the specified number.
-
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Description
-* Rule value: 4
-* Result: Pass - number of characters > rule.
-
-</details>
-
-#### **Number between**
-
-\
-Converts cell value to a number and evaluates if number is within a range of values, and ignores text listed in textbox.
-
-<details>
-
-<summary>Example</summary>
-
-* Cell value: 12.5 kg
-* Rule values:
-  * Min val: 1
-  * Max val: 100
-  * Ignore text: kg,Kg,g,mg,m,mm,each,L,ml,oz,fl
-* Result: Pass - "kg" ignored, cell value between min\max.
-
-</details>
-
-#### **Text length must be between**
-
-\
-The number of characters in the cell value must be between the lower and upper limit.
-
-<details>
-
-<summary>Example</summary>
-
-* Cell value: Part
-* Rule values:
-  * Min length: 5
-  * Max length: 15
-* Result: Fail - number of characters outside of min/max range.
-
-</details>
-
-### Import/Export Rules
-
-#### **Append text**
-
-\
-
-
-#### **Calculate Number**
-
-\
-
-
-#### **Text manipulation**
-
-\
-
-
-#### **Export manipulation**
-
-\
-
-
-#### **Format as decimal number**
-
-\
-
-
-#### **Select from JSON**
-
-\
-
-
-Return to Top
-
-**Prepend text**
-
-\
-
-
-#### **Replace first instance**
-
-\
-
-
-#### **Round to nearest X**
-
-\
-
-
-#### **Set cell value**
-
-\
-
-
-Return to Top
-
-#### **Set empty cells**
-
-\
-
-
-#### **Text length must equal**
-
-\
-
-
-#### **Text must be exactly**
-
-\
-
-
-#### **Text must contain string**
-
-\
-
-
-#### **Text must end with string**
-
-\
-
-
-#### **Text must not be empty**
-
-\
-
-
-#### **Text must not contain string**
-
-\
-
-
-#### **Text must not end with string**
-
-\
-
-
-#### **Text must start with string**
-
-\
-
-
-#### **Text is in list**
-
-\
-
-
-#### **Text is not in list**
-
-\
-
-
-#### **Text must be a number**
-
-\
-
-
-#### **Text must not be a number**
-
-\
-
-
-### Interpreting the Results
+Interpreting the Results
 
 SharpSync processes and prioritizes each rule in order from top to bottom. Moving a rule up or down the list can change the result depending on the subsequent outcome. See the examples below to gain an idea of how results are evaluated:
 
