@@ -4,7 +4,7 @@ description: The cell value must contain the specified text.
 
 # Text contains
 
-Type: Import/Export
+Type: Display
 
 <details>
 

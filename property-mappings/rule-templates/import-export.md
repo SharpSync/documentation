@@ -58,30 +58,12 @@ Below is a comprehensive list of Import/Export Property Mapping Rules. Click a r
 | [Calculate number](import-export/calculate-number.md)             | Import / Export | Uses the cell value and performs a calculation. The result of the calculation replaces the cell value     |
 | [Export manipulation](import-export/export-manipulation.md)       | Export only     | Runs the specified javascript expression when data is exported. Has the ability to remove rowData values  |
 | [Format as decimal](import-export/format-as-decimal-number.md)    | Import / Export | Converts the cell value to a number and adds the specified number of decimals. This does round the number |
-| [Number between](import-export/number-between.md)                 |                 |                                                                                                           |
 | [Prepend text](import-export/prepend-text.md)                     | Import / Export | Adds the specified text to the beginning of the cell value                                                |
-| [Remove property](import-export/remove-property.md)               |                 | Removes the specified property when exporting the data                                                    |
+| [Remove property](import-export/remove-property.md)               | Export only     | Removes the specified property when exporting the data                                                    |
 | [Replace all instances](import-export/replace-all-instances.md)   | Import / Export | Replaces all instances of the specified text with the new value                                           |
 | [Replace first instance](import-export/replace-first-instance.md) | Import / Export | Replaces the first instance of the specified text with the new value                                      |
 | [Round to nearest X](import-export/round-to-nearest-x.md)         | Import / Export | Rounds the number to up or down the nearest specified digit                                               |
 | [Select from Json](import-export/select-from-json.md)             | Import / Export | Converts the cell value from text to a JSON object and returns the value given by the specified key       |
 | [Set cell value](import-export/set-cell-value.md)                 | Import / Export | Sets the cell value to the specified text. Existing text is replaced                                      |
 | [Set empty cells](import-export/set-empty-cells.md)               | Import / Export | Set an empty (any cell that has only whitespace or no value) cell value to the specified text             |
-| [Text contains](import-export/text-contains.md)                   | Import/Export   | The cell value must contain the specified text.                                                           |
-| [Text ends with](import-export/text-ends-with.md)                 | Import/Export   | The cell value must end with the specified string.                                                        |
-| [Text evaluation](import-export/text-evaluation.md)               |                 |                                                                                                           |
-| [Text is a number](import-export/text-is-a-number.md)             | Import/Export   | The cell value must be a number.                                                                          |
-| [Text is exactly](import-export/text-is-exactly.md)               | Import/Export   | The cell value must be an exact match with the specified text.                                            |
-| [Text is in list](import-export/text-is-in-list.md)               | Import/Export   | The cell value must match a value in a string list.                                                       |
-| [Text is not a number](import-export/text-is-not-a-number.md)     | Import/Export   | The cell value must not be a number.                                                                      |
-| [Text is not empty](import-export/text-is-not-empty.md)           | Import/Export   | The cell value must not be empty.                                                                         |
-| [Text is not in list](import-export/text-is-not-in-list.md)       | Import/Export   | The cell value must not match a value in a string list.                                                   |
-| [Text length between](import-export/text-length-between.md)       |                 |                                                                                                           |
-| [Text length is exactly](import-export/text-length-is-exactly.md) | Import/Export   | The number of characters in the cell value must be exactly the length specified.                          |
 | [Text manipulation](import-export/text-manipulation.md)           | Import / Export | Manipulates (and returns the result of) the cell value using the given the javascript expression          |
-| [Text maximum length](import-export/text-maximum-length.md)       |                 |                                                                                                           |
-| [Text minimum length](import-export/text-minimum-length.md)       |                 |                                                                                                           |
-| [Text not contains](import-export/text-not-contains.md)           | Import/Export   | The cell value must not contain the specified string.                                                     |
-| [Text not ends with](import-export/text-not-ends-with.md)         | Import/Export   | The cell value must not end with the specified string.                                                    |
-| [Text not starts with](import-export/text-not-starts-with.md)     | Import/Export   | The cell value must not start with the specified string.                                                  |
-| [Text starts with](import-export/text-starts-with.md)             | Import/Export   | The cell value must start with the specified string.                                                      |

@@ -4,7 +4,7 @@ description: The cell value must not be empty.
 
 # Text is not empty
 
-Type: Import/Export
+Type: Display
 
 <details>
 

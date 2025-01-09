@@ -4,7 +4,7 @@ description: The cell value must start with the specified string.
 
 # Text starts with
 
-Type: Import/Export
+Type: Display
 
 <details>
 

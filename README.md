@@ -19,8 +19,6 @@ Welcome to the SharpSync! Here you'll get an overview of all the amazing feature
 
 You'll see some of the best parts of SharpSync in action — and find help on how you can manage and setup your integrations with your CAD and ERP systems.
 
-<mark style="color:orange;">This page is a work in progress (and frequently updated) port of the existing documentation here</mark> [<mark style="color:orange;">https://github.com/SharpSync/docs</mark>](https://github.com/SharpSync/docs)
-
 
 
 ### Jump right in

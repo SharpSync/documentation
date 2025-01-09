@@ -4,7 +4,7 @@ description: The cell value must not contain the specified string.
 
 # Text not contains
 
-Type: Import/Export
+Type: Display
 
 <details>
 

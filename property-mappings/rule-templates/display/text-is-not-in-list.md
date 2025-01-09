@@ -4,7 +4,7 @@ description: The cell value must not match a value in a string list.
 
 # Text is not in list
 
-Type: Import/Export
+Type: Display
 
 Implementation: Entries are separated by a comma.
 

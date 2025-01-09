@@ -4,7 +4,7 @@ description: The cell value must be an exact match with the specified text.
 
 # Text is exactly
 
-Type: Import/Export
+Type: Display
 
 <details>
 

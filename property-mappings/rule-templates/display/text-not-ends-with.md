@@ -4,7 +4,7 @@ description: The cell value must not end with the specified string.
 
 # Text not ends with
 
-Type: Import/Export
+Type: Display
 
 <details>
 
@@ -15,3 +15,4 @@ Type: Import/Export
 * Result: Fail - Cell value "Description" ends with "ion"
 
 </details>
+

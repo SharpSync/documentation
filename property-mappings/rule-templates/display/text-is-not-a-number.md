@@ -4,7 +4,7 @@ description: The cell value must not be a number.
 
 # Text is not a number
 
-Type: Import/Export
+Type: Display
 
 <details>
 

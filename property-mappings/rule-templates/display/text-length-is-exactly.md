@@ -6,7 +6,7 @@ description: >-
 
 # Text length is exactly
 
-Type: Import/Export
+Type: Display
 
 <details>
 
