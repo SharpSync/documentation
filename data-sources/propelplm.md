@@ -1,3 +1,7 @@
+---
+icon: chart-tree-map
+---
+
 # PropelPLM
 
 ## Propel
