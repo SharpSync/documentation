@@ -28,6 +28,7 @@
   * [Odoo Common List Names](data-sources/odoo/odoo-common-list-names.md)
   * [Hosting Options](data-sources/odoo/hosting-options.md)
 * [Onshape](data-sources/onshape.md)
+* [PropelPLM](data-sources/propelplm.md)
 * [SolidWorks](data-sources/solidworks.md)
 * [SolidWorks PDM](data-sources/solidworks-pdm.md)
   * [Downloading client files](data-sources/solidworks-pdm/downloading-client-files.md)
