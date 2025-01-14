@@ -8,6 +8,7 @@ icon: chart-tree-map
 
 NetSuite is an ERP and e-commerce platform by Oracle.&#x20;
 
-* [Authentication](./#authentication)
-* [Configuration](./#configuration)
+* [Authentication](authentication-+-configuration.md)
+* [Common Setup](common-setup/)
+* [Common Scenarios](common-scenarios.md)
 

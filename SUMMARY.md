@@ -23,6 +23,7 @@
   * [Common setup](data-sources/netsuite/common-setup/README.md)
     * [Item Type mapping](data-sources/netsuite/common-setup/item-type-mapping.md)
     * [Thumbnail Folder](data-sources/netsuite/common-setup/thumbnail-folder.md)
+  * [Common Scenarios](data-sources/netsuite/common-scenarios.md)
 * [Odoo](data-sources/odoo/README.md)
   * [Odoo Permissions Required](data-sources/odoo/odoo-permissions-required.md)
   * [Odoo Common List Names](data-sources/odoo/odoo-common-list-names.md)
