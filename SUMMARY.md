@@ -19,6 +19,7 @@
 
 * [CSV](data-sources/editor.md)
 * [Netsuite](data-sources/netsuite/README.md)
+  * [Setting up a thumbnail folder](data-sources/netsuite/setting-up-a-thumbnail-folder.md)
   * [Authentication + Configuration](data-sources/netsuite/authentication-+-configuration.md)
   * [Common setup](data-sources/netsuite/common-setup/README.md)
     * [Item Type mapping](data-sources/netsuite/common-setup/item-type-mapping.md)
