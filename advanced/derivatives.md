@@ -41,14 +41,12 @@ There are different types of mappings for derivatives:
 
 For each type of mapping you can select one or more (depending on the type) of option:
 
-* Transfer URL: creates a copy of the URL value int the selected property mapping \*\*
+* Transfer URL: creates a copy of the URL value (in the selected property mapping if supported by the ERP Data Source) \*\*
 * Transfer File: creates a copy of the file in the destination ERP
 
 \*\*_Not available for **offline sources** at the time of writing_
 
 It is important to note the following logic:
-
-\[Work in progress - can change]
 
 * When mapping assembly derivatives \[checkbox `FOR ASSEMBLIES`] (e.g. STEP, IGES):
   * The derivative is _always_ generated based on the version + configuration provided for the component.
@@ -58,7 +56,7 @@ It is important to note the following logic:
   * The derivative is searched for (opt-in) (Not Yet Implemented)
 * When mapping the DRAWING derivative \[checkbox `FOR DRAWINGS`] (e.g. SLDDRW / ONSHAPE DRAWING documents):
   * No new drawings will be generated in the source.
-  * A new DRAWING BOM Row will be created in the BOM view in SharpSync as child of each item (assemblies + parts) during the BOM loading process, only if a corresponding DRAWING is found in the source matching the defined file pattern exactly (the search will be based on the DRAWING derivative template file pattern and the metadata of the parent item. e.g.: If the parent item part name is P1-PN The pattern DRW-{componentName} will search for a source DRAWING exactly named DRW-P1-PN).
+  * A new DRAWING BOM Row will be created in the BOM view in SharpSync as child of each item (assemblies + parts) during the BOM loading process, only if a corresponding DRAWING is found in the source matching the defined file search pattern exactly (the search will be based on the DRAWING derivative template file search pattern and the metadata of the parent item. e.g.: If the parent item part name is P1-PN, the search pattern DRW-{componentName} will search for a source DRAWING exactly named DRW-P1-PN).
   * This created row will be read only and will not be included as part of bom submission, instead it will act as a placeholder for possible drawing derivatives (DRAWING, PDF, DWG, etc...).
   * The DRAWING row derivative can be configured in the DERIVATIVES menu but can only be added to a DRAWING BOM Row.
   * When processing derivatives, the application will use the found source DRAWING. The application will then make a copy of the link only (in the case of online CAD document system (e.g. Onshape)) or a copy of the link and/or file (in the case of online CAD file system (e.g. SolidWorks PDM))
@@ -67,9 +65,9 @@ It is important to note the following logic:
   * The derivative is _always_ generated based on the DRAWING Bom Row and its parent item metadata. This means that the application will use the found source DRAWING, and convert it to the supported format specified, and copy the link and/or the file to the destination.
   * The derivative is searched for (opt-in) (Not Yet Implemented)
 
-### Configure Derivative Name (or Search) Patterns
+### Configure Derivative Search or Naming Patterns
 
-1. You can double click on the `PATTERN` cell of each derivative type to change the file naming pattern of the derivative that will be transferred to your ERP source. If the naming pattern is for a DRAWING document type, then this will be the _search pattern_ used to search for drawings. Not that when searching for drawings, only exact matches are considered. Partial matching is not supported at the time of writing due to the possibility of 1000s of results being returned.&#x20;
+1. You can double click on the `PATTERN` cell of each derivative type to change the file search or naming pattern of the derivative that will be transferred to your ERP source. If the search pattern is for a DRAWING document type, then this will be the _search pattern_ used to search for drawings. Not that when searching for drawings, only exact matches are considered. Partial matching is not supported at the time of writing due to the possibility of 1000s of results being returned.&#x20;
 
 <figure><img src="../.gitbook/assets/derivatives_configure_naming_pattern.png" alt=""><figcaption><p>Derivatives: Configure Naming Pattern</p></figcaption></figure>
 
@@ -77,7 +75,7 @@ It is important to note the following logic:
 
 <figure><img src="../.gitbook/assets/derivatives_select_auto_generation.png" alt=""><figcaption><p>Derivatives: Select Auto Generation</p></figcaption></figure>
 
-3. You can check/uncheck the `TRANSFER FILE` or the `TRANSFER URL` checkbox of a derivative type to have the corresponding BOM row derivative checkbox `Store File` or `Store Url` checked by default when the BOM row derivative is generated. (See also Configure BOM Row Derivatives)&#x20;
+3. You can check/uncheck the `TRANSFER FILE` or the `TRANSFER URL` checkbox of a derivative type to have the corresponding BOM row derivative checkbox `Store File` or `Store Url` checked by default when the BOM row derivative is generated. (See also Configure BOM Row Derivatives)
 
 <figure><img src="../.gitbook/assets/derivative_default_transfer_options.png" alt=""><figcaption><p>Derivatives: Default Transfer Options</p></figcaption></figure>
 
@@ -110,7 +108,7 @@ It is important to note the following logic:
 
 <figure><img src="../.gitbook/assets/derivatives_edit_name.png" alt=""><figcaption><p>Derivatives: Edit name</p></figcaption></figure>
 
-5. You can also change the `Store File` or `Store Url` option on a per row basis.&#x20;
+5. You can also change the `Store File` or `Store Url` option on a per row basis. Note that the `DRAWING`derivative cannot have its `Store File` checkbox checked as these derivatives will not be generated.
 
 <figure><img src="../.gitbook/assets/derivatives_individual_change_upload_options.png" alt=""><figcaption></figcaption></figure>
 
