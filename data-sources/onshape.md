@@ -93,9 +93,11 @@ Base API path
 
 you will have
 
+{% code fullWidth="false" %}
 ```
 https://{enterpriseName}.onshape.com/api 
 ```
+{% endcode %}
 
 #### Authentication Types (see below\*\*)
 

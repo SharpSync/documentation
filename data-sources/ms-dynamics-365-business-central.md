@@ -28,10 +28,25 @@ When logged in to your SharpSync organization as an admin user:
 To configure a Dynamics 365 Business Central datasource instance in SharpSync you need:
 
 * The base API path of Dynamics 365 Business Central cloud which is: `https://api.businesscentral.dynamics.com`
-* Dynamics 365 Business Central uses the OAuth 2.0 protocol to authenticate, therefore, a code grant url, a refresh token url and the oauth scopes need to be supplied, they are of the form:
-  * Code Grant URL: `https://login.microsoftonline.com/{{sharpsync-app-tenant-id}}/oauth2/v2.0/authorize`
-  * Refresh Token URL: `https://login.microsoftonline.com/{{sharpsync-app-tenant-id}}/oauth2/v2.0/token`
-  * Scopes: `https://api.businesscentral.dynamics.com/.default offline_access`
+*   Dynamics 365 Business Central uses the OAuth 2.0 protocol to authenticate, therefore, a code grant url, a refresh token url and the oauth scopes need to be supplied, they are of the form:
+
+    * Code Grant URL:&#x20;
+
+    ```plaintext
+    https://login.microsoftonline.com/{{sharpsync-app-tenant-id}}/oauth2/v2.0/authorize
+    ```
+
+    * Refresh Token URL:&#x20;
+
+    ```markdown
+    https://login.microsoftonline.com/{sharpsync-app-tenant-id}/oauth2/v2.0/token
+    ```
+
+    * Scopes:
+
+    ```
+    https://api.businesscentral.dynamics.com/.default offline
+    ```
 * Your Dynamics 365 Business Central instance company id and environment:
   * The company id can be obtained by following these steps from your Dynamics 365 Business Central instance web interface:
     * Log in to your Business Central account and navigate to the Companies tab.
