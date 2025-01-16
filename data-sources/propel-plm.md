@@ -2,9 +2,7 @@
 icon: chart-tree-map
 ---
 
-# PropelPLM
-
-## Propel
+# Propel PLM
 
 _This document is a work in progress_
 
