@@ -6,7 +6,7 @@ icon: chart-tree-map
 
 _This document is a work in progress_
 
-Dynamics 365 Business Central is a cloud ERP available from Microsoft. Please also see \[(https://www.microsoft.com/en-us/dynamics-365/products/business-central)
+Dynamics 365 Business Central is a cloud ERP available from Microsoft. Please also see \[(https://www.microsoft.com/en-us/dynamics-365/products/business-central)]
 
 ### Install SharpSync custom extension for Dynamics 365 Business Central
 
