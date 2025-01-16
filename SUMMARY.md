@@ -18,6 +18,7 @@
 ## Data Sources
 
 * [CSV](data-sources/editor.md)
+* [MS Dynamics 365 Business Central](data-sources/ms-dynamics-365-business-central.md)
 * [Netsuite](data-sources/netsuite/README.md)
   * [Setting up a thumbnail folder](data-sources/netsuite/setting-up-a-thumbnail-folder.md)
   * [Authentication + Configuration](data-sources/netsuite/authentication-+-configuration.md)
