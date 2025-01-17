@@ -72,6 +72,10 @@ You mileage may vary, but the default items required for setting up a routing ar
 * SetupTime
 * RunRate
 
+<figure><img src="../../.gitbook/assets/netsuite_routing_steps.png" alt=""><figcaption></figcaption></figure>
+
+
+
 This leads us to a json array body that looks something like the following:
 
 ```json
@@ -155,8 +159,11 @@ You then add this list as a list of values for a property mapping as follows:
 | List Display Selector      | name          |
 | List Value Selector        | value         |
 
-You can now save this mapping and load a bom to see the results in a BOM that was loaded.
+You can now save this mapping and load a BOM to see the results in a BOM that was loaded.
 
-Take note that there are some limitations imposed by Netsuite that must be followed. In the example shown above you cannot have lagTime at the middle of the list of steps, only at the end
+<figure><img src="../../.gitbook/assets/netsuite_select_routing_steps.png" alt=""><figcaption></figcaption></figure>
 
-.. Back to Advanced BOMs
+
+
+Take note that there are some limitations imposed by NetSuite that must be followed. In the example shown above you cannot have `lagTime` at the middle of the list of steps, only at the end
+
