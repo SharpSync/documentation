@@ -31,6 +31,7 @@
   * [Create an uploads folder](data-sources/netsuite/create-an-uploads-folder.md)
   * [Integration tips](data-sources/netsuite/integration-tips.md)
   * [OAuth Setup](data-sources/netsuite/oauth-setup.md)
+  * [Permissions](data-sources/netsuite/permissions.md)
   * [Setting up a thumbnail folder](data-sources/netsuite/setting-up-a-thumbnail-folder.md)
   * [Suite API Setup](data-sources/netsuite/suite-api-setup.md)
   * [Supported features](data-sources/netsuite/supported-features.md)

@@ -69,51 +69,7 @@ Navigate to the role you want to assign the permissions to, and add the followin
 
 > Setup > Roles > Manage Roles > Developer (Or whichever role you want to assign the permissions to)
 
-| Section                    | Functionality                | Access  | Required   |
-| -------------------------- | ---------------------------- | ------- | ---------- |
-| Permissions > Transactions | Audit Trail                  | View    |            |
-| Permissions > Transactions | Find Transaction             | View    |            |
-| Permissions > Transactions | Receive Inventory            | View    |            |
-| Permissions > Transactions | Sales Order                  | View    |            |
-| Permissions > Reports      | SuiteAnalytics Workbook      | Edit    |            |
-| Permissions > Lists        | Accounts                     | View    |            |
-| Permissions > Lists        | Address list in Search       | View    |            |
-| Permissions > Lists        | Bill of Materials            | Full    |            |
-| Permissions > Lists        | Cost of Goods Sold Registers | View    |            |
-| Permissions > Lists        | Departments                  | View    |            |
-| Permissions > Lists        | Documents and Files          | Full    |            |
-| Permissions > Lists        | Employee Record              | View    |            |
-| Permissions > Lists        | Employees                    | View    |            |
-| Permissions > Lists        | Items                        | Full    |            |
-| Permissions > Lists        | Locations                    | View    |            |
-| Permissions > Lists        | Manufacturing Routing        | Full    |            |
-| Permissions > Lists        | Manufacturing Cost Template  | View    | Optional   |
-| Permissions > Lists        | Perform Search               | Full    |            |
-| Permissions > Lists        | Product Classes              | Full    |            |
-| Permissions > Lists        | Subsidiaries                 | View    |            |
-| Permissions > Lists        | Tax Schedules                | View    |            |
-| Permissions > Lists        | Tax Records                  | View    |            |
-| Permissions > Lists        | Units                        | View    |            |
-| Permissions > Lists        | Vendors                      | View    |            |
-| Permissions > Setup        | Allows JS / HTML uploads     | Full    | Setup Only |
-| Permissions > Setup        | Custom Item fields           | Full    | Setup Only |
-| Permissions > Setup        | Custom Number Item fields    | Full    | Setup Only |
-| Permissions > Setup        | Custom Lists                 | Full    | Setup Only |
-| Permissions > Setup        | Custom Sublist               | Full    | Setup Only |
-| Permissions > Setup        | Custom Sublists              | Full    | Setup Only |
-| Permissions > Setup        | Login using Access Tokens    | Full    | Setup Only |
-| Permissions > Setup        | Login using OAuth 2.0 Tokens | Full    | Setup Only |
-| Permissions > Setup        | REST Web Services            | Full    | Setup Only |
-| Permissions > Setup        | SuiteScript                  | Full    | Setup Only |
-| Permissions > Setup        | SuiteApp Deployment          | Full    | Setup Only |
-| Permissions > Setup        | View Login Audit Trail       | Full    | Setup Only |
-| Permissions > Reports      | SuiteAnalytics Workbook      | Edit    |            |
-| Forms > Item               | Group/Kit/Assembly           | Enabled |            |
-| Forms > Item               | Inventory Part               | Enabled |            |
-| Forms > Item               | Non-Inventory Part           | Enabled |            |
-| Forms > Inventory Detail   | Inventory Detail             | Enabled |            |
-| Forms > Other record       | Item Location                | Enabled |            |
-| Forms > Other record       | Manufacturing Routing        | Enabled |            |
+For a comprehensive list of permissions required for users and for setting up the integration, refer to the [permissions.md](permissions.md "mention") page
 
 ### Testing the OAuth setup
 
