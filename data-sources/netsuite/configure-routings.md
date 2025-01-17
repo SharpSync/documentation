@@ -74,9 +74,7 @@ You mileage may vary, but the default items required for setting up a routing ar
 
 <figure><img src="../../.gitbook/assets/netsuite_routing_steps.png" alt=""><figcaption></figcaption></figure>
 
-
-
-This leads us to a json array body that looks something like the following:
+This leads us to a json array body (Let's call this Set 1) that looks something like the following:
 
 ```json
 [
@@ -161,7 +159,7 @@ You then add this list as a list of values for a property mapping as follows:
 
 You can now save this mapping and load a BOM to see the results in a BOM that was loaded.
 
-<figure><img src="../../.gitbook/assets/netsuite_select_routing_steps.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/netsuite_select_routing_steps.png" alt=""><figcaption><p>Make a selection using Advanced Selection Lists</p></figcaption></figure>
 
 
 

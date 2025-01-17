@@ -1,20 +1,24 @@
 ---
 icon: chart-tree-map
-description: '[docs in progress]'
 ---
 
 # Odoo
 
-_This document is a work in progress_
-
-### Limitations at the time of writing
-
-
-
 SharpSync supports different versions of Odoo:
 
-* Odoo version 17.
-* Odoo version 16. Should you require access to a different version, please contact us at [SharpSync](https://sharpsync.net/about/)
+* Odoo 18 is slated for early 2025
+* Odoo version 17 \[full support].
+* Odoo version 16 \[full support].&#x20;
+
+| Item    | Status            | Support |
+| ------- | ----------------- | ------- |
+| Odoo 18 | Slated early 2025 | N/A     |
+| Odoo 17 | Available         | Full    |
+| Odoo 16 | Available         | Full    |
+
+
+
+Should you require access to a different version, please contact us at [SharpSync](https://sharpsync.net/about/)
 
 Odoo is an open-source ERP available in a self-hosted or cloud-hosted option. Please also see:
 
@@ -22,7 +26,7 @@ Odoo is an open-source ERP available in a self-hosted or cloud-hosted option. Pl
 * [https://www.odoo.com/](https://www.odoo.com/),
 * [Hosting options](https://github.com/SharpSync/docs/blob/main/datasources/odoo/markdown/hosting-options.md)
 
-To configure an Odoo intance you need 4 things
+To configure an Odoo instance in SharpSync you need at least the following 4 things
 
 * Odoo version number
 * Database name (case sensitive)

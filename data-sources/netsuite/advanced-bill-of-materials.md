@@ -1,76 +1,27 @@
 # Advanced Bill of Materials
 
-## Advanced BOMs
+Advanced BOMs are NetSuite's way of keeping track of Bill of Materials (BOM) snapshots. You can think of an advanced BOM as the revision of a Bill of Materials at a certain point in time.
 
-Advanced BOMs are Netsuite's way of keeping track of bill of materials (BOM) snapshots. You can think of an advanced BOM as the revision of a BOM at a certain point in time
+Advanced BOMs use the following notable features:
 
-### Using advanced BOMs
+* Individual revisions of components
+* Activation dates
+* Routings
+* Manufacturing steps
 
-There are some limitation with the use of advanced BOMs via the API. For this reason (at the time of writing), we make use of a custom script to create advanced BOMS
+### Using Advanced BOMs
 
-Server side scripting uses a script in Netsuite to set field values. The important bit to take note of here is that the `itemInjectionScriptId` needs to be configured (see below).
+There are some limitations with the use of advanced BOMs via the NetSuite API. For this reason (at the time of writing), we make use of a custom server side script to create advanced BOMS.
 
-To use serverside scripting to create items, in SharpSync do the following under `Data Sources`:
+Server side scripting uses a script in NetSuite to set default custom field values which are not accessible via the NetSuite API. The important bit to take note of here is that the `itemInjectionScriptId` needs to be configured (see below).
+
+To use server side scripting to create items, in SharpSync do the following under `Data Sources`:
 
 ### Major steps
 
-* Setup the server side script
-* Configure SharpSync to use server side scripting
-* Configure Routings \[optional]
-
-#### Setup the server side script
-
-In Netsuite, create a new script for SharpSync to use (example at the bottom)
-
-* Click Setup > Customization > Scripts
-* Select the `Script File` box > click the + sign
-* Upload the script file from your computer
-  * Attach from: `Computer`
-  * Filename: Specify with the `.js` extension at the back
-  * Folder: This must be `SuiteScripts`. DO NOT use another folder
-  * Choose file: choose the file you saved (you can use the example below after some customization of fields)
-  * Click Save
-* Click > Create Script Record
-  * Specify a name: `sharpsync-item-create.js`
-  * Click the `Deployments` tab > Enter any name
-    * Deployed: `Yes`
-    * Status: `Released`
-  * Click `Save`
-* After clicking Save and the page has loaded:
-  * Under the `Scripts` tab > click `Edit`. You can make changes here
-  * Under the `Deployments` tab > Click the script name
-    * A new page is shown `Script Deployment`
-    * In the `URL` field you'll see a deployment url, something like
-    * /app/site/hosting/restlet.nl?script=3187\&deploy=1
-    * Take note of the id of the script (in the example above it's `3187`)
-    * Click to edit the deployment
-    * Make sure you have checked the following audiences:
-      * `Audience` --> `Roles` --> `All Roles`
-      * `Audience` --> `Roles` --> `All Employees`
-    * Click `Save`
-
-You are now done configuring the script in Netsuite. The next step is to use this ID in the setup of the script in SharpSync.
-
-#### Configure SharpSync to use server side scripting
-
-Server side scripting allows SharpSync to configure fields in NetSuite that are not available via the REST api.
-
-* Add Netsuite as a data source
-* Click the `Configure` button
-* Navigate to the `Configuration` section
-*   Add a servlet url
-
-    > https://\[companyId].restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=3187\&itemInjectionScriptId=3187\&deploy=1\&folderId=3561
-* The `itemInjectionScriptId` param above is the same as the one in the previous step
-* Select `Use server side scripting`
-* Select `Use advanced BOMs`
-* Configure your `Bom Naming scheme`
-* Configure your `Bom Revision Naming Scheme`
-* Click the Save button
-
-A custom script example follows below. You can certainly modify this to your heart's content, but the overarching details are captured here
-
-Before uploading to Netsuite, save the below contents to a `*.js` file. See the example called Example script
+* [Configure the server side script](configure-server-side-script.md)
+* [Configure SharpSync to use server side scripting](configure-sharpsync-to-use-server-side-script.md)
+* [Configure Routings](configure-routings.md) \[optional]
 
 ### Configure Routings
 
@@ -78,9 +29,7 @@ Routing in NetSuite, or in any manufacturing context, refers to a sequence of op
 
 There is a dedicated page to configure routings
 
-.. Back to NetSuite
-
-#### Example script
+#### Example Server Side Script
 
 ```javascript
 /*
