@@ -6,15 +6,33 @@ To setup a list of accounts to pick from in NetSuite, we'll query the `accounts`
 
 Steps:
 
-* Create a new [property mapping ](../../../fundamentals/property-mappings.md)for income account and expense account
+* Create [a new property mapping](configure-accounts-selection.md#create-a-property-mapping) for income account and expense account
 * [Specify the list query](configure-accounts-selection.md#specify-the-list-query)
 * Setup the selection
+
+### Create a Property Mapping&#x20;
+
+Create a new Property mapping with the following settings:
+
+| Setting                   | Value                                                                                                                                                     |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Primary accessor          | <p>(unmapped) </p><p>or mapped to a Primary Source accessor if you have one</p>                                                                           |
+| Secondary accessor        | <p>One of: </p><ul><li>inventoryitem.incomeAccount </li><li>assemblyitem.incomeAccount</li><li>noninventoryresaleitem.incomeAccount</li><li>etc</li></ul> |
+| Update Primary on Submit  | unchecked                                                                                                                                                 |
+| Update NetSuite on Submit | checked                                                                                                                                                   |
+| Prefer NetSuite value     | checked                                                                                                                                                   |
+| Rendering Type            | Select List                                                                                                                                               |
+| List items                | \*\* see below                                                                                                                                            |
 
 ### Specify the list query
 
 When mapping to income account or expense account, the type of item in SharpSync will show as nestedObject. NestedObject is a special type of object which requires SharpSync to query another list to get the value.
 
-&#x20;To setup list selection from NetSuite. Use the following values in the property mapping settings for income account and expense account:
+The list items will depend on the values returned in the `List Values`section after saving the property mapping the first time or clicking the refresh button.
+
+Once this list has been generated, click the small copy button (next to the refresh button), and then the paste button (clipboard button a little further down)
+
+To setup list selection from NetSuite. Use the following values in the property mapping settings for income account and expense account:
 
 | Option                | Value                         | Description                                                                 |
 | --------------------- | ----------------------------- | --------------------------------------------------------------------------- |

@@ -30,6 +30,7 @@
     * [Configure Accounts Selection](data-sources/netsuite/common-setup/configure-accounts-selection.md)
     * [Configure Item Type mapping](data-sources/netsuite/common-setup/item-type-mapping.md)
     * [Configure New assemblies as isPhantom](data-sources/netsuite/common-setup/configure-new-assemblies-as-isphantom.md)
+    * [Configure Subsidiary Selection](data-sources/netsuite/common-setup/configure-subsidiary-selection.md)
     * [Configure Thumbnail Folder](data-sources/netsuite/common-setup/configure-thumbnail-folder.md)
     * [Configure Where Used Link](data-sources/netsuite/common-setup/configure-where-used-link.md)
   * [Create an uploads folder](data-sources/netsuite/create-an-uploads-folder.md)
