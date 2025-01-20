@@ -6,6 +6,31 @@ Routings in NetSuite, or in any manufacturing context, refers to a sequence of o
 For the NetSuite module, SharpSync only adds routings to BOMs that do NOT ALREADY have routings. This is to prevent overwriting existing manufacturing processes which may have been defined already. Please engage us for upgrading this functionality should you have need for it.
 {% endhint %}
 
+{% hint style="info" %}
+
+
+Each assembly will contain 0:N Manufacturing Routings
+
+Each step has a name and is assigned to a Work Center
+
+Each routing step
+
+* Requires setup time (minutes) and a run rate (minutes / unit)
+
+An assembly has a 1:N relationship with routings An assembly has a 1:1 relationship an individual routing, with routings not being reusable across assemblies, therefore
+
+* Assembly 1:N Routing 1:N RoutingSteps
+
+An individual routing
+
+* Has a 1:1 relationship with an assembly
+* Has a 1:N relationship with RoutingSteps
+* Has a `customForm` id
+* Must have a name unique to that routing (provide template string for this e.g. `{componentName} - Routing`)
+* Must have a BOM id
+* Must have default subsidiary
+{% endhint %}
+
 
 
 #### Step 1: Manufacturing operation
