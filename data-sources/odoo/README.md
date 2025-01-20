@@ -4,6 +4,26 @@ icon: chart-tree-map
 
 # Odoo
 
+Odoo is an open source ERP and e-commerce platform
+
+## Odoo supported features
+
+Out of the box, the Odoo integration supports the following features for all supported versions:
+
+### Bill of Material (BOM) level features
+
+| Feature                                        |      Differences     |     Modifications    |          Updates          |
+| ---------------------------------------------- | :------------------: | :------------------: | :-----------------------: |
+| BOM hierarchy                                  | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
+| BOM meta data                                  | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
+| BOM quantities                                 | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
+| Component thumbnails                           |          N/A         |          N/A         |    :white\_check\_mark:   |
+| Advanced BOMs                                  | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
+| Routings                                       | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
+| File derivative transfers (e.g. STEP, DXF)\*\* |          N/A         |          N/A         | \[marked for development] |
+
+\*\* It should be noted that there are many ways to transfer files. We're in the process of adding file transfers for NetSuite, but please note that consultation services are required to understand your use case + configuration options. Each customer's implementation of file transfers will be unique.
+
 SharpSync supports different versions of Odoo:
 
 * Odoo 18 is slated for early 2025
@@ -33,40 +53,9 @@ To configure an Odoo instance in SharpSync you need at least the following 4 thi
 * Username
 * Password
 
-### Setup steps
+### Configuration
 
-* In the Navigation Bar, select Data Sources
-* On the right (in Data Sources), select Odoo as the Data Source and click ADD DATASOURCE
-*   Change the Server URL to:
-
-    ```
-    https://{myEnterprizeInstance}.dev.odoo.com
-    ```
-* Scroll to the bottom of the page and click UPDATE
-* Click CONFIGURE
-* On the first tab (Authentication), change the Base API Path to: `https://{myEnterprizeInstance}.dev.odoo.com`
-* Leave the Authentication Types dropdown on Basic Authentication.
-* Enter the Database name.&#x20;
-
-{% hint style="info" %}
-To find the database name navigate to [https://{myEnterprizeInstance}/web/database/selector](https://your-odoo-instance/web/database/selector)
-{% endhint %}
-
-{% hint style="warning" %}
-The database name is case sensitive.
-{% endhint %}
-
-* Enter the username and password.
-* The configuration should look something like the image below:
-
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
-
-* On the second tab (BOM Configuration) enter the version number (Only version 17 is supported at the time of writing, but contact us if you require access to an older version)
-* Click the `Save` button to save and close the form.
-* Click AUTHENTICATE. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
-* Configure the Primary and Secondary Identifiers as follows:
-  * Primary Identifier: name
-  * Secondary Identifier: product\_tmpl\_id
+* [Authentication](authentication-+-configuration.md)
 
 After successfully authenticating with Odoo, the update should automatically trigger. If it does not, click the _Update_ button.
 

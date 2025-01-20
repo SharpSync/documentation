@@ -2,15 +2,19 @@
 
 Routings in NetSuite, or in any manufacturing context, refers to a sequence of operations or steps that a product must go through during the manufacturing process. These steps can include various operations such as assembly, machining, laser and inspection.
 
-Routing limitation (at time of writing): For the NetSuite module, SharpSync only adds routings to BOMs that do NOT ALREADY have routings. This is to prevent overwriting existing manufacturing processes which may have been defined already. Please engage us for upgrading this functionality should you have need for it.
+{% hint style="success" %}
+For the NetSuite module, SharpSync only adds routings to BOMs that do NOT ALREADY have routings. This is to prevent overwriting existing manufacturing processes which may have been defined already. Please engage us for upgrading this functionality should you have need for it.
+{% endhint %}
+
+
 
 #### Step 1: Manufacturing operation
 
-To configure routings for Netsuite in Sharpsync, add at least 1 property mapping with the setting enabled:
+To configure routings for NetSuite in SharpSync, add 2 property mapping with the setting enabled:
 
-* `Is Manufacturing Operation` (let's call this `operationStep`)
+* `Is Manufacturing Operation` (let's refer to this as  `operationStep`)
 * AND 1 more mapping
-* `Is Manufacturing Step` (let's call this `manfacturingStep`)
+* `Is Manufacturing Step` (let's refer to this as`manufacturingStep`)
 
 For the property `operationStep` use the settings:
 
@@ -74,7 +78,7 @@ You mileage may vary, but the default items required for setting up a routing ar
 
 <figure><img src="../../.gitbook/assets/netsuite_routing_steps.png" alt=""><figcaption></figcaption></figure>
 
-This leads us to a json array body (Let's call this Set 1) that looks something like the following:
+This leads us to a JSON array body (Let's call this Set 1) that looks something like the following:
 
 ```json
 [

@@ -6,7 +6,27 @@ icon: chart-tree-map
 
 _This document is a work in progress_
 
-Propel is a cloud ERP available from salesforce. Please also see [(https://www.propelsoftware.com/)](https://www.propelsoftware.com/)
+Propel is a cloud based ERP available from Salesforce. Please also see [(https://www.propelsoftware.com/)](https://www.propelsoftware.com/)
+
+
+
+## Propel PLM supported features
+
+Out of the box, the Propel PLM integration supports the following features:
+
+### Bill of Material (BOM) level features
+
+| Feature                                        |      Differences     |     Modifications    |        Updates       |
+| ---------------------------------------------- | :------------------: | :------------------: | :------------------: |
+| BOM hierarchy                                  | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| BOM meta data                                  | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| BOM quantities                                 | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
+| Component thumbnails                           |          N/A         |          N/A         | :white\_check\_mark: |
+| File derivative transfers (e.g. STEP, DXF)\*\* |          N/A         |          N/A         | :white\_check\_mark: |
+
+\*\* It should be noted that there are many ways to transfer files. We're in the process of adding file transfers for NetSuite, but please note that consultation services are required to understand your use case + configuration options. Each customer's implementation of file transfers will be unique.
+
+### Configuration
 
 To configure a Propel intance you need:
 
