@@ -26,7 +26,7 @@ The database name is case sensitive.
 * Enter the username and password.
 * The configuration should look something like the image below:
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 * On the second tab (BOM Configuration) enter the version number  in the form of 2 digits.
 * Click the `SAVE` button to save your connection details and close the form.

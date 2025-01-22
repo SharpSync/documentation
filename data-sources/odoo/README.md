@@ -56,7 +56,7 @@ To configure an Odoo instance in SharpSync you need at least the following 4 thi
 
 ### Configuration
 
-* [Authentication](authentication-+-configuration.md)
+* [Authentication](getting-started/authentication-+-configuration.md)
 
 After successfully authenticating with Odoo, the update should automatically trigger. If it does not, click the _Update_ button.
 
