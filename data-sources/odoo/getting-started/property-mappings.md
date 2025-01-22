@@ -6,17 +6,16 @@ description: The quickest way to get started with Odoo is to add some property m
 
 ### Add Property Mappings
 
-After authenticating with Odoo, add the following mappings
+After [authenticating ](authentication-+-configuration.md)with Odoo, add the following [Property Mappings](../../../fundamentals/property-mappings.md)
 
 | Name        | Primary Accessor | Odoo accessor                |
 | ----------- | ---------------- | ---------------------------- |
 | Description | Description      | product.template.description |
 | Quantity    | Quantity         | mrp.bom.product\_qty         |
-|             |                  |                              |
 
 
 
-### Property mapping settings
+### Property Mapping settings
 
 #### Description
 
