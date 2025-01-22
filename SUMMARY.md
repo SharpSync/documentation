@@ -11,8 +11,7 @@
   * [Subscription](fundamentals/onboarding/subscription.md)
 * [Data Sources](fundamentals/data-sources.md)
 * [Property Mappings](fundamentals/property-mappings.md)
-* [Rule Templates](fundamentals/rule-templates/README.md)
-  * [Rule Template Parameters](fundamentals/rule-templates/rule-template-parameters.md)
+* [Rule Templates](fundamentals/rule-templates.md)
 * [BOM Comparison](fundamentals/bom-comparison.md)
 
 ## Data Sources
@@ -60,6 +59,7 @@
 
 * [Settings](property-mappings/settings.md)
 * [Rule templates](property-mappings/rule-templates/README.md)
+  * [Rule Template Parameters](property-mappings/rule-templates/rule-template-parameters.md)
   * [Import / Export](property-mappings/rule-templates/import-export.md)
     * [Append text](property-mappings/rule-templates/import-export/append-text.md)
     * [Calculate number](property-mappings/rule-templates/import-export/calculate-number.md)

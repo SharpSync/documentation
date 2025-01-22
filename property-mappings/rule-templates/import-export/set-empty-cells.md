@@ -8,6 +8,8 @@ description: >-
 
 Type: Import/Export
 
+Description: Evaluates the cells 's' value. If there is a value, then nothing happens. If there is no value (blank string, mutliple blanks strings, false value), it overwrites the value with the specified value.
+
 <details>
 
 <summary>Example</summary>

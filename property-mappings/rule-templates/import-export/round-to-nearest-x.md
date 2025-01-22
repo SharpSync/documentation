@@ -6,6 +6,8 @@ description: Rounds the number to the nearest specified number
 
 Type: Import/Export
 
+Description: Converts the cell value to a number and rounds the value to the nearest specified digits.
+
 Scope: Supports only positive and negative integers.
 
 <details>

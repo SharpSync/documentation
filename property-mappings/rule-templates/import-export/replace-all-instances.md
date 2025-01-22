@@ -6,6 +6,8 @@ description: Replace all instances of the specified text with the new value.
 
 Type:  Import/Export Rule&#x20;
 
+Description: Searches the cell value and replaces all instances of the found string with a new value.
+
 <details>
 
 <summary>Example: Replace all delimiters</summary>

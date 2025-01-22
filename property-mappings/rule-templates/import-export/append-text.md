@@ -6,6 +6,8 @@ description: Adds the specified text to the end of the cell value.
 
 Type: Import/Export
 
+Description: Adds text to the end of the cell value
+
 <details>
 
 <summary>Example</summary>

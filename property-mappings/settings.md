@@ -1,3 +1,7 @@
+---
+icon: gear
+---
+
 # Settings
 
 ### Overview

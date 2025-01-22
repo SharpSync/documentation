@@ -8,13 +8,28 @@ description: >-
 
 Type: Import/Export
 
-Supports nested key/values and arrays. You can use key.value\[index].key to retrieve value for a given key.
+Description: Converts the cell value to a JSON object and selects the value specified by the selector.
+
+Supports nested key/values and arrays. You can use `key.value[index].key` to retrieve value for a given key.
 
 <details>
 
 <summary>Example</summary>
 
-* Cell value: {"parts":\[{"name":"coil","quantity":2},{"name":"fan","quantity":3}]}
+* Cell value
+
+{&#x20;
+
+&#x20; "parts" : \[
+
+&#x20;    { "name" : "coil", "quantity" : 2 },&#x20;
+
+&#x20;    {"name" : "fan", "quantity" : 3 }
+
+&#x20; ]
+
+}
+
 * Rule values:
   * Select value: parts\[1].name
 * Result: fan

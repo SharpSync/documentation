@@ -1,41 +1,47 @@
 ---
-icon: layer-group
-description: >-
-  Rule templates are automated functions that display highlights based on the
-  data or change the data before it is displayed
+icon: list-check
 ---
 
 # Rule Templates
+
+Rule templates are optional automated functions that either:
+
+* Edits the row data coming from a [Data Source](data-sources.md)  or&#x20;
+* Display highlights based on the data or change the data before it is displayed (see [Rule legend](rule-templates.md#rule-legend))
 
 ### Rules Fundamentals
 
 The main concepts to understand for rules are the following:
 
-* The [_type_ or _category_](./#concept-rule-categories) of the rules
-* The[ _order_ ](./#order-of-rules)of the rules
+* The [_type_ or _category_](rule-templates.md#concept-rule-categories) of the rules
+* The[ _order_ ](rule-templates.md#order-of-rules)of the rules
 * _When_ the rules run
 
 ### Rule Type or Category
 
 Rules for property mappings fall into 1 of 3 categories:
 
-* Import Rules (Data transformation)
-* Display Rules (Data validation)
-* Export Rules (Data transformation)
+| Rule Category | What it does             | Internal Reference  | Visibility  |
+| ------------- | ------------------------ | ------------------- | ----------- |
+| Import Rules  | Modifies data            | Data Transformation | Tooltip     |
+| Export Rules  | Modifies data            | Data Transformation | Tooltip     |
+| Display Rules | Validates data on-screen | Data Validation     | Cell border |
 
-Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule
 
-Import/Export rules (Data transformation) work on the raw source data and are applied to each individual data source's data.
 
-Display Rules (Data validation) works on the data displayed onscreen after being retrieved from a Data Source.&#x20;
+Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule.
+
+Import/Export rules (Data Transformation) work on the raw source data and are applied to each individual data source's data.
+
+Display Rules (Data Validation) evaluates the data displayed on-screen after being retrieved from a Data Source.&#x20;
 
 ### Order of Rules
 
 Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule The order that rules run in always follow the following order:
 
-* import
-* display
-* export
+* Import
+* Display
+* Export
 
 You _can_ reorder the rules (there are individual up/down buttons next to the header), but `export` rules cannot appear before `import` rules. Import/Export rules have an orange border, while display rules only have a gray border.
 
@@ -47,48 +53,70 @@ Import rules work on the raw source data and are applied to each individual data
 
 #### Rule parameters
 
-User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See [Rule Template Parameters](rule-template-parameters.md)
+User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See [Rule Template Parameters](../property-mappings/rule-templates/rule-template-parameters.md)
+
+### Rule Legend
+
+When a rule passes, the user is not informed of any problems with the data. When rule fails, a border is displayed on the  cell where the problem appears.
+
+{% hint style="info" %}
+The colors displayed can be modified under Profile > User Settings > Display
+{% endhint %}
+
+
+
+<table data-full-width="false"><thead><tr><th width="290">Color scheme</th><th>Description</th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/image (14).png" alt="" data-size="original"></td><td>Orange border - Value did not pass display mapping rule (Warning), the user is able to continue.</td></tr><tr><td><img src="../.gitbook/assets/image (15).png" alt="" data-size="original"></td><td>Red border - Value did not pass display mapping rule (Error), the user is <em>not</em> able to continue.</td></tr></tbody></table>
+
+
 
 ### Adding new Rules
 
-A
-
-### Setting up a Rule
-
 Start by navigating to Property Mappings and click on "Rules" for the Property Mapping you want to edit.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-A panel will appear on the side. Expand the Rules dropdown to reveal the available [list of rules ](../../property-mappings/rule-templates/)that can be applied. Select a rule and click `ADD RULE`.
+A panel will appear on the side. Expand the Rules dropdown to reveal the available [list of rules ](../property-mappings/rule-templates/)that can be applied. Select a rule and click `ADD RULE`.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="214"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="214"><figcaption></figcaption></figure>
 
-In the example below, the `Format as decimal number` rule runs for both Onshape and NetSuite. The rule runs on the individual strings of data imported.
+In the example below, the `Format as decimal number` rule runs for both [Data Sources](data-sources.md) (in this example Onshape and NetSuite). The rule runs on the individual strings of data imported.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-The final result for both rules are overlaid in the user interface (the default would be a blue rectangle). Below is a conceptual illustration of the process:
+The final result for both rules are overlaid in the user interface (the default would be a blue rectangle). Below is a conceptual illustration of the process where&#x20;
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+* Datasource 1 is Onshape
+* Datasource 2 is NetSuite
+* 's' is the [rowData ](../property-mappings/rule-templates/rule-template-parameters.md)string value being evaluated
 
-_NOTE:_ The rule running for NetSuite _is not aware of the data being imported from Onshape_. That means that when running a rule such as a JavaScript `Text Manipulation` rule, the rule runs only for one source at a time, never for both at the same time.
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-Pro tip: One way to get around this is to create a `Text evaluation` rule to match the value of a cell to that of another and return a display message to the user. Or use a `Text manipulation` rule to write a message to a cell value and give the user a message onscreen.
+{% hint style="warning" %}
+The rule running for NetSuite _is not aware of the data being imported from Onshape_. That means that when running a rule such as a JavaScript `Text Manipulation` rule, the rule runs only for one source at a time, _never for both at the same time_.
+{% endhint %}
 
-For example: Let's suppose that we have Data Source 1 (DS1) and Data Source 2 (DS2), the process would be:
+{% hint style="info" %}
+One way to get around this is to create a `Text evaluation` rule to match the value of a cell to that of another and return a display message to the user. Or use a `Text manipulation` rule to write a message to a cell value and give the user a message onscreen.
+{% endhint %}
 
-**Step: Setup the property mappings**
+
+
+### Example
+
+Let's suppose that we have Data Source 1 (DS1) and Data Source 2 (DS2), the process would be:
+
+#### **Step: Setup the property mappings**
 
 * Setup the 1st column. Give it an accessor of `description` with a column mapping of property `description` for DS1 and for DS2
 
 {% hint style="info" %}
-As a quick reference, here are the instructions for setting up a [Property Mapping](../../property-mappings/settings.md#adding-property-mappings).
+As a quick reference, here are the instructions for setting up a [Property Mapping](../property-mappings/settings.md#adding-property-mappings).
 {% endhint %}
 
 * Setup a 2nd property column `description2` column. Give it an accessor of `description2`. Also map it to the `description` property.
 * Add a `Text evaluation` display rule to the 2nd column.
 
-**Step: Pulling the BOM + reviewing the data**
+#### **Step: Pulling the BOM + reviewing the data**
 
 * For now let's say the value that comes from DS1 is the value `Coil`.
 * Enable the setting on the 2nd column: `Prefer {DS2} Value`. This forces the value from DS2 to display instead of the value of DS1 displaying by default
@@ -106,7 +134,7 @@ Note that returning any value in the `message` above can be customized by you.
 
 The data from DS2 is imported after that of DS1. The rules start running for DS2.
 
-Be sure also to read and understand [Rule Template Parameters](rule-template-parameters.md).
+Be sure also to read and understand [Rule Template Parameters](../property-mappings/rule-templates/rule-template-parameters.md).
 
 
 
@@ -197,12 +225,6 @@ SharpSync processes and prioritizes each rule in order from top to bottom. Movin
 4. PASS: Number is between or equal to the minimum and maximum values of 1 and 123.
 
 * If the 2nd and 3rd rules were reversed, the last rule would fail. The number would be rounded first, which would result in the new number being 124, which is larger than the last rule's maximum value.
-
-### Rule Legend
-
-<table data-full-width="false"><thead><tr><th>Color scheme</th><th>Description</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image (14).png" alt="" data-size="original"></td><td>Orange border - Value did not pass display mapping rule (Warning)</td></tr><tr><td><img src="../../.gitbook/assets/image (15).png" alt="" data-size="original"></td><td>Red border - Value did not pass display mapping rule (Error)</td></tr></tbody></table>
-
-
 
 [^1]: Displayed in the context menu in the BOM Comparison screen
 

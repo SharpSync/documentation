@@ -6,6 +6,8 @@ description: Adds the specified text to the beginning of the cell value.
 
 Type: Import/Export
 
+Description: Adds text to the front of the cell value
+
 <details>
 
 <summary>Example</summary>

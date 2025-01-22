@@ -174,7 +174,7 @@ It is desirable to prefer the values for accounts from NetSuite over that of you
 Make sure to set the checkbox `Prefer NetSuite value` in the property Mapping settings
 {% endhint %}
 
-&#x20;To setup a default value, you can make use of a [Rule ](../../../fundamentals/rule-templates/)such as this
+&#x20;To setup a default value, you can make use of a [Rule ](../../../fundamentals/rule-templates.md)such as this
 
 **Rule 1**
 

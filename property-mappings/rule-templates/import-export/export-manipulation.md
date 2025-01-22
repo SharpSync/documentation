@@ -6,6 +6,8 @@ description: Modifies the outgoing data before it is sent to the secondary sourc
 
 Type: Export only
 
+Description: Modifies the `secondaryExportData`object by removing, adding or altering the data.
+
 It is important to note two things:
 
 1. There can be only one of these rules as it modifies all outgoing data

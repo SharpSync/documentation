@@ -6,6 +6,8 @@ description: Replace the first instance of the specified text with the new value
 
 Type: Import/Export
 
+Description: Searches the cell value and replaces the first instance of the found string with a new value.
+
 Scope: The rule only applies to the first instance. All following instances will be ignored.&#x20;
 
 Also see [Replace All Instances](replace-all-instances.md)

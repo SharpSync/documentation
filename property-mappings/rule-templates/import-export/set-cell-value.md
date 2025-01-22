@@ -6,6 +6,8 @@ description: Sets the cell value to the specified text.
 
 Type: Import/Export
 
+Description: Ignores the current  value of the cell and overrides it with the specified value
+
 <details>
 
 <summary>Example</summary>

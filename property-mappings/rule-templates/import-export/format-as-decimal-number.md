@@ -6,7 +6,7 @@ description: Converts the cell value to a number and adds the specified number o
 
 Type: Import/Export
 
-This formats the number as it is viewed and does not round it. Any text specified to be removed will be replaced/ignored during the number format.
+Description: This formats the number as it is viewed and does not round it. Any text specified to be removed will be replaced/ignored during the number format.
 
 <details>
 
