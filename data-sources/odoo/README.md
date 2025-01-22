@@ -67,7 +67,7 @@ The custom fields from Odoo have now successfully been pulled into SharpSync.
 {% endhint %}
 
 {% hint style="info" %}
-SharpSync requires the MRP module (mrp) at a minimum in order to support an Odoo integration. This is because of BOM information, more specifically the Quantities of individual items.
+SharpSync requires the MRP module (mrp) at a minimum in order to support an Odoo integration. This is because of BOM information, more specifically the Quantities of individual items are managed using this module.
 {% endhint %}
 
 Routings are not currently supported but we are working towards it.

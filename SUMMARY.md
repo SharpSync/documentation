@@ -43,7 +43,6 @@
 * [Odoo](data-sources/odoo/README.md)
   * [Getting Started](data-sources/odoo/getting-started/README.md)
     * [Authentication + Configuration](data-sources/odoo/getting-started/authentication-+-configuration.md)
-    * [Property Mappings](data-sources/odoo/getting-started/property-mappings.md)
   * [Hosting Options](data-sources/odoo/hosting-options.md)
   * [List Names](data-sources/odoo/list-names.md)
   * [Permissions](data-sources/odoo/permissions.md)
