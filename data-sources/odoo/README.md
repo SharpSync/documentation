@@ -19,6 +19,7 @@ Out of the box, the Odoo integration supports the following features for all sup
 | BOM quantities                                 | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
 | Component thumbnails                           |          N/A         |          N/A         |    :white\_check\_mark:   |
 | Advanced BOMs                                  | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
+| Attributes and variants                        |  \[work in progress] |  \[work in progress] |    \[work in progress]    |
 | Routings                                       | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
 | File derivative transfers (e.g. STEP, DXF)\*\* |          N/A         |          N/A         | \[marked for development] |
 
