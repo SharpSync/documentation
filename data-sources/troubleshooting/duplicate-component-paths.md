@@ -1,16 +1,8 @@
----
-icon: square-exclamation
----
-
-# Troubleshooting
-
-Sometimes the errors might occur onscreen when attempting to show Bill of Material (BOM) information.
-
-
+# Duplicate component paths
 
 ### Duplicate component paths
 
-<figure><img src="../.gitbook/assets/error_bom_contains_duplicate_rows.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/error_bom_contains_duplicate_rows.png" alt=""><figcaption></figcaption></figure>
 
 **Reason**: There are components with duplicate paths. Duplicate paths cause problems such as incorrect quantities or duplicate entries in the destination system and are therefore blocked on a UI level.
 
