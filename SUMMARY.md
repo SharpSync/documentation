@@ -17,7 +17,9 @@
 ## Data Sources
 
 * [Autodesk Inventor](data-sources/autodesk-inventor.md)
-* [CSV](data-sources/editor.md)
+* [CSV](data-sources/editor/README.md)
+  * [Setup](data-sources/editor/setup.md)
+  * [Importing a Bill of Materials (BOM)](data-sources/editor/importing-a-bill-of-materials-bom.md)
 * [MS Dynamics 365 Business Central](data-sources/ms-dynamics-365-business-central.md)
 * [NetSuite](data-sources/netsuite/README.md)
   * [Advanced Bill of Materials](data-sources/netsuite/advanced-bill-of-materials.md)
