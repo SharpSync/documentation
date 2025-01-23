@@ -55,6 +55,7 @@
   * [Downloading client files](data-sources/solidworks-pdm/downloading-client-files.md)
   * [Setting up the Solidworks PDM Web 2](data-sources/solidworks-pdm/setting-up-the-solidworks-pdm-web-2.md)
   * [Advanced: Configure add-in for testing](data-sources/solidworks-pdm/advanced-configure-add-in-for-testing.md)
+* [Troubleshooting](data-sources/troubleshooting.md)
 
 ## Property Mappings
 
