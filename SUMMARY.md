@@ -102,3 +102,8 @@
 
 * [Derivatives](advanced/derivatives.md)
 * [Advanced Scripting](advanced/advanced-scripting.md)
+
+## User management
+
+* [User management](user-management/user-management.md)
+* [Application Permissions](user-management/application-permissions.md)
