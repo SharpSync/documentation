@@ -1,10 +1,8 @@
----
-description: The cell value must start with the specified string.
----
-
 # Text starts with
 
 Type: Display
+
+Description: The cell value must start with the specified string.
 
 <details>
 
@@ -12,6 +10,6 @@ Type: Display
 
 * Cell value: Description
 * Rule value: Desc
-* Result: Pass - Cell value "Description" begins with "Desc"
+* Result: Rule passes - Cell value "Description" begins with "Desc"
 
 </details>

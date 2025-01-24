@@ -1,14 +1,12 @@
----
-description: The cell value must not contain the specified string.
----
-
 # Text not contains
 
 Type: Display
 
+Description: The cell value must not contain the specified string.
+
 <details>
 
-<summary>Example</summary>
+<summary>Example: Fail</summary>
 
 * Cell value: Description
 * Rule value: rip

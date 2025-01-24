@@ -1,10 +1,8 @@
----
-description: The cell value must be an exact match with the specified text.
----
-
 # Text is exactly
 
 Type: Display
+
+Description: The cell value must be an exact match with the specified text.
 
 <details>
 

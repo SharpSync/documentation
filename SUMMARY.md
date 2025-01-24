@@ -63,7 +63,6 @@
 
 * [Settings](property-mappings/settings.md)
 * [Rule templates](property-mappings/rule-templates/README.md)
-  * [Rule Template Parameters](property-mappings/rule-templates/rule-template-parameters.md)
   * [Import / Export](property-mappings/rule-templates/import-export.md)
     * [Append text](property-mappings/rule-templates/import-export/append-text.md)
     * [Calculate number](property-mappings/rule-templates/import-export/calculate-number.md)

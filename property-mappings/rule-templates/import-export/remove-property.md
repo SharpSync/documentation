@@ -6,7 +6,7 @@ description: Removes the specified property when exporting the data.
 
 Type: Export only
 
-Description: Removes the property from the `secondaryExportData` object (see [rowData](../rule-template-parameters.md)).
+Description: Removes the property from the `secondaryExportData` object (see [rowData](broken-reference)).
 
 Implementation: Can only have one Remove Property rule per BOM
 

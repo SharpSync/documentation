@@ -8,7 +8,7 @@ description: >-
 
 Type: Import/Export
 
-Description: Uses the value of 's' ([rowData](../rule-template-parameters.md)) and the equation to calculate and return a new number
+Description: Uses the value of 's' ([rowData](broken-reference)) and the equation to calculate and return a new number
 
 <details>
 

@@ -53,7 +53,7 @@ Import rules work on the raw source data and are applied to each individual data
 
 #### Rule parameters
 
-User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See [Rule Template Parameters](../property-mappings/rule-templates/rule-template-parameters.md)
+User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See [Rule Template Parameters](broken-reference)
 
 ### Rule Legend
 
@@ -87,7 +87,7 @@ The final result for both rules are overlaid in the user interface (the default 
 
 * Datasource 1 is Onshape
 * Datasource 2 is NetSuite
-* 's' is the [rowData ](../property-mappings/rule-templates/rule-template-parameters.md)string value being evaluated
+* 's' is the [rowData ](broken-reference)string value being evaluated
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
@@ -134,7 +134,7 @@ Note that returning any value in the `message` above can be customized by you.
 
 The data from DS2 is imported after that of DS1. The rules start running for DS2.
 
-Be sure also to read and understand [Rule Template Parameters](../property-mappings/rule-templates/rule-template-parameters.md).
+Be sure also to read and understand [Rule Template Parameters](broken-reference).
 
 
 

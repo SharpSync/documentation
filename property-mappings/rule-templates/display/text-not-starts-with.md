@@ -1,17 +1,15 @@
----
-description: The cell value must not start with the specified string.
----
-
 # Text not starts with
 
 Type: Display
 
+Description: The cell value must not start with the specified string.
+
 <details>
 
-<summary>Example</summary>
+<summary>Example: Fail</summary>
 
 * Cell value: Description
 * Rule value: Des
-* Result: Fail - Cell value "Description" starts with "Des"
+* Result: Rule fails - Cell value "Description" starts with "Des"
 
 </details>

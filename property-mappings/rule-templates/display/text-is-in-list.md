@@ -1,19 +1,36 @@
 ---
-description: The cell value must match a value in a string list.
+description: .
 ---
 
 # Text is in list
 
 Type: Display
 
-Implementation: Entries are separated by a comma.
+Description: Entries are separated by a pipe symbol '|'. If the cell value matches an entry, the rule succeeds.
 
 <details>
 
-<summary>Example</summary>
+<summary>Example: Fail</summary>
 
 * Cell value: Desc
-* Rule value: abc,def,ghi
-* Result: Fail - Cell value "Desc" does not match any list value
+* Rule value:&#x20;
+
+`abc|def|ghi`
+
+* Result: Rule Fails - Cell value "Desc" does not match any list value
 
 </details>
+
+<details>
+
+<summary>Example: Success</summary>
+
+* Cell value: Stainless Steel
+* Rule value:&#x20;
+
+`Stainless Steel|Bronze|Metal`&#x20;
+
+* Result: Rule Succeeds - Cell value "Desc" does not match any list value
+
+</details>
+

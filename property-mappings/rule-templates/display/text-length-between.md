@@ -1,22 +1,18 @@
----
-description: >-
-  The number of characters in the cell value must be between the lower and upper
-  limit (both inclusive).
----
-
 # Text length between
 
 Type: Display
 
+Description: The number of characters in the cell value must be between the lower and upper limit (both inclusive).
+
 <details>
 
-<summary>Example: </summary>
+<summary>Example: Success</summary>
 
 * Cell value: Description
 * Rule values:
   * Min length: 1
   * Max length: 11
-* Result: ![](<../../../.gitbook/assets/image (22).png>)
+* Result: Rule passes because the length of 'Description' is 11
 
 
 
@@ -29,13 +25,13 @@ Observations:&#x20;
 
 <details>
 
-<summary>Example: </summary>
+<summary>Example: Success</summary>
 
 * Cell value: D
 * Rule values:
   * Min length: 1
   * Max length: 11
-* Result: ![](<../../../.gitbook/assets/image (23).png>)
+* Result: Rule passes because the length of 'D' is 1
 
 
 
@@ -48,7 +44,7 @@ Observations:&#x20;
 
 <details>
 
-<summary>Example: </summary>
+<summary>Example: Fail</summary>
 
 * Cell value: Descriptions
 * Rule values:

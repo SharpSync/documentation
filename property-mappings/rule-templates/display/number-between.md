@@ -1,12 +1,8 @@
----
-description: >-
-  The number in the cell value must be between (inclusive) the numbers
-  specified.
----
-
 # Number between
 
 Type: Display
+
+Description: The number in the cell value must be between (inclusive) the numbers specified.
 
 <details>
 
@@ -16,7 +12,7 @@ Type: Display
 * Rule values:
   * Min val: 1
   * Max val: 5
-* Result: False, since value is less than min value.
+* Result: Rule fails, since value is less than min value.
 
 </details>
 
@@ -28,7 +24,7 @@ Type: Display
 * Rule values:
   * Min val: 1
   * Max val: 5
-* Result: True, since value is between min and max value (inclusive)
+* Result: Rule passes, since value is between min and max value (inclusive)
 
 </details>
 
@@ -40,6 +36,6 @@ Type: Display
 * Rule values:
   * Min val: 1
   * Max val: 5
-* Result: True, since value is between min and max value (inclusive)
+* Result: Rule passes, since value is between min and max value (inclusive)
 
 </details>

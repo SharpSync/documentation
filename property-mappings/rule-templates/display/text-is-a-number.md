@@ -1,10 +1,8 @@
----
-description: The cell value must be a number.
----
-
 # Text is a number
 
 Type: Display
+
+Description: The cell value must be a number.
 
 <details>
 

@@ -10,8 +10,6 @@ Type: Export/Import
 
 Description: Runs the specified JavaScript function on the cell value and returns a new value, replacing the original
 
-Available parameters:
+This is an advanced rule which requires programming knowledge. It is more difficult to use, but much more powerful.
 
-* s (original value)
-* rowData (the existing row containing rowData.cells which are the accessors)
-* pm (the property mapping)
+See the [Advanced Scripting ](../../../advanced/advanced-scripting.md)section for more detail.

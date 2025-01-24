@@ -1,14 +1,12 @@
----
-description: The cell value must not end with the specified string.
----
-
 # Text not ends with
 
 Type: Display
 
+Description: The cell value must not end with the specified string.
+
 <details>
 
-<summary>Example</summary>
+<summary>Example: Fail</summary>
 
 * Cell value: Description
 * Rule value: ion

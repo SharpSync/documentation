@@ -1,12 +1,8 @@
----
-description: >-
-  The number of characters in the cell value must be exactly the length
-  specified.
----
-
 # Text length is exactly
 
 Type: Display
+
+Description: The number of characters in the cell value must be exactly the length specified.
 
 <details>
 
