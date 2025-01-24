@@ -201,11 +201,11 @@ You can group both of these "sets of steps" in an object list as follows:
 ]
 ```
 
-You finally paste this list in the List Items of the Manufacturing Step property mapping.
+You finally paste this list in the List Items of the Manufacturing Step property mapping, then save the mapping.
 
 #### Using / Setting BOM Routings
 
-You can now save this mapping and load a BOM to see the results in a BOM that was loaded.
+You can now use / set routings by loading a BOM and edit the corresponding routings BOM cells.
 
 <figure><img src="../../.gitbook/assets/netsuite_select_routing_steps.png" alt=""><figcaption><p>Make a selection using Advanced Selection Lists</p></figcaption></figure>
 
