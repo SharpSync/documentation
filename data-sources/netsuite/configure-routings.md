@@ -163,7 +163,7 @@ Take note that there are some limitations imposed by NetSuite that must be follo
 
 #### Finding the Manufacturing Cost Template IDs
 
-To find your available subsidiary ids you can simply select Financial > Manufacturing > Manufacturing Cost Templates, and then grab the `INTERNAL ID`.
+To find your available manufacturing cost template ids you can simply select Financial > Manufacturing > Manufacturing Cost Templates, and then grab the `INTERNAL ID`.
 
 #### Finding the Manufacturing Work Center IDs
 
