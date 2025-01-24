@@ -73,11 +73,11 @@ The colors displayed can be modified under Profile > User Settings > Display
 
 Start by navigating to Property Mappings and click on "Rules" for the Property Mapping you want to edit.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 A panel will appear on the side. Expand the Rules dropdown to reveal the available [list of rules ](../property-mappings/rule-templates/)that can be applied. Select a rule and click `ADD RULE`.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt="" width="214"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt="" width="214"><figcaption></figcaption></figure>
 
 In the example below, the `Format as decimal number` rule runs for both [Data Sources](data-sources.md) (in this example Onshape and NetSuite). The rule runs on the individual strings of data imported.
 

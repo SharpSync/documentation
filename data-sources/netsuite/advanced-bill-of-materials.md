@@ -9,6 +9,8 @@ Advanced BOMs use the following notable features:
 * Routings
 * Manufacturing steps
 
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
 ### Using Advanced BOMs
 
 There are some limitations with the use of advanced BOMs via the NetSuite API. For this reason (at the time of writing), we make use of a custom server side script to create advanced BOMS.
