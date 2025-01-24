@@ -51,30 +51,42 @@ For the property `operationStep` use the settings:
 
 ```json
 [
-{
-    "name" : "Location - Inhouse",
-    "id" : 1,
-    "value" : {
-        "name": "SharpSync routing via rest",
-        "subsidiary": { "id": 1 },
-        "location": { "items": [ { "id": 5 }] }
+  {
+    "name": "Location - Inhouse",
+    "id": 1,
+    "value": {
+      "name": "SharpSync routing via rest",
+      "subsidiary": { "id": 1 },
+      "location": { "items": [{ "id": 5 }] }
     }
-},
-{
-    "name" : "Location - External",
-    "id" : 2,
-    "value" : {
-        "name": "SharpSync routing via rest",
-        "subsidiary": { "id": 1 },
-        "location": { "items": [ { "id": 6 }] }
+  },
+  {
+    "name": "Location - External",
+    "id": 2,
+    "value": {
+      "name": "SharpSync routing via rest",
+      "subsidiary": { "id": 1 },
+      "location": { "items": [{ "id": 6 }] }
     }
-}
+  }
 ]
 ```
 
+#### Finding the subsidiary IDs
+
+To find your available subsidiary ids you can simply select Setup > Other Setup > Subsidiaries, and then grab the `INTERNAL ID`.
+
+For the more technical users, use POSTMAN to authenticate, then
+
+> /GET https://\[companyId].suitetalk.api.netsuite.com/services/rest/record/v1/subsidiary
+
+and then followup with
+
+> /GET https://\[companyId].suitetalk.api.netsuite.com/services/rest/record/v1/subsidiary/{id}
+
 #### Finding the location IDs
 
-To find your available location ids you can simply select Financial > Lists > Locations, and then grab the `INTERNAL ID`.
+To find your available location ids you can simply select Financial > Lists > Locations, and then grab the `INTERNAL ID`. (Note: make sure you use a valid combination of subsidiary and location)
 
 For the more technical users, use POSTMAN to authenticate, then
 
