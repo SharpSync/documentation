@@ -194,7 +194,7 @@ You then add this list as a list of values for a property mapping as follows:
 | Is Manufacturing Step      | Yes           |
 | Rendering Type             | Advanced List |
 | List Display Selector      | name          |
-| List Value Selector        | value         |
+| List Value Selector        | id            |
 
 You can now save this mapping and load a BOM to see the results in a BOM that was loaded.
 
