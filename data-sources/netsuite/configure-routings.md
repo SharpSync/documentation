@@ -43,22 +43,15 @@ To configure routings for NetSuite in SharpSync, add 2 property mapping with the
 
 For the property `operationStep` use the settings:
 
-| Setting                    | Value                                                          |
-| -------------------------- | -------------------------------------------------------------- |
-| Primary source Property    | (Unmapped)                                                     |
-| Secondary source Property  | (Unmapped)                                                     |
-| Is Manufacturing Operation | Yes                                                            |
-| Is Manufacturing Step      | No                                                             |
-| Rendering Type             | Advanced List                                                  |
-| List Display Selector      | name                                                           |
-| List Value Selector        | value                                                          |
-| List Items                 | See List items for Operation Step and Finding the location IDs |
+<table><thead><tr><th width="317">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary source Property</td><td>(Unmapped)</td></tr><tr><td>Secondary source Property</td><td>(Unmapped)</td></tr><tr><td>Is Manufacturing Operation</td><td>Yes</td></tr><tr><td>Is Manufacturing Step</td><td>No</td></tr><tr><td>Rendering Type</td><td>Advanced List</td></tr><tr><td>List Display Selector</td><td>name</td></tr><tr><td>List Value Selector</td><td>value</td></tr><tr><td>List Items</td><td>See List items for Operation Step and Finding the location IDs</td></tr></tbody></table>
 
 #### List items for Operation Step
 
 ```json
-[{
+[
+{
     "name" : "Location - Inhouse",
+    "id" : 1,
     "value" : {
         "name": "SharpSync routing via rest",
         "subsidiary": { "id": 1 },
@@ -67,6 +60,7 @@ For the property `operationStep` use the settings:
 },
 {
     "name" : "Location - External",
+    "id" : 2,
     "value" : {
         "name": "SharpSync routing via rest",
         "subsidiary": { "id": 1 },
@@ -165,10 +159,12 @@ You can group both of these "sets of steps" in an object list as follows:
 [
   {
     "name" : "Set 1 - Cut, Galv, Powder",
+    "id" : 1,
     "value" : [] // "{paste the values from set 1}",
   }
   {
-    "name" : "Set 2 - Galv, Powder", 
+    "name" : "Set 2 - Galv, Powder",
+    "id" : 2,
     "value" : [] // "{paste the values from set 2}",
   }
 ]
