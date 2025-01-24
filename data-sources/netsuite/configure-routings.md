@@ -45,7 +45,7 @@ To configure routings for NetSuite in SharpSync, add 2 property mapping with the
 
 For the property `operationStep` use the settings:
 
-<table><thead><tr><th width="317">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary source Property</td><td>(Unmapped)</td></tr><tr><td>Secondary source Property</td><td>(Unmapped)</td></tr><tr><td>Is Manufacturing Operation</td><td>Yes</td></tr><tr><td>Is Manufacturing Step</td><td>No</td></tr><tr><td>Rendering Type</td><td>Advanced List</td></tr><tr><td>List Display Selector</td><td>name</td></tr><tr><td>List Value Selector</td><td>value</td></tr><tr><td>List Items</td><td>See List items for Operation Step and Finding the location IDs</td></tr></tbody></table>
+<table><thead><tr><th width="265">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary source Property</td><td>(Unmapped)</td></tr><tr><td>Secondary source Property</td><td>(Unmapped)</td></tr><tr><td>Is Manufacturing Operation</td><td>Yes</td></tr><tr><td>Is Manufacturing Step</td><td>No</td></tr><tr><td>Rendering Type</td><td>Advanced List</td></tr><tr><td>List Display Selector</td><td>name</td></tr><tr><td>List Value Selector</td><td>id</td></tr><tr><td>List Items</td><td>See List items for Operation Step and Finding the subsidiary and location IDs</td></tr></tbody></table>
 
 #### List items for Operation Step
 
