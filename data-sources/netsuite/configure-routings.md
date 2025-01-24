@@ -161,6 +161,16 @@ This leads us to a JSON array body (Let's call this Set 1) that looks something 
 
 Take note that there are some limitations imposed by NetSuite that must be followed. In the example shown above you cannot have `lagTime` at any step in the list of steps except the last.
 
+#### Finding the Manufacturing Cost Template IDs
+
+To find your available subsidiary ids you can simply select Financial > Manufacturing > Manufacturing Cost Templates, and then grab the `INTERNAL ID`.
+
+#### Finding the Manufacturing Work Center IDs
+
+_(Work in progress)_
+
+
+
 However for a different type of assembly you might not require the cutting part as that is subcontracted out, so you have a different set of steps (Let's call this Set 2):
 
 ```json
