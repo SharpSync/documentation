@@ -163,7 +163,7 @@ You can group both of these "sets of steps" in an object list as follows:
     "name" : "Set 1 - Cut, Galv, Powder",
     "id" : 1,
     "value" : [] // "{paste the values from set 1}",
-  }
+  },
   {
     "name" : "Set 2 - Galv, Powder",
     "id" : 2,
