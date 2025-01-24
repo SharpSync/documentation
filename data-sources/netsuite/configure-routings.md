@@ -219,8 +219,16 @@ For each of the above defined property mappings, go to rules and add a `Text Man
 
 Paste the following `JavaScript expression` :
 
-```
-if (s === "") {   return s; } else {   const listItem = JSON.parse(pm.objectListItems).find((item) => item.id == s);   return listItem.value; }
+```javascript
+if (s === "") 
+{
+  return s;
+}
+else
+{
+  const listItem = JSON.parse(pm.objectListItems).find((item) => item.id == s);
+  return listItem.value;
+}
 ```
 
 Check the checkbox for `NetSuite`
