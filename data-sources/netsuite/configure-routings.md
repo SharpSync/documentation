@@ -35,13 +35,13 @@ An individual routing
 
 
 
-#### Step 1: Manufacturing operation
-
 To configure routings for NetSuite in SharpSync, add 2 property mapping with the setting enabled:
 
 * `Is Manufacturing Operation` (let's refer to this as  `operationStep`)
 * AND 1 more mapping
 * `Is Manufacturing Step` (let's refer to this as`manufacturingStep`)
+
+#### Step 1: Manufacturing operation
 
 For the property `operationStep` use the settings:
 
@@ -98,6 +98,21 @@ and then followup with
 
 #### Step 2: Manufacturing operation steps
 
+For the property `manufacturingStep` use the settings:
+
+| Setting                    | Value                                 |
+| -------------------------- | ------------------------------------- |
+| Primary source Property    | (Unmapped)                            |
+| Secondary source Property  | (Unmapped)                            |
+| Is Manufacturing Operation | No                                    |
+| Is Manufacturing Step      | Yes                                   |
+| Rendering Type             | Advanced List                         |
+| List Display Selector      | name                                  |
+| List Value Selector        | id                                    |
+| List Items                 | See List items for Manufacturing Step |
+
+#### List items for Manufacturing Step
+
 Operation steps are groupings of steps performed on an operation. Say you have a default set of steps for an assembly. Let's say it's to be powdercoated, cut, galvanized, then you'll want setup the steps accordingly (let's call this Set 1):
 
 You mileage may vary, but the default items required for setting up a routing are:
@@ -144,6 +159,8 @@ This leads us to a JSON array body (Let's call this Set 1) that looks something 
 ]
 ```
 
+Take note that there are some limitations imposed by NetSuite that must be followed. In the example shown above you cannot have `lagTime` at any step in the list of steps except the last.
+
 However for a different type of assembly you might not require the cutting part as that is subcontracted out, so you have a different set of steps (Let's call this Set 2):
 
 ```json
@@ -184,17 +201,9 @@ You can group both of these "sets of steps" in an object list as follows:
 ]
 ```
 
-You then add this list as a list of values for a property mapping as follows:
+You finally paste this list in the List Items of the Manufacturing Step property mapping.
 
-| Setting                    | Value         |
-| -------------------------- | ------------- |
-| Primary source Property    | (Unmapped)    |
-| Secondary source Property  | (Unmapped)    |
-| Is Manufacturing Operation | No            |
-| Is Manufacturing Step      | Yes           |
-| Rendering Type             | Advanced List |
-| List Display Selector      | name          |
-| List Value Selector        | id            |
+#### Using / Setting BOM Routings
 
 You can now save this mapping and load a BOM to see the results in a BOM that was loaded.
 
@@ -202,5 +211,5 @@ You can now save this mapping and load a BOM to see the results in a BOM that wa
 
 
 
-Take note that there are some limitations imposed by NetSuite that must be followed. In the example shown above you cannot have `lagTime` at the middle of the list of steps, only at the end
+
 
