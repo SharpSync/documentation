@@ -213,6 +213,20 @@ You can group both of these "sets of steps" in an object list as follows:
 
 You finally paste this list in the List Items of the Manufacturing Step property mapping, then save the mapping.
 
+#### Add Routing Mappings Export Rules
+
+For each of the above defined property mappings, go to rules and add a `Text Manipulation` `Export` rule.
+
+Paste the following `JavaScript expression` :
+
+```
+if (s === "") {   return s; } else {   const listItem = JSON.parse(pm.objectListItems).find((item) => item.id == s);   return listItem.value; }
+```
+
+Check the checkbox for `NetSuite`
+
+Then save the rule.
+
 #### Using / Setting BOM Routings
 
 You can now use / set routings by loading a BOM and edit the corresponding routings BOM cells.
