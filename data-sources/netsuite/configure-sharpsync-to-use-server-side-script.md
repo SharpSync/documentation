@@ -2,6 +2,8 @@
 
 Server side scripting allows SharpSync to configure fields in NetSuite that are not available via the REST api.
 
+To use server side scripting to create items, in SharpSync do the following under `Data Sources`:
+
 * Add Netsuite as a data source
 * Click the `Configure` button
 * Navigate to the `Configuration` section
