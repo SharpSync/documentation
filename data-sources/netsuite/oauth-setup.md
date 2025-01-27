@@ -69,7 +69,7 @@ Navigate to the role you want to assign the permissions to, and add the followin
 
 > Setup > Roles > Manage Roles > Developer (Or whichever role you want to assign the permissions to)
 
-For a comprehensive list of permissions required for users and for setting up the integration, refer to the [permissions.md](permissions.md "mention") page
+For a comprehensive list of permissions required for users and for setting up the integration, refer to the [Permissions](permissions.md) page
 
 ### Testing the OAuth setup
 
