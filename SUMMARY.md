@@ -4,11 +4,11 @@
 
 ## Fundamentals
 
-* [Onboarding](fundamentals/onboarding/README.md)
-  * [Registration](fundamentals/onboarding/registration.md)
-  * [Landing Page](fundamentals/onboarding/landing-page.md)
-  * [Support](fundamentals/onboarding/support.md)
-  * [Subscription](fundamentals/onboarding/subscription.md)
+* [Getting Started](fundamentals/getting-started/README.md)
+  * [Registration](fundamentals/getting-started/registration.md)
+  * [Landing Page](fundamentals/getting-started/landing-page.md)
+  * [Support](fundamentals/getting-started/support.md)
+  * [Subscription](fundamentals/getting-started/subscription.md)
 * [Data Sources](fundamentals/data-sources.md)
 * [Property Mappings](fundamentals/property-mappings.md)
 * [Rule Templates](fundamentals/rule-templates.md)

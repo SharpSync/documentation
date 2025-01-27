@@ -19,11 +19,9 @@ Welcome to the SharpSync! Here you'll get an overview of all the amazing feature
 
 You'll see some of the best parts of SharpSync in action — and find help on how you can manage and setup your integrations with your CAD and ERP systems.
 
-
-
 ### Jump right in to the fundamentals
 
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Onboarding</strong></td><td>Register your organization</td><td><a href=".gitbook/assets/sharpsync_card.png">sharpsync_card.png</a></td><td></td><td><a href="https://app.sharpsync.net/organization/register">https://app.sharpsync.net/organization/register</a></td></tr><tr><td><strong>Data Sources</strong></td><td>Setting up Data sources</td><td><a href=".gitbook/assets/database_to_database.png">database_to_database.png</a></td><td></td><td><a href="fundamentals/data-sources.md">data-sources.md</a></td></tr><tr><td><strong>Property Mappings</strong></td><td>Setting up Property Mappings between sources</td><td><a href=".gitbook/assets/property_mapping_card.png">property_mapping_card.png</a></td><td></td><td><a href="fundamentals/property-mappings.md">property-mappings.md</a></td></tr><tr><td><strong>Rules</strong></td><td>Using the standard rule templates</td><td><a href=".gitbook/assets/rule_mapping_card.png">rule_mapping_card.png</a></td><td></td><td><a href="fundamentals/rule-templates.md">rule-templates.md</a></td></tr><tr><td><strong>Advanced Rules</strong></td><td>Using advanced rule templates</td><td><a href=".gitbook/assets/rule_mapping_card.png">rule_mapping_card.png</a></td><td></td><td><a href="property-mappings/rule-templates/">rule-templates</a></td></tr><tr><td><strong>Derivates</strong></td><td>Exporting and transferring CAD files (e.g. STEP, DXF, DWG)</td><td><a href=".gitbook/assets/derivatives_card.png">derivatives_card.png</a></td><td></td><td><a href="advanced/derivatives.md">derivatives.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Register your organization</td><td><a href=".gitbook/assets/sharpsync_card.png">sharpsync_card.png</a></td><td></td><td><a href="fundamentals/getting-started/">getting-started</a></td></tr><tr><td><strong>Data Sources</strong></td><td>Setting up Data sources</td><td><a href=".gitbook/assets/database_to_database.png">database_to_database.png</a></td><td></td><td><a href="fundamentals/data-sources.md">data-sources.md</a></td></tr><tr><td><strong>Property Mappings</strong></td><td>Setting up Property Mappings between sources</td><td><a href=".gitbook/assets/property_mapping_card.png">property_mapping_card.png</a></td><td></td><td><a href="fundamentals/property-mappings.md">property-mappings.md</a></td></tr><tr><td><strong>Rules</strong></td><td>Using the standard rule templates</td><td><a href=".gitbook/assets/rule_mapping_card.png">rule_mapping_card.png</a></td><td></td><td><a href="fundamentals/rule-templates.md">rule-templates.md</a></td></tr><tr><td><strong>Advanced Rules</strong></td><td>Using advanced rule templates</td><td><a href=".gitbook/assets/rule_mapping_card.png">rule_mapping_card.png</a></td><td></td><td><a href="property-mappings/rule-templates/">rule-templates</a></td></tr><tr><td><strong>Derivates</strong></td><td>Exporting and transferring CAD files (e.g. STEP, DXF, DWG)</td><td><a href=".gitbook/assets/derivatives_card.png">derivatives_card.png</a></td><td></td><td><a href="advanced/derivatives.md">derivatives.md</a></td></tr></tbody></table>
 
 
 
@@ -42,11 +40,11 @@ See also Troubleshooting
 Important concepts:
 
 * What is SharpSync
-* Getting started
-* Data Sources
-* Property mappings: Setup
-* Property mappings: Rules
-* Derivatives
+* [Getting Started](fundamentals/getting-started/)
+* [Data Sources](fundamentals/data-sources.md)
+* [Property Mappings: Setup](fundamentals/property-mappings.md)
+* [Property Mappings: Rules](fundamentals/rule-templates.md)
+* [Derivatives](advanced/derivatives.md)
 * Subscriptions
 
 ### What is SharpSync?
