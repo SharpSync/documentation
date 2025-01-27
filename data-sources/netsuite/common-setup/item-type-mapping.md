@@ -32,23 +32,29 @@ When an item is created in NetSuite, it is typically one of the item types menti
 assemblyitem|inventoryitem|noninventorypurchaseitem|noninventorysaleitem|noninventoryresaleitem
 ```
 
-### Item Type Property Mapping Rules
-
-In addition to this you'll want to create 2 rules:
-
-1. A text manipulation rule for NetSuite / Primary CAD system that runs the following script (or similar based on your setup) on data import:
-
-```javascript
-if (rowData.isAssemblyRow) 
-    return 'assemblyitem'; 
-
-return 'noninventorypurchaseitem'; /* or whatever the default item type is */
-```
-
-2. A `Text not empty` rule. This will prevent errors when submitting the BOM
-
 On a more technical note: These items are derived by calling the endpoint
 
 > &#x20;/GET `{{netsuite-api}}/services/rest/record/v1/metadata-catalog` with an empty body
 
-### &#x20;
+### Item Type Property Mapping Rules
+
+In addition to this you'll want to create the following rules:
+
+1. A text manipulation rule for the Primary Source (CAD source) system that runs the following script (or similar based on your conditions) on data import:
+
+```javascript
+if (rowData.isAssemblyRow === true) 
+    return 'assemblyitem'; 
+
+return 'inventoryitem'; /* or whatever your default item type is */
+```
+
+2.  A text manipulation rule for the Secondary Source (NetSuite) that runs the following script on data import to derive the existing NetSuite item type:\
+
+
+    ```javascript
+    return rowData.secondaryDefaultItem;
+    ```
+
+
+3. A `Text not empty` rule. This will prevent errors when submitting the BOM&#x20;
