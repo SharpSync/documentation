@@ -63,7 +63,7 @@
 ## Property Mappings
 
 * [Settings](property-mappings/settings.md)
-* [Rule templates](property-mappings/rule-templates/README.md)
+* [Rule Templates](property-mappings/rule-templates/README.md)
   * [Import / Export](property-mappings/rule-templates/import-export.md)
     * [Append text](property-mappings/rule-templates/import-export/append-text.md)
     * [Calculate number](property-mappings/rule-templates/import-export/calculate-number.md)
@@ -105,5 +105,5 @@
 
 ## User management
 
-* [User management](user-management/user-management.md)
+* [User Management](user-management/user-management.md)
 * [Application Permissions](user-management/application-permissions.md)
