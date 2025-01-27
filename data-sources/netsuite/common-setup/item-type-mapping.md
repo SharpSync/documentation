@@ -53,7 +53,7 @@ return 'inventoryitem'; /* or whatever your default item type is */
 
 
     ```javascript
-    return rowData.secondaryDefaultItem;
+    return rowData.secondaryDefaultItemCreationType;
     ```
 
 
