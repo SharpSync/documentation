@@ -19,7 +19,7 @@ Server side scripting uses a script in NetSuite to set default custom field valu
 
 ### Major steps
 
-* [Configure the server side script](configure-server-side-script.md)
+* [Configure the server side script](configure-server-side-script/)
 * [Configure SharpSync to use server side scripting](configure-sharpsync-to-use-server-side-script.md)
 * [Configure Routings](configure-routings.md) \[optional]
 
