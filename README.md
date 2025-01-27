@@ -45,7 +45,7 @@ Important concepts:
 * [Property Mappings: Setup](fundamentals/property-mappings.md)
 * [Property Mappings: Rules](fundamentals/rule-templates.md)
 * [Derivatives](advanced/derivatives.md)
-* Subscriptions
+* [Subscriptions](fundamentals/getting-started/subscription.md)
 
 ### What is SharpSync?
 
