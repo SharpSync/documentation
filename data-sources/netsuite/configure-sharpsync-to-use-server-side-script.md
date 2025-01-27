@@ -17,6 +17,3 @@ To use server side scripting to create items, in SharpSync do the following unde
 * Configure your `Bom Revision Naming Scheme`
 * Click the Save button
 
-A custom script example follows below. You can certainly modify this to your heart's content, but the overarching details are captured here
-
-Before uploading to Netsuite, save the below contents to a `*.js` file. See the example called Example script

@@ -1,5 +1,9 @@
 # Example Server Side Script
 
+A custom script example follows below. You can certainly modify this to your heart's content, but the overarching details are captured here
+
+Before uploading to Netsuite, save the below contents to a `*.js` file.
+
 ```javascript
 /*
   Created for SharpSync.net
@@ -343,4 +347,3 @@ function createBomFromContext(context, record) {
   return itemRecord;
 }
 ```
-
