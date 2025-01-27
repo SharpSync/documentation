@@ -1,12 +1,12 @@
 # Configure Accounts Selection
 
-You want to setup a list of accounts to pick from for Income and Expense accounts. This will let you specify a default Income and expense account when creating new items.
+You want to setup a list of accounts to pick from for Income and Expense accounts. This will let you specify a default Income and expense account when creating new items (for each item type).
 
 To setup a list of accounts to pick from in NetSuite, we'll query the `accounts` list and select some values from it.
 
 Steps:
 
-* Create [a new property mapping](configure-accounts-selection.md#create-a-property-mapping) for income account and expense account
+* Create [a new property mapping](configure-accounts-selection.md#create-a-property-mapping) for income account and a new mapping for expense account (make sure to create additional mapping pairs for each item type you need)
 * [Specify the list query](configure-accounts-selection.md#specify-the-list-query)
 * Setup the selection
 
@@ -158,7 +158,7 @@ Suppose we want to display the account name from the above example as `5800 Aman
 
 We then specify a token selection string of `{parent.refName}` because we're selecting the child `refName` from the token called `parent`
 
-Both the examples above will result in a list seperated by the pipe symbol |
+Both the examples above will result in a list separated by the pipe symbol |
 
 note: if you don't specify the selector string, then the entire json object will the shown as the listitem.
 
