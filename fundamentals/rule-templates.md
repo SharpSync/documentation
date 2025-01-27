@@ -6,7 +6,7 @@ icon: list-check
 
 Rule templates are optional automated functions that either:
 
-* Edits the row data coming from a [Data Source](data-sources.md)  or&#x20;
+* Edits the row data coming from or going to a [Data Source](data-sources.md)  or&#x20;
 * Display highlights based on the data or change the data before it is displayed (see [Rule legend](rule-templates.md#rule-legend))
 
 ### Rules Fundamentals
@@ -53,7 +53,7 @@ Import rules work on the raw source data and are applied to each individual data
 
 #### Rule parameters
 
-User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See [Rule Template Parameters](broken-reference)
+User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See [Advanced Scripting](../advanced/advanced-scripting.md)
 
 ### Rule Legend
 
@@ -134,9 +134,7 @@ Note that returning any value in the `message` above can be customized by you.
 
 The data from DS2 is imported after that of DS1. The rules start running for DS2.
 
-Be sure also to read and understand [Rule Template Parameters](broken-reference).
-
-
+Be sure also to read and understand [Advanced Scripting](../advanced/advanced-scripting.md).
 
 ### Display Rules
 
