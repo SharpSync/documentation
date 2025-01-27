@@ -5,6 +5,7 @@ The pages below show common setup scenarios. It is by no means exhaustive, but w
 * [Configure Accounts selection](configure-accounts-selection.md)
 * [Configure Item Type mapping](item-type-mapping.md)
 * [Configure New assemblies as `isPhantom`](configure-new-assemblies-as-isphantom.md)
+* [Configure subsidiary selection](configure-subsidiary-selection.md)
 * [Configure a thumbnail folder](configure-thumbnail-folder.md)
 * [Configure a `where-used`link](configure-where-used-link.md)
 
