@@ -85,9 +85,9 @@ In the example below, the `Format as decimal number` rule runs for both [Data So
 
 The final result for both rules are overlaid in the user interface (the default would be a blue rectangle). Below is a conceptual illustration of the process where&#x20;
 
-* Datasource 1 is Onshape
-* Datasource 2 is NetSuite
-* 's' is the [rowData ](broken-reference)string value being evaluated
+* Data Source 1 is DS1
+* Data Source 2 is DS2
+* 's' is the [rowData](broken-reference) string value being evaluated
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
