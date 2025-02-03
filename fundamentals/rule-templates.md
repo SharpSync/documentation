@@ -9,6 +9,8 @@ Rule templates are optional automated functions that either:
 * Edits the row data coming from or going to a [Data Source](data-sources.md)  or&#x20;
 * Display highlights based on the data or change the data before it is displayed (see [Rule legend](rule-templates.md#rule-legend))
 
+A list of all the supported rules may be found here at [rule-templates](../property-mappings/rule-templates/ "mention")
+
 ### Rules Fundamentals
 
 The main concepts to understand for rules are the following:

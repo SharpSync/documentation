@@ -2,7 +2,7 @@
 icon: list-check
 ---
 
-# Rule templates
+# Rule Templates
 
 Rule templates are optional automated functions that either:
 
@@ -18,4 +18,4 @@ Rules are grouped by two major types: &#x20;
 
 Import and export rules are considered data transformation rules and replaces the value of the cell with a new value.
 
-Click either of these links for more information.
+Click either of these links above for more information.
