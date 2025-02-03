@@ -92,7 +92,7 @@ The final result for both rules are overlaid in the user interface (the default 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-The rule running for NetSuite _is not aware of the data being imported from Onshape_. That means that when running a rule such as a JavaScript `Text Manipulation` rule, the rule runs only for one source at a time, _never for both at the same time_.
+The rule running for DS1 (e.g. Onshape) _is not aware of the data being imported from DS2_ (e.g. NetSuite)_._ That means that when running a rule such as a JavaScript `Text Manipulation` rule, the function runs only for _one_ source at a time, _never for both at the same time_.
 {% endhint %}
 
 {% hint style="info" %}
