@@ -31,9 +31,15 @@ The database name is case sensitive.
 * On the second tab (BOM Configuration) enter the version number  in the form of 2 digits.
 * Click the `SAVE` button to save your connection details and close the form.
 * Click `AUTHENTICATE`. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
-* Configure the Primary and Secondary Identifiers as follows:
-  * Primary Identifier: `name`
-  * Alternative Identifier: `product_tmpl_id`
+
+### Primary and Alternative component identifiers
+
+The primary and alternative identifiers can be used for product.product  or product.template, though if you plan on using configurations, you would probably select a field for `product.product`
+
+Configure the [Primary and Alternative ](../../../fundamentals/data-sources.md)component Identifiers as follows:
+
+* Primary Identifier: `default_code`
+* Alternative Identifier:  `name`
 
 {% hint style="info" %}
 You can specify any Primary Identifier (field linked to the product.template model) that is used on product templates e.g. name, barcode. You can even use custom field names, as long as the field uniquely identifies the part (it must be a unique identifier)
@@ -68,7 +74,7 @@ Database name
 <mark style="color:orange;">The name of the database in Odoo. Take note that it is case sensitive</mark>
 
 ```
-odoo177
+odoo.app.17.713
 ```
 
 Basic Auth Username
