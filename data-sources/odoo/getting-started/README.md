@@ -1,6 +1,10 @@
 # Getting Started
 
-See [Authentication + Configuration](authentication-+-configuration.md) before continuing with the below;
+See [Authentication + Configuration](authentication-+-configuration.md) before continuing with the below.
+
+{% hint style="warning" %}
+It is important to start with something simple like Description and Quantity . Once you've confirmed that a Bill of Materials is being created according to your specifications and that is working to your liking, work your way up from there to more complicated mappings like routings, unique values, and generated values.
+{% endhint %}
 
 ### Add Property Mappings
 
@@ -53,7 +57,7 @@ Add the following rules, then click the save button for each rule.
 #### Description
 
 {% hint style="info" %}
-Description (mapped to `product.template.description`) in Odoo is an HTML field. So it comes with some HTML tags. It can be desireable to remove these, so the following rule accounts for this by removing \<p>\</p> paragraph tags
+Description (mapped to `product.template.description`) in Odoo is an HTML field. So it comes with some HTML tags. It can be desirable to remove these tags, so the following import rule accounts for this by removing \<p>\</p> paragraph tags
 {% endhint %}
 
 | Rule                  | Value                                                      | Process for |
@@ -64,7 +68,7 @@ Description (mapped to `product.template.description`) in Odoo is an HTML field.
 #### Quantity
 
 {% hint style="info" %}
-Quantity (mapped to `mrp.bom.product_qty`) in Odoo is an numeric field. We want to format it so that it displays as the same number of decimal digits as those coming from our primary source
+Quantity (mapped to `mrp.bom.product_qty`) in Odoo is an numeric field. We want to format it so that it displays as the same number of decimal digits as those coming from our Primary Data Source. This is an optional rule mapping.
 {% endhint %}
 
 
