@@ -176,17 +176,7 @@ Property Mapping Rules are used to define the output format of the BOM data show
 
 BOM with list of pass/fail Rules on overlay for part A4 - Base Plate (Red Arrow)
 
-#### Render types
 
-Properties mapped from a source may be displayed using different representations on screen. The options are:
-
-| Render Type | Description                                                                                                                                                                                                             |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Checkbox    | Attempts to convert values to true/false. Any value of True or true will be converted. Tip: Use rules to parse values to True                                                                                           |
-| Free Text   | Displays the return value from the source as is. If it is a single value like 'myvalue' the that will be displayed. If a more complex object like `{ "id" : "myvalue"}` then the entire object is displayed as a string |
-| List        | Displays a list of values from the list specified                                                                                                                                                                       |
-| Object List | This is a special list (more detail below) that serves as a substitution list. You would pick a value from a list, but the actual value is a different value                                                            |
-| Url         | Displays the underlying text as a clickable URL. The URL is always opened in a new tab                                                                                                                                  |
 
 **Object list setup example**
 

@@ -6,13 +6,13 @@ When setting up an Odoo source, it is useful to query the Odoo instance for list
 
 > \[!NOTE] For this to work the type in Odoo (as shown in SharpSync) must be `nestedObject`. We don't currently support list queries for other native SharpSync types like `array`
 
-| List name         | Returns                                        | Sample data                                                           |
-| ----------------- | ---------------------------------------------- | --------------------------------------------------------------------- |
-| product.category  | Product template categories                    | `[ 1, "All" ], [ 9, "All / Consumable" ],`                            |
-| product.attribute | Returns registered attributes                  | \[ "Color", "Duration", "Finish" ]                                    |
-| product.tag       | Tags assigned on the `General Information` tab | `[ 11, "Kit" ], [ 12, "Assemble" ], [ 81, "Switches" ]`               |
-| stock.location    | Locations you can assign for warehouses        | `[ 14986, "MP" ], [ 14995, "MP/Assemble" ], [ 14990, "MP/Output" ],`  |
-| stock.route       | Routes available for selection \[2]            | `[ 1, "Replenish on Order (ROO)" ], [ 2, "Receive in 1 step (RIS)" ]` |
+| List name              | Returns                                        | Sample data                                                           |
+| ---------------------- | ---------------------------------------------- | --------------------------------------------------------------------- |
+| product.category       | Product template categories                    | `[ 1, "All" ], [ 9, "All / Consumable" ],`                            |
+| product.attribute \*\* | Returns registered attributes                  | \[ "Color", "Duration", "Finish" ]                                    |
+| product.tag            | Tags assigned on the `General Information` tab | `[ 11, "Kit" ], [ 12, "Assemble" ], [ 81, "Switches" ]`               |
+| stock.location         | Locations you can assign for warehouses        | `[ 14986, "MP" ], [ 14995, "MP/Assemble" ], [ 14990, "MP/Output" ],`  |
+| stock.route            | Routes available for selection \[2]            | `[ 1, "Replenish on Order (ROO)" ], [ 2, "Receive in 1 step (RIS)" ]` |
 
 {% hint style="info" %}
 ```postman_json
@@ -21,6 +21,20 @@ You can view and configure all the attributes by navigating to Inventory > Confi
 {% endhint %}
 
 
+
+\*\* The list `product.attribute` is special in that you can expand upon the query by adding attribute name at the end in square brackets. Example, by looking at the list values above, you can use the value&#x20;
+
+> `product.attribute["Finish"]`&#x20;
+
+This will query all the values of the `Finish` attribute.
+
+However this may return complex values which you could refine with a value selector such as&#x20;
+
+> {id} : {name}
+
+### The result returned from this may look something like this&#x20;
+
+> 1 : |10 : Powder Blue|2 : |3 : |4 : |9 : Satin Black
 
 ### List data (e.g. Stock Routes)
 
