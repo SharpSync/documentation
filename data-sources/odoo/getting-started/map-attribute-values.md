@@ -74,8 +74,8 @@ Let's say  the values returned from the above list is as follows:
 
 * Click the copy button next to the generated list of values
 * Change the Property Mapping [Rendering Type](../../../property-mappings/settings.md) to `Advanced Multi Select List`
-* For `List Display Selector`, enter `id`
-* For List Value Selector, enter `name`
+* For `List Display Selector`, enter <mark style="color:blue;">`name`</mark>
+* For List Value Selector, enter <mark style="color:blue;">`id`</mark>
 * For List Items, transform the values into an array of values as follows:
 
 ```json
