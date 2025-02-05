@@ -1,9 +1,5 @@
 # Setting up a thumbnail folder
 
-(Work in progress)
-
-
-
 While not strictly necessary, it is recommended to setup a thumbnails folder in NetSuite. This lets you generate an image preview for a file in NetSuite.
 
 ## NetSuite Setup of Thumbnail folder
