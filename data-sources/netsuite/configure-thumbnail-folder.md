@@ -2,6 +2,10 @@
 
 ## NetSuite Setup of Thumbnail folder
 
+(Work In Progress
+
+
+
 To successfully upload thumbnails to NetSuite, you need the following 3 things:
 
 * OAuth `clientId` and `clientSecret` (aka consumer key and consumer secret)
