@@ -16,15 +16,17 @@ Base API path
 https://[customerId].suitetalk.api.netsuite.com
 ```
 
-Authentication Types (see below\*\*)
+Authentication Types
 
 <mark style="color:orange;">The type of authentication method to use when authenticating with NetSuite. We only support:</mark>
 
-> OAuth 2.0
+```
+OAuth 2.0
+```
 
 OAuth Url
 
-<mark style="color:orange;">The URL where authentication initially happens</mark>
+<mark style="color:orange;">The URL where authentication initially happens:</mark>
 
 ```
 https://[customerId].app.netsuite.com/app/login/oauth2/authorize.nl
@@ -32,7 +34,7 @@ https://[customerId].app.netsuite.com/app/login/oauth2/authorize.nl
 
 OAuth Token Url
 
-<mark style="color:orange;">The URL where tokens are created / renewed. Typically something like</mark>&#x20;
+<mark style="color:orange;">The URL where tokens are created / renewed. Typically something like:</mark>
 
 ```
 https://[customerId].suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token
@@ -40,19 +42,19 @@ https://[customerId].suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/tok
 
 OAuth Client Client Id
 
-<mark style="color:orange;">The OAuth Client Id registered for the SharpSync application</mark>
+<mark style="color:orange;">The OAuth Client Id registered for the SharpSync application. Usually generated  by the integration record created:</mark>
 
 > {some long string of text}
 
 OAuth Client Secret
 
-<mark style="color:orange;">The OAuth Client secret registered for the SharpSync application</mark>
+<mark style="color:orange;">The OAuth Client secret registered for the SharpSync application. Usually generated  the first time the integration record is created:</mark>
 
 > {some long string of text}
 
 OAuth Scopes
 
-<mark style="color:orange;">Think of this as the permissions needed by your OAuth application. You should set this to:</mark>
+<mark style="color:orange;">Think of this as the permissions needed by your OAuth application  to send and receive data. The</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`restlets`</mark> <mark style="color:orange;"></mark><mark style="color:orange;">scope is optional but highly recommended. Without it you will not be able to upload thumbnails. You should set this to:</mark>
 
 ```
 rest_webservices,restlets
@@ -64,14 +66,3 @@ rest_webservices,restlets
 {% endtab %}
 {% endtabs %}
 
-
-
-<details>
-
-<summary> ** Authentication Types</summary>
-
-* OAuth 2.0 - the latest greatest method which is the most robust and secure
-* API Key - not currently supported
-* Basic Auth (username / password) - not currently supported
-
-</details>
