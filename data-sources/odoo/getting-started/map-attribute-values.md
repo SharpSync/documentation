@@ -2,6 +2,8 @@
 
 {% hint style="danger" %}
 This page is a work in progress.&#x20;
+
+Reading attribute values are supported, but writing is in progress. Check back here  frequently for updates
 {% endhint %}
 
 
