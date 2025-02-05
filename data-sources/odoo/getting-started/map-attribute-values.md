@@ -145,4 +145,15 @@ return [];
 
 
 
-This will return a string of 'ids' to the screen. We need to convert this to an actual array
+This will return a string of 'ids' to the screen.&#x20;
+
+
+
+
+
+### Write the values back to Odoo
+
+{% hint style="info" %}
+Writing values back to Odoo is  a work in progress. Please check back here regularly
+{% endhint %}
+
