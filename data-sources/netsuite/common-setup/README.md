@@ -2,12 +2,12 @@
 
 The pages below show common setup scenarios. It is by no means exhaustive, but we've found these helpful.
 
-* [Configure Accounts selection](configure-accounts-mappings.md)
-* [Configure Item Type mapping](item-type-mapping.md)
-* [Configure New assemblies as `isPhantom`](configure-isphantom-mapping.md)
-* [Configure subsidiary selection](configure-subsidiary-mapping.md)
-* [Configure a thumbnail folder](broken-reference)
-* [Configure a `where-used`link](configure-where-used-link-mapping.md)
+* [Configure accounts mappings](configure-accounts-mappings.md)
+* [Configure ItemType mapping](item-type-mapping.md)
+* [Configure isPhantom mapping](configure-isphantom-mapping.md)
+* [Configure subsidiary mapping](configure-subsidiary-mapping.md)
+* [Configure a `where-used`link mapping](configure-where-used-link-mapping.md)
+* [Configure thumbnail mapping](configure-thumbnail-mapping.md)
 
 #### Caveats
 
