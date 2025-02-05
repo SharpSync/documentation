@@ -124,7 +124,60 @@ The next step will be to parse the values from Odoo so that it automatically sel
 
 
 
-Add a new Rule Mapping:
+### Add a new Rule Mapping
+
+The values that arrive from Odoo are complex nested values (the type is `nestedObject` in SharpSync) and looks something like this:
+
+```json
+[
+  {
+    "id": 27,
+    "value_count": 2,
+    "sequence": 10,
+    "attribute_id": {
+      "id": 1,
+      "display_name": "Legs"
+    },
+    "value_ids": [
+      {
+        "id": 1,
+        "display_name": "Steel",
+        "color": 9
+      },
+      {
+        "id": 2,
+        "display_name": "Aluminium",
+        "color": 3
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "value_count": 2,
+    "sequence": 11,
+    "attribute_id": {
+      "id": 2,
+      "display_name": "Color"
+    },
+    "value_ids": [
+      {
+        "id": 3,
+        "display_name": "White",
+        "color": 3
+      },
+      {
+        "id": 4,
+        "display_name": "Black",
+        "color": 3
+      }
+    ]
+  }
+]
+```
+
+This must be converted this to a more readable format for the BOM comparison screen, so we'll make use of an import rule. Navigate to the Property Mapping. Add a new Import Rule:
+
+
 
 <table><thead><tr><th width="162">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Rule Type</td><td>Import</td></tr><tr><td>Rule Name</td><td>Text Manipulation</td></tr><tr><td>Value</td><td><p></p><pre class="language-javascript"><code class="lang-javascript">let sArr = JSON.parse(s); 
 let attributeName = "Finish";  
