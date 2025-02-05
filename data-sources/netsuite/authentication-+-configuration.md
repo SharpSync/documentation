@@ -6,6 +6,21 @@ description: Configuration of a Netsuite Datasource
 
 NetSuite supports a number of types of authentication. The auth method supported in SharpSync is OAuth 2. The configuration values in SharpSync are shown below.
 
+**Authentication**
+
+* In SharpSync, navigate to `Data Sources`&#x20;
+* Select the NetSuite Data Source > `Add`
+* Set the `Server Url`
+
+```
+https://[customerId].app.netsuite.com
+```
+
+* Click `Update`
+* Click the Ping button to test the connection. This is optional and will not work if ICMP is disabled on the server
+* Click the 'Configure' button
+* You can now configure Authentication & Configuration
+
 {% tabs %}
 {% tab title="Authentication" %}
 Base API path
