@@ -1,4 +1,4 @@
-# Configure Item Type mapping
+# Configure itemType mapping
 
 The NetSuite REST API using specific paths for mapping item types such as (but not limited to):
 
@@ -40,7 +40,7 @@ On a more technical note: These items are derived by calling the endpoint
 
 In addition to this you'll want to create the following rules:
 
-1. A text manipulation rule for the Primary Source (CAD source) system that runs the following script (or similar based on your conditions) on data import:
+* A `Text Manipulation` rule for the Primary Source (CAD source) system that runs the following script (or similar based on your conditions) on data import:
 
 ```javascript
 if (rowData.isAssemblyRow === true) 
@@ -49,12 +49,10 @@ if (rowData.isAssemblyRow === true)
 return 'inventoryitem'; /* or whatever your default item type is */
 ```
 
-2.  A text manipulation rule for the Secondary Source (NetSuite) that runs the following script on data import to derive the existing NetSuite item type:\
+* A `Text Manipulation` rule for the Secondary Source (NetSuite) that runs the following script on data import to derive the existing NetSuite item type:
 
+```javascript
+return rowData.secondaryDefaultItemCreationType;
+```
 
-    ```javascript
-    return rowData.secondaryDefaultItemCreationType;
-    ```
-
-
-3. A `Text not empty` rule. This will prevent errors when submitting the BOM&#x20;
+* A `Text not empty` rule. This will prevent errors when submitting the BOM&#x20;
