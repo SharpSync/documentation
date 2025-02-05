@@ -8,25 +8,22 @@ While not strictly necessary, it is recommended to setup a thumbnails folder in 
 
 ## NetSuite Setup of Thumbnail folder
 
-To successfully upload thumbnails to NetSuite, you need the following 3 things:
+To successfully upload thumbnails to NetSuite, you need the following:
 
 * OAuth `clientId` and `clientSecret` (aka consumer key and consumer secret)
 * A `scriptId`
 * A `folderId`
-* A variable to assign the fileId to
+* A variable to assign the `fileId` to
 
 Steps involved in setting up NetSuite:
 
 * [Setup OAuth](oauth-setup/) - gives you permissions to upload files + `clientId` and `clientSecret`
 * Setup restlet for uploading thumbnails ([SuiteApi](suite-api-setup.md)) - gives you the `scriptId`
 * Setup an [upload folder](create-an-uploads-folder.md) - gives you the `folderId`
-* Putting it all together - configuring the datasource in SharpSync
 
 ### Putting it all together - Setup the datasource
 
-**Goal**: To configure the datasource in SharpSync
 
-* Setup the datasource to point to the new restlet (this step)
 
 With the copied URL in the previous step, and the `folderId` and `scriptId` in hand, it's time to setup the datasource in SharpSync.
 
