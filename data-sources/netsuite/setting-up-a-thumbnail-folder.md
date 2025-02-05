@@ -6,8 +6,6 @@
 
 While not strictly necessary, it is recommended to setup a thumbnails folder in NetSuite. This lets you generate an image preview for a file in NetSuite.
 
-
-
 ## NetSuite Setup of Thumbnail folder
 
 To successfully upload thumbnails to NetSuite, you need the following 3 things:
@@ -19,63 +17,15 @@ To successfully upload thumbnails to NetSuite, you need the following 3 things:
 
 Steps involved in setting up NetSuite:
 
-* Setup OAuth - gives you permissions to upload files + `clientId` and `clientSecret`
-* Setup restlet for uploading thumbnails (SuiteApi) - gives you the `scriptId`
-* Setup an upload folder - gives you the `folderId`
+* [Setup OAuth](oauth-setup/) - gives you permissions to upload files + `clientId` and `clientSecret`
+* Setup restlet for uploading thumbnails ([SuiteApi](suite-api-setup.md)) - gives you the `scriptId`
+* Setup an [upload folder](create-an-uploads-folder.md) - gives you the `folderId`
 * Putting it all together - configuring the datasource in SharpSync
-
-***
-
-### Setup OAuth
-
-**Goal**: To get the the necessary permissions to upload files
-
-Steps required:
-
-* Setup OAuth (this step)
-* Install SuiteApi
-* Create a new thumbnails folder in NetSuite
-* Setup the datasource to point to the new restlet
-
-See NetSuite OAuth Setup
-
-***
-
-### Setup restlet for uploading thumbnails (SuiteApi)
-
-Steps required:
-
-* (done) Setup OAuth
-* Install SuiteApi (this step)
-* Create a new thumbnails folder in NetSuite
-* Setup the datasource to point to the new restlet
-
-See Setup restlet for uploading thumbnails (SuiteApi) Original source Suite API Setup
-
-***
-
-### Setup an upload folder
-
-**Goal**: To get a folder id
-
-Steps required:
-
-* (done) Setup OAuth
-* (done) Install SuiteApi
-* Create a new thumbnails folder in NetSuite (this step)
-* Setup the datasource to point to the new restlet
-
-See Setup an upload folder See Create an upload folder
 
 ### Putting it all together - Setup the datasource
 
 **Goal**: To configure the datasource in SharpSync
 
-Steps required:
-
-* (done) Setup OAuth
-* (done) Install SuiteApi
-* (done) Create a new thumbnails folder in NetSuite
 * Setup the datasource to point to the new restlet (this step)
 
 With the copied URL in the previous step, and the `folderId` and `scriptId` in hand, it's time to setup the datasource in SharpSync.
