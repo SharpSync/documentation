@@ -32,6 +32,7 @@
     * [Configure isPhantom mapping](data-sources/netsuite/common-setup/configure-isphantom-mapping.md)
     * [Configure subsidiary mapping](data-sources/netsuite/common-setup/configure-subsidiary-mapping.md)
     * [Configure Where Used Link mapping](data-sources/netsuite/common-setup/configure-where-used-link-mapping.md)
+    * [Configure thumbnail mapping](data-sources/netsuite/common-setup/configure-thumbnail-mapping.md)
   * [Advanced Bill of Materials](data-sources/netsuite/advanced-bill-of-materials.md)
   * [Configure Server Side Script](data-sources/netsuite/configure-server-side-script/README.md)
     * [Example Server Side Script](data-sources/netsuite/configure-server-side-script/example-server-side-script.md)
