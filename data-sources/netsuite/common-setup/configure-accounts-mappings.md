@@ -1,4 +1,4 @@
-# Configure Accounts Selection
+# Configure accounts mappings
 
 You want to setup a list of accounts to pick from for Income and Expense accounts. This will let you specify a default Income and expense account when creating new items (for each item type).
 
@@ -14,7 +14,7 @@ To setup a list of accounts to pick from in NetSuite, create a new property mapp
 | Update NetSuite on Submit | checked                                                                                                                                                                                      |
 | Object Value Selector     | `refName`                                                                                                                                                                                    |
 | List Name                 | `account`                                                                                                                                                                                    |
-| List Value Selector \*    | `"id": "{acctNumber}", "displayName": "{acctNumber} - {acctName}"`                                                                                                                           |
+| List Value Selector \*    | `"id": "{id}", "displayName": "{acctNumber} - {acctName}"`                                                                                                                                   |
 | Rendering Type            | `Advanced List`                                                                                                                                                                              |
 | List Display Selector     | `displayName`                                                                                                                                                                                |
 | List Value Selector       | `id`                                                                                                                                                                                         |
