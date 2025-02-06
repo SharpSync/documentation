@@ -88,7 +88,7 @@ This means that each attribute has an internal id, and a display name or 'name' 
 >
 > ]
 
-You can create this by hand or use the following prompt in ChatGPT with your text string&#x20;
+You can create this by hand or use the following handy prompt in [Copilot ](https://copilot.microsoft.com/)or [ChatGPT ](https://chatgpt.com/)with your text string pasted after:
 
 > Convert the following string into a JSON array with "id" and "name" key value pair objects. The keys must be strings
 
