@@ -86,7 +86,7 @@ To setup a list of accounts to pick from in NetSuite, create a new property mapp
 
 {% code overflow="wrap" %}
 ```
-"id": "100000", "displayName": "100000 - Cash & Equivalents"|"id": "100100", "displayName": "100100 - Checking"|"id": "100200", "displayName": "100200 - Savings"|"id": "100300", "displayName": "100300 - Investments"|"id": "100400", "displayName": "100400 - Petty Cash"|"id": "100900", "displayName": "100900 - Other"
+"id": "123", "displayName": "100000 - Cash & Equivalents"|"id": "124", "displayName": "100100 - Checking"|"id": "125", "displayName": "100200 - Savings"|"id": "126", "displayName": "100300 - Investments"|"id": "127", "displayName": "100400 - Petty Cash"|"id": "128", "displayName": "100900 - Other"
 ```
 {% endcode %}
 
@@ -100,12 +100,12 @@ Once done, it will produce a Json array (see below sample) which can be pasted i
 
 ```
 [
-  {"id": "100000", "displayName": "100000 - Cash & Equivalents"},
-  {"id": "100100", "displayName": "100100 - Checking"},
-  {"id": "100200", "displayName": "100200 - Savings"},
-  {"id": "100300", "displayName": "100300 - Investments"},
-  {"id": "100400", "displayName": "100400 - Petty Cash"},
-  {"id": "100900", "displayName": "100900 - Other"}
+  {"id": "123", "displayName": "100000 - Cash & Equivalents"},
+  {"id": "124", "displayName": "100100 - Checking"},
+  {"id": "125", "displayName": "100200 - Savings"},
+  {"id": "126", "displayName": "100300 - Investments"},
+  {"id": "127", "displayName": "100400 - Petty Cash"},
+  {"id": "128", "displayName": "100900 - Other"}
 ]
 ```
 
@@ -126,7 +126,7 @@ Given this input, create the following rules:
 * A `Set Empty Cells` import rule for your Primary/CAD source with the default id of the account, for example:
 
 ```
-100200
+125
 ```
 
 * A `Text not empty` rule. This will prevent errors when submitting the BOM
