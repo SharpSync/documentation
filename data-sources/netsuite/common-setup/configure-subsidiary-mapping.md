@@ -1,4 +1,4 @@
-# Configure Subsidiary Selection
+# Configure subsidiary mapping
 
 When using Advanced BOMs subsidiary selection becomes available for manufacturing routes. To setup subsidiary selections, add a new Property Mapping for each item type that you need.
 
@@ -25,9 +25,11 @@ The list values returned needs to be formatted. You can use Chat GPT with this p
 
 Below is a sample that can be generated from this list:
 
+{% code overflow="wrap" %}
 ```
-Convert the following list of items into a Json array of objects with an "id' and "displayName" keyValue pair
+Convert the following string into a JSON array with "id" and "displayName" key value pair objects. The keys must be strings
 ```
+{% endcode %}
 
 Once done, it will produce a Json array which can be pasted in the `List Items`field in the Property Mapping settings.
 

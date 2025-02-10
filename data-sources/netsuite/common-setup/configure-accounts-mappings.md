@@ -92,9 +92,11 @@ To setup a list of accounts to pick from in NetSuite, create a new property mapp
 
 The list values returned needs to be formatted. You can use Chat GPT with this prompt:
 
+{% code overflow="wrap" %}
 ```
-Convert the following list of items into a Json array of objects with an "id' and "displayName" keyValue pair
+Convert the following string into a JSON array with "id" and "displayName" key value pair objects. The keys must be strings
 ```
+{% endcode %}
 
 Once done, it will produce a Json array (see below sample) which can be pasted in the `List Items`field in the Property Mapping settings.
 
