@@ -6,20 +6,20 @@ To setup a list of accounts to pick from in NetSuite, create a new property mapp
 
 ### Account Property Mapping Settings
 
-| Setting                   | Value                                                                                                                                                                                        |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Primary accessor          | <p>(unmapped) </p><p>or mapped to a Primary Source accessor if you have one</p>                                                                                                              |
-| Secondary accessor        | <p>One of: </p><ul><li>assemblyitem.incomeAccount</li><li>inventoryitem.incomeAccount</li><li>noninventoryresaleitem.incomeAccount</li><li>assemblyitem.expenseAccount</li><li>etc</li></ul> |
-| Update Primary on Submit  | unchecked                                                                                                                                                                                    |
-| Update NetSuite on Submit | checked                                                                                                                                                                                      |
-| Object Value Selector     | `id`                                                                                                                                                                                         |
-| List Name                 | `account`                                                                                                                                                                                    |
-| List Value Selector \*    | `"id": "{id}", "displayName": "{acctNumber} - {acctName}"`                                                                                                                                   |
-| Rendering Type            | `Advanced List`                                                                                                                                                                              |
-| List Display Selector     | `displayName`                                                                                                                                                                                |
-| List Value Selector       | `id`                                                                                                                                                                                         |
-| List Items                |  see below \*\*                                                                                                                                                                              |
-| Prefer NetSuite value     | checked                                                                                                                                                                                      |
+| Setting                   | Value                                                                                                                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Primary accessor          | <p>(unmapped) </p><p>or mapped to a Primary Source accessor if you have one</p>                                                                                                                        |
+| Secondary accessor        | <p>One of: </p><ul><li>assemblyitem.incomeAccount</li><li>inventoryitem.incomeAccount</li><li>noninventoryresaleitem.incomeAccount</li><li>noninventoryresaleitem.expenseAccount</li><li>etc</li></ul> |
+| Update Primary on Submit  | unchecked                                                                                                                                                                                              |
+| Update NetSuite on Submit | checked                                                                                                                                                                                                |
+| Object Value Selector     | `id`                                                                                                                                                                                                   |
+| List Name                 | `account`                                                                                                                                                                                              |
+| List Value Selector \*    | `"id": "{id}", "displayName": "{acctNumber} - {acctName}"`                                                                                                                                             |
+| Rendering Type            | `Advanced List`                                                                                                                                                                                        |
+| List Display Selector     | `displayName`                                                                                                                                                                                          |
+| List Value Selector       | `id`                                                                                                                                                                                                   |
+| List Items                |  see below \*\*                                                                                                                                                                                        |
+| Prefer NetSuite value     | checked                                                                                                                                                                                                |
 
 \* A list value selector is a string that selects token values (text items wrapped in curly braces) from the returned JSON object. In our example above, when specifying the list name of `account`, the object returned for each list may look something like this:
 
