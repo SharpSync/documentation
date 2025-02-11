@@ -2,6 +2,7 @@
 
 The pages below show common setup scenarios. It is by no means exhaustive, but we've found these helpful.
 
+* [Configure quantity mapping](configure-quantity-mapping.md)
 * [Configure accounts mappings](configure-accounts-mappings.md)
 * [Configure ItemType mapping](item-type-mapping.md)
 * [Configure isPhantom mapping](configure-isphantom-mapping.md)

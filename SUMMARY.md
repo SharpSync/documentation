@@ -29,6 +29,7 @@
   * [Setting up a thumbnail folder](data-sources/netsuite/setting-up-a-thumbnail-folder.md)
   * [Authentication + Configuration](data-sources/netsuite/authentication-+-configuration.md)
   * [Common setup](data-sources/netsuite/common-setup/README.md)
+    * [Configure quantity mapping](data-sources/netsuite/common-setup/configure-quantity-mapping.md)
     * [Configure accounts mappings](data-sources/netsuite/common-setup/configure-accounts-mappings.md)
     * [Configure itemType mapping](data-sources/netsuite/common-setup/item-type-mapping.md)
     * [Configure isPhantom mapping](data-sources/netsuite/common-setup/configure-isphantom-mapping.md)

@@ -4,20 +4,7 @@ When using Advanced BOMs subsidiary selection becomes available for manufacturin
 
 ### Subsidiary Property Mapping Settings
 
-| Setting                   | Value                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------- |
-| Primary accessor          | <p>(Unmapped) </p><p>or mapped to a Primary Source accessor if you have one</p> |
-| Secondary accessor        | <p>assemblyitem.subsidiary<br>inventoryitem.subsidiary<br>etc...</p>            |
-| Update Primary on Submit  | unchecked                                                                       |
-| Update NetSuite on Submit | checked                                                                         |
-| Object Value Selector     | `refName`                                                                       |
-| List Name                 | `subsidiary`                                                                    |
-| List Value Selector       | "id" : "{id}", "displayName" : "{name}"                                         |
-| Rendering Type            | Advanced Multi Select List                                                      |
-| List Display Selector     | `displayName`                                                                   |
-| List Value Selector       | `id`                                                                            |
-| List Items                |  \*\*see below                                                                  |
-| Prefer NetSuite value     | checked                                                                         |
+<table><thead><tr><th width="279">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary accessor</td><td><p>(Unmapped) </p><p>or mapped to a Primary Source accessor if you have one</p></td></tr><tr><td>Secondary accessor</td><td>assemblyitem.subsidiary<br>inventoryitem.subsidiary<br>etc...</td></tr><tr><td>Update Primary on Submit</td><td>unchecked</td></tr><tr><td>Update NetSuite on Submit</td><td>checked</td></tr><tr><td>Object Value Selector</td><td><code>refName</code></td></tr><tr><td>List Name</td><td><code>subsidiary</code></td></tr><tr><td>List Value Selector</td><td>"id" : "{id}", "displayName" : "{name}"</td></tr><tr><td>Rendering Type</td><td>Advanced Multi Select List</td></tr><tr><td>List Display Selector</td><td><code>displayName</code></td></tr><tr><td>List Value Selector</td><td><code>id</code></td></tr><tr><td>List Items</td><td> **see below</td></tr><tr><td>Prefer NetSuite value</td><td>checked</td></tr></tbody></table>
 
 The list items will depend on the values returned in the `List Values`section after saving the property mapping the first time or clicking the refresh button.&#x20;
 
