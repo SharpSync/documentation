@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Advanced: Configure add-in for testing
 
 Under some circumstances it can be desirable to send data to our test environment before using it in production.
