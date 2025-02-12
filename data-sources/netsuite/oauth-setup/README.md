@@ -27,7 +27,7 @@ For this to happen you need the permissions
 
 To create a new integration record do the following:
 
-* Click Setup > Integration > Manage Integrations > New
+* Click Setup > Other Setup > Manage Integrations > New
 * Enter a name for the integration
 * Check the boxes for:
   * Authorization Code Grant
