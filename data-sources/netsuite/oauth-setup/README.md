@@ -82,7 +82,7 @@ Execute the following /GET request in a browser window.
 > &#x20;`client_id`={clientId}&\
 > &#x20;`redirect_uri`=https://sharpsync.net/callback-oauth&\
 > &#x20;`scope`=rest\_webservices,restlets&\
-> &#x20;`state`={someValue}
+> &#x20;`state`={someValue must be between 22 and 1024 charachters}
 
 This will redirect to the login page for the NetSuite account. Once logged in, the user will be redirected to the redirect\_uri (https://sharpsync.net) with the included state value.
 
@@ -156,3 +156,16 @@ The result will look like this (no `refresh_token`, only the `access_token`)
 The important bit here is the `access_token` which gives us access to NetSuite.
 
 Your preparation is now ready and you can move on to configuring NetSuite as a datasource
+
+For more info, you can find links to the NetSuite docs related to the OAuth 2.0 Authorization Code Grant below:
+
+[NetSuite OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html)
+
+[NetSuite Step One GET Request to the Authorization Endpoint](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081944642.html)
+
+[NetSuite Step Two POST Request to the Token Endpoint](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html)
+
+[NetSuite Step Three Refresh Token POST Request to the Token Endpoint](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158082518856.html)
+
+[NetSuite Response Errors in Step Two and in the Refresh Token Response](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/subsect_158521832417.html)
+
