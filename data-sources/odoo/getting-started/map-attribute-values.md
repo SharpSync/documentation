@@ -210,3 +210,34 @@ This will return a string of 'ids' to the screen.&#x20;
 Writing values back to Odoo is  a work in progress. Please check back here regularly
 {% endhint %}
 
+### Limitation
+
+Odoo uses attribute values like configurations.
+
+Let's scketch a hypothetical scenario which, while possible in Odoo, is not supported by SharpSync.
+
+You have a product template (pt1) with variants (pv1, pv2, pv3) which were created through setting some variant attribute values.
+
+You add a unique internal reference to each variant namely
+
+* PV1-I
+* PV2-I
+* PV3-I
+
+You then archive PV2. In this step, the internal reference is no longer considered as part of the uniqueness rule in Odoo.
+
+You then rename PV3-I to PV2-I.
+
+Finally, you unarchive the original PV2.
+
+
+
+The situation you've now arrived at is that PV2 contains 2 instances with the same internal reference. Attempting to save either will result in an error in Odoo informing you that you have a unique constraint violation. _But importantly, it does allow the duplicates!._
+
+
+
+In SharpSync, when setting the primary search identifier to _default\_code_ (which is the internal name of the `internal reference`) field, SharpSync will search for and sometimes find _both_ items if both variants are linked to the _same_ BOM. This will result in an error stating that you have duplicate items.
+
+#### The fix
+
+In Odoo - change the internal or unique reference for the item shown in SharpSync to something which makes it unique again.
