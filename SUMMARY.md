@@ -58,6 +58,7 @@
 * [SolidWorks PDM](data-sources/solidworks-pdm.md)
   * [Downloading client files](data-sources/solidworks-pdm/downloading-client-files.md)
   * [Setting up the Solidworks PDM Web 2](data-sources/solidworks-pdm/setting-up-the-solidworks-pdm-web-2.md)
+  * [Troubleshooting](data-sources/solidworks-pdm/troubleshooting.md)
   * [Advanced: Configure add-in for testing](data-sources/solidworks-pdm/advanced-configure-add-in-for-testing.md)
 * [Troubleshooting](data-sources/troubleshooting/README.md)
   * [Duplicate component paths](data-sources/troubleshooting/duplicate-component-paths.md)
