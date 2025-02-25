@@ -34,6 +34,7 @@
     * [Configure itemType mapping](data-sources/netsuite/common-setup/item-type-mapping.md)
     * [Configure isPhantom mapping](data-sources/netsuite/common-setup/configure-isphantom-mapping.md)
     * [Configure subsidiary mapping](data-sources/netsuite/common-setup/configure-subsidiary-mapping.md)
+    * [Configure price mapping](data-sources/netsuite/common-setup/configure-price-mapping.md)
     * [Configure Where Used Link mapping](data-sources/netsuite/common-setup/configure-where-used-link-mapping.md)
     * [Configure thumbnail mapping](data-sources/netsuite/common-setup/configure-thumbnail-mapping.md)
   * [Advanced Bill of Materials](data-sources/netsuite/advanced-bill-of-materials.md)
