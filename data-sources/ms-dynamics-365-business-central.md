@@ -4,7 +4,11 @@ icon: chart-tree-map
 
 # MS Dynamics 365 Business Central
 
-_This document is a work in progress_
+{% hint style="danger" %}
+This document is a work in progress.
+
+Check back here  frequently for updates.
+{% endhint %}
 
 Dynamics 365 Business Central is a cloud ERP available from Microsoft. Please also see [Business Central](https://www.microsoft.com/en-us/dynamics-365/products/business-central)
 
