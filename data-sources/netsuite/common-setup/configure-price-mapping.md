@@ -40,3 +40,18 @@ if (itemTypeValue === pm.secondaryAccessor.split(".")[0] && s === "") {
 }
 ```
 {% endcode %}
+
+* `Text Manipulation` export rule for NetSuite (check the checkbox for `Process for NetSuite`) with the following text (make sure you are using the appropriate currencyPage id and priceLevel id) :
+
+```javascript
+return {
+  "items": [
+    {
+      "currencyPage": { "id": "1" },
+      "priceLevel": { "id": "1" },
+      "quantity": { "value": 0 },
+      "price": Number(s)
+    }
+  ]
+}
+```
