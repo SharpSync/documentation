@@ -17,6 +17,7 @@ Exactly one property mapping for NetSuite _must_ be set as an item type mapping 
 
 | Setting                   | Value                                                                           |
 | ------------------------- | ------------------------------------------------------------------------------- |
+| Accessor                  | `itemType`                                                                      |
 | Primary accessor          | <p>(Unmapped) </p><p>or mapped to a Primary Source accessor if you have one</p> |
 | Secondary accessor        | (Unmapped)                                                                      |
 | Update Primary on Submit  | unchecked                                                                       |

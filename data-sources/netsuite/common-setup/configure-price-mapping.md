@@ -26,3 +26,17 @@ if (s && "items" in JSON.parse(s) && JSON.parse(s).items.length > 0) {   return 
 ```
 {% endcode %}
 
+* `Text Evaluation` display rule with the following text (make sure to replace all instances of `itemType` in the below code with your accessor name for Item Type , see [Configure itemType mapping](item-type-mapping.md)):
+
+{% code overflow="wrap" %}
+```javascript
+const itemTypeValue =
+  "itemType" in rowData.modifications
+    ? rowData.modifications.itemType
+    : rowData.cells.itemType;
+
+if (itemTypeValue === pm.secondaryAccessor.split(".")[0] && s === "") {
+  return { message: "Value must not be empty" };
+}
+```
+{% endcode %}
