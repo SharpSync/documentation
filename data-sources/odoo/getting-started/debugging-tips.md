@@ -21,7 +21,7 @@ Create a new mapping with the following values
 | Process for Odoo          | checked           |
 | Rule value                | See below \*\*    |
 
-Paste the below code into the textbox. It makes use of the `rowData`object's `secondaryViewHref`property to create a new url
+Paste the below code into the textbox. It makes use of the `rowData` object's `secondaryViewHref` property to create a new url:
 
 ```javascript
 const urlObj = new URL(rowData.secondaryViewHref);
@@ -63,7 +63,7 @@ Create a new mapping with the following values
 | Process for Odoo          | checked           |
 | Rule value                | See below \*\*    |
 
-Paste the below code into the textbox. It makes use of the `rowData`object's `secondaryViewHref`property to create a new url
+Paste the below code into the textbox. It makes use of the `rowData` object's `secondaryViewHref` property to create a new text field:
 
 ```javascript
 const urlObj = new URL(rowData.secondaryViewHref);
