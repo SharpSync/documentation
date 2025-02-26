@@ -46,12 +46,20 @@ Expose the API to the public internet. The API must be exposed and visible (usin
 * [ ] Test the connection from an _external machine (e.g. your phone or another computer outside your network)_ by connecting to the API using the following curl request&#x20;
 
 ```bash
-curl -L 'https://{yourdomainOrStaticIpAndPort}/api/{vaultName}/authenticate' \
--d '{
-  "username": "{registeredVaultUser}",
-  "password": "{registeredVaultUserPassword}"
-}'
+curl -L https://{yourdomainOrStaticIpAndPort}/api/{vaultName}/authenticate \
+-d "{
+  'username': '{registeredVaultUser}',
+  'password': '{registeredVaultUserPassword}'
+}"
 ```
+
+or a more convenient one-liner (since Windows terminal doesn't always work so well with multiline):
+
+```bash
+curl -L http://{yourdomainOrStaticIpAndPort}/api/{vaultName}/authenticate -H "Content-Type: application/json" -d "{ 'Username': 'admin', 'Password': 'admin' }"
+```
+
+
 
 This must return a 200 OK Response with a token
 
