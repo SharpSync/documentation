@@ -7,6 +7,7 @@ The pages below show common setup scenarios. It is by no means exhaustive, but w
 * [Configure ItemType mapping](item-type-mapping.md)
 * [Configure isPhantom mapping](configure-isphantom-mapping.md)
 * [Configure subsidiary mapping](configure-subsidiary-mapping.md)
+* [Configure price mapping](configure-price-mapping.md)
 * [Configure a `where-used`link mapping](configure-where-used-link-mapping.md)
 * [Configure thumbnail mapping](configure-thumbnail-mapping.md)
 
