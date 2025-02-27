@@ -7,15 +7,27 @@ These are the major components required when installing and operating PDM Web to
 * Web2 API server
 * Web2 PDM server (optional)
 
-### Static IP or DynDNS
+### Static IP or Dynamic DNS for testing
 
-A static IP address means that an address for a machine (your PDM server) stays the same. If you don't own a static IP address (preferable), then a dynamic dns update client is preferred. SharpSync does not endorse any specific services, but [https://my.noip.com/](https://my.noip.com/) is a free service.
+To connect from SharpSync to {yourserver}, a static IP address or domain name is required. This means that an IP address for a machine (your PDM server) stays the same or can be found using a name (domain name).&#x20;
 
-A domain name points to a static ip address (your pdm server). A domain name is not strictly necessary but can be more convenient to use than an ip address. A domain name is something that your company would use on the internet to host your own website at e.g.
+{% hint style="info" %}
+If you don't own a static IP address (preferable), then a dynamic DNS client is preferred. SharpSync does not endorse any specific services, but [https://my.noip.com/](https://my.noip.com/) is a free service.
+
+This service lets you register your machine under a semi-custom domain name and keeps that domain name active for 30 days at a time. For testing purposes this is sufficient.
+{% endhint %}
+
+
+
+A domain name in turn points to a static IP address (your PDM server). A domain name is not strictly necessary but is more convenient to remember than an IP address. A domain name is something that your company would use on the internet to host your own website at e.g.
 
 > https://yourcompany.com.
 
-Once you've setup a domain name, you can use this in the SharpSync settings. Be sure to test this name from another computer (PING or curl to login) outside your network before using it in SharpSync.
+Once you've setup a domain name (either in your company or using a dynamic DNS service), you can use this new name in the SharpSync settings for PDM.&#x20;
+
+{% hint style="warning" %}
+Be sure to test this name from another computer (PING or curl to login) outside your network before using it in SharpSync. If it doesn't work from a computer outside your network, it won't work in SharpSync
+{% endhint %}
 
 ### TLS Certificate
 
@@ -27,15 +39,14 @@ OR
 
 > [https://www.godaddy.com/en-ca/web-security/ssl-certificate](https://www.godaddy.com/en-ca/web-security/ssl-certificate)
 
-For the more adventurous amongst you there are free TLS certificates available from Let's encrypt, there processes may be reviewed here
+For the more adventurous amongst you there are free TLS certificates available from Let's encrypt.
 
 ### SW PDM Web2 API Server
 
 #### Installing the Web2 API server
 
 * [x] Install the Web2 API server according to the installation instructions
-* [ ] Host the web API server in IIS, then add the API to the List of WebAPI servers in the Administration tool.
-*
+* [x] Host the web API server in IIS, then add the API to the List of WebAPI servers in the Administration tool.
 *
 [ ] 
     <figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
@@ -45,7 +56,7 @@ Expose the API to the public internet. The API must be exposed and visible (usin
 {% endhint %}
 
 * [x] Take note of the port number that is visible in the IIS configuration options (or if being forwarded from a reverse proxy, then take note of that port)
-* [ ] Test the connection from an _external machine (e.g. your phone or another computer outside your network)_ by connecting to the API using the following curl request&#x20;
+* [x] Test the connection from an _external machine (e.g. your phone or another computer outside your network)_ by connecting to the API using the following curl request&#x20;
 
 ```bash
 curl -L https://{yourdomainOrStaticIpAndPort}/api/{vaultName}/authenticate \
