@@ -15,6 +15,8 @@ A domain name points to a static ip address (your pdm server). A domain name is 
 
 > https://yourcompany.com.
 
+Once you've setup a domain name in DynDNS, you can use this in the SharpSync settings. Be sure to test this name from another computer (PING or curl to login) outside your network before using it in SharpSync.
+
 ### TLS Certificate
 
 A TLS certificate is something that you use to encrypt the traffic between `https://yourcompany.com` and `https://app.sharpsync.net`. A TLS certificate is used to change the _type_ of traffic from `http` => `https` A TLS certificate may be obtained from a certificate authority such as DigiCert or GoDaddy
