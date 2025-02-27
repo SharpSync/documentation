@@ -9,13 +9,13 @@ These are the major components required when installing and operating PDM Web to
 
 ### Static IP or DynDNS
 
-A static IP address means that an address for a machine (your PDM server) stays the same. If you don't own a static IP address (preferable), then a DynDNS update client is preferred. Documentation on DynDNS clients can be found here [https://help.dyn.com/update-client-faqs/](https://help.dyn.com/update-client-faqs/)
+A static IP address means that an address for a machine (your PDM server) stays the same. If you don't own a static IP address (preferable), then a dynamic dns update client is preferred. SharpSync does not endorse any specific services, but [https://my.noip.com/](https://my.noip.com/) is a free service.
 
 A domain name points to a static ip address (your pdm server). A domain name is not strictly necessary but can be more convenient to use than an ip address. A domain name is something that your company would use on the internet to host your own website at e.g.
 
 > https://yourcompany.com.
 
-Once you've setup a domain name in DynDNS, you can use this in the SharpSync settings. Be sure to test this name from another computer (PING or curl to login) outside your network before using it in SharpSync.
+Once you've setup a domain name, you can use this in the SharpSync settings. Be sure to test this name from another computer (PING or curl to login) outside your network before using it in SharpSync.
 
 ### TLS Certificate
 
