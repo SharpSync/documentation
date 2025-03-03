@@ -1,20 +1,71 @@
 # Map attribute values
 
-{% hint style="danger" %}
+
+
+{% hint style="warning" %}
 This page is a work in progress.&#x20;
 
 Reading attribute values are supported, but writing is in progress. Check back here  frequently for updates
 {% endhint %}
 
+{% hint style="danger" %}
+CAUTION: You should note that attributes (In Odoo) are the equivalent of configurations in your CAD system. This means that for a given configuration in your CAD system, the properties for the model will list as multiple attributes in a product template, but only a single value on a product variant.
+
+Please read the information below carefully as it could result in data loss in Odoo if done incorrrectly!
+
+
+
+
+{% endhint %}
+
+Each configuration's properties in the CAD system will be mapped as an attribute in Odoo. Let's say we have the following setup:
+
+* Part
+  * P1&#x20;
+* With Configurations&#x20;
+  * C1
+  * C2
+
+
+
+Each has a color value.&#x20;
+
+* C1, Color = <mark style="color:blue;">Blue</mark>
+* C2, Color = <mark style="color:red;">Red</mark>.
+
+
+
+**From CAD ⇒ SharpSync**&#x20;
+
+There is a 1:1 mapping in the BOM comparison screen. Sending the BOM to SharpSync should should _either_ a value of Blue OR Red for the part. Not both.
+
+
+
+Pulling the values from Odoo,&#x20;
+
+&#x20;if mapping to _product.template_.color
+
+> a value of <mark style="color:blue;">Blue</mark> **AND** <mark style="color:red;">Red</mark> will be displayed on screen.&#x20;
+
+But when mapping to _product.product_.color.
+
+> a value of <mark style="color:blue;">Blue</mark> **OR** <mark style="color:red;">Red</mark> will be displayed on screen
+
+
+
+**From SharpSync ⇒ Odoo**&#x20;
+
+There is a 1:1 mapping from the BOM comparison screen for attributes. That means that whatever is displayed in SharpSync will be set in Odoo. You should know that when removing attributes from a model in Odoo, Odoo either archives or _deletes_ the model (product.product). Be aware of this as you can have data loss when mapping attributes incorrectly.&#x20;
+
+
+
+You should thoroughly test this functionality when mapping attributes.&#x20;
+
 
 
 The status of implementation:
 
-| Odoo Version | Read attributes                | Write attributes             |
-| ------------ | ------------------------------ | ---------------------------- |
-| 16           | Basic read \[work in progress] | \[scheduled for development] |
-| 17           | :white\_check\_mark:           | \[scheduled for development] |
-| 18           | \[scheduled for development]   | \[scheduled for development] |
+<table><thead><tr><th width="123">Odoo Version</th><th width="258">Read attributes</th><th>Write attributes</th></tr></thead><tbody><tr><td>16</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>[work in progress]</td></tr><tr><td>17</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>[work in progress]</td></tr><tr><td>18</td><td>[scheduled for development]</td><td>[scheduled for development]</td></tr></tbody></table>
 
 
 
