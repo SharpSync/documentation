@@ -118,23 +118,25 @@ vehicle.make
 vehicle.model
 ```
 
-Use this scheme to create new BOM names
+Use this scheme to search existing BOM names
 
-<mark style="color:orange;">This value defines the naming scheme to name BOM names. It is calculated at runtime</mark>
+<mark style="color:orange;">This value defines the naming scheme to search BOM names. It is calculated at runtime based on the Primary Datasource's row\*\*</mark>
 
 ```
-{rowData.componentName}_BOM
+{rowData.componentName}_{rowData.cells.revision}
 ```
 
 Use this scheme to create new BOM names
 
-<mark style="color:orange;">This value defines the naming scheme to name BOM revisions. It is calculated at runtime</mark>
+<mark style="color:orange;">This value defines the naming scheme to name BOM revisions. It is calculated at runtime and is based on the Secondary Datasource's row\*\*</mark>
 
 ```
 {rowData.componentName}_{rowData.cells.revision}
 ```
 {% endtab %}
 {% endtabs %}
+
+\*\* For searching, this is based on the raw data from the Primary Source data before any Property Mapping rules (Import) have run.
 
 <details>
 
