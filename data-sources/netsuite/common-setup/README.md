@@ -10,6 +10,7 @@ The pages below show common setup scenarios. It is by no means exhaustive, but w
 * [Configure price mapping](configure-price-mapping.md)
 * [Configure a `where-used`link mapping](configure-where-used-link-mapping.md)
 * [Configure thumbnail mapping](configure-thumbnail-mapping.md)
+* [Common Mapping Rules](common-mapping-rules.md)
 
 #### Caveats
 
