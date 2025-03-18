@@ -1094,7 +1094,7 @@
             "title": "JavaScript expression:",
             "type": "text",
             "key": "expression",
-            "value": "return \"https://odoo-qa2.apps.juniperdesign.com/web#id=\" + s + \"&action=535&active_id=4088&model=mrp.bom&view_type=form\""
+            "value": "return \"https://your-odoo-instance.com/web#id=\" + s + \"&action=535&active_id=4088&model=mrp.bom&view_type=form\""
           }
         ],
         "onRuleFailure": "pass",

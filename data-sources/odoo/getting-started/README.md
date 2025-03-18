@@ -82,7 +82,7 @@ Quantity (mapped to `mrp.bom.product_qty`) in Odoo is an numeric field. We want 
 
 You are now ready to submit a new [Bill of Materials](../../../fundamentals/bom-comparison.md) and view it in SharpSync.
 
-Below are some property mappings that can be imported when working with Odoo as a Secondary Source
+Below are some property mappings that can be imported when working with Odoo as a Secondary Source (right click > Save link as...)
 
 <table><thead><tr><th width="139">CAD Source</th><th width="128">Odoo version</th><th>Comment</th></tr></thead><tbody><tr><td>Onshape</td><td>Odoo v17</td><td>download <a href="https://2811874215-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FcO2KdHJXVWdQ1ou1L85s%2Fuploads%2Fda188S8fq2t3Aeq1qoz9%2Fodoo-17-default-mapping-set.json?alt=media&#x26;token=efa400ee-33f4-4162-a0af-b1e250344e07">odoo-17-default-mapping-set.json</a></td></tr></tbody></table>
 
