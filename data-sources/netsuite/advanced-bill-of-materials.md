@@ -30,7 +30,7 @@ Some notes on the `bom` and `bomrevision` metadata:
 
 * Some bom fields such as `bom.id` , `bom.name` , `bom.createdDate` , etc... are determined by a NetSuite or SharpSync logic, and their mappings should not be set to update NetSuite, and preferably be set to readonly.
 * Some bomrevision fields such as `bomrevision.id` , `bomrevision.name` , `bomrevision.effectiveStartDate` , `bomrevision.effectiveEndDate` , etc... are determined by a NetSuite or SharpSync logic, and their mappings should not be set to update NetSuite, and preferably be set to readonly.
-* The bom field `bom.useComponentYield` is a boolean field, but once it is set to `true` it can not be set back to `false` . This is a NetSuite limitation. In a related issue.
+* The bom field `bom.useComponentYield` is a boolean field, but once it is set to `true` it can not be set back to `false` . This is a NetSuite limitation.
 * For boms where `bom.useComponentYield` is set to `true` , a related `bomrevision`'s child components can have the field `bomrevisioncomponent.componentYield` set to values greater than 0 and less or equal than 100 (0 < x <= 100).
 * For boms where `bom.useComponentYield` is set to `false` , a related `bomrevision`'s child components will have the field `bomrevisioncomponent.componentYield` values always ignored by NetSuite and kept at 100.
 
