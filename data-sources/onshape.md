@@ -1,6 +1,6 @@
 ---
-icon: chart-tree-map
 description: '[docs in progress]'
+icon: chart-tree-map
 ---
 
 # Onshape
@@ -41,7 +41,7 @@ https://cad.onshape.com
 * [Configure the authentication options](onshape.md#configure-the-authentication-options)
 * Click AUTHENTICATE. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
 * Configure the Primary and Secondary Identifiers as follows:
-  * Primary Identifier: partNumber
+  * Primary Identifier: `partNumber`
   * Secondary Identifier: `name`&#x20;
 
 After successfully authenticating with OnShape, the update should automatically trigger. If it does not, click the _Update_ button.
