@@ -13,7 +13,7 @@ This means that:
 
 1. For a given configuration in your CAD system,&#x20;
 2. The properties for the model will list as multiple attributes in a product template, but only a single value on a product variant.
-3. Deleting an attribute is the equivalent of deleting a configuration (unless it is referenced on a purchase order, in which case it is archived (becomes invisible))
+3. Deleting an attribute is the equivalent of deleting one or more configurations (unless they are referenced on a purchase order, in which case they will be archived (becomes invisible))
 
 Please read the information below carefully as it could result in data loss in Odoo if done incorrectly!
 {% endhint %}
