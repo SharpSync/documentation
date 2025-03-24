@@ -26,7 +26,7 @@ CAUTION: Removing a variant attribute will remove the variant (unless it is used
 
 When adding new attributes in Odoo, Odoo automatically creates new variants. It does not set the internal reference (you have to do that), but it creates multiple variants. Product Templates and Product Variants have a 1:N relationship in Odoo. For a single template attribute value, it is a 1:1 relationship. Anything more than that results in multiple product variants.
 
-<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption><p>For every attribute value added, a variant is created</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption><p>For every attribute value added, a variant is created</p></figcaption></figure>
 
 \[You can add new,  attributes by navigating to the `Attributes and variants`tab in Odoo and adding new values]
 
@@ -34,7 +34,7 @@ When adding new attributes in Odoo, Odoo automatically creates new variants. It 
 
 If a single attribute with 1 value is added, the default `product.product` variant is updated with that value. If any more than a single value is added, then an additional  variant is created with the new value:
 
-<figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption><p>Adding an attribute creates additional product variants (product.product) with the new value.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption><p>Adding an attribute creates additional product variants (product.product) with the new value.</p></figcaption></figure>
 
 ### Multiple attributes
 
@@ -46,7 +46,7 @@ Multiple attributes in Odoo automatically adds multiple variants. It increases t
 
 Below is an image that illustrates this for the product A1-PN, where 2 different attributes with 2 values each results in 4 variants.
 
-<figure><img src="../../../.gitbook/assets/multiple-attributes.png" alt=""><figcaption><p>Adding multiple attributes increases the count of product variants (product.product)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multiple-attributes.png" alt=""><figcaption><p>Adding multiple attributes increases the count of product variants (product.product)</p></figcaption></figure>
 
 ### Mapping the Property Mappings
 
@@ -105,12 +105,6 @@ You should thoroughly test this functionality when mapping attributes. Incorrect
 
 
 
-The status of implementation:
-
-<table><thead><tr><th width="123">Odoo Version</th><th width="176">Read attributes</th><th>Write attributes</th><th width="197">Available </th></tr></thead><tbody><tr><td>16</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Single attribute values</td><td>late 2025</td></tr><tr><td>17</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Single attribute values</td><td>late 2025</td></tr><tr><td>18</td><td>[scheduled for development]</td><td>[scheduled for development]</td><td>[scheduled for development]</td></tr></tbody></table>
-
-
-
 Attributes in Odoo are analogous to configuration values in a CAD system. When adding an attribute to a product template or a product variant, you are creating a new variant (new configuration) of that product.
 
 To setup attribute lists in SharpSync these are major steps:
@@ -121,11 +115,11 @@ To setup attribute lists in SharpSync these are major steps:
 
 ### Read the values
 
-To view the list values of an attribute for Odoo, use the list `product.attribute` (see also [List Names](../list-names.md))
+To view the list values of an attribute for Odoo, use the list `product.attribute` (see also [List Names](list-names.md))
 
 The list `product.attribute` is special in that you can expand upon the query by adding attribute name at the end in square brackets.&#x20;
 
-* Start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md)for&#x20;
+* Start by adding a [Property Mapping ](../../fundamentals/property-mappings.md)for&#x20;
 
 > product.template.attribute\_line\_ids
 
@@ -184,7 +178,7 @@ You can create this by hand or use the following handy prompt in [Copilot ](http
 > Convert the following string into a JSON array with "id" and "name" key value pair objects. The keys must be strings
 
 * Click the copy button next to the generated list of values
-* Change the Property Mapping [Rendering Type](../../../property-mappings/settings.md) to <mark style="color:blue;">`Advanced Multi Select List`</mark>
+* Change the Property Mapping [Rendering Type](../../property-mappings/settings.md) to <mark style="color:blue;">`Advanced Multi Select List`</mark>
 * For `List Display Selector`, enter <mark style="color:blue;">`name`</mark>
 * For List Value Selector, enter <mark style="color:blue;">`id`</mark>
 * For List Items, transform the values into an array of values as follows:

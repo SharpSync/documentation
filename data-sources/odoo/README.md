@@ -12,30 +12,34 @@ Out of the box, the Odoo integration supports the following features for all sup
 
 ### Bill of Material (BOM) level features
 
-| Feature                                        |      Differences     |     Modifications    |          Updates          |
-| ---------------------------------------------- | :------------------: | :------------------: | :-----------------------: |
-| BOM hierarchy                                  | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
-| BOM meta data                                  | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
-| BOM quantities                                 | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
-| Component thumbnails                           |          N/A         |          N/A         |    :white\_check\_mark:   |
-| Advanced BOMs                                  | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
-| Attributes and variants                        |  \[work in progress] |  \[work in progress] |    \[work in progress]    |
-| Routings                                       | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:   |
-| File derivative transfers (e.g. STEP, DXF)\*\* |          N/A         |          N/A         | \[marked for development] |
+| Feature                                        |        Create        |         Read         |           Update           |
+| ---------------------------------------------- | :------------------: | :------------------: | :------------------------: |
+| BOM hierarchy                                  | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:    |
+| BOM meta data                                  | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:    |
+| BOM quantities                                 | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:    |
+| Component thumbnails                           | :white\_check\_mark: |          N/A         |    :white\_check\_mark:    |
+| Advanced BOMs                                  | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:    |
+| Attributes and variants                        | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark:\*\*\* |
+| Routings                                       | :white\_check\_mark: | :white\_check\_mark: |    :white\_check\_mark:    |
+| File derivative transfers (e.g. STEP, DXF)\*\* |          N/A         |          N/A         |  \[marked for development] |
+
+
 
 \*\* It should be noted that there are many ways to transfer files. We're in the process of adding file transfers for NetSuite, but please note that consultation services are required to understand your use case + configuration options. Each customer's implementation of file transfers will be unique.
 
+\*\*\* Single attribute, single value. Multiple attributes are scheduled for development.
+
 SharpSync supports different versions of Odoo:
 
-* Odoo 18 is slated for early 2025
+* Odoo 18 is slated for early-mid 2025
 * Odoo version 17 \[full support].
 * Odoo version 16 \[full support].&#x20;
 
-| Item    | Status            | Support |
-| ------- | ----------------- | ------- |
-| Odoo 18 | Slated early 2025 | N/A     |
-| Odoo 17 | Available         | Full    |
-| Odoo 16 | Available         | Full    |
+| Item    | Status                    | Support |
+| ------- | ------------------------- | ------- |
+| Odoo 18 | Scheduled for development | N/A     |
+| Odoo 17 | Available                 | Full    |
+| Odoo 16 | Available                 | Full    |
 
 
 
