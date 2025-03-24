@@ -1,13 +1,12 @@
 ---
-description: '[docs in progress]'
 icon: chart-tree-map
 ---
 
-# Onshape
+# Getting Started
 
 ## Onshape Setup
 
-* [Onshape App Store Subscription](onshape.md#onshape-app-store-subscription)
+* [Onshape App Store Subscription](getting-started.md#onshape-app-store-subscription)
 * Setting up Onshape
 * Configure the authentication options
 * Mapping values to ERP
@@ -18,11 +17,11 @@ icon: chart-tree-map
 
 ### Onshape App Store Subscription
 
-<figure><img src="../.gitbook/assets/onshape_subscribe.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/onshape_subscribe.png" alt=""><figcaption></figcaption></figure>
 
 * Find and subscribe to the [SharpSync.net](https://appstore.onshape.com/apps/ERP%20Connector/D375UTR5KWRHUES3LFV56CCHA5VBYDFPXTGPXPQ=/description) OnShape app in the Onshape App Store&#x20;
 
-<figure><img src="../.gitbook/assets/onshape_app_permissions (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/onshape_app_permissions (1).png" alt=""><figcaption></figcaption></figure>
 
 * For Onshape Enterprise users, make sure to add the related Onshape users to the list of users that have permission to access the Onhsape App Store&#x20;
 
@@ -38,7 +37,7 @@ https://cad.onshape.com
 
 * Scroll to the bottom of the page and click UPDATE
 * Change the Authentication Type to OAuth2
-* [Configure the authentication options](onshape.md#configure-the-authentication-options)
+* [Configure the authentication options](getting-started.md#configure-the-authentication-options)
 * Click AUTHENTICATE. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
 * Configure the Primary and Secondary Identifiers as follows:
   * Primary Identifier: `partNumber`
@@ -77,7 +76,7 @@ We only support:
 
 Once you have selected the Authentication Type, the remainder of the form should autocomplete to the following:
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="Image of configuration settings"><figcaption><p>Configuration Settings</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt="Image of configuration settings"><figcaption><p>Configuration Settings</p></figcaption></figure>
 
 * Click SAVE to save and close the form
 {% endtab %}
@@ -111,7 +110,7 @@ We only support:
 
 Once you have selected the Authentication Type, the remainder of the form should autocomplete to the following:
 
-<figure><img src="../.gitbook/assets/image (3).png" alt="Image of configuration settings" width="563"><figcaption><p>Configuration Settings</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt="Image of configuration settings" width="563"><figcaption><p>Configuration Settings</p></figcaption></figure>
 
 * Click SAVE to save and close the form
 {% endtab %}
@@ -119,7 +118,7 @@ Once you have selected the Authentication Type, the remainder of the form should
 
 Please make sure to set up your Secondary Source. For more information, refer to the other Data Sources listed in the Navigation Bar.
 
-Once completed with the setup for both Primary and Secondary Data Sources, proceed to setup [Property Mappings](../fundamentals/property-mappings.md).
+Once completed with the setup for both Primary and Secondary Data Sources, proceed to setup [Property Mappings](../../fundamentals/property-mappings.md).
 
 ### Mapping values to ERP
 
@@ -136,7 +135,7 @@ To map an Onshape document URL to a property in the ERP do the following:
 * Create a new rule: `Text manipulation`
 * Rule value: `return rowData.primaryViewHref;`
 
-<figure><img src="../.gitbook/assets/onshape_update_import_rule.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/onshape_update_import_rule.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -150,15 +149,15 @@ To map an Onshape document URL to a property in the ERP do the following:
 
     * The Onshape Tree Structure Assembly Context Menu&#x20;
 
-    <figure><img src="../.gitbook/assets/onshape_export_to_sharpsync.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/onshape_export_to_sharpsync.png" alt=""><figcaption></figcaption></figure>
 
     * The Onshape Assembly Tab Context Menu&#x20;
 
-    <figure><img src="../.gitbook/assets/onshape_export_assembly_tab.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/onshape_export_assembly_tab.png" alt=""><figcaption></figcaption></figure>
 
     * The Onshape Part Studio Tab Part Context Menu&#x20;
 
-    <figure><img src="../.gitbook/assets/onshape_export_individual_part.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/onshape_export_individual_part.png" alt=""><figcaption></figcaption></figure>
 
 ### Troubleshooting
 
@@ -180,7 +179,7 @@ OR
 
 You are trying to sync to an organization in SharpSync that has not yet been created.&#x20;
 
-First, create the organization by following the setup steps in [Data Sources](../fundamentals/data-sources.md).
+First, create the organization by following the setup steps in [Data Sources](../../fundamentals/data-sources.md).
 
 #### Cannot get properties
 
