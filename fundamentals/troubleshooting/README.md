@@ -4,9 +4,9 @@ icon: square-exclamation
 
 # Troubleshooting
 
-Sometimes the errors might occur onscreen when attempting to show Bill of Material (BOM) information.
+Sometimes the errors might occur onscreen when attempting to load Bill of Material (BOM) information.
 
-Below are some of the issues that you might encounter and tips for solving the problems:
+Below are some of the common issues that you might encounter and tips for solving the problems:
 
 * [Duplicate component paths](duplicate-component-paths.md)
 * [OAuth 2.0](oauth-2.0.md)
