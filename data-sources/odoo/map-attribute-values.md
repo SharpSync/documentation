@@ -28,7 +28,7 @@ When adding new attributes in Odoo, Odoo automatically creates new variants. It 
 
 <figure><img src="../../.gitbook/assets/image (37).png" alt=""><figcaption><p>For every attribute value added, a variant is created</p></figcaption></figure>
 
-\[You can add new,  attributes by navigating to the `Attributes and variants`tab in Odoo and adding new values]
+\[You can add new Attributes (and in doing so, product variants) by navigating to the `Attributes and variants` Tab in Odoo and adding new values]
 
 ### Single attributes
 
@@ -102,8 +102,6 @@ But when mapping to _product.product_.finish.
 {% hint style="danger" %}
 You should thoroughly test this functionality when mapping attributes. Incorrectly mapping + setting updates can delete `product.product` variants in Odoo. You have been warned!
 {% endhint %}
-
-
 
 Attributes in Odoo are analogous to configuration values in a CAD system. When adding an attribute to a product template or a product variant, you are creating a new variant (new configuration) of that product.
 
