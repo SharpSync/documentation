@@ -118,17 +118,9 @@ vehicle.make
 vehicle.model
 ```
 
-Use this scheme to search existing BOM names
+Use this scheme to create new BOM revision names
 
-<mark style="color:orange;">This value defines the naming scheme to search BOM names. It is calculated at runtime based on the Primary Datasource's row\*\*</mark>
-
-```
-{rowData.componentName}_{rowData.cells.revision}
-```
-
-Use this scheme to create new BOM names
-
-<mark style="color:orange;">This value defines the naming scheme to name BOM revisions. It is calculated at runtime and is based on the Secondary Datasource's row\*\*</mark>
+<mark style="color:orange;">This value defines the naming scheme to search for existing BOM names. It is calculated at runtime based on the Primary DataSource's row\*\*</mark>
 
 ```
 {rowData.componentName}_{rowData.cells.revision}
@@ -136,7 +128,12 @@ Use this scheme to create new BOM names
 {% endtab %}
 {% endtabs %}
 
-\*\* For searching, this is based on the raw data from the Primary Source data before any Property Mapping rules (Import) have run.
+\*\* For searching, this is based on the raw data from the Primary Source data before any Property Mapping rules (Import) have run. When a new BOM is created, the final value from the rows cells will be used. So if you manipulate the text in SharpSync to
+
+1. Change from&#x20;
+2. `Assembly A1, Rev A` to&#x20;
+3. `Assembly A1, Rev B`
+4. Then the Bill of Materials Name will be `A1_B`instead of `A1_A`
 
 <details>
 
