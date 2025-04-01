@@ -1,11 +1,16 @@
 ---
-description: '[docs in progress]'
 icon: chart-tree-map
 ---
 
 # Onshape
 
-Onshape is a cloud-based CAD software by PTC.&#x20;
+Onshape is a cloud-based CAD system by PTC.  It comes in 3 flavours:
+
+* Free
+* Professional
+* Enterprise
+
+SharpSync supports all 3 versions out of the box.
 
 ## Onshape supported features
 

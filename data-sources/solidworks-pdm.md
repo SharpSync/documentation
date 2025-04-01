@@ -1,24 +1,38 @@
 ---
-description: '[docs in progress]'
 icon: chart-tree-map
 ---
 
 # SolidWorks PDM
 
-SharpSync supports SolidWorks PDM Professional ≥ 2024. (PDM Standard does not support add-ins or the web server2 setup)
+SolidWorks PDM is a product by Dassault Systemes. It is typically installed on a self-hosted server and has basic support via a web API. There are 2 flavors of PDM:
+
+* PDM Standard
+* PDM Professional
+
+{% hint style="warning" %}
+The Standard version does not allow add-in customization and does not have an web API component, so SharpSync cannot support the Standard version
+{% endhint %}
+
+### Bill of Material (BOM) level features
+
+<table><thead><tr><th width="335.0078125">Feature</th><th width="115.390625" align="center">Read</th><th width="144.890625" align="center">Create</th><th width="113.16796875" align="center">Update</th></tr></thead><tbody><tr><td>BOM hierarchy</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>BOM meta data</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td>BOM quantities</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>Component thumbnails</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>BOM Configurations</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>File derivative transfers (e.g. STEP, DXF)</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr></tbody></table>
+
+\*\* Updates to BOM metadata are available on request
+
+
 
 ## SOLIDWORKS PDM Setup
 
 The setup steps for SWPDM are as follows:
 
 * Make the PDM Web API available to the internet
-* Add the SWPDM datasource
+* Add the SWPDM data source
 * Test the connectivity to the server
 * Download and install the PDM client
 * Configure the PDM client for the vault
 * Configure the PDM client for the logged in user
 
-See also Configure the addin for testing
+See also Configure the add-in for testing
 
 ### Step: Make the PDM Web API available to the internet
 
@@ -28,7 +42,7 @@ A domain name is not required. A public IP address is sufficient. However either
 
 (See Test connectivity to server)
 
-Once the API is available, go back to the datasource configuration page and click `Ping` button. Upon success the following message will be displayed:
+Once the API is available, go back to the data source configuration page and click `Ping` button. Upon success the following message will be displayed:
 
 > Name\
 > Connection status: Healthy\
@@ -38,17 +52,17 @@ Where `{serverName}` is the name of the server that is hosting the PDM Web API
 
 <figure><img src="../.gitbook/assets/swpdm_authentication_setup.png" alt=""><figcaption></figcaption></figure>
 
-### Step: Add the SWPDM datasource
+### Step: Add the SWPDM DataSource
 
 * Login on SharpSync
-* Navigate to the Datasources section
+* Navigate to the DataSources section
 * Select SWPDM
-* Click Add Datasource
+* Click Add DataSource
 
 ### Step: Test connectivity to the server
 
-* In the datasource configuration section, select the PDM Datasource.
-* After updating the server url, make sure to click the 'Update' button.
+* In the data source configuration section, select the PDM Data Source.
+* After updating the server URL, make sure to click the 'Update' button.
 * Click the Ping button.
 * If configured correctly, SharpSync will attempt to Ping the host.
 * Important: Make sure that ICMP ping is enabled for this part. If it is not, please enable it (it can be disabled again)
