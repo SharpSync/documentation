@@ -112,7 +112,7 @@ Let's suppose that we have Data Source 1 (DS1) and Data Source 2 (DS2), the proc
 * Setup the 1st column. Give it an accessor of `description` with a column mapping of property `description` for DS1 and for DS2
 
 {% hint style="info" %}
-As a quick reference, here are the instructions for setting up a [Property Mapping](../property-mappings/settings.md#adding-property-mappings).
+As a quick reference, here are the instructions for setting up a [Property Mapping](../property-mappings/property-mapping-settings/#adding-property-mappings).
 {% endhint %}
 
 * Setup a 2nd property column `description2` column. Give it an accessor of `description2`. Also map it to the `description` property.
@@ -191,11 +191,11 @@ SharpSync processes and prioritizes each rule in order from top to bottom. Movin
 **Evaluation**
 
 1. [<mark style="color:green;">PASS</mark>](#user-content-fn-1)[^1]: Text is appended to be "ABC-Connector Bracket 1\_REL"
-2. [<mark style="color:green;">PASS</mark>](#user-content-fn-2)[^2]: Text does end with the string "\_REL"
-3. [<mark style="color:red;">FAIL</mark>](#user-content-fn-3)[^3]: Text length is longer than maximum. Text was originally 23 characters; the prepended text makes the character length 27.
+2. [<mark style="color:green;">PASS</mark>](#user-content-fn-1)[^1]: Text does end with the string "\_REL"
+3. [<mark style="color:red;">FAIL</mark>](#user-content-fn-1)[^1]: Text length is longer than maximum. Text was originally 23 characters; the prepended text makes the character length 27.
 
 * Quick Fix: change the text in SharpSync by removing characters or abbreviating words. Data Sources can be updated when the BOM is submitted with the changes, depending on the Property Mapping settings.
-* If the Maximum Text Length was ordered before the Prepend Text rule, all rules would evaluate as [<mark style="color:green;">pass</mark>](#user-content-fn-4)[^4].
+* If the Maximum Text Length was ordered before the Prepend Text rule, all rules would evaluate as [<mark style="color:green;">pass</mark>](#user-content-fn-1)[^1].
 
 **Example 2: Numeric Rule Application**
 
@@ -227,9 +227,3 @@ SharpSync processes and prioritizes each rule in order from top to bottom. Movin
 * If the 2nd and 3rd rules were reversed, the last rule would fail. The number would be rounded first, which would result in the new number being 124, which is larger than the last rule's maximum value.
 
 [^1]: Displayed in the context menu in the BOM Comparison screen
-
-[^2]: Displayed in the context menu in the BOM Comparison screen
-
-[^3]: Displayed in the context menu in the BOM Comparison screen
-
-[^4]: Displayed in the context menu in the BOM Comparison screen

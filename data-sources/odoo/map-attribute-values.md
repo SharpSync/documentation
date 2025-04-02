@@ -176,7 +176,7 @@ You can create this by hand or use the following handy prompt in [Copilot ](http
 > Convert the following string into a JSON array with "id" and "name" key value pair objects. The keys must be strings
 
 * Click the copy button next to the generated list of values
-* Change the Property Mapping [Rendering Type](../../property-mappings/settings.md) to <mark style="color:blue;">`Advanced Multi Select List`</mark>
+* Change the Property Mapping [Rendering Type](../../property-mappings/property-mapping-settings/) to <mark style="color:blue;">`Advanced Multi Select List`</mark>
 * For `List Display Selector`, enter <mark style="color:blue;">`name`</mark>
 * For List Value Selector, enter <mark style="color:blue;">`id`</mark>
 * For List Items, transform the values into an array of values as follows:
