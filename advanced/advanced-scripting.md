@@ -15,27 +15,29 @@ User scriptable rules (JavaScript) have access to 4 parameters, instead of just 
 * Text Evaluation (display)
 * Export Manipulation (export only)
 
+### Parameters of a rule
+
 The parameters available to these rules are listed below:
 
 <table><thead><tr><th width="139">Parameter</th><th width="325">Description</th><th>Note</th></tr></thead><tbody><tr><td>s</td><td>The current string value from the source</td><td>Can be modified by previous rule</td></tr><tr><td>rowData</td><td>The entire row's data (all the cell values, modifications, differences, etc.)</td><td>Cannot be modified, read-only</td></tr><tr><td>p</td><td>The pass / block value</td><td>Cannot be modified, read-only</td></tr><tr><td>pm</td><td>The property mapping object</td><td>Contains additional options such as "Is it read-only"</td></tr></tbody></table>
 
-typical rules only have access to the string value `s` which is passed to it. In the table listed above are the data to which special rules listed on this page has access to. It allows for much greater scripting capability.&#x20;
+Typical rules only manipulate or use the string value `s` which is passed to it. The table above lists the data to which special rules have access to. It allows for much greater scripting capability.&#x20;
 
-When the rule is an export or import rule, the result of a rule must always be a `string` or a representation of a `string` such as a JavaScript `object` (JSON) which has been serialized. If it does not return a value you may experience unexpected results in the UI, possibly even instability (BOM view not rendering) in attempting to render client side BOMs.
+{% hint style="danger" %}
+When the rule is an Import or Export `Text Manipulation` rule, the result of the rule must always be a `string` or a representation of a `string` such as a JavaScript `object` (JSON) which has been serialized. If it does not return a value you may experience unexpected results in the UI, possibly even instability (BOM view not rendering).
 
+The result  must be an object containing a 'message' key, e.g.
+{% endhint %}
 
-
-When the rule is an evaluation rule, the result (which must only be returned for errors or warnings), must be an object containing a 'message' key, e.g.
+The resultant message is displayed onscreen during a rule evaluation failure
 
 ```
 { 'message' : 'if the rule fails show this text in the tooltip' }
 ```
 
 {% hint style="info" %}
-Should you happen to break your BOM view using these scripts, simply disable the rule.&#x20;
+Should you happen to break your BOM view using these custom scripts, simply disable the rules or delete them to restore the BOM view.
 {% endhint %}
-
-
 
 <table><thead><tr><th width="193">Param</th><th>Description</th></tr></thead><tbody><tr><td>s</td><td>The current string value in the cell (changes with each successive import rule or export rule (if there are any)</td></tr><tr><td>rowData</td><td>The rowData object (more detail below **)</td></tr><tr><td>p</td><td>The pass / block value, does not change</td></tr><tr><td>pm</td><td>The Property Mapping's object. Does not change. (** more detail below)</td></tr></tbody></table>
 
@@ -43,11 +45,15 @@ Should you happen to break your BOM view using these scripts, simply disable the
 
 The `s` parameter is the representation of the cell value. Most of the time this is a value of _type_ `string`  but sometimes it can be a _type_ JSON `object` or a JSON `array` (if using say an import manipulation rule to change the type).
 
+It is important to note that the `s`parameter is a _per-source_ value. It is not shared between sources.
+
+Below is a graphic representing how the value is treated and displayed onscreen
+
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
 If you see a value onscreen shown as \[object Object] this means you have a JSON object or array that needs to be parsed or converted into a different _type_
 {% endhint %}
-
-
 
 ### `rowData` Parameter
 
