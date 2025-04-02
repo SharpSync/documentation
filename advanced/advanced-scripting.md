@@ -39,7 +39,19 @@ Should you happen to break your BOM view using these scripts, simply disable the
 
 <table><thead><tr><th width="193">Param</th><th>Description</th></tr></thead><tbody><tr><td>s</td><td>The current string value in the cell (changes with each successive import rule or export rule (if there are any)</td></tr><tr><td>rowData</td><td>The rowData object (more detail below **)</td></tr><tr><td>p</td><td>The pass / block value, does not change</td></tr><tr><td>pm</td><td>The Property Mapping's object. Does not change. (** more detail below)</td></tr></tbody></table>
 
-\*\* The `rowData` value is a special value. It contains, but is not limited to, the following key/values:
+### `s` Parameter
+
+The `s` parameter is the representation of the cell value. Most of the time this is a value of _type_ `string`  but sometimes it can be a _type_ JSON `object` or a JSON `array` (if using say an import manipulation rule to change the type).
+
+{% hint style="info" %}
+If you see a value onscreen shown as \[object Object] this means you have a JSON object or array that needs to be parsed or converted into a different _type_
+{% endhint %}
+
+
+
+### `rowData` Parameter
+
+&#x20;The `rowData` is the row itself including any cells, differences or modifications. It contains, but is not limited to, the following key/values:
 
 <table><thead><tr><th width="241">Key name</th><th>Description of the value</th></tr></thead><tbody><tr><td><code>isAssemblyRow</code></td><td>A bool value indicating if the current row value is an assembly row (contains children according to the source)</td></tr><tr><td><code>componentName</code></td><td>The primary identifier of each row - typically the name of the component</td></tr><tr><td><code>componentPathArray</code></td><td>The path of each component. So if you have assembly A1, with Part P1, then this value will be [ 'A1', 'P1' ]</td></tr><tr><td><code>cells</code></td><td><p>The row values for the entire row. A typical row object might look something like this (notice the nested `cells` key):</p><pre class="language-json"><code class="lang-json">{
   "isAssemblyRow" : false,
@@ -63,9 +75,15 @@ Should you happen to break your BOM view using these scripts, simply disable the
      "material" : "Steel",
   }
 } 
-</code></pre></td></tr><tr><td><code>primaryExportData</code></td><td>object containing the final set of data to send to the Primary Source. This is the final set of values to be sent.</td></tr><tr><td><code>secondaryExportData</code></td><td>object containing the final set of data to send to the Secondary Source. This is the final set of values to be sent</td></tr></tbody></table>
+</code></pre></td></tr><tr><td><code>primarySourceExportData</code></td><td>object containing the final set of data to send to the Primary Source. This is the final set of values to be sent.</td></tr><tr><td><code>secondarySourceExportData</code></td><td>object containing the final set of data to send to the Secondary Source. This is the final set of values to be sent</td></tr></tbody></table>
 
-\*\* The `pm`value is a special value. It contains, but is not limited to, the following key/values:
+### `p` Parameter
+
+The `p`  parameter is the `PassOrBlock`value specified in the Property Mapping Rule options.
+
+### `pm` Parameter
+
+The `pm`value contains values related to the [Property Mapping](broken-reference) used for this column. It cannot be modified, and any modifications to it are ignored. It contains, but is not limited to, the following key/values:
 
 | Key name                           | Description of the value                                           |
 | ---------------------------------- | ------------------------------------------------------------------ |
