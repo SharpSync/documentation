@@ -1,5 +1,21 @@
 # Troubleshooting
 
+## **Issue: Testing a connection to SQL fails**
+
+When testing your connection to your SQL server, the SharpSync add-in tries to connect to the server using the specified credentials.
+
+To connect to just use {serverName}&#x20;
+
+{% hint style="warning" %}
+If your instance of SQL is the default instance but there are more than 1 instances on the box, use the scheme {serverName}\MSSQL
+{% endhint %}
+
+In the setup, on the SQL Config Tab, when clicking `Test Connectivity` you may receive this error message:
+
+<figure><img src="../../.gitbook/assets/sql_connection_failed.png" alt=""><figcaption><p>Connection to SQL server failed</p></figcaption></figure>
+
+If that is the case, try adding / removing the instance name
+
 ## **Issue: Add-in fails to extract or register on load**
 
 It is possible that when the SharpSync add-in is installed with insufficient permissions, that the installation fails.
