@@ -6,6 +6,7 @@
 * Thumbnail uploads fail with errors
 * Error running script
 * Cannot update BOMs using incompatible subsidiaries
+* Cannot view items despite correct list permissions
 
 ### Concurrency limits.
 
@@ -59,3 +60,23 @@ At the time of writing there is a limitation for advanced BOMs. The limitation o
 > https://\[customerId].app.netsuite.com/app/common/item/item.nl?id=18099
 
 * Make sure that the subsidiary matches that of the Bom to which it is being added.
+
+### Cannot view items despite correct list permissions
+
+If you cannot view items despite having assigned the correct permissions for the OAuth2 role, make sure that the checkbox "Allow Cross-Subsidiary Record Viewing" is turned on.
+
+If this setting is not turned on, you may receive the following error when querying an item
+
+```json5
+{
+    "type": "https://www.rfc-editor.org/rfc/rfc9110.html#section-15.5.1",
+    "title": "Bad Request",
+    "status": 400,
+    "o:errorDetails": [
+        {
+            "detail": "Error while accessing a resource. Permission Violation: The restrictions on your role deny you access to this record.",
+            "o:errorCode": "USER_ERROR"
+        }
+    ]
+}
+```

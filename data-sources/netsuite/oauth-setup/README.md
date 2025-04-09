@@ -40,9 +40,23 @@ To create a new integration record do the following:
 
 Make sure to tick `Ask first time` under `OAUTH 2.0 CONSENT POLICY`
 
+### Step: Create new role
+
+Create a new Role to assign to users that will login.
+
+* Click Setup > Users/Roles > Manage Roles
+* Click New Role
+* Set the [permissions](permissions.md)
+
+{% hint style="danger" %}
+If setting the `Accessible Subsidiaries`to `User Subsidiary`this may cause problems with viewing items that are not in the user's subsidiary.
+
+You may then also want to enable `Allow Cross-Subsidiary Record Viewing`
+{% endhint %}
+
 ### Step: Scopes
 
-NetSuite requires that the OAuthe flow uses the following scopes. Ensure they are enabled for the OAuth connection to work:
+NetSuite requires that the OAuth flow uses the following scopes. Ensure they are enabled for the OAuth connection to work:
 
 * rest\_webservices
 * restlets

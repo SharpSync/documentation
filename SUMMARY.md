@@ -42,6 +42,7 @@
     * [Configure Where Used Link mapping](data-sources/netsuite/common-setup/configure-where-used-link-mapping.md)
     * [Configure thumbnail mapping](data-sources/netsuite/common-setup/configure-thumbnail-mapping.md)
     * [Common Mapping Rules](data-sources/netsuite/common-setup/common-mapping-rules.md)
+    * [Common List names](data-sources/netsuite/common-setup/common-list-names.md)
   * [Advanced Bill of Materials](data-sources/netsuite/advanced-bill-of-materials.md)
   * [Configure Server Side Script](data-sources/netsuite/configure-server-side-script/README.md)
     * [Example Server Side Script](data-sources/netsuite/configure-server-side-script/example-server-side-script.md)
