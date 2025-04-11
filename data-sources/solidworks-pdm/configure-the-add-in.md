@@ -4,12 +4,24 @@ The SharpSync PDM add-in has several pages for local configuration. These may be
 
 <figure><img src="../../.gitbook/assets/swpdm_addin_click_configure.png" alt=""><figcaption><p>Right Click > Configure SharpSync</p></figcaption></figure>
 
+### Major configuration steps
+
+* Configure a BOM view
+* Test connection to the server
+
+### Step: Configure a BOM view
+
+A BOM view in PDM lets you view columns of data. SharpSync uses this information to populate data in SharpSync in combination with the property mappings.
+
+The BOM view must contain the same columns as the columns mapped in the Property Mappings, with the exception of any column names wrapped in angled brackets '<>'. For example \<state> and \<folder> does not have to appear in the BOM view.
+
 ### Step: Configure the PDM client for the vault
 
-When configuring the add-in for the vault, there are 2 sections to configure:
+When configuring the add-in for the vault, these are the sections to configure:
 
 * The general setup which applies to all users
-* The SQL setup which is used internally by the add-in
+* The BOM configuration section (how to process BOMs)
+* The SQL setup which is used internally by the add-in to assist with determining child item types
 
 #### General setup
 
@@ -37,15 +49,15 @@ First go to SharpSync > Data Sources (you must be an admin) > Add the PDM Data S
 
 Setting up the BOM configuration allows you to customize how Bill of materials are uploaded to SharpSync.
 
-| Section             | Option                                 | Description                                                                                                              |
-| ------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| BOM export          | As Built                               | Export the version of the BOM and its associated references as at the version selected                                   |
-| BOM export          | Latest                                 | Export the latest version of the BOM and its associated references                                                       |
-| Weldments           | Export a weldment part as a part       | Exports the weldment with the same qty referenced in the original BOM. Does not add children items from weldment members |
-| Weldments           | Export a weldment part as a assembly   | Exports the weldment with the same qty referenced in the original BOM. _DOES_ add children items                         |
-| Sheetmetal          | Export a sheetmetal part as a part     | Exports the weldment with the same qty referenced in the original BOM. Does not add children items from multibody parts  |
-| Sheetmetal          | Export a sheetmetal part as a assembly | Exports the weldment with the same qty referenced in the original BOM. _DOES_ add children items                         |
-| Excluded file types | Add file types on new lines            | If a linked reference is found in the PDM BOM, it is not exported to SharpSync                                           |
+| Section             | Option                                  | Description                                                                                                              |
+| ------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| BOM export          | As Built                                | Export the version of the BOM and its associated references as at the version selected                                   |
+| BOM export          | Latest                                  | Export the latest version of the BOM and its associated references                                                       |
+| Weldments           | Export a weldment part as a part        | Exports the weldment with the same qty referenced in the original BOM. Does not add children items from weldment members |
+| Weldments           | Export a weldment part as a assembly    | Exports the weldment with the same qty referenced in the original BOM. _DOES_ add children items                         |
+| Sheetmetal          | Export a sheet metal part as a part     | Exports the weldment with the same qty referenced in the original BOM. Does not add children items from multibody parts  |
+| Sheetmetal          | Export a sheet metal part as a assembly | Exports the weldment with the same qty referenced in the original BOM. _DOES_ add children items                         |
+| Excluded file types | Add file types on new lines             | If a linked reference is found in the PDM BOM, it is not exported to SharpSync                                           |
 
 <figure><img src="../../.gitbook/assets/swpdm_client_bom_configuration_bom_export.png" alt=""><figcaption></figcaption></figure>
 

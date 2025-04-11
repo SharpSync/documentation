@@ -21,8 +21,6 @@ The Standard version does not allow add-in customization and does not have an we
 \*\* Updates to BOM metadata are available on request. Each customer's setup is unique and requires different configuration
 {% endhint %}
 
-
-
 ## SOLIDWORKS PDM Setup
 
 The setup steps for SWPDM are as follows:
@@ -40,9 +38,13 @@ See also Configure the add-in for testing
 
 _The PDM Web API must be accessible over the public internet._ This is required for SharpSync to be able to connect to the PDM vault.
 
-A domain name is not required. A public IP address is sufficient. However either of these (IP address or domain name) must be accessible from the internet.
+{% hint style="success" %}
+A domain name is not required. A public IP address is sufficient.&#x20;
+
+However either of these (IP address or domain name) must be accessible from the internet.
 
 (See Test connectivity to server)
+{% endhint %}
 
 Once the API is available, go back to the data source configuration page and click `Ping` button. Upon success the following message will be displayed:
 
@@ -54,18 +56,26 @@ Where `{serverName}` is the name of the server that is hosting the PDM Web API
 
 <figure><img src="../.gitbook/assets/swpdm_authentication_setup.png" alt=""><figcaption></figcaption></figure>
 
-### Step: Add the SWPDM DataSource
+### Step: Add the SWPDM Data Source
 
 * Login on SharpSync
-* Navigate to the DataSources section
+* Navigate to the Data Sources section
 * Select SWPDM
-* Click Add DataSource
+* Click Add Data Source
+
+Update the following settings
+
+<table><thead><tr><th width="212">Setting</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td>Server Url</td><td><p><code>https://{myserver.com}</code>  </p><p>or</p><p><code>https://{myserver.com}:port</code></p></td><td>The address (including any ports) where your server may be reached on the public internet. VPNs are not supported.</td></tr><tr><td>Primary Identifier</td><td><code>Number</code></td><td>The unique identifier. Usually <code>Number</code>, but it can be any data card variable name. You can also use [filenameWithoutExtension] as a value to use the name of files</td></tr><tr><td>Alternative Identifier</td><td><code>[filenameWithoutExtension]</code></td><td>If a value for 'Number' is not found, fall back to this value. You can use this as your Primary Identifier if you wish to.</td></tr></tbody></table>
+
+
+
+* Click the Save button.
 
 ### Step: Test connectivity to the server
 
-* In the data source configuration section, select the PDM Data Source.
+* In the Data Source configuration section, select the PDM Data Source.
 * After updating the server URL, make sure to click the 'Update' button.
-* Click the Ping button.
+* Click the Ping button.&#x20;
 * If configured correctly, SharpSync will attempt to Ping the host.
 * Important: Make sure that ICMP ping is enabled for this part. If it is not, please enable it (it can be disabled again)
 

@@ -22,7 +22,7 @@ The PDM Client is only available for Windows machines. It is not available for M
 * Navigate to the Downloads section
 * Download the PDM Client&#x20;
 
-<figure><img src="../../.gitbook/assets/swpdm_client_download.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/swpdm_client_download.png" alt=""><figcaption><p>These were the PDM client versions at the time of writing</p></figcaption></figure>
 
 * If you're having trouble installing the add-in through the client, you can download the Admin Export (\*.cex) file
 * Extract all the files to a known location (e.g. Desktop)
