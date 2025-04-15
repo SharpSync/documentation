@@ -74,10 +74,6 @@ Let's go ahead and add a new property mapping.&#x20;
 
 Start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md)for&#x20;
 
-{% hint style="info" %}
-tests
-{% endhint %}
-
 > product.template.attribute\_line\_ids
 
 Summary of the settings below:
