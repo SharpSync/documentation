@@ -15,7 +15,7 @@ Before we go to deep, let's define some terms:
 | Term                                         | Description                                                                            |
 | -------------------------------------------- | -------------------------------------------------------------------------------------- |
 | Property mapping                             | The entire mapping and all its settings                                                |
-| Accessor                                     | The Internal name as SharpSync refers to it                                            |
+| Accessor                                     | The Internal name as SharpSync refers to it or the source refers to it                 |
 | Primary accessor (or Data Source property)   | The name of the property as at the primary source (typically a CAD / PDM / PLM System) |
 | Secondary accessor (or Data Source property) | The name of the property as at the secondary source (typically an online ERP System)   |
 
