@@ -16,7 +16,7 @@ Out of the box, the Odoo integration supports the following features for all sup
 
 
 
-<table><thead><tr><th width="87">Item</th><th>Description</th></tr></thead><tbody><tr><td>[1]</td><td>It should be noted that there are many ways to transfer files. We're in the process of adding file transfers for NetSuite, but please note that consultation services are required to understand your use case + configuration options. Each customer's implementation of file transfers will be unique.</td></tr><tr><td>[2]</td><td>Multiple attributes, single value per attribute. Multiple attributes are scheduled for development. Please also see <a data-mention href="map-attribute-values/">map-attribute-values</a></td></tr><tr><td>[3]</td><td>Only supported for version 17 and onwards. Please also see <a data-mention href="../../advanced/derivatives.md">derivatives.md</a></td></tr></tbody></table>
+<table><thead><tr><th width="87">Item</th><th>Description</th></tr></thead><tbody><tr><td>[1]</td><td>It should be noted that there are many ways to transfer files. We're in the process of adding file transfers for Odoo, but please note that consultation services are required to understand your use case + configuration options. Each customer's implementation of file transfers will be unique.</td></tr><tr><td>[2]</td><td>Multiple attributes, single value per attribute. Multiple attributes are scheduled for development. Please also see <a data-mention href="map-attribute-values/">map-attribute-values</a></td></tr><tr><td>[3]</td><td>Only supported for version 17 and onwards. Please also see <a data-mention href="../../advanced/derivatives.md">derivatives.md</a></td></tr></tbody></table>
 
 SharpSync supports different versions of Odoo:
 
