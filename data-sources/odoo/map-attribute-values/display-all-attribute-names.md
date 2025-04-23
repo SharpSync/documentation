@@ -2,7 +2,7 @@
 
 To view the values of a Product Template's attributes in SharpSync, use the Property Mapping list `product.attribute` (see also [List Names](../list-names.md))
 
-The list `product.attribute` is special in that you can expand upon the query by adding attribute name at the end in square brackets. See [display-single-attribute-names.md](display-single-attribute-names.md "mention")
+The list `product.attribute` is special in that you can expand upon the query by adding attribute name at the end in square brackets. See [display-single-attribute-values.md](display-single-attribute-values.md "mention")
 
 
 
@@ -10,7 +10,7 @@ Start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md
 
 > product.template.attributes
 
-<table><thead><tr><th width="284">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary Accessor</td><td>(Unmapped)</td></tr><tr><td>Secondary Accessor</td><td><code>product.template.attributes</code></td></tr><tr><td>List Name</td><td><code>product.attribute</code></td></tr><tr><td>List Value Selector</td><td>{id}:{name}</td></tr><tr><td>Prefer Odoo Value</td><td>checked</td></tr><tr><td>Update Odoo on submit</td><td><p>! enable only if mapping a single value ! </p><p>[You have been warned!] </p></td></tr></tbody></table>
+<table><thead><tr><th width="284">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary Accessor</td><td>(Unmapped)</td></tr><tr><td>Secondary Accessor</td><td><code>product.template.attribute_line_ids</code></td></tr><tr><td>List Name</td><td><code>product.attribute</code></td></tr><tr><td>List Value Selector</td><td>{id}:{name}</td></tr><tr><td>Prefer Odoo Value</td><td>checked</td></tr><tr><td>Update Odoo on submit</td><td>unchecked. (We'll enable the update for individual names)</td></tr></tbody></table>
 
 
 
@@ -204,14 +204,37 @@ return (attributeValues?.length ?? 0) > 0 ? attributeValues : valueWhenNoJson;
 </code></pre></td></tr><tr><td>Enabled for</td><td>Odoo only</td></tr></tbody></table>
 
 {% hint style="info" %}
-ProTip: Open the browser dev tools (F12) and add a&#x20;
+ProTip: Open the browser dev tools (F12) and add a line
 
 `console.log('attributeValues', attributeValues);`
 
-line to see the values at runtime + troubleshoot them.
+immediately before the `return` line to see the values at runtime + troubleshoot them. When you're done, simply remove it again.
+
+If the value for attribute\_id is not an array, change the text
+
+```javascript
+s.map(item => item.attribute_id && item.attribute_id[0]).filter(Boolean);
+```
+
+to this&#x20;
+
+```javascript
+s.map(item => item.attribute_id && item.attribute_id.id).filter(Boolean);
+```
 {% endhint %}
 
+{% hint style="info" %}
+If you get an error reading
 
+`Fail: Failed to evaluate rule with error: TypeError: s.map is not a function`
+
+Add a new import rule to convert the text to json (enabled only for Odoo):\
+
+
+```javascript
+return JSON.parse(s ?? "[]");
+```
+{% endhint %}
 
 This will return a string of 'ids' as a result, select the values from the list of values to the screen, and return the selected values
 

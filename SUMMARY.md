@@ -64,7 +64,7 @@
   * [Map attribute values](data-sources/odoo/map-attribute-values/README.md)
     * [Reading Attributes - Overview](data-sources/odoo/map-attribute-values/reading-attributes-overview.md)
     * [Display All Attribute Names](data-sources/odoo/map-attribute-values/display-all-attribute-names.md)
-    * [Display Single Attribute Names](data-sources/odoo/map-attribute-values/display-single-attribute-names.md)
+    * [Display Single Attribute Values](data-sources/odoo/map-attribute-values/display-single-attribute-values.md)
     * [Writing attributes](data-sources/odoo/map-attribute-values/writing-attributes.md)
   * [Permissions](data-sources/odoo/permissions.md)
 * [Onshape](data-sources/onshape/README.md)

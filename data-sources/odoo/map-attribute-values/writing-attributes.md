@@ -38,7 +38,7 @@ You may repeat this single value setup for other attributes, as long as you foll
 Until further notice we do not support multiple value updates while setting the `default_code`. Should you choose to still sync multiple values (it is possible), please note that we will not be able to provide support. It doesn't mean it can't be done - we just can't support you right now.
 {% endhint %}
 
-Create a new Property Mapping for a single attribute line id. Follow the guide to [display-single-attribute-names.md](display-single-attribute-names.md "mention").
+Create a new Property Mapping for a single attribute line id. Follow the guide to [display-single-attribute-values.md](display-single-attribute-values.md "mention").
 
 Your display in SharpSync and Odoo should now look something like this:
 
@@ -54,7 +54,7 @@ The data we want to send to Odoo is:
 
 
 
-To do this, we create a mapping for the Legs (See [display-single-attribute-names.md](display-single-attribute-names.md "mention") )
+To do this, we create a mapping for the Legs (See [display-single-attribute-values.md](display-single-attribute-values.md "mention") )
 
 Once this is setup, we have the ID of the attribute 'Legs', which is the value `1`
 
