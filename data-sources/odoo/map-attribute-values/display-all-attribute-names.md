@@ -93,7 +93,7 @@ In SharpSync make the following changes to the Property Mapping:
 
 | Setting               | Value                                                                                                                                                                                                             |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Rendering Type        | <mark style="color:blue;">`Advanced Multi Select List`</mark>                                                                                                                                                     |
+| Rendering Type        | <mark style="color:blue;">`Advanced List`</mark>                                                                                                                                                                  |
 | List Display Selector | `name`                                                                                                                                                                                                            |
 | List Value Selector   | `id`                                                                                                                                                                                                              |
 | List Items            | <pre class="language-json"><code class="lang-json">[ 
