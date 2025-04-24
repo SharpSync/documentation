@@ -89,7 +89,7 @@ The final result for both rules are overlaid in the user interface (the default 
 
 * Data Source 1 is DS1
 * Data Source 2 is DS2
-* 's' is the [rowData](broken-reference) string value being evaluated
+* 's' is the [rowData](../advanced/advanced-scripting.md) string value being evaluated
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
