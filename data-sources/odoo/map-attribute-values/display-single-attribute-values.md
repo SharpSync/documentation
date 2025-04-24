@@ -1,4 +1,4 @@
-# Display Single Attribute Names
+# Display Single Attribute Values
 
 {% hint style="info" %}
 Attributes in Odoo are an advanced topic. You should approach this with a lot of patience and caution.
@@ -8,69 +8,11 @@ The goal is to display a single attribute, and select a different value. Once th
 
 ### Setting up the list
 
-We start by specifying the list name `product.attribute`. The list `product.attribute` is special in that you can expand upon the query by adding an attribute name at the end in square brackets.&#x20;
-
-To view the values of a Product Template's attributes in SharpSync, use the Property Mapping list `product.attribute["{nestedListName"}]` (see also [List Names](../list-names.md))
-
-Start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md)for&#x20;
-
-> product.template.attributes
-
-<table><thead><tr><th width="284">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary Accessor</td><td>(Unmapped)</td></tr><tr><td>Secondary Accessor</td><td><code>product.template.attributes</code></td></tr><tr><td>List Name</td><td><code>product.attribute</code></td></tr><tr><td>List Value Selector</td><td><code>{id}:{name}</code></td></tr><tr><td>Prefer Odoo Value</td><td>checked</td></tr><tr><td>Update Odoo on submit</td><td>Do NOT enable. We'll enable the next mapping.</td></tr><tr><td>Render Type</td><td><code>Advanced List</code></td></tr></tbody></table>
-
-### Populate the list of attributes
-
-* Open the Property Mapping > Settings and enter a `List Name` of&#x20;
-
-> product.attribute
-
-Click the `Save` button. You'll immediately see results in the List preview. Typically you would select a single name from the list returned. For my use-case, I was returned the list below, and I picked the value 'Legs'
-
-> 1:Legs|2:Color|3:Duration|5:Finish
-
-{% hint style="info" %}
-Leaving out the `List Value Selector` value will return all the fields (which may contain additional useful data)
-{% endhint %}
-
-The new list must be formatted into a list that SharpSync can understand. We'll make use of the `Advanced List` option which lets us customize the values
-
-{% hint style="info" %}
-### ProTip
-
-You can use ChatGPT or CoPilot with this prompt to easily convert the data returned from Odoo. Use the following prompt:
-
-_Convert the following string into a JSON array with "id" and "name" key value pair objects. The keys must be integers_
-{% endhint %}
-
-After converting the values, you'll get a list like this
-
-```json5
-[ 
-{
-  "id": 1,
-  "name": "Legs"
-},
-{
-  "id": 2,
-  "name": "Color"
-},
-// ... more
-]
-```
-
-Copy and paste the values to the `List Items` text area (It becomes visible after selecting a render type of `Advanced List`).
-
-We'll apply the `Prefer Odoo Value` checkbox setting here so that we always get shown the Odoo value. Check the checkbox to display values from our secondary source in favor of values from the Primary CAD / PDM / PLM Source.
-
-Click the `Save` button at the bottom
-
-If you pull a BOM from Odoo, you'll now be able to select an attribute from the list.
+We start by specifying the list name `product.attribute`. The list `product.attribute` is special in that you can expand upon the query by adding an attribute name at the end in square brackets. Use the steps in the previous topic to duplicate the mapping.
 
 ### Read individual attribute values
 
-We want to take this a step further. We don't _just_ want to read whether I have a 'Legs' attribute on the product template. I want to also read the value of the 'Legs' attribute for the product template.
-
-Let's go ahead and add a new property mapping.&#x20;
+To view the values of an individual Product Template's attribute in SharpSync, use the Property Mapping list `product.attribute["{nestedListName"}]` (see also [List Names](../list-names.md))
 
 Start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md)for&#x20;
 
@@ -78,7 +20,7 @@ Start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md
 
 Summary of the settings below:
 
-<table><thead><tr><th width="284">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary Accessor</td><td>(Unmapped)</td></tr><tr><td>Secondary Accessor</td><td><code>product.template.attributes</code></td></tr><tr><td>List Name</td><td><code>product.attribute["Legs"]</code></td></tr><tr><td>List Value Selector</td><td><code>{id}:{name}, attribute_id : {attribute_id[0]}</code></td></tr><tr><td>Prefer Odoo Value</td><td>checked</td></tr><tr><td>Update Odoo on submit</td><td><p>Checked. </p><div data-gb-custom-block data-tag="hint" data-style="danger" class="hint hint-danger"><p>Warning! Enable only if mapping a single value ! </p><p>[You have been warned!] . Always <em>always</em> test attribute mappings. </p><p>If you are unsure, leave this unchecked</p></div></td></tr><tr><td>Render Type</td><td><code>Advanced List</code></td></tr></tbody></table>
+<table><thead><tr><th width="284">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary Accessor</td><td>(Unmapped)</td></tr><tr><td>Secondary Accessor</td><td><code>product.template.attribute_line_ids</code></td></tr><tr><td>List Name</td><td><code>product.attribute["Legs"]</code></td></tr><tr><td>List Value Selector</td><td><code>{id}:{name}, attribute_id : {attribute_id[0]}</code></td></tr><tr><td>Prefer Odoo Value</td><td>checked</td></tr><tr><td>Update Odoo on submit</td><td><p>Checked. </p><div data-gb-custom-block data-tag="hint" data-style="danger" class="hint hint-danger"><p>Warning! Enable only if mapping a single value ! </p><p>[You have been warned!] . Always <em>always</em> test attribute mappings. </p><p>If you are unsure, leave this unchecked</p></div></td></tr><tr><td>Render Type</td><td><code>Advanced List</code></td></tr></tbody></table>
 
 We'll specify our list name and add an attribute name 'Legs' as follows:
 
@@ -94,7 +36,7 @@ In SharpSync make the following changes to the Property Mapping:
 
 | Setting               | Value                                                                                                                                                                                                                                 |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Rendering Type        | <mark style="color:blue;">`Advanced List`</mark>                                                                                                                                                                                      |
+| Rendering Type        | `Advanced List`                                                                                                                                                                                                                       |
 | List Display Selector | `name`                                                                                                                                                                                                                                |
 | List Value Selector   | `id`                                                                                                                                                                                                                                  |
 | List Items            | <pre class="language-json5"><code class="lang-json5">[
@@ -227,13 +169,13 @@ return retVal[0];
 
 This parses the values from Odoo and filters out everything but the first value. If you want to return all the values from Odoo, change the last line from&#x20;
 
-```
+```javascript
 return retVal[0];
 ```
 
 to
 
-```
+```javascript
 return retVal;
 ```
 
@@ -241,7 +183,7 @@ This will return a list of 'ids' as a result, allow selection of the values from
 
 ![](../../../.gitbook/assets/odoo_select_value_steel.png)
 
-This deals with the values. The next step is to put an optional blocking rule in place.
+We can now read the values. The next step is to put an optional blocking rule in place.
 
 ### Add Blocking Rule
 
@@ -251,9 +193,7 @@ Add a new rule which will block multiple values from being submitted to Odoo.
 
 Add a new Import Rule:
 
-<table><thead><tr><th width="201">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Rule Type</td><td><code>Import</code></td></tr><tr><td>Rule Name</td><td><code>Text Evaluation</code></td></tr><tr><td>Value</td><td><pre class="language-javascript"><code class="lang-javascript">const legsAttributeId = 1;
-
-if (s &#x26;&#x26; s.length > 1)  
+<table><thead><tr><th width="201">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Rule Type</td><td><code>Import</code></td></tr><tr><td>Rule Name</td><td><code>Text Evaluation</code></td></tr><tr><td>Value</td><td><pre class="language-javascript"><code class="lang-javascript">if (s &#x26;&#x26; s.length > 1)  
   return { status: "failure", message: `Only a single property value is supported`, passOrBlock: `pass` };
 
 </code></pre></td></tr><tr><td>On Rule Failure Action:</td><td><code>block</code></td></tr></tbody></table>
