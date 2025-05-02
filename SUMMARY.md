@@ -28,6 +28,7 @@
   * [Getting Started](data-sources/ms-dynamics-365-business-central/getting-started.md)
   * [Item Fields Json & Internal Names](data-sources/ms-dynamics-365-business-central/item-fields-json-and-internal-names.md)
   * [Resource Fields Json & Internal Names](data-sources/ms-dynamics-365-business-central/resource-fields-json-and-internal-names.md)
+  * [List Names For nestedObject Mappings](data-sources/ms-dynamics-365-business-central/list-names-for-nestedobject-mappings.md)
 * [NetSuite](data-sources/netsuite/README.md)
   * [OAuth Setup](data-sources/netsuite/oauth-setup/README.md)
     * [Permissions](data-sources/netsuite/oauth-setup/permissions.md)
