@@ -25,6 +25,7 @@
   * [Setup](data-sources/editor/setup.md)
   * [Importing a Bill of Materials (BOM)](data-sources/editor/importing-a-bill-of-materials-bom.md)
 * [MS Dynamics 365 Business Central](data-sources/ms-dynamics-365-business-central/README.md)
+  * [Getting Started](data-sources/ms-dynamics-365-business-central/getting-started.md)
   * [Item Fields Json & Internal Names](data-sources/ms-dynamics-365-business-central/item-fields-json-and-internal-names.md)
   * [Resource Fields Json & Internal Names](data-sources/ms-dynamics-365-business-central/resource-fields-json-and-internal-names.md)
 * [NetSuite](data-sources/netsuite/README.md)
