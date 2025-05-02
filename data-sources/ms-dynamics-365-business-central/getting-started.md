@@ -75,6 +75,8 @@ To configure a Dynamics 365 Business Central datasource instance in SharpSync yo
   * `SAT Classification`
   * `Name`
 
+For more info check a comprehensive but not exhaustive list [here](list-names-for-nestedobject-mappings.md).
+
 ### Definitions
 
 Dynamics 365 Business Central API selected definitions:
