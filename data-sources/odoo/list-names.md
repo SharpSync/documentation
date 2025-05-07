@@ -1,3 +1,7 @@
+---
+icon: bars
+---
+
 # List Names
 
 ## Common List names

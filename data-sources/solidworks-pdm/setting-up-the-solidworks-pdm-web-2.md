@@ -1,3 +1,7 @@
+---
+icon: sliders
+---
+
 # Setting up the Solidworks PDM Web 2
 
 These are the major components required when installing and operating PDM Web to:

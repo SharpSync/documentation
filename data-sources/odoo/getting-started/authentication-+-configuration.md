@@ -1,3 +1,7 @@
+---
+icon: user
+---
+
 # Authentication + Configuration
 
 To integrate with an Odoo instance, we have to setup an&#x20;

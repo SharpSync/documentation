@@ -1,3 +1,7 @@
+---
+icon: conveyor-belt-empty
+---
+
 # Product Management
 
 In Odoo, products are created using the `product.template` model. Products have a 1:N relationship with their variants.

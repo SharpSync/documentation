@@ -1,3 +1,7 @@
+---
+icon: arrow-right-from-bracket
+---
+
 # Submitting a BOM for update
 
 When a BOM is submitted in SharpSync, it pushes the information to the ERP.

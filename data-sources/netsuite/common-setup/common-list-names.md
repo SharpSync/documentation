@@ -1,3 +1,7 @@
+---
+icon: list-check
+---
+
 # Common List names
 
 When the type of the Property Mapping is `nestedObject`you are able to query a list using a list name.

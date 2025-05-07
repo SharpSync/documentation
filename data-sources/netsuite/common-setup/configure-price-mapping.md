@@ -1,3 +1,7 @@
+---
+icon: diagram-subtask
+---
+
 # Configure price mapping
 
 ### Price Property Mapping Settings

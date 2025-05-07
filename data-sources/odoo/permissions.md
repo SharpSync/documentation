@@ -1,4 +1,8 @@
-# Odoo Permissions Required
+---
+icon: shield
+---
+
+# Permissions
 
 ## List of permissions required on models
 

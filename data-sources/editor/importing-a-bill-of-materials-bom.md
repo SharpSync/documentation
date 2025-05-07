@@ -1,3 +1,7 @@
+---
+icon: table-tree
+---
+
 # Importing a Bill of Materials (BOM)
 
 ## Importing a CSV BOM

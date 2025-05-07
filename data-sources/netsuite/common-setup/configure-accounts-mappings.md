@@ -1,3 +1,7 @@
+---
+icon: diagram-subtask
+---
+
 # Configure accounts mappings
 
 You want to setup a list of accounts to pick from for Income and Expense accounts. This will let you specify a default Income and expense account when creating new items (for each item type).

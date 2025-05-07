@@ -1,3 +1,7 @@
+---
+icon: bug
+---
+
 # Troubleshooting
 
 ## Errors in Production

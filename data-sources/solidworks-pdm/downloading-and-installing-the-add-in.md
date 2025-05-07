@@ -1,3 +1,7 @@
+---
+icon: arrow-down-to-bracket
+---
+
 # Downloading and installing the add-in
 
 SolidWorks PDM is a data management solution from Dassault Systémes. It allows you to manage SolidWorks files and their revisions, along with metadata like Vendor, Material, Description, etc.

@@ -1,4 +1,8 @@
-# User management
+---
+icon: user-check
+---
+
+# User Management
 
 <figure><img src="../.gitbook/assets/section_header_users.png" alt=""><figcaption><p>Section: Users</p></figcaption></figure>
 

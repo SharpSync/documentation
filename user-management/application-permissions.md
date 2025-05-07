@@ -1,3 +1,7 @@
+---
+icon: shield
+---
+
 # Application Permissions
 
 SharpSync's permissions per user type is listed below:

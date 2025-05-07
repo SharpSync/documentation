@@ -1,3 +1,7 @@
+---
+icon: bug
+---
+
 # Integration tips
 
 ### Enable internal IDs

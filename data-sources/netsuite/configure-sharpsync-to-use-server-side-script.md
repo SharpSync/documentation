@@ -1,3 +1,7 @@
+---
+icon: js
+---
+
 # Configure SharpSync to use Server Side Script
 
 Server side scripting allows SharpSync to configure fields in NetSuite that are not available via the REST api.

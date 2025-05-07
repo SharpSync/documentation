@@ -1,3 +1,7 @@
+---
+icon: js
+---
+
 # Suite API Setup
 
 ## SuiteAPI Overview

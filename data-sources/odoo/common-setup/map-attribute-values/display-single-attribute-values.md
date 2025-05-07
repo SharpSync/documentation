@@ -1,3 +1,7 @@
+---
+icon: magnifying-glass
+---
+
 # Display Single Attribute Values
 
 {% hint style="info" %}
@@ -12,9 +16,9 @@ We start by specifying the list name `product.attribute`. The list `product.attr
 
 ### Read individual attribute values
 
-To view the values of an individual Product Template's attribute in SharpSync, use the Property Mapping list `product.attribute["{nestedListName"}]` (see also [List Names](../list-names.md))
+To view the values of an individual Product Template's attribute in SharpSync, use the Property Mapping list `product.attribute["{nestedListName"}]` (see also [List Names](../../list-names.md))
 
-Start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md)for&#x20;
+Start by adding a [Property Mapping ](../../../../fundamentals/property-mappings.md)for&#x20;
 
 > product.template.attribute\_line\_ids
 
@@ -181,7 +185,7 @@ return retVal;
 
 This will return a list of 'ids' as a result, allow selection of the values from the list of values on the screen.
 
-![](../../../.gitbook/assets/odoo_select_value_steel.png)
+![](../../../../.gitbook/assets/odoo_select_value_steel.png)
 
 We can now read the values. The next step is to put an optional blocking rule in place.
 

@@ -1,3 +1,7 @@
+---
+icon: sliders
+---
+
 # Configure the add-in
 
 The SharpSync PDM add-in has several pages for local configuration. These may be accessed by navigating to the PDM administration tool and right clicking > Configure SharpSync.
@@ -33,11 +37,13 @@ The following fields must be configured:
 
 | Name                        | Description                                                                                              | Recommended value                                                                                 |
 | --------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| BOM Layout                  | The columns + values exported to SharpSync                                                               | BOM (or whatever layout you want to export to SharpSync)                                          |
+| BOM Layout                  | The columns + values exported to SharpSync                                                               | BOM (or whatever layout you want to export to SharpSync)<sup>\[1]</sup>                           |
 | SharpSync Admin credentials | User credentials that are used to setup the Data Source                                                  | -                                                                                                 |
 | File name handling          | How files will be named in the hierarchy. Can be either the name of the file or a variable (e.g. Number) | This is automatically configured in Data Source configuration and cannot be changed in the add-in |
 
-Click `Test Connectivity`. Upon success, the configured primary identifier will be listed in the `Primary Identifier` field. This is the value that will be used to identify the file in SharpSync.
+\[1] If you want Sheetmetal or weldments to display as child items of the BOM, make sure to enable one of the  following settings in the BOM display
+
+Click `Connect..`. Upon success, the configured primary identifier will be listed in the `Primary Identifier` field. This is the value that will be used to identify the file in SharpSync.
 
 NOTE: If you get an error saying that no source is configured,
 

@@ -2,6 +2,7 @@
 description: >-
   Derivatives are files which can be derived from Assemblies or Parts
   (components) or items
+icon: files
 ---
 
 # Derivatives

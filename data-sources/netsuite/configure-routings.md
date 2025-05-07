@@ -1,3 +1,7 @@
+---
+icon: diagram-subtask
+---
+
 # Configure Routings
 
 Routings in NetSuite, or in any manufacturing context, refers to a sequence of operations or steps that a product must go through during the manufacturing process. These steps can include various operations such as assembly, machining, laser and inspection.

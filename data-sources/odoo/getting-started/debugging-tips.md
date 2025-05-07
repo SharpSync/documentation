@@ -1,3 +1,7 @@
+---
+icon: bug
+---
+
 # Debugging tips
 
 It can be useful during the setup process to have access to information that helps you to troubleshoot.

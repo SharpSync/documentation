@@ -1,3 +1,7 @@
+---
+icon: bug
+---
+
 # Troubleshooting
 
 ## **Issue: Testing a connection to SQL fails**

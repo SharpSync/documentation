@@ -1,4 +1,8 @@
-# Map attribute values
+---
+icon: diagram-subtask
+---
+
+# Map Attribute Values
 
 Some terms before you read the below:
 
@@ -26,7 +30,7 @@ CAUTION: Removing an attribute value (if there is more than 1 value for the same
 
 When adding new attributes in Odoo, Odoo automatically creates new variants. It does not set the internal reference (you have to do that), but it creates multiple variants. Product Templates and Product Variants have a 1:N relationship in Odoo. For a single template attribute value, it is a 1:1 relationship. Anything more than that results in multiple product variants.
 
-<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption><p>For every attribute value added per attribute line on a product template, a new variant is created</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (37).png" alt=""><figcaption><p>For every attribute value added per attribute line on a product template, a new variant is created</p></figcaption></figure>
 
 \[You can add new Attributes (and in doing so, product variants) by navigating to the `Attributes and variants` Tab in Odoo and adding new values]
 
@@ -38,7 +42,7 @@ If another attribute is added, also only with a single value, only 1 variant is 
 
 If any more than a single value is added, then an additional  variants are created with the new values:
 
-<figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption><p>Adding an attribute creates additional product variants (product.product) with the new value.</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (36).png" alt=""><figcaption><p>Adding an attribute creates additional product variants (product.product) with the new value.</p></figcaption></figure>
 
 SharpSync does not currently support the generation of multiple variant lines with multiple attribute values. Only a single attribute value is supported.
 
@@ -52,7 +56,7 @@ Multiple attributes in Odoo automatically adds multiple variants. It increases t
 
 Below is an image that illustrates this for the product A1-PN, where 2 different attributes with 2 values each results in 4 variants.
 
-<figure><img src="../../../.gitbook/assets/multiple-attributes.png" alt=""><figcaption><p>Adding multiple attributes increases the count of product variants (product.product)</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/multiple-attributes.png" alt=""><figcaption><p>Adding multiple attributes increases the count of product variants (product.product)</p></figcaption></figure>
 
 ### Displaying an attribute as a Property Mapping
 

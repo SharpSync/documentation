@@ -1,3 +1,7 @@
+---
+icon: js
+---
+
 # Configure Server Side Script
 
 In NetSuite, create a new script for SharpSync to use (example at the bottom)

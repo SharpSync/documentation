@@ -1,3 +1,7 @@
+---
+icon: floppy-disks
+---
+
 # Writing attributes
 
 ### Write the values back to Odoo
@@ -42,9 +46,9 @@ Create a new Property Mapping for a single attribute line id. Follow the guide t
 
 Your display in SharpSync and Odoo should now look something like this:
 
-| SharpSync                                                  | Odoo                                                  |
-| ---------------------------------------------------------- | ----------------------------------------------------- |
-| ![](../../../.gitbook/assets/sharpsync_legs_aluminium.png) | ![](../../../.gitbook/assets/odoo_legs_aluminium.png) |
+| SharpSync                                                     | Odoo                                                     |
+| ------------------------------------------------------------- | -------------------------------------------------------- |
+| ![](../../../../.gitbook/assets/sharpsync_legs_aluminium.png) | ![](../../../../.gitbook/assets/odoo_legs_aluminium.png) |
 
 ### Example: Legs
 

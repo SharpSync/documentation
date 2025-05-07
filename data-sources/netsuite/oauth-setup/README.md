@@ -1,3 +1,7 @@
+---
+icon: shield
+---
+
 # OAuth Setup
 
 ## NetSuite OAuth Setup

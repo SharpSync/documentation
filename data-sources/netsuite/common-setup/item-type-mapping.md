@@ -1,3 +1,7 @@
+---
+icon: diagram-subtask
+---
+
 # Configure itemType mapping
 
 The NetSuite REST API using specific paths for mapping item types such as (but not limited to):

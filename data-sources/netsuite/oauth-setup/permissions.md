@@ -1,3 +1,7 @@
+---
+icon: shield
+---
+
 # Permissions
 
 The following is a list of permissions required in NetSuite for the setup and integration of the SharpSync app.

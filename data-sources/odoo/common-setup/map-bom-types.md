@@ -1,4 +1,8 @@
-# Map BoM Type
+---
+icon: diagram-subtask
+---
+
+# Map BOM Types
 
 In Odoo the default values for BOM types can be in the range
 

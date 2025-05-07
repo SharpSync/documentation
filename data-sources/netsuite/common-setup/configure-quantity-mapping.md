@@ -1,3 +1,7 @@
+---
+icon: diagram-subtask
+---
+
 # Configure quantity mapping
 
 Exactly one property mapping _must_ be set as a quantity mapping in order for SharpSync to know which mapping value to use when updating the BOM structure in NetSuite.

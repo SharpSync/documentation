@@ -1,3 +1,7 @@
+---
+icon: sparkle
+---
+
 # Getting Started
 
 See [Authentication + Configuration](authentication-+-configuration.md) before continuing with the below.

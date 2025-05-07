@@ -1,3 +1,7 @@
+---
+icon: js
+---
+
 # Example Server Side Script
 
 A custom script example follows below. You can certainly modify this to your heart's content, but the overarching details are captured here

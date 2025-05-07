@@ -1,3 +1,7 @@
+---
+icon: server
+---
+
 # Hosting Options
 
 ## Editions & Hosting

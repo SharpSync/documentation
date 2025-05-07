@@ -1,3 +1,7 @@
+---
+icon: sparkle
+---
+
 # Common setup
 
 The pages below show common setup scenarios. It is by no means exhaustive, but we've found these helpful.

@@ -1,3 +1,7 @@
+---
+icon: diagram-subtask
+---
+
 # Configure isPhantom mapping
 
 This setup will cause all new assemblies in NetSuite to be marked as Phantom. Onscreen you will also see any new assemblies (not marked as Phantom) showing with an error.

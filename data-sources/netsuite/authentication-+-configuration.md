@@ -1,5 +1,6 @@
 ---
 description: Configuration of a Netsuite Datasource
+icon: shield
 ---
 
 # Authentication + Configuration

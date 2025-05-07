@@ -1,3 +1,7 @@
+---
+icon: magnifying-glass
+---
+
 # Reading Attributes - Overview
 
 Before reading the below, make sure to read [.](./ "mention")
@@ -34,7 +38,7 @@ But when mapping to _product.product_.finish.
 
 To view the values of a product template's attributes in SharpSync, use the Property Mapping list `product.attribute` &#x20;
 
-Start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md)for&#x20;
+Start by adding a [Property Mapping ](../../../../fundamentals/property-mappings.md)for&#x20;
 
 > product.template.atributes
 

@@ -1,3 +1,7 @@
+---
+icon: sparkle
+---
+
 # Getting Started
 
 ### Install SharpSync custom extension for Dynamics 365 Business Central

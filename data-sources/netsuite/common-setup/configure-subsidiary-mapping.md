@@ -1,3 +1,7 @@
+---
+icon: diagram-subtask
+---
+
 # Configure subsidiary mapping
 
 When using Advanced BOMs subsidiary selection becomes available for manufacturing routes. To setup subsidiary selections, add a new Property Mapping for each item type that you need.

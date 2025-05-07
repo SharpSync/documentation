@@ -1,12 +1,16 @@
+---
+icon: magnifying-glass
+---
+
 # Display All Attribute Names
 
-To view the values of a Product Template's attributes in SharpSync, use the Property Mapping list `product.attribute` (see also [List Names](../list-names.md))
+To view the values of a Product Template's attributes in SharpSync, use the Property Mapping list `product.attribute` (see also [List Names](../../list-names.md))
 
 The list `product.attribute` is special in that you can expand upon the query by adding attribute name at the end in square brackets. See [display-single-attribute-values.md](display-single-attribute-values.md "mention")
 
 
 
-Start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md)for&#x20;
+Start by adding a [Property Mapping ](../../../../fundamentals/property-mappings.md)for&#x20;
 
 > product.template.attributes
 
@@ -238,4 +242,4 @@ return JSON.parse(s ?? "[]");
 
 This will return a string of 'ids' as a result, select the values from the list of values to the screen, and return the selected values
 
-<figure><img src="../../../.gitbook/assets/odoo_multiple_attribute_names.png" alt=""><figcaption><p>Showing all mapped attribute names</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/odoo_multiple_attribute_names.png" alt=""><figcaption><p>Showing all mapped attribute names</p></figcaption></figure>

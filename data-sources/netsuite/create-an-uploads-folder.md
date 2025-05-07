@@ -1,3 +1,7 @@
+---
+icon: arrow-up-from-bracket
+---
+
 # Create an uploads folder
 
 For thumbnails to be uploaded, an uploads folder is required. To setup a thumbnails folder, do the following

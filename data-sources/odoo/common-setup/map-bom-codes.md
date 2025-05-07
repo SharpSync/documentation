@@ -1,4 +1,8 @@
-# Map BoM Code
+---
+icon: diagram-subtask
+---
+
+# Map BOM Codes
 
 In Odoo the BOM code is a unique reference to the version of the BOM at the time of submitting it via Onshape.
 

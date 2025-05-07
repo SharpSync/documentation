@@ -1,3 +1,7 @@
+---
+icon: diagram-subtask
+---
+
 # Configure Where Used Link mapping
 
 In NetSuite it is often useful to know which assemblies or BOM revisions are using a specific component. We'll make use of the `rowData` object + `secondarySourceComponentId` (The id of the item in NetSuite) to generate the link.

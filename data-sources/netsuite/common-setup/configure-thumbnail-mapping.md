@@ -1,3 +1,7 @@
+---
+icon: diagram-subtask
+---
+
 # Configure thumbnail mapping
 
 To update NetSuite thumbnails, add a new Property Mapping for each item type that you need.
