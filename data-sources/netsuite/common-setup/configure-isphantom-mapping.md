@@ -46,3 +46,11 @@ if (isNewAssemblyRow === true && (rowData.cells.isPhantom === false || (`isPhant
 }
 ```
 
+### Notes:
+
+* The `assemblyitem` field `isPhantom` and `bomcomponentrevision` field `itemSource` are somewhat related fields in NetSuite.
+* The `isPhantom` field takes boolean values
+* The `itemSource` field takes string enum values such as "STOCK" and "PHANTOM".
+* With Advanced BOMs, when setting an `assemblyitem` field `isPhantom` to false, and later adding this item to a BOM, its related `itemSource` value will default to "STOCK". When setting the `assemblyitem` field `isPhantom` to true, and later adding this item to a BOM, its related `itemSource` value will default to "PHANTOM"
+* The `itemSource` value can be later changed in the BOM and be different than the `isPhantom` field value of its related `asssemblyitem`
+
