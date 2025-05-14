@@ -15,6 +15,7 @@ The pages below show common setup scenarios. It is by no means exhaustive, but w
 * [Configure a `where-used`link mapping](configure-where-used-link-mapping.md)
 * [Configure thumbnail mapping](configure-thumbnail-mapping.md)
 * [Common Mapping Rules](common-mapping-rules.md)
+* [Notes](notes.md)
 
 #### Caveats
 
