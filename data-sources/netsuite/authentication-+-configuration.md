@@ -90,6 +90,16 @@ Item types to load properties for
 
 <mark style="color:orange;">When loading accessors (NetSuite Fields) and property mappings, these are the item types searched for:</mark>
 
+<mark style="color:orange;">Simple Boms:</mark>
+
+{% code overflow="wrap" %}
+```
+assemblyitem|inventoryitem|noninventoryresaleitem|noninventorysaleitem|noninventorypurchaseitem|assemblyitemmember
+```
+{% endcode %}
+
+<mark style="color:orange;">Advanced Boms:</mark>
+
 {% code overflow="wrap" %}
 ```
 assemblyitem|inventoryitem|noninventoryresaleitem|noninventorysaleitem|noninventorypurchaseitem|bom|bomRevision|manufacturingRouting
