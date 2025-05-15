@@ -18,3 +18,4 @@ It is recommended to disable the "Update NetSuite On Submit" setting for the fol
 * `bomrevision.name`
 * `bomrevisioncomponent.id`
 * `bomrevisioncomponent.item`
+* `bomrevisioncomponent.lineId`
