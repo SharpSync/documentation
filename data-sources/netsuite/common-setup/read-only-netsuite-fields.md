@@ -1,7 +1,8 @@
-# Notes
+# Read-Only NetSuite Fields
 
 It is recommended to disable the "Update NetSuite On Submit" setting for the following NetSuite fields to prevent any unexpected behaviour.
 
+* &#x20;All fields with suffix `.links`
 * `assemblyitemmember.item`
 * `bom.assembly`
 * `bom.createdDate`
