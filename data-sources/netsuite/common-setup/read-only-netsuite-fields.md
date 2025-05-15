@@ -12,6 +12,8 @@ It is recommended to disable the "Update NetSuite On Submit" setting for the fol
 * `bomrevision.billOfMaterials`
 * `bomrevision.component`
 * `bomrevision.createdDate`&#x20;
+* `bomrevision.effectiveEndDate`
+* `bomrevision.effectiveStartDate`
 * `bomrevision.id`&#x20;
 * `bomrevision.name`
 * `bomrevisioncomponent.id`
