@@ -3,6 +3,7 @@
 It is recommended to disable the "Update NetSuite On Submit" setting for the following NetSuite fields to prevent any unexpected behaviour.
 
 * &#x20;All fields with suffix `.links`
+* &#x20;All fields with suffix `.id`
 * `assemblyitemmember.item`
 * `bom.assembly`
 * `bom.createdDate`
