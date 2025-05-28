@@ -102,8 +102,10 @@ define(["N/record", "N/search", "N/log", "N/encode", "N/error"], function (
     }
 
     // Regular expression for validating UUID format
+    // var uuidPattern =
+    //   /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
     var uuidPattern =
-      /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
     // Check if the UUID matches the pattern and is not all zeros
     return (
       uuidPattern.test(uuid) && uuid !== "00000000-0000-0000-0000-000000000000"
