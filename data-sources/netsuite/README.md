@@ -26,7 +26,3 @@ The list of items that are supported are shown below. These have been officially
 
 SharpSync currently only supports OAuth2 authentication for NetSuite.
 
-* [OAuth Setup](oauth-setup/)
-* [Authentication](authentication-+-configuration.md)
-* [Common Setup](common-setup/)
-
