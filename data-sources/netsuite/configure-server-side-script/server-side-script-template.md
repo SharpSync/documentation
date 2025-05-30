@@ -2,11 +2,17 @@
 icon: js
 ---
 
-# Example Server Side Script
+# Server Side Script Template
 
-A custom script example follows below.&#x20;
+You'll find in this page the SharpSync NetSuite Restlet script that is required to allow SharpSync to perform certain operations that are not typically available from the standard NetSuite API.
 
-TODO: Update the `organizationSpecificTaxScheduleId` variable value in the code below on line 21 to match your organization specific default `taxschedule` id for newly created items.
+Both NetSuite users of simple and advanced BOMs should upload this script.
+
+This script is needed for the creation of files in NetSuite (such as PNG files for thumbnails), that can be used in both cases of simple and advanced BOMs.
+
+The script is needed for the creation of items (`assemblyitem` , `inventoryitem`, etc...) in the case of advanced BOMs. Item creation for advanced BOMS requires providing a value for `taxschedule` that is not readily queryable from the standard API.&#x20;
+
+<mark style="color:orange;">**TODO: Update the**</mark><mark style="color:orange;">**&#x20;**</mark><mark style="color:orange;">**`organizationSpecificTaxScheduleId`**</mark><mark style="color:orange;">**&#x20;**</mark><mark style="color:orange;">**variable value in the code below on line 21 to match your organization specific default**</mark><mark style="color:orange;">**&#x20;**</mark><mark style="color:orange;">**`taxschedule`**</mark><mark style="color:orange;">**&#x20;**</mark><mark style="color:orange;">**id for newly created items.**</mark>
 
 Before uploading to Netsuite, save the below contents to a `*.js` file.
 

@@ -12,7 +12,7 @@ In NetSuite, create a new script for SharpSync to use (example at the bottom)
   * Attach from: `Computer`
   * Filename: Specify with the `.js` extension at the back
   * Folder: This must be `SuiteScripts`. DO NOT use another folder
-  * Choose file: choose the file you saved (you can use the example script [here](example-server-side-script.md))
+  * Choose file: choose the file you saved (you can use the example script [here](server-side-script-template.md))
   * Click Save
 * Click > Create Script Record
   * Specify a name: `sharpsync-item-create.js`

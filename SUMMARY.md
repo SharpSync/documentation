@@ -50,7 +50,7 @@
     * [Common List names](data-sources/netsuite/common-setup/common-list-names.md)
   * [Advanced Bill of Materials](data-sources/netsuite/advanced-bill-of-materials.md)
   * [Configure Server Side Script](data-sources/netsuite/configure-server-side-script/README.md)
-    * [Example Server Side Script](data-sources/netsuite/configure-server-side-script/example-server-side-script.md)
+    * [Server Side Script Template](data-sources/netsuite/configure-server-side-script/server-side-script-template.md)
   * [Configure SharpSync to use Server Side Script](data-sources/netsuite/configure-sharpsync-to-use-server-side-script.md)
   * [Configure Routings](data-sources/netsuite/configure-routings.md)
   * [Integration tips](data-sources/netsuite/integration-tips.md)
