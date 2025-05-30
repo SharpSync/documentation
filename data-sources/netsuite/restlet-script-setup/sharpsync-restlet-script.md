@@ -2,7 +2,7 @@
 icon: js
 ---
 
-# Server Side Script Template
+# SharpSync RESTlet Script
 
 You'll find in this page the SharpSync NetSuite Restlet script that is required to allow SharpSync to perform certain operations that are not typically available from the standard NetSuite API.
 
@@ -14,7 +14,7 @@ The script is needed for the creation of items (`assemblyitem` , `inventoryitem`
 
 <mark style="color:orange;">**TODO: Update the**</mark><mark style="color:orange;">**&#x20;**</mark><mark style="color:orange;">**`organizationSpecificTaxScheduleId`**</mark><mark style="color:orange;">**&#x20;**</mark><mark style="color:orange;">**variable value in the code below on line 21 to match your organization specific default**</mark><mark style="color:orange;">**&#x20;**</mark><mark style="color:orange;">**`taxschedule`**</mark><mark style="color:orange;">**&#x20;**</mark><mark style="color:orange;">**id for newly created items.**</mark>
 
-Before uploading to Netsuite, save the below contents to a `*.js` file.
+Before uploading to Netsuite, save the below contents to a `*.js` file (example `sharpsync-restlet-script.js`).
 
 {% code lineNumbers="true" %}
 ```javascript
