@@ -38,13 +38,14 @@ define(["N/record", "N/search", "N/log", "N/encode", "N/error"], function (
     APPLICATION_NAME: "applicationName",
     SHARPSYNC_ID: "sharpsyncId",
     ORGANIZATION_ID: "organizationId",
-    METHOD: "method",
+    PROCEDURE: "procedure",
     ITEM_TYPE: "itemType",
     NAME: "name",
     CUSTOM_PROPERTIES: "customProperties",
   };
 
-  const methodTypes_e = {
+  const procedureTypes_e = {
+    CREATE_FILE: "createFile",
     CREATE_ITEM: "createItem",
   };
 
@@ -102,8 +103,6 @@ define(["N/record", "N/search", "N/log", "N/encode", "N/error"], function (
     }
 
     // Regular expression for validating UUID format
-    // var uuidPattern =
-    //   /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
     var uuidPattern =
       /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
     // Check if the UUID matches the pattern and is not all zeros
@@ -113,16 +112,10 @@ define(["N/record", "N/search", "N/log", "N/encode", "N/error"], function (
   }
 
   function validateApplicationName(applicationHostName) {
-    if (
-      applicationHostName !== "app.sharpsync.net" &&
-      applicationHostName !== "dev.sharpsync.net" &&
-      applicationHostName !== "localhost"
-    ) {
+    if (applicationHostName !== "app.sharpsync.net") {
       throwParameterError(
         "INVALID_APPLICATION",
-        "Invalid application: (" +
-          applicationHostName +
-          ") must be in [app.sharpsync.net, dev.sharpsync.net, localhost]"
+        "Invalid application: (" + applicationHostName + ")"
       );
     }
   }
@@ -152,7 +145,6 @@ define(["N/record", "N/search", "N/log", "N/encode", "N/error"], function (
   }
 
   function arrayIncludesCaseInsensitive(array, value) {
-    // Replace the .map((v) => v.toLowerCase()) with an ES5 equivalent
     var lowerCaseArray = [];
     for (var i = 0; i < array.length; i++) {
       lowerCaseArray.push(array[i].toLowerCase());
@@ -192,31 +184,30 @@ define(["N/record", "N/search", "N/log", "N/encode", "N/error"], function (
     }
   }
 
-  function validatePostRequestBody(requestBody, encode, log, base64String) {
+  function validatePostRequestBody(requestBody) {
     validateApplicationName(requestBody[sharpSyncConstants_e.APPLICATION_NAME]);
     validateSharpSyncId(requestBody[sharpSyncConstants_e.SHARPSYNC_ID]);
     validateOrganizationId(requestBody[sharpSyncConstants_e.ORGANIZATION_ID]);
   }
 
   function listTaxSchedules(search, log) {
-    var types = Object.keys(search.Type);
-    var taxTypes = types.filter(function (type) {
-      return type.toLowerCase().indexOf("tax") !== -1;
+    var taxScheduleSearch = search.create({
+      type: "taxschedule",
+      columns: ["internalid", "name"],
+    });
+
+    var taxSchedules = [];
+    taxScheduleSearch.run().each(function (result) {
+      taxSchedules.push({
+        id: result.getValue("internalid"),
+        name: result.getValue("name"),
+      });
+      return true;
     });
 
     log.debug({
-      title: "Searchable tax types",
-      details: taxTypes,
-    });
-
-    var taxScheduleSearch = search.create({
-      type: search.Type.TAX_TYPE,
-      columns: ["internalid"],
-    });
-
-    var taxSchedules = taxScheduleSearch.run().getRange({
-      start: 0,
-      end: 100,
+      title: "Retrieved Tax Schedules",
+      details: JSON.stringify(taxSchedules),
     });
 
     return taxSchedules;
@@ -360,6 +351,99 @@ define(["N/record", "N/search", "N/log", "N/encode", "N/error"], function (
     return itemRecord;
   }
 
+  function fileCreate(request) {
+    if (
+      typeof request.name == "undefined" ||
+      request.name === null ||
+      request.name === ""
+    ) {
+      throwParameterError("MISSING_PARAMETER", "No name was specified.");
+    }
+
+    if (
+      typeof request.fileType == "undefined" ||
+      request.fileType === null ||
+      request.fileType === ""
+    ) {
+      throwParameterError("MISSING_PARAMETER", "No fileType was specified.");
+    }
+
+    if (typeof request.contents == "undefined" || request.contents === null) {
+      throwParameterError("MISSING_PARAMETER", "No contents was specified.");
+    }
+
+    if (
+      typeof request.description == "undefined" ||
+      request.description === null
+    ) {
+      throwParameterError("MISSING_PARAMETER", "No description was specified.");
+    }
+
+    if (typeof request.encoding == "undefined" || request.encoding === null) {
+      throwParameterError("MISSING_PARAMETER", "No encoding was specified.");
+    }
+
+    if (
+      typeof request.folderID == "undefined" ||
+      request.folderID === null ||
+      request.folderID === ""
+    ) {
+      throwParameterError("MISSING_PARAMETER", "No folderID was specified.");
+    }
+
+    if (
+      typeof request.isOnline == "undefined" ||
+      request.isOnline === null ||
+      request.isOnline === ""
+    ) {
+      request.isOnline = false;
+    }
+
+    if (
+      typeof request.isInactive == "undefined" ||
+      request.isInactive === null ||
+      request.isInactive === ""
+    ) {
+      request.isInactive = false;
+    }
+
+    var fileObj = file.create({
+      name: request.name,
+      fileType: request.fileType,
+      contents: request.contents,
+      description: request.description,
+      encoding: request.encoding,
+      folder: request.folderID,
+      isOnline: request.isOnline,
+      isInactive: request.isInactive,
+    });
+
+    var fileID = fileObj.save();
+
+    fileObj = file.load({ id: fileID });
+
+    var response = {};
+    response.file = {};
+    response.file.info = fileObj;
+
+    if (
+      typeof request.returnContent != "undefined" &&
+      request.returnContent === true
+    ) {
+      var contents = fileObj.getContents();
+
+      contents = encode.convert({
+        string: contents,
+        inputEncoding: encode.Encoding.UTF_8,
+        outputEncoding: encode.Encoding.BASE_64,
+      });
+
+      response.file.content = contents;
+    }
+
+    return response;
+  }
+
   /*
   SharpSync always uses the following appState to confirm validity for GET and POST requests:
   X-APPLICATION => header naming the application
@@ -386,9 +470,11 @@ define(["N/record", "N/search", "N/log", "N/encode", "N/error"], function (
   }
 
   function post(context) {
-    validatePostRequestBody(context, encode, log, context.appState);
+    validatePostRequestBody(context);
 
-    if (context[sharpSyncConstants_e.METHOD] == methodTypes_e.CREATE_ITEM) {
+    if (
+      context[sharpSyncConstants_e.PROCEDURE] == procedureTypes_e.CREATE_ITEM
+    ) {
       var itemRecord = createItemFromContext(context, record, log);
       // Save the new item and get its id
       var itemId = itemRecord.save();
@@ -412,11 +498,15 @@ define(["N/record", "N/search", "N/log", "N/encode", "N/error"], function (
           itemId +
           "/?expandSubResources=true",
       };
+    } else if (
+      context[sharpSyncConstants_e.PROCEDURE] == procedureTypes_e.CREATE_FILE
+    ) {
+      return fileCreate(context);
     }
 
     throwParameterError(
-      "METHOD_NOT_SUPPORTED",
-      "The context method is not valid or not yet supported"
+      "PROCEDURE_NOT_SUPPORTED",
+      "The context procedure is not valid or not yet supported"
     );
   }
 
