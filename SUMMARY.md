@@ -32,7 +32,7 @@
 * [NetSuite](data-sources/netsuite/README.md)
   * [OAuth Setup](data-sources/netsuite/oauth-setup/README.md)
     * [Permissions](data-sources/netsuite/oauth-setup/permissions.md)
-  * [RESTlet Script Setup](data-sources/netsuite/restlet-script-setup.md)
+  * [RESTlet Script Setup](data-sources/netsuite/suite-api-setup.md)
   * [Configure Server Side Script](data-sources/netsuite/configure-server-side-script/README.md)
     * [Server Side Script Template](data-sources/netsuite/configure-server-side-script/server-side-script-template.md)
   * [Setting up a thumbnail folder](data-sources/netsuite/setting-up-a-thumbnail-folder.md)

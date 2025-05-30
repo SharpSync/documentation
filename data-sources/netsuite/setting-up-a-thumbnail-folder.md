@@ -11,7 +11,7 @@ While not strictly necessary, it is recommended to setup a thumbnails folder in 
 To successfully upload images/thumbnails to NetSuite, you need the following:
 
 * OAuth `clientId` and `clientSecret` (see [OAuth Setup](oauth-setup/))
-* A `scriptId` (see [RESTlet Script Setup](restlet-script-setup.md))
+* A `scriptId` (see [RESTlet Script Setup](suite-api-setup.md))
 * A `folderId` (see next step below)
 * A variable to assign the `fileId` to
 

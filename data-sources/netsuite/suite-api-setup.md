@@ -2,7 +2,7 @@
 icon: js
 ---
 
-# Suite API Setup
+# RESTlet Script Setup
 
 ## SuiteAPI Overview
 
