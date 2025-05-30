@@ -6,14 +6,6 @@ icon: folder-open
 
 While not strictly necessary, it is recommended to setup a thumbnails folder in NetSuite. This lets you place created image files in a convenient location in NetSuite to be able to use as item thumbnails for example.
 
-## NetSuite Setup of Thumbnail folder
-
-To successfully upload images/thumbnails to NetSuite, you need the following:
-
-* OAuth `clientId` and `clientSecret` (see [OAuth Setup](oauth-setup/))
-* A `scriptId` and `deploymentId` (see [RESTlet Script Setup](restlet-script-setup/))
-* A `folderId` (see below)
-
 ### Create A NetSuite Thumbnails Folder
 
 * Navigate to NetSuite
@@ -35,10 +27,4 @@ With this last folder selected in the file cabinet, take note of the folder id i
 > https://`{companyId}`.app.netsuite.com/app/common/media/mediaitemfolders.nl?`folder=20149768`\&whence=\&cmid=...
 
 Copy the value of the `folderId` and keep it for later reference
-
-### Putting it all together - Setup the datasource
-
-With the URL of the previous step, and the `folderId` and `scriptId` and `deploymentId` in hand, it's time to setup the datasource in SharpSync.
-
-Check out [Authentication + Configuration](authentication-+-configuration.md) for instructions.
 

@@ -5,6 +5,14 @@ icon: shield
 
 # Authentication + Configuration
 
+By now you should have the following key info:
+
+* `clientId`  (see [OAuth Setup](oauth-setup/))
+* `clientSecret`  (see [OAuth Setup](oauth-setup/))
+* `scriptId`  (see [RESTlet Script Setup](restlet-script-setup/))
+* `deploymentId`  (see [RESTlet Script Setup](restlet-script-setup/))
+* `folderId`  (see [Thumbnail Folder Setup](thumbnail-folder-setup.md))
+
 NetSuite supports a number of types of authentication. The auth method supported in SharpSync is OAuth 2. The configuration values in SharpSync are shown below.
 
 **Authentication**
