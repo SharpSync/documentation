@@ -71,6 +71,7 @@
   * [Hosting Options](data-sources/odoo/hosting-options.md)
   * [List Names](data-sources/odoo/list-names.md)
   * [Permissions](data-sources/odoo/permissions.md)
+  * [Troubleshooting](data-sources/odoo/troubleshooting.md)
 * [Onshape](data-sources/onshape/README.md)
   * [Getting Started](data-sources/onshape/getting-started.md)
   * [Setting up Derivatives](data-sources/onshape/setting-up-derivatives.md)
