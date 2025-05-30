@@ -58,13 +58,13 @@ https://[customerId].suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/tok
 
 OAuth Client Client Id
 
-<mark style="color:orange;">The OAuth Client Id registered for the SharpSync application. Usually generated  by the integration record created:</mark>
+<mark style="color:orange;">The OAuth</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`clientId`</mark> <mark style="color:orange;"></mark><mark style="color:orange;">registered for the SharpSync application. Usually generated  by the integration record created:</mark>
 
 > {some long string of text}
 
 OAuth Client Secret
 
-<mark style="color:orange;">The OAuth Client secret registered for the SharpSync application. Usually generated  the first time the integration record is created:</mark>
+<mark style="color:orange;">The OAuth</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`clientSecret`</mark> <mark style="color:orange;"></mark><mark style="color:orange;">registered for the SharpSync application. Usually generated  the first time the integration record is created:</mark>
 
 > {some long string of text}
 
@@ -98,50 +98,48 @@ assemblyitem|inventoryitem|noninventoryresaleitem|noninventorysaleitem|noninvent
 ```
 {% endcode %}
 
-<mark style="color:orange;">Advanced Boms:</mark>
+<mark style="color:orange;">Advanced BOMs:</mark>
 
 {% code overflow="wrap" %}
 ```
-assemblyitem|inventoryitem|noninventoryresaleitem|noninventorysaleitem|noninventorypurchaseitem|bom|bomRevision|manufacturingRouting
+assemblyitem|inventoryitem|noninventoryresaleitem|noninventorysaleitem|noninventorypurchaseitem|bom|bomrevision|bomrevisioncomponent|manufacturingrouting
 ```
 {% endcode %}
 
 Servlet URL
 
-<mark style="color:orange;">The url of the servlet where thumbnails will be uploaded. Optional but recommended. If specified, include the</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`folderId`</mark> <mark style="color:orange;"></mark><mark style="color:orange;">param at the end.\*\*</mark>
+<mark style="color:orange;">The url of the servlet where thumbnails will be uploaded and advanced BOMs item created.</mark>
+
+<mark style="color:orange;">Simple Boms:</mark>
 
 {% code overflow="wrap" %}
 ```
-https://{companyId}.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=2943&deploy=1&folderId={folderId}
+https://{companyId}.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script={scriptId}&deploy={deploymentId}&folderId={folderId}
+```
+{% endcode %}
+
+<mark style="color:orange;">Advanced BOMs (use the same value for</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`script`</mark>  <mark style="color:orange;"></mark><mark style="color:orange;">and</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`itemInjectionScriptId`</mark> <mark style="color:orange;"></mark><mark style="color:orange;">):</mark>
+
+{% code overflow="wrap" %}
+```
+https://{companyId}.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script={scriptId}&itemInjectionScriptId={scriptId}&deploy={deploymentId}&folderId={folderId}
 ```
 {% endcode %}
 
 Use server side scripting for items
 
-<mark style="color:orange;">Use the server to update custom fields for items which are not surfaced in the NetSuite api. (Only set if the defaults don't provide enough functionality)</mark>
+<mark style="color:orange;">Use the server to update custom fields for items which are not surfaced in the NetSuite api. (check this if using advanced BOMs)</mark>
 
 Use advanced BOMs
 
-<mark style="color:orange;">Check to use the advanced BOMs module in NetSuite</mark>
+<mark style="color:orange;">Check to let SharpSync know that you use advanced BOMs in NetSuite</mark>
 
-Bom Naming Scheme
+BOM Naming Scheme
 
-<mark style="color:orange;">The scheme used to generate BOM names</mark>
+<mark style="color:orange;">The scheme that SharpSync uses to search for and generate BOM names</mark>
 
-Bom Revision Naming Scheme
+BOM Revision Naming Scheme
 
-<mark style="color:orange;">The scheme used to generate BOM revision names</mark>
+<mark style="color:orange;">The scheme that SharpSync uses to search for and generate BOM revision names</mark>
 {% endtab %}
 {% endtabs %}
-
-#### \*\*Servlet URL configuration
-
-* Enter the URL of the restlet, followed by `&folderId=` and the id of the folder in the first steps
-* Remember to update the `script`or `deploy`id if the script or deployment status is updated&#x20;
-* Enter the folder ID into the UI in the form
-
-> `{{netsuite-api}}`/app/site/hosting/restlet.nl?script={yourScriptId}\&deploy=1\&folderId={folderId}
-
-e.g.
-
-> `{{netsuite-api}}`/app/site/hosting/restlet.nl?script=`2743`\&deploy=1\&folderId=`19578359`

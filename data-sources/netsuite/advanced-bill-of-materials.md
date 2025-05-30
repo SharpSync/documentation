@@ -12,13 +12,7 @@ Advanced BOMs use the following notable features:
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-### Using Advanced BOMs
-
-There are some limitations with the use of advanced BOMs via the NetSuite API. For this reason (at the time of writing), we make use of a custom server side script to create advanced BOMS.
-
-Server side scripting uses a script in NetSuite to set default custom field values for `bom` and `bomrevision` upon their creation. The important bit to take note of here is that the `itemInjectionScriptId` needs to be configured (see links at the bottom of article).
-
-### Reading And Writing bom and bomrevision Metadata
+### Using Advanced BOMs - Reading And Writing bom and bomrevision Metadata
 
 You can map NetSuite fields related to `bom` and `bomrevision` item types just like you map fields for regular item types (`assemblyitem`, `inventoryitem`, etc...).
 
@@ -34,9 +28,7 @@ Some notes on the `bom` and `bomrevision` metadata:
 * For boms where `bom.useComponentYield` is set to `true` , a related `bomrevision`'s child components can have the field `bomrevisioncomponent.componentYield` set to values greater than 0 and less or equal than 100 (0 < x <= 100).
 * For boms where `bom.useComponentYield` is set to `false` , a related `bomrevision`'s child components will have the field `bomrevisioncomponent.componentYield` values always ignored by NetSuite and kept at 100.
 
-### Major steps
+### Next Steps
 
-* [Configure the server side script](configure-server-side-script/)
-* [Configure SharpSync to use server side scripting](configure-sharpsync-to-use-server-side-script.md)
 * [Configure Routings](configure-routings.md) \[optional]
 
