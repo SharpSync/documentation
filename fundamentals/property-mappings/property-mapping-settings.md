@@ -1,8 +1,8 @@
 # Property Mapping Settings
 
-To change the settings of each Property Mapping, click on the coressponding mapping gear in the Settings column.
+To change the settings of each Property Mapping, click on the corresponding mapping gear icon in the Settings column.
 
-**Update** Data Source
+**Update Data Source On Submit**
 
 Verify that the accessor for each Data Source is correct:
 
@@ -91,47 +91,6 @@ Example: Custom list of items to select from using `Select List`
 Which, when displayed in the UI, looks like this
 
 <figure><img src="../../.gitbook/assets/property_mapping_selection_list_settings.png" alt=""><figcaption></figcaption></figure>
-
-
-
-### Configure Rules
-
-Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. For the list of Rules with explanations for each, click the following link: Property mapping rules
-
-<figure><img src="../../.gitbook/assets/rule_template_sections.png" alt=""><figcaption></figcaption></figure>
-
-
-
-1. Select the rule desired. Be sure to select the type of rule that best matches the data type. (Text, Numeric, JavaScript expression, Json value)
-2. Select display, import or export to determine when the rule is applied:
-   * Display applies the rule in the SharpSync BOM.
-   * Import applies the rule as data is being imported into the SharpSync BOM.
-   * Export applies the rule as data is being exported from the SharpSync BOM.
-3. Click on Add Rule to show the rule in the list.
-4. This icon tells you what type of rule it is:
-   * Data Validation - Evaluates validity of the cell data.
-   * Data Transformation - Changes cell data to match the rule type.
-5. This header shows the rule action, and the arrows allow you to move the rule up or down the list.
-   * Rules are evaluated from top to bottom. If you want one rule to execute before another, ensure it is ordered correctly.
-6. Saves any changes you make to the rule.
-7. Deletes the rule from the list.
-8. Rule name with :information\_source: tooltip explanation at right.
-9. Rule criteria
-   * A textbox may be present to allow the user to define the rule parameter.
-   * A description will be present if the parameter is not required.
-10. On Rule Failure Action - Warning(s) will be present in the cell overlay when the rule fails.
-    * Select pass to allow the user to still process the BOM.
-    * Select block to require the user to fix the cell data before processing the BOM.
-11. Depending on the rule selected, the bottom line may display options for processing the rule. Select the Data Sources that will be updated.
-12. Closes and saves the Rules module. Rules in the list will be saved and applied to the BOM.
-
-<figure><img src="../../.gitbook/assets/rule_template_tooltip.png" alt=""><figcaption></figcaption></figure>
-
-
-
-BOM with list of pass/fail Rules on overlay for part A4 - Base Plate (Red Arrow)
-
-
 
 **Object list setup example**
 

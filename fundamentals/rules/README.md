@@ -4,38 +4,13 @@ icon: list-check
 
 # Rules
 
-Rules are optional automated functions that either:
-
-* Edits the row data coming from or going to a [Data Source](../data-sources.md)  or&#x20;
-* Display highlights based on the data or change the data before it is displayed (see [Rule legend](./#rule-legend))
-
-A list of all the supported rules may be found here at [rule-templates](rule-templates/ "mention")
-
-### Rules Fundamentals
-
-The main concepts to understand for rules are the following:
-
-* The [_type_ or _category_](./#concept-rule-categories) of the rules
-* The[ _order_ ](./#order-of-rules)of the rules
-* _When_ the rules run
+To configure the rules for each Property Mapping, click on the corresponding rules icon in the Rules column.
 
 ### Rule Type or Category
 
 Rules for property mappings fall into 1 of 3 categories:
 
-| Rule Category | What it does             | Internal Reference  | Visibility  |
-| ------------- | ------------------------ | ------------------- | ----------- |
-| Import Rules  | Modifies data            | Data Transformation | Tooltip     |
-| Export Rules  | Modifies data            | Data Transformation | Tooltip     |
-| Display Rules | Validates data on-screen | Data Validation     | Cell border |
-
-
-
-Each type of rule can be reordered within it's own category, but you cannot move an export rule before an import rule.
-
-Import/Export rules (Data Transformation) work on the raw source data and are applied to each individual data source's data.
-
-Display Rules (Data Validation) evaluates the data displayed on-screen after being retrieved from a Data Source.&#x20;
+<table><thead><tr><th width="140.5546875">Rule Category</th><th width="234.3671875">What it does</th><th>Internal Reference</th><th>Visibility</th></tr></thead><tbody><tr><td>Import Rules</td><td>Modifies incoming data </td><td>Data Transformation</td><td>Tooltip</td></tr><tr><td>Export Rules</td><td>Modifies outgoing data</td><td>Data Transformation</td><td>Tooltip</td></tr><tr><td>Display Rules</td><td>Validates data on-screen</td><td>Data Validation</td><td>Tooltip + Cell border</td></tr></tbody></table>
 
 ### Order of Rules
 
@@ -47,15 +22,13 @@ Each type of rule can be reordered within it's own category, but you cannot move
 
 You _can_ reorder the rules (there are individual up/down buttons next to the header), but `export` rules cannot appear before `import` rules. Import/Export rules have an orange border, while display rules only have a gray border.
 
+Display Rules (Data Validation) evaluates the data displayed on-screen after being retrieved from a Data Source and after all applicable Import rules have been processed.
+
 #### Concept: Individual sources
 
 Import rules work on the raw source data and are applied to each individual data source's data.
 
 > Each rule runs only on the source that it is being applied on (see image below)
-
-#### Rule parameters
-
-User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See [Advanced Scripting](advanced-scripting.md)
 
 ### Rule Legend
 
@@ -65,21 +38,44 @@ When a rule passes, the user is not informed of any problems with the data. When
 The colors displayed can be modified under Profile > User Settings > Display
 {% endhint %}
 
-
-
 <table data-full-width="false"><thead><tr><th width="290">Color scheme</th><th>Description</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image (14).png" alt="" data-size="original"></td><td>Orange border - Value did not pass display mapping rule (Warning), the user is able to continue.</td></tr><tr><td><img src="../../.gitbook/assets/image (15).png" alt="" data-size="original"></td><td>Red border - Value did not pass display mapping rule (Error), the user is <em>not</em> able to continue.</td></tr></tbody></table>
 
-
-
-### Adding new Rules
+### Configure Rules
 
 Start by navigating to Property Mappings and click on "Rules" for the Property Mapping you want to edit.
 
 <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-A panel will appear on the side. Expand the Rules dropdown to reveal the available [list of rules ](rule-templates/)that can be applied. Select a rule and click `ADD RULE`.
+A panel will appear on the side. Expand the Rules dropdown to reveal the available list of rules that can be applied.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="214"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rule_template_sections.png" alt=""><figcaption></figcaption></figure>
+
+1. Select the rule desired. Be sure to select the type of rule that best matches the data type. (Text, Numeric, JavaScript expression, Json value)
+2. Select display, import or export to determine when the rule is applied:
+   * Display applies the rule in the SharpSync BOM.
+   * Import applies the rule as data is being imported into the SharpSync BOM.
+   * Export applies the rule as data is being exported from the SharpSync BOM.
+3. Click on Add Rule to show the rule in the list.
+4. This icon tells you what type of rule it is:
+   * Data Validation - Evaluates validity of the cell data.
+   * Data Transformation - Changes cell data to match the rule type.
+5. This header shows the rule action, and the arrows allow you to move the rule up or down the list.
+   * Rules are evaluated from top to bottom. If you want one rule to execute before another, ensure it is ordered correctly.
+6. Saves any changes you make to the rule.
+7. Deletes the rule from the list.
+8. Rule name with :information\_source: tooltip explanation at right.
+9. Rule criteria
+   * A textbox may be present to allow the user to define the rule parameter.
+   * A description will be present if the parameter is not required.
+10. On Rule Failure Action - Warning(s) will be present in the cell overlay when the rule fails.
+    * Select pass to allow the user to still process the BOM.
+    * Select block to require the user to fix the cell data before processing the BOM.
+11. Depending on the rule selected, the bottom line may display options for processing the rule. Select the Data Sources that will be updated.
+12. Closes and saves the Rules module. Rules in the list will be saved and applied to the BOM.
+
+<figure><img src="../../.gitbook/assets/rule_template_tooltip.png" alt=""><figcaption><p>BOM with list of pass/fail Rules on overlay for part A4 - Base Plate (Red Arrow)</p></figcaption></figure>
+
+### Notes
 
 In the example below, the `Format as decimal number` rule runs for both [Data Sources](../data-sources.md) (in this example Onshape and NetSuite). The rule runs on the individual strings of data imported.
 
@@ -100,8 +96,6 @@ The rule running for DS1 (e.g. Onshape) _is not aware of the data being imported
 {% hint style="info" %}
 One way to get around this is to create a `Text evaluation` rule to match the value of a cell to that of another and return a display message to the user. Or use a `Text manipulation` rule to write a message to a cell value and give the user a message onscreen.
 {% endhint %}
-
-
 
 ### Example
 
@@ -142,7 +136,6 @@ Be sure also to read and understand [Advanced Scripting](advanced-scripting.md).
 
 #### **Text evaluation**
 
-\
 Evaluates the cell value given the JavaScript expression. Available parameters:
 
 * s (display value)

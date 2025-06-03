@@ -6,7 +6,7 @@ description: Removes the specified property when exporting the data.
 
 Type: Export only
 
-Description: Removes the property from the `secondaryExportData` object (see [rowData](../../advanced-scripting.md)).
+Description: Removes the property from the `secondaryExportData` object (see [rowData](../advanced-scripting.md)).
 
 Implementation: Can only have one Remove Property rule per BOM
 
@@ -20,7 +20,7 @@ Implementation: Can only have one Remove Property rule per BOM
 
 - Lastly, remember to check for which Data Sources this rule should apply. In the example below the rule will only apply to the Secondary Data Source, in other words, the property not be removed for the Primary Data Source, but it will be removed for the Secondary Data Source.
 
-<img src="../../../../.gitbook/assets/image (21).png" alt="" data-size="original">
+<img src="../../../.gitbook/assets/image (21).png" alt="" data-size="original">
 
 
 

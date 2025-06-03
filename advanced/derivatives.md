@@ -11,16 +11,7 @@ icon: files
 
 Derivatives are files or URLs that are derived from BOMs and Components in the CAD source, such as STEP, DWG, PDF, etc... files. SharpSync's derivatives feature allows the manual or automated transfer of CAD BOM derivatives from the CAD Data Source to the ERP Data Source. The derivatives feature is currently only available for:
 
-| Source         |    Url Transfer\*    |   File Transfer\*\*  |
-| -------------- | :------------------: | :------------------: |
-| Onshape        | :white\_check\_mark: | :white\_check\_mark: |
-| PropelPLM      | :white\_check\_mark: | :white\_check\_mark: |
-| Odoo           | :white\_check\_mark: |   \[mid-late 2025]   |
-| NetSuite       | :white\_check\_mark: |     \[on-request]    |
-| SolidWorks     |                      |                      |
-| Inventor       |                      |                      |
-| CSV            |                      |                      |
-| SolidWorks PDM |                      |                      |
+<table><thead><tr><th>Source</th><th width="154.28125" align="center">Url Transfer*</th><th width="206.94140625" align="center">File Transfer**</th></tr></thead><tbody><tr><td>Autodesk Inventor</td><td align="center"></td><td align="center"></td></tr><tr><td>CSV</td><td align="center"></td><td align="center"></td></tr><tr><td>MS Dynamics 365 Business Central</td><td align="center"></td><td align="center"></td></tr><tr><td>NetSuite</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">[on-request]</td></tr><tr><td>Odoo</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">[mid-late 2025]</td></tr><tr><td>Onshape</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td>Propel PLM</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td>SolidWorks</td><td align="center"></td><td align="center"></td></tr><tr><td>SolidWorks PDM</td><td align="center"></td><td align="center"></td></tr></tbody></table>
 
 \* If the source is CAD, then the URL is available and copied to a field in the ERP. If the source is ERP, then the URL may be copied to a field from the CAD.
 

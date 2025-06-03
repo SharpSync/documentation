@@ -12,4 +12,4 @@ Description: Runs the specified JavaScript function on the cell value and return
 
 This is an advanced rule which requires programming knowledge. It is more difficult to use, but much more powerful.
 
-See the [Advanced Scripting ](../../advanced-scripting.md)section for more detail.
+See the [Advanced Scripting ](../advanced-scripting.md)section for more detail.
