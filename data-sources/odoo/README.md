@@ -20,11 +20,11 @@ Out of the box, the Odoo integration supports the following features for all sup
 
 SharpSync supports different versions of Odoo:
 
-| Item    | Status         | Support |
-| ------- | -------------- | ------- |
-| Odoo 18 | In Development | N/A     |
-| Odoo 17 | Available      | Full    |
-| Odoo 16 | Available      | Full    |
+| Item    | Status    | Support |
+| ------- | --------- | ------- |
+| Odoo 18 | Available | Full    |
+| Odoo 17 | Available | Full    |
+| Odoo 16 | Available | Full    |
 
 
 
