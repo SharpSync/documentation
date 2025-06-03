@@ -13,7 +13,6 @@
 * [Property Mappings](fundamentals/property-mappings/README.md)
   * [Adding Property Mapping](fundamentals/property-mappings/adding-property-mapping.md)
   * [Property Mapping Settings](fundamentals/property-mappings/property-mapping-settings.md)
-  * [Rendering Types](fundamentals/property-mappings/rendering-types.md)
 * [Rules](fundamentals/rules/README.md)
   * [Rule Templates](fundamentals/rules/rule-templates/README.md)
     * [Import / Export](fundamentals/rules/rule-templates/import-export/README.md)

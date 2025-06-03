@@ -1,8 +1,0 @@
-# Rendering Types
-
-SharpSync supports multiple ways of displaying data on screen. The most common type is \`FREE TEXT\`
-
-
-
-<table><thead><tr><th width="266">Render Type</th><th>Description</th></tr></thead><tbody><tr><td>Free Text</td><td>The most common type of data to display. Shows the value as a string on screen</td></tr><tr><td>Checkbox</td><td>Renders the data as a checkbox. Supported values are '0','1', 'Yes', 'No'. Anything not in these values are rendered as unchecked</td></tr><tr><td>Select List</td><td>A simple selection box for user specified values. Separate values with a pipe symbol ' | '</td></tr><tr><td>Multi Select List</td><td>A selection box for multiple user specified values. Separate values with a pipe symbol ' | '. A user may pick more than 1 value from the list</td></tr><tr><td>Advanced List</td><td><p>A selection box for complex user specified values.  The user must specify the <code>Display Selector</code>, the <code>Value Selector</code>and the items to pick from.</p><p></p><p>Items are specified using a JSON array [ {object1}, {object2} ]<br><br>Selections are made using the value of the <code>Value Selector</code> e.g. if <code>object1</code>contains a keyvalue pair of  <br><br><code>{ 'id' : 23' , 'name' : 'andries' }</code><br><br>Then the value selector will be <code>id</code>and the display selector will be <code>name</code> </p></td></tr><tr><td>Advanced Multi Select List</td><td>The same as an Advanced List, but the user can select multiple values</td></tr><tr><td>URL</td><td>Displays any value onscreen as 'link' and opens a new tab when clicked. Does not check for validity.</td></tr></tbody></table>
-
