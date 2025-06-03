@@ -6,7 +6,7 @@ icon: table-tree
 
 ## Importing a CSV BOM
 
-Once the Data Source and Property Mapping sections have been set up, you can now begin importing CSV Bills of Materials.
+Once the Data Sources and Property Mappings have been set up (see section [Property Mappings](../../fundamentals/property-mappings/)), you can now begin importing CSV Bills of Materials.
 
 #### Get the CSV BOM
 
