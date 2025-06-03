@@ -10,7 +10,7 @@ The list `product.attribute` is special in that you can expand upon the query by
 
 
 
-Start by adding a [Property Mapping ](../../../../fundamentals/property-mappings.md)for&#x20;
+Start by adding a [Property Mapping ](../../../../fundamentals/property-mappings/)for&#x20;
 
 > product.template.attributes
 

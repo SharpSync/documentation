@@ -12,7 +12,7 @@ It is important to start with something simple like Description and Quantity . O
 
 ### Add Property Mappings
 
-After [authenticating ](authentication-+-configuration.md)with Odoo, add the following [Property Mappings](../../../fundamentals/property-mappings.md)
+After [authenticating ](authentication-+-configuration.md)with Odoo, add the following [Property Mappings](../../../fundamentals/property-mappings/)
 
 | Name        | Primary Accessor | Odoo accessor                |
 | ----------- | ---------------- | ---------------------------- |

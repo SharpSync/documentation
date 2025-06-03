@@ -18,7 +18,7 @@ We start by specifying the list name `product.attribute`. The list `product.attr
 
 To view the values of an individual Product Template's attribute in SharpSync, use the Property Mapping list `product.attribute["{nestedListName"}]` (see also [List Names](../../list-names.md))
 
-Start by adding a [Property Mapping ](../../../../fundamentals/property-mappings.md)for&#x20;
+Start by adding a [Property Mapping ](../../../../fundamentals/property-mappings/)for&#x20;
 
 > product.template.attribute\_line\_ids
 

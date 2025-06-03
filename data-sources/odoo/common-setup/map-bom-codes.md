@@ -10,7 +10,7 @@ Multiple BOMs are supported per product template / product variant. To use this 
 
 To manage this, we set a BOM code to that of the component + the revision
 
-To update this from SharpSync, start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md)for&#x20;
+To update this from SharpSync, start by adding a [Property Mapping ](../../../fundamentals/property-mappings/)for&#x20;
 
 > mrp.bom.code
 

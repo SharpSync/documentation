@@ -6,17 +6,17 @@ icon: list-check
 
 Rules are optional automated functions that either:
 
-* Edits the row data coming from or going to a [Data Source](data-sources.md)  or&#x20;
-* Display highlights based on the data or change the data before it is displayed (see [Rule legend](rules.md#rule-legend))
+* Edits the row data coming from or going to a [Data Source](../data-sources.md)  or&#x20;
+* Display highlights based on the data or change the data before it is displayed (see [Rule legend](./#rule-legend))
 
-A list of all the supported rules may be found here at [rule-templates](../property-mappings/rule-templates/ "mention")
+A list of all the supported rules may be found here at [rule-templates](rule-templates/ "mention")
 
 ### Rules Fundamentals
 
 The main concepts to understand for rules are the following:
 
-* The [_type_ or _category_](rules.md#concept-rule-categories) of the rules
-* The[ _order_ ](rules.md#order-of-rules)of the rules
+* The [_type_ or _category_](./#concept-rule-categories) of the rules
+* The[ _order_ ](./#order-of-rules)of the rules
 * _When_ the rules run
 
 ### Rule Type or Category
@@ -55,7 +55,7 @@ Import rules work on the raw source data and are applied to each individual data
 
 #### Rule parameters
 
-User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See [Advanced Scripting](../advanced/advanced-scripting.md)
+User scriptable rules (JavaScript) have access to 3 parameters, not just 1. See [Advanced Scripting](advanced-scripting.md)
 
 ### Rule Legend
 
@@ -67,7 +67,7 @@ The colors displayed can be modified under Profile > User Settings > Display
 
 
 
-<table data-full-width="false"><thead><tr><th width="290">Color scheme</th><th>Description</th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/image (14).png" alt="" data-size="original"></td><td>Orange border - Value did not pass display mapping rule (Warning), the user is able to continue.</td></tr><tr><td><img src="../.gitbook/assets/image (15).png" alt="" data-size="original"></td><td>Red border - Value did not pass display mapping rule (Error), the user is <em>not</em> able to continue.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="290">Color scheme</th><th>Description</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image (14).png" alt="" data-size="original"></td><td>Orange border - Value did not pass display mapping rule (Warning), the user is able to continue.</td></tr><tr><td><img src="../../.gitbook/assets/image (15).png" alt="" data-size="original"></td><td>Red border - Value did not pass display mapping rule (Error), the user is <em>not</em> able to continue.</td></tr></tbody></table>
 
 
 
@@ -75,23 +75,23 @@ The colors displayed can be modified under Profile > User Settings > Display
 
 Start by navigating to Property Mappings and click on "Rules" for the Property Mapping you want to edit.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-A panel will appear on the side. Expand the Rules dropdown to reveal the available [list of rules ](../property-mappings/rule-templates/)that can be applied. Select a rule and click `ADD RULE`.
+A panel will appear on the side. Expand the Rules dropdown to reveal the available [list of rules ](rule-templates/)that can be applied. Select a rule and click `ADD RULE`.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt="" width="214"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="214"><figcaption></figcaption></figure>
 
-In the example below, the `Format as decimal number` rule runs for both [Data Sources](data-sources.md) (in this example Onshape and NetSuite). The rule runs on the individual strings of data imported.
+In the example below, the `Format as decimal number` rule runs for both [Data Sources](../data-sources.md) (in this example Onshape and NetSuite). The rule runs on the individual strings of data imported.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 The final result for both rules are overlaid in the user interface (the default would be a blue rectangle). Below is a conceptual illustration of the process where&#x20;
 
 * Data Source 1 is DS1
 * Data Source 2 is DS2
-* 's' is the [rowData](../advanced/advanced-scripting.md) string value being evaluated
+* 's' is the [rowData](advanced-scripting.md) string value being evaluated
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 The rule running for DS1 (e.g. Onshape) _is not aware of the data being imported from DS2_ (e.g. NetSuite)_._ That means that when running a rule such as a JavaScript `Text Manipulation` rule, the function runs only for _one_ source at a time, _never for both at the same time_.
@@ -136,7 +136,7 @@ Note that returning any value in the `message` above can be customized by you.
 
 The data from DS2 is imported after that of DS1. The rules start running for DS2.
 
-Be sure also to read and understand [Advanced Scripting](../advanced/advanced-scripting.md).
+Be sure also to read and understand [Advanced Scripting](advanced-scripting.md).
 
 ### Display Rules
 

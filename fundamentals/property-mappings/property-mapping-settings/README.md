@@ -35,13 +35,13 @@ SharpSync has built-in rules and settings for each property mapping. These rules
    * The column headers you entered in the Data Source BOM Configuration will populate each Property Mapping.
    * Each Property Mapping will be displayed as a column on the Component Assembly BOM page.
 
-<figure><img src="../../.gitbook/assets/select_property_mapping.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/select_property_mapping.png" alt=""><figcaption></figcaption></figure>
 
 
 
 2. Once you have selected the property mappings that you want to appear in the SharpSync BOM, confirm that the Accessors, Primary Data Source Accessors, and Secondary Data Source Accessors columns are correct. You can double-click on the cells in each column to change the value SharpSync will match. The accessor must be present in the appropriate Data Source.
 
-<figure><img src="../../.gitbook/assets/property_mappings_view.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/property_mappings_view.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -55,7 +55,7 @@ SharpSync has built-in rules and settings for each property mapping. These rules
    * If you want both sources to change, check the "Update Source on Submit" checkboxes for both sources.
    * Settings are saved for each Property Mapping.
 
-<figure><img src="../../.gitbook/assets/property_mapping_update_sources.png" alt=""><figcaption><p>Property Mapping: Update sources</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/property_mapping_update_sources.png" alt=""><figcaption><p>Property Mapping: Update sources</p></figcaption></figure>
 
 
 
@@ -115,7 +115,7 @@ Example: Custom list of items to select from using `Advanced List`
 
 Which, when displayed in the UI, looks like this
 
-<figure><img src="../../.gitbook/assets/property_mapping_example_list.png" alt=""><figcaption><p>Property Mapping: Example list</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/property_mapping_example_list.png" alt=""><figcaption><p>Property Mapping: Example list</p></figcaption></figure>
 
 
 
@@ -135,7 +135,7 @@ Example: Custom list of items to select from using `Select List`
 
 Which, when displayed in the UI, looks like this
 
-<figure><img src="../../.gitbook/assets/property_mapping_selection_list_settings.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/property_mapping_selection_list_settings.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -143,7 +143,7 @@ Which, when displayed in the UI, looks like this
 
 Property Mapping Rules are used to define the output format of the BOM data shown in SharpSync. When a rule is applied, all cells in a column mapped to a property will be evaluated. If the cell data does not fall within the rules applied, the cell will display an error color on its border, with a more detailed explanation in the cell overlay. Hover over a cell to see the applied rules evaluated in the overlay. Click on list icon in the Rules column of the desired Property Mapping to begin. For the list of Rules with explanations for each, click the following link: Property mapping rules
 
-<figure><img src="../../.gitbook/assets/rule_template_sections.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rule_template_sections.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -170,7 +170,7 @@ Property Mapping Rules are used to define the output format of the BOM data show
 11. Depending on the rule selected, the bottom line may display options for processing the rule. Select the Data Sources that will be updated.
 12. Closes and saves the Rules module. Rules in the list will be saved and applied to the BOM.
 
-<figure><img src="../../.gitbook/assets/rule_template_tooltip.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rule_template_tooltip.png" alt=""><figcaption></figcaption></figure>
 
 
 

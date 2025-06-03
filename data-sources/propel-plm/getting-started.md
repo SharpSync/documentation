@@ -30,7 +30,7 @@ To configure a Propel instance you need:
 ### Setup Propel Property Mappings
 
 * Navigate to `Property Mapping`
-* After creating/adding your[ Property Mappings ](../../fundamentals/property-mappings.md)from your primary/CAD source, select the corresponding Propel property from the drop down selection boxes.
+* After creating/adding your[ Property Mappings ](../../fundamentals/property-mappings/)from your primary/CAD source, select the corresponding Propel property from the drop down selection boxes.
 
 ### Notes:
 

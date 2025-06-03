@@ -50,7 +50,7 @@ Observations:&#x20;
 * Rule values:
   * Min length: 1
   * Max length: 11
-* Result: ![](<../../../.gitbook/assets/image (25).png>)
+* Result: ![](<../../../../.gitbook/assets/image (25).png>)
 
 
 

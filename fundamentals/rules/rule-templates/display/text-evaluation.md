@@ -6,7 +6,7 @@ Description: Evaluates the cell value given the JavaScript expression.
 
 This is an advanced rule which requires programming knowledge. It is more difficult to use, but much more powerful.
 
-See the [Advanced Scripting ](../../../advanced/advanced-scripting.md)section for more detail.
+See the [Advanced Scripting ](../../advanced-scripting.md)section for more detail.
 
 <details>
 

@@ -12,7 +12,7 @@ In Odoo the default values for BOM types can be in the range
 
 \[These can depend on your installation, but it is a common theme]
 
-To update this from SharpSync, start by adding a [Property Mapping ](../../../fundamentals/property-mappings.md)for&#x20;
+To update this from SharpSync, start by adding a [Property Mapping ](../../../fundamentals/property-mappings/)for&#x20;
 
 > mrp.bom.type
 
