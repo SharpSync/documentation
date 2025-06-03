@@ -2,12 +2,12 @@
 icon: list-check
 ---
 
-# Rule Templates
+# Rules
 
-Rule templates are optional automated functions that either:
+Rules are optional automated functions that either:
 
 * Edits the row data coming from or going to a [Data Source](data-sources.md)  or&#x20;
-* Display highlights based on the data or change the data before it is displayed (see [Rule legend](rule-templates.md#rule-legend))
+* Display highlights based on the data or change the data before it is displayed (see [Rule legend](rules.md#rule-legend))
 
 A list of all the supported rules may be found here at [rule-templates](../property-mappings/rule-templates/ "mention")
 
@@ -15,8 +15,8 @@ A list of all the supported rules may be found here at [rule-templates](../prope
 
 The main concepts to understand for rules are the following:
 
-* The [_type_ or _category_](rule-templates.md#concept-rule-categories) of the rules
-* The[ _order_ ](rule-templates.md#order-of-rules)of the rules
+* The [_type_ or _category_](rules.md#concept-rule-categories) of the rules
+* The[ _order_ ](rules.md#order-of-rules)of the rules
 * _When_ the rules run
 
 ### Rule Type or Category

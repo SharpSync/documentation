@@ -9,7 +9,7 @@ Rule templates are optional automated functions that either:
 * Edits the row data coming from a [Data Source](../../fundamentals/data-sources.md)  or&#x20;
 * Display highlights based on the data or change the data before it is displayed (see [Rule legend](./#rule-legend))
 
-Please make sure to review [Rule Template Fundamentals](../../fundamentals/rule-templates.md) before continuing on to [Rule Template Parameters](../../advanced/advanced-scripting.md).
+Please make sure to review [Rule Template Fundamentals](../../fundamentals/rules.md) before continuing on to [Rule Template Parameters](../../advanced/advanced-scripting.md).
 
 Rules are grouped by two major types: &#x20;
 

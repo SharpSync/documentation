@@ -11,7 +11,7 @@
   * [Subscription](fundamentals/getting-started/subscription.md)
 * [Data Sources](fundamentals/data-sources.md)
 * [Property Mappings](fundamentals/property-mappings.md)
-* [Rule Templates](fundamentals/rule-templates.md)
+* [Rules](fundamentals/rules.md)
 * [BOM Comparison](fundamentals/bom-comparison.md)
 * [Data Safety](fundamentals/data-safety.md)
 * [Troubleshooting](fundamentals/troubleshooting/README.md)
