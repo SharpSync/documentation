@@ -90,7 +90,7 @@ The `p`  parameter is the `PassOrBlock`value specified in the Property Mapping R
 
 ### `pm` Parameter
 
-The `pm`value contains values related to the [Property Mapping](broken-reference) used for this column. It cannot be modified, and any modifications to it are ignored. It contains, but is not limited to, the following key/values:
+The `pm`value contains values related to the [Property Mapping](../property-mappings/) used for this column. It cannot be modified, and any modifications to it are ignored. It contains, but is not limited to, the following key/values:
 
 | Key name                           | Description of the value                                           |
 | ---------------------------------- | ------------------------------------------------------------------ |

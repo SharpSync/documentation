@@ -74,7 +74,7 @@ CSV (Comma Separated Values) files are utilized to import Bills of Materials (BO
   * Vendor
   * Volume
   * Weld Material
-* Each value entered here will be available as an Accessor in the `Property Mappings` tab
+* Each value entered here will be available as an Accessor in the `Property Mappings` tab. See also the [Property Mappings](../fundamentals/property-mappings/) section.
 * Make sure to add an extra line with the `Quantity` property which is not an Inventor property but will be used later in the property mappings configuration.
 * Click the `Save` button
 * On the main datasource tab, make sure that the `Primary Identifier` matches with the `Part Number` Inventor property or any other Inventor property that you use as unique component identifier. The primary component identifier is the identifier that is unique across datasources.
