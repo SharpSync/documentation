@@ -112,7 +112,7 @@ Let's suppose that we have Data Source 1 (DS1) and Data Source 2 (DS2), the proc
 * Setup the 1st column. Give it an accessor of `description` with a column mapping of property `description` for DS1 and for DS2
 
 {% hint style="info" %}
-As a quick reference, here are the instructions for setting up a [Property Mapping](../property-mappings/property-mapping-settings/#adding-property-mappings).
+As a quick reference, here are the instructions for setting up a [Property Mapping](../property-mappings/adding-property-mapping.md#adding-property-mappings).
 {% endhint %}
 
 * Setup a 2nd property column `description2` column. Give it an accessor of `description2`. Also map it to the `description` property.
