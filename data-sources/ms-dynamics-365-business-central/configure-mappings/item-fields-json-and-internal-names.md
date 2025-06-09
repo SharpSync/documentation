@@ -11,7 +11,7 @@ icon: code
 | itemNumber                                 | No.                            |
 | itemNumber2                                | No. 2                          |
 | description                                | Description                    |
-| searchDescription                          | ATHENS DESK                    |
+| searchDescription                          | Search Description             |
 | description2                               | Description 2                  |
 | assemblyBom                                | Assembly BOM                   |
 | baseUnitOfMeasure                          | Base Unit of Measure           |
