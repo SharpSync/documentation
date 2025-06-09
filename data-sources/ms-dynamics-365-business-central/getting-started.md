@@ -4,6 +4,12 @@ icon: sparkle
 
 # Getting Started
 
+{% hint style="danger" %}
+This document is a work in progress.
+
+Check back here  frequently for updates.
+{% endhint %}
+
 ### Install SharpSync custom extension for Dynamics 365 Business Central
 
 When logged in to your SharpSync organization as an admin user:
@@ -74,9 +80,3 @@ Dynamics 365 Business Central API selected definitions:
 * Application: A unique application that belongs to a tenant and has a unique ID (guid)
 * Company: A tenant may have multiple companies (e.g. an organization may trade as different company names in different regions)
 * Items: An item is created in a company and is queried using the company id
-
-### Notes:
-
-In the current implementation of the Dynamics 365 Business Central Module:
-
-\[In progress]

@@ -4,6 +4,12 @@ icon: list-tree
 
 # Configure Mappings
 
+{% hint style="danger" %}
+This document is a work in progress.
+
+Check back here  frequently for updates.
+{% endhint %}
+
 For the basics on how to setup mappings, check out [Property Mappings](../../../fundamentals/property-mappings/).
 
 ### Configure Dynamics 365 Business Central Property Mappings
@@ -20,3 +26,8 @@ For the basics on how to setup mappings, check out [Property Mappings](../../../
   * `Name`
 
 For more info check a comprehensive but not exhaustive list [here](list-names-for-nestedobject-mappings.md).
+
+
+
+* You must set up a Quantity Property Mapping.
+* You must set up an Item Type Property Mapping.
