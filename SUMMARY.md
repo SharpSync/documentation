@@ -68,6 +68,7 @@
     * [List Names For nestedObject Mappings](data-sources/ms-dynamics-365-business-central/configure-mappings/list-names-for-nestedobject-mappings.md)
     * [Configure Quantity Mapping](data-sources/ms-dynamics-365-business-central/configure-mappings/configure-quantity-mapping.md)
     * [Configure Item Type Mapping](data-sources/ms-dynamics-365-business-central/configure-mappings/configure-item-type-mapping.md)
+    * [Read-Only Fields](data-sources/ms-dynamics-365-business-central/configure-mappings/read-only-fields.md)
 * [NetSuite](data-sources/netsuite/README.md)
   * [OAuth Setup](data-sources/netsuite/oauth-setup/README.md)
     * [Permissions](data-sources/netsuite/oauth-setup/permissions.md)
