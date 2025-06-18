@@ -25,7 +25,7 @@ Exactly one property mapping for _must_ be set as an item type mapping in order 
 | Primary accessor          | <p>(Unmapped) </p><p>or mapped to a Primary Source accessor if you have one</p> |
 | Secondary accessor        | (Unmapped)                                                                      |
 | Update Primary on Submit  | unchecked                                                                       |
-| Update NetSuite on Submit | unchecked                                                                       |
+| Update NetSuite on Submit | checked (IMPORTANT)                                                             |
 | Rendering Type            | Select List                                                                     |
 | List Items                | `item\|resource`                                                                |
 | Is Item Type Property     | checked                                                                         |
