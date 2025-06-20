@@ -4,7 +4,7 @@ icon: chart-tree-map
 
 # Data Sources
 
-&#x20;`Data Source` is exactly that - a source of data you configure to read/write data from, or a source of data with an add-in to push data to SharpSync.&#x20;
+`Data Source` is exactly that - a source of data you configure to read/write data from, or a source of data with an add-in to push data to SharpSync.&#x20;
 
 A primary source will be a Bill of Materials (BOM) structure and metadata (e.g., part number, description, revision). A secondary source will be Inventory records and BOM data.
 
@@ -47,6 +47,26 @@ If nothing is found using an exact match (i.e. no component identifier `PartNumb
 As an example of a Primary Identifier, we have included a screenshot from OnShape. This will of course vary from other platforms:
 
 <figure><img src="../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption><p>OnShape Property Map</p></figcaption></figure>
+
+### Core concept: Bom Revision Names
+
+In the Configuration section of a Secondary Source (Typically an ERP), you will find a BOM Revision Scheme field where a naming convention must be specified for BOM revisions.
+
+Some examples may be:
+
+<table><thead><tr><th width="504">Scheme name</th><th>Sample result</th></tr></thead><tbody><tr><td>{rowData.componentName}</td><td>A1</td></tr><tr><td>{rowData.componentName}_BOM</td><td>A1_BOM</td></tr><tr><td>{rowData.componentName}_{rowData.cells.revision}</td><td>A1_A or A1_B</td></tr></tbody></table>
+
+
+
+<figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption><p>Set the schema name. Use curly braces {} to capture dynamic fields from the row data</p></figcaption></figure>
+
+Some ERPs allows the management of different Bills of Materials for the same assembly at different stages of the design process, typically when a new revision occurs. To facilitate this, a scheme name has to be specified.
+
+In the example above, the name of the component may be used. In addition to this, you can use any [Accessor](property-mappings/) Name from a [Property Mapping](property-mappings/) to get dynamic values.
+
+
+
+What's important here is that, when specifying this Schema name, you should _not_ map the value in a property mapping. In other words, do not map the BOM Name or Code in a Property Mapping (you _can_, but you _shouldn't_). This is because, when not finding a BOM with a matching name, a _new_ BOM will be created, which is not what you'd want.
 
 ### Core concepts: Setup
 
