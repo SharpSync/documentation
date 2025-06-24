@@ -29,5 +29,5 @@ For more info check a comprehensive but not exhaustive list [here](list-names-fo
 
 
 
+* You must set up an [Item Type Property Mapping](configure-item-type-mapping.md).
 * You must set up a [Quantity Property Mapping](configure-quantity-mapping.md).
-* You must set up an Item [Type Property Mapping](configure-item-type-mapping.md).
