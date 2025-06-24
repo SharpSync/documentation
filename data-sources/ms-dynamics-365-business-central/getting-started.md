@@ -15,11 +15,11 @@ Check back here  frequently for updates.
 When logged in to your SharpSync organization as an admin user:
 
 * Navigate to [Downloads](https://app.sharpsync.net/admin/downloads)
-* Locate and download the current version of the custom extension app which should look like `CADSharp LLC_sharpsync-dynamics-365-api-extension_#.#.#.#.app` `(IN PROGRESS)`
+* Locate and download the current version of the custom extension app which should look like `CADSharp LLC_Sharpsync For Dynamics 365 Business Central_#.#.#.#.app`&#x20;
 * Navigate to your Dynamics 365 Business Central web instance as an administrator
 * Navigate to Extension Management: From the Business Central home page, use the search feature and type "Extension Management." Select the appropriate link.
 * Upload the Extension: On the Extension Management page, click Manage and choose Upload Extension. You will be prompted to select the .app file for your extension.
-* Deploy the Extension: After selecting the file, click Accept and then Deploy. If your extension includes schema changes, you may have to select a schema sync mode, such as Force Sync for development environments.
+* Deploy the Extension: After selecting the file, click Accept and then Deploy. If your extension includes schema changes, you may have to select a schema sync mode, such as Add or Force Sync for development environments. Use `Add`
 * Manage Permissions: Make sure that the user installing the extension has appropriate permissions, typically the EXTENSION MGT. - ADMIN permission set.
 * Additional documentation can be found in the following links:
   * [Customizing Business Central online using apps](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions)
@@ -30,7 +30,7 @@ When logged in to your SharpSync organization as an admin user:
 To configure a Dynamics 365 Business Central datasource instance in SharpSync you need:
 
 * The base API path of Dynamics 365 Business Central cloud which is: `https://api.businesscentral.dynamics.com`
-*   Dynamics 365 Business Central uses the OAuth 2.0 protocol to authenticate, therefore, a code grant url, a refresh token url and the oauth scopes need to be supplied, they are of the form:
+*   Dynamics 365 Business Central uses the OAuth 2.0 protocol to authenticate, therefore, a code grant url, a refresh token url and the OAuth scopes need to be supplied, they are of the form:
 
     * Code Grant URL:&#x20;
 
@@ -51,7 +51,7 @@ To configure a Dynamics 365 Business Central datasource instance in SharpSync yo
     ```
 * Your Dynamics 365 Business Central instance company id and environment:
   * The company id can be obtained by following these steps from your Dynamics 365 Business Central instance web interface:
-    * Log in to your Business Central account and navigate to the Companies tab.
+    * Log in to your Business Central account and navigate to the Companies page (search for `Companies` and navigate to the page.
     * Select the company you want to use.
     * Click the question mark button on the top right corner and select Help & Support.
     * Under the troubleshooting section, click Inspect pages and data.
