@@ -12,15 +12,22 @@ Check back here  frequently for updates.
 
 ### Install SharpSync custom extension for Dynamics 365 Business Central
 
-When logged in to your SharpSync organization as an admin user:
+In SharpSync, when logged in to your organization as an admin user:
 
 * Navigate to [Downloads](https://app.sharpsync.net/admin/downloads)
-* Locate and download the current version of the custom extension app which should look like `CADSharp LLC_Sharpsync For Dynamics 365 Business Central_#.#.#.#.app`&#x20;
-* Navigate to your Dynamics 365 Business Central web instance as an administrator
+* Locate and download the `SHARPSYNC APP FOR DYNAMICS 365` custom extension app which should save locally a file ending in `*.app`&#x20;
+
+In MS Dynamics 365 Business Central, when logged in to your tenant as an administrator (appropriate permissions are typically the EXTENSION MGT. - ADMIN permission set):
+
 * Navigate to Extension Management: From the Business Central home page, use the search feature and type "Extension Management." Select the appropriate link.
-* Upload the Extension: On the Extension Management page, click Manage and choose Upload Extension. You will be prompted to select the .app file for your extension.
-* Deploy the Extension: After selecting the file, click Accept and then Deploy. If your extension includes schema changes, you may have to select a schema sync mode, such as Add or Force Sync for development environments. Use `Add`
-* Manage Permissions: Make sure that the user installing the extension has appropriate permissions, typically the EXTENSION MGT. - ADMIN permission set.
+* Upload the Extension: On the Extension Management page, click Manage and choose Upload Extension. You will be prompted to select the .app file for your extension that you previously downloaded.
+* Deploy the Extension:
+  * Choose `Target` = `Current version` (unless releasing for next BC upgrade).
+  * Choose `Schema Sync Mode` = `Add` (unless the version includes schema changes, you may have to select `Force Sync` )
+  * Accept the disclaimer and click Deploy.
+* The deployment is processed in the background.
+* You can monitor the progress using Installation Status (Click Manage → Installation Status), then refresh once it’s complete.
+* Upon successful deployment, the app should now appear in your extensions table with the checkbox for `Is Installed` checked and the `Published As` value as `PTE`
 * Additional documentation can be found in the following links:
   * [Customizing Business Central online using apps](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions)
   * [Install and Uninstall Extensions (Apps) in Business Central](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions-install-uninstall)
