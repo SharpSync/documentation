@@ -10,7 +10,9 @@ icon: sparkle
 * Setting up Onshape
 * Configure the authentication options
 * Mapping values to ERP
-* Export Assembly or Part from Onshape
+* Export Assembly from Onshape
+* Export Part Studio Part from Onshape
+* Export Release Package Contents (Assemblies & Parts) from Onshape
 * Troubleshooting
 
 `Note:` Onshape integration for SharpSync is not currently supported for free versions. For SharpSync to work, you need to create custom properties in a company in Onshape. This is only possible with the Professional or Enterprise versions of Onshape. This is a limitation of Onshape.
@@ -143,9 +145,9 @@ To map an Onshape document URL to a property in the ERP do the following:
 * Reload the BOM to display in the BOM Comparison screen
 * Click Submit to update
 
-### Export Assembly or Part from Onshape
+### Export Assembly from Onshape
 
-*   You can export a BOM from Onshape to SharpSync through the following methods:
+*   You can export a Assembly BOM from Onshape to SharpSync via:
 
     * The Onshape Tree Structure Assembly Context Menu&#x20;
 
@@ -155,9 +157,20 @@ To map an Onshape document URL to a property in the ERP do the following:
 
     <figure><img src="../../.gitbook/assets/onshape_export_assembly_tab.png" alt=""><figcaption></figcaption></figure>
 
-    * The Onshape Part Studio Tab Part Context Menu&#x20;
+    ### Export Part Studio Part from Onshape
+* You can export a Part Studio Part BOM from Onshape to SharpSync via:
+  * The Onshape Part Studio Tab Part Context Menu&#x20;
 
-    <figure><img src="../../.gitbook/assets/onshape_export_individual_part.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/onshape_export_individual_part.png" alt=""><figcaption></figcaption></figure>
+
+### Export Release Package Contents (Assemblies & Parts) from Onshape
+
+* You can export the contents (Assemblies & Parts)  of a Release Package from Onshape to SharpSync via:
+  * Selecting the desired Release Package by Left-Clicking on the related version in the Onshape Document Version Tree
+  * Clicking on "Export Release Contents" in the Onshape Assembly Tab Context Menu&#x20;
+* SharpSync will query the Release Package for Assemblies and Parts and will automatically create a SharpSync BOM per top level Assembly and Part and ignoring their nested children.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-07-07 at 3.47.08 PM.png" alt=""><figcaption></figcaption></figure>
 
 ### Troubleshooting
 
