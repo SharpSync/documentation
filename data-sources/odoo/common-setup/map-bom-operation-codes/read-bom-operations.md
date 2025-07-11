@@ -8,7 +8,9 @@ icon: magnifying-glass
 This page is a Work in Progress and not completed yet, please check back again soon
 {% endhint %}
 
-BOM operations are individual operations that are performed on the item. This can often include one or more of the following items in the table&#x20;
+BOM operations are _individual_ operations that are performed on the item. There are 2 scenarios, reading and writing. BOM operations are never repeated. Even if you see duplicates in Odoo, they each have their own underlying unique _operationId for that line in the BOM._
+
+BOM operations can often include one or more of the following items in the table&#x20;
 
 | Destructive operation | Non-Destructive operation |
 | --------------------- | ------------------------- |
@@ -23,12 +25,63 @@ To read these operations from the BOM, we map to the Odoo property&#x20;
 
 > mrp.bom.operation\_id
 
+{% hint style="info" %}
+When writing a value to Odoo, you have to provide the full spec of the object in the form.
+
+<pre class="language-json5"><code class="lang-json5"><strong>"value":  
+</strong><strong>{ 
+</strong><strong>  "sequence": 30,
+</strong><strong>  "name": "Punch",
+</strong><strong>  "workcenter_id": 3,
+</strong><strong>  "time_mode": "manual",
+</strong><strong>  "time_mode_batch": 10,
+</strong><strong>  "time_cycle_manual": 60
+</strong><strong>} 
+</strong>           
+</code></pre>
+
+This is shown the example below
+{% endhint %}
+
 Create a new [Property Mapping](../../../../fundamentals/property-mappings/) with the following settings:
 
-<table><thead><tr><th width="301">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Property Name / Header</td><td>BOM Operations</td></tr><tr><td>Accessor</td><td>bomOperations</td></tr><tr><td>Primary Property</td><td>(Unmapped)</td></tr><tr><td>Secondary Property</td><td><code>mrp.bom.operation_ids</code></td></tr><tr><td>Update Odoo on Submit</td><td>true</td></tr><tr><td>Rendering Type</td><td><code>Advanced Multi Select List</code></td></tr><tr><td>List Display Selector</td><td>displayName</td></tr><tr><td>List Value Selector</td><td>id</td></tr><tr><td>List items</td><td><p> Here is a sample of what you can insert, but it can be anything, whatever you use most frequently [more on this below]**</p><pre class="language-json5"><code class="lang-json5">[   
-  { "workCenterId": 2, "displayName" : "Drill", "value": { "operationSequence" : 10, "operationName" : "Drill" }},
-  { "workCenterId": 1, "displayName" : "Galvanize", "value": { "operationSequence" : 20, "operationName" : "Galvanize"}},
-  { "workCenterId": 3, "displayName" : "Punch", "value" : { "operationSequence" : 30, "operationName" : "Punch"}}
+<table><thead><tr><th width="301">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Property Name / Header</td><td>BOM Operations</td></tr><tr><td>Accessor</td><td>bomOperations</td></tr><tr><td>Primary Property</td><td>(Unmapped)</td></tr><tr><td>Secondary Property</td><td><code>mrp.bom.operation_ids</code></td></tr><tr><td>Update Odoo on Submit</td><td>true</td></tr><tr><td>Rendering Type</td><td><code>Advanced Multi Select List</code></td></tr><tr><td>List Display Selector</td><td>displayName</td></tr><tr><td>List Value Selector</td><td>id</td></tr><tr><td>List items</td><td><p> Here is a sample of what you can insert, but it can be anything, whatever you use most frequently [more on this below]**</p><pre class="language-json5"><code class="lang-json5">[
+    {
+        "workCenterId": 2,
+        "name": "Drill",
+        "value": {
+            "sequence": 10,
+            "name": "Drill",
+            "workcenter_id": 2,
+            "time_mode": "manual",
+            "time_mode_batch": 10,
+            "time_cycle_manual": 60
+        }
+    },
+    {
+        "workCenterId": 1,
+        "name": "Galvanize",
+        "value": {
+            "sequence": 20,
+            "name": "Galvanize",
+            "workcenter_id": 1,
+            "time_mode": "manual",
+            "time_mode_batch": 10,
+            "time_cycle_manual": 60
+        }
+    },
+    {
+        "workCenterId": 3,
+        "name": "Punch",
+        "value": {
+            "sequence": 30,
+            "name": "Punch",
+            "workcenter_id": 3,
+            "time_mode": "manual",
+            "time_mode_batch": 10,
+            "time_cycle_manual": 60
+        }
+    },
 ]
 </code></pre></td></tr><tr><td>Enabled</td><td>true</td></tr><tr><td>Prefer Odoo Value</td><td>true</td></tr></tbody></table>
 
