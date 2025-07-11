@@ -17,10 +17,20 @@ To integrate with an Odoo instance, we have to setup an&#x20;
 * Click CONFIGURE
 * On the first tab (Authentication), change the Base API Path to: `https://{myEnterpriseInstance}.dev.odoo.com`
 * Leave the Authentication Types drop-down on `Basic Authentication`.
-* Enter the Database name.&#x20;
+* Enter the Database name. You can find this in one of 2 ways:&#x20;
 
 {% hint style="info" %}
-To find the database name navigate to [https://{myEnterpriseInstance}/web/database/selector](https://your-odoo-instance/web/database/selector)
+1st option: To find the database name navigate to [https://{myEnterpriseInstance}/web/database/selector](https://your-odoo-instance/web/database/selector)
+
+\[This may be disabled for your instance]
+{% endhint %}
+
+{% hint style="info" %}
+2nd option: To find the database name navigate to &#x20;
+
+{YourOdooInstance} > Settings > Activate developer mode (right at the bottom)
+
+After selecting this, the database name will be displayed in the top right corner
 {% endhint %}
 
 {% hint style="warning" %}
@@ -32,7 +42,7 @@ The database name is case sensitive.
 
 <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-* On the second tab (BOM Configuration) enter the version number  in the form of 2 digits.
+* On the second tab (BOM Configuration) enter the version number in the form of 2 digits (e.g. 16, 17, or 18). \[Do not append a version at the end (e.g. 18.3), only use 2 digits
 * Click the `SAVE` button to save your connection details and close the form.
 * Click `AUTHENTICATE`. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
 

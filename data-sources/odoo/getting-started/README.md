@@ -17,7 +17,7 @@ After [authenticating ](authentication-+-configuration.md)with Odoo, add the fol
 | Name        | Primary Accessor | Odoo accessor                |
 | ----------- | ---------------- | ---------------------------- |
 | Description | Description      | product.template.description |
-| Quantity    | Quantity         | mrp.bom.product\_qty         |
+| Quantity    | Quantity         | mrp.bom.line.product\_qty    |
 
 
 
@@ -61,7 +61,7 @@ Add the following rules, then click the save button for each rule.
 #### Description
 
 {% hint style="info" %}
-Description (mapped to `product.template.description`) in Odoo is an HTML field. So it comes with some HTML tags. It can be desirable to remove these tags, so the following import rule accounts for this by removing \<p>\</p> paragraph tags
+Description (mapped to `product.template.description`) in Odoo is an HTML field. So it comes with some HTML tags. It can be desirable to remove these tags, so the following `import rule` takes care of this by removing \<p>\</p> paragraph tags
 {% endhint %}
 
 | Rule                  | Value                                                      | Process for |
