@@ -8,16 +8,24 @@ icon: magnifying-glass
 This page is a Work in Progress and not completed yet, please check back again soon
 {% endhint %}
 
-BOM operations are _individual_ operations that are performed on the item. There are 2 scenarios, reading and writing. BOM operations are never repeated. Even if you see duplicates in Odoo, they each have their own underlying unique _operationId for that line in the BOM._
+BOM operations are _individual_ operations that are performed on the item. There are 2 scenarios, reading and writing. BOM operations are never repeated. Even if you see duplicates in Odoo, they each have their own underlying unique `operationId` _for that line in the BOM._
+
+{% hint style="info" %}
+The best way to manage operations is to be consistent in your naming convention for your operations.&#x20;
+
+In other words, if you are going to assemble something, always give it the exact same name (e.g. `Assembly` or `Assemble`).
+{% endhint %}
+
+
 
 BOM operations can often include one or more of the following items in the table&#x20;
 
 | Destructive operation | Non-Destructive operation |
 | --------------------- | ------------------------- |
 | Punching              | Painting                  |
-| Welding               | Assembly                  |
+| Welding               | Assembling                |
 | Galvanizing           | Powder Coating            |
-| etc                   | Wiring                    |
+| etc.                  | Wiring                    |
 
 
 
