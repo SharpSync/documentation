@@ -1,0 +1,10 @@
+bool_value_true: 'true'
+entity_property_mappings: Property Mapping
+entity_property_mapping: Property Mapping
+entity_data_source: Data Source
+module_odoo: Odoo
+module_csv: CSV
+module_onshape: Onshape
+module_dynamics: Dynamics365
+module_solidworks: SolidWorks
+module_solidworks_pdm: SolidWorks Pdm

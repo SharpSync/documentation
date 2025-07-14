@@ -101,6 +101,7 @@
     * [Map BOM Operation Codes](data-sources/odoo/common-setup/map-bom-operation-codes/README.md)
       * [Read BOM WorkCenters](data-sources/odoo/common-setup/map-bom-operation-codes/read-bom-workcenters.md)
       * [Read BOM Operations](data-sources/odoo/common-setup/map-bom-operation-codes/read-bom-operations.md)
+      * [Write BOM Operations](data-sources/odoo/common-setup/map-bom-operation-codes/write-bom-operations.md)
     * [Map BOM Types](data-sources/odoo/common-setup/map-bom-types.md)
     * [Map Attribute Values](data-sources/odoo/common-setup/map-attribute-values/README.md)
       * [Reading Attributes - Overview](data-sources/odoo/common-setup/map-attribute-values/reading-attributes-overview.md)
