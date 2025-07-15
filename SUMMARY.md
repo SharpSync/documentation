@@ -83,6 +83,7 @@
     * [Configure isPhantom mapping](data-sources/netsuite/common-setup/configure-isphantom-mapping.md)
     * [Configure subsidiary mapping](data-sources/netsuite/common-setup/configure-subsidiary-mapping.md)
     * [Configure price mapping](data-sources/netsuite/common-setup/configure-price-mapping.md)
+    * [Configure locations mapping](data-sources/netsuite/common-setup/configure-locations-mapping.md)
     * [Configure Where Used Link mapping](data-sources/netsuite/common-setup/configure-where-used-link-mapping.md)
     * [Configure thumbnail mapping](data-sources/netsuite/common-setup/configure-thumbnail-mapping.md)
     * [Read-Only NetSuite Fields](data-sources/netsuite/common-setup/read-only-netsuite-fields.md)
