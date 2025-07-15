@@ -4,6 +4,8 @@ icon: diagram-subtask
 
 # Configure locations mapping
 
+`locations` is a `multi-value`  NetSuite field that accepts an array of complex objects
+
 ### Locations Property Mapping Settings
 
 | Setting                   | Value                                                                                               |

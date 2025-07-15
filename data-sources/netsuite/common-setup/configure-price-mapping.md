@@ -4,6 +4,8 @@ icon: diagram-subtask
 
 # Configure price mapping
 
+`price` is a `multi-value`  NetSuite field that accepts an array of complex objects
+
 ### Price Property Mapping Settings
 
 | Setting                   | Value                                                                                       |
