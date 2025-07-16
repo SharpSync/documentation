@@ -14,7 +14,18 @@ The best way to manage operations is to be consistent in your naming convention 
 In other words, if you are going to assemble something, always give it the exact same name (e.g. `Assembly` or `Assemble`).
 {% endhint %}
 
+{% hint style="info" %}
+### Choose what to display
 
+The work centers and operations both depend on `mpr.bom.operation_ids`. You'll want to display _one_ of the following:
+
+* The mapped work center or stations, read-only (e.g. Drill Station 1, Galvanization, Powder Coating)
+* The mapped operation names (e.g. Drill, Galvanize, Powder Coat)
+
+
+
+For more complicated mappings, please contact us through the support portal.
+{% endhint %}
 
 BOM operations can often include one or more of the following items in the table below:&#x20;
 
