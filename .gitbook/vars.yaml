@@ -1,5 +1,5 @@
 bool_value_true: 'true'
-entity_property_mappings: Property Mapping
+entity_property_mappings: Property Mappings
 entity_property_mapping: Property Mapping
 entity_data_source: Data Source
 module_odoo: Odoo

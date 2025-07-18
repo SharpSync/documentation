@@ -3,18 +3,6 @@ description: >-
   The sections described here are for general situations which are common to BOM
   field customization
 icon: sparkle
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Common Setup

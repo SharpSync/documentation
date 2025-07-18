@@ -95,18 +95,13 @@ You can create this by hand or use the following handy prompt in [Copilot ](http
 
 In SharpSync make the following changes to the Property Mapping:
 
-| Setting               | Value                                                                                                                                                                                                             |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Rendering Type        | <mark style="color:blue;">`Advanced List`</mark>                                                                                                                                                                  |
-| List Display Selector | `name`                                                                                                                                                                                                            |
-| List Value Selector   | `id`                                                                                                                                                                                                              |
-| List Items            | <pre class="language-json"><code class="lang-json">[ 
+<table><thead><tr><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td>Rendering Type</td><td><mark style="color:blue;"><code>Advanced List</code></mark></td></tr><tr><td>List Display Selector</td><td><code>name</code></td></tr><tr><td>List Value Selector</td><td><code>id</code></td></tr><tr><td>List Items</td><td><pre class="language-json"><code class="lang-json">[ 
   { "id" : 1, "name" : "Legs" },
   { "id" : 2, "name" : "Color" },
   { "id" : 3, "name" : "Duration" },
   { "id" : 5, "name" : "Finish" }  
 ]
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 
 

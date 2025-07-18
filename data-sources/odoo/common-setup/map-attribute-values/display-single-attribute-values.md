@@ -38,17 +38,12 @@ A new list of items is returned
 
 In SharpSync make the following changes to the Property Mapping:
 
-| Setting               | Value                                                                                                                                                                                                                                 |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Rendering Type        | `Advanced List`                                                                                                                                                                                                                       |
-| List Display Selector | `name`                                                                                                                                                                                                                                |
-| List Value Selector   | `id`                                                                                                                                                                                                                                  |
-| List Items            | <pre class="language-json5"><code class="lang-json5">[
+<table><thead><tr><th>Setting</th><th>Value</th></tr></thead><tbody><tr><td>Rendering Type</td><td><code>Advanced List</code></td></tr><tr><td>List Display Selector</td><td><code>name</code></td></tr><tr><td>List Value Selector</td><td><code>id</code></td></tr><tr><td>List Items</td><td><pre class="language-json5"><code class="lang-json5">[
   { "id": 1, "name": "Steel", "attributeId" : 1 },
   { "id": 2, "name": "Aluminium" , "attributeId" : 1 },
   { "id": 8, "name": "Custom" , "attributeId" : 1 }
 ]
-</code></pre> |
+</code></pre></td></tr></tbody></table>
 
 
 
