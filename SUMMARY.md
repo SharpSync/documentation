@@ -28,6 +28,8 @@
     * [Set cell value](fundamentals/rules/import-export/set-cell-value.md)
     * [Set empty cells](fundamentals/rules/import-export/set-empty-cells.md)
     * [Text manipulation](fundamentals/rules/import-export/text-manipulation.md)
+  * [Comparison](fundamentals/rules/comparison/README.md)
+    * [Uncheck Process Row Box](fundamentals/rules/comparison/uncheck-process-row-box.md)
   * [Display](fundamentals/rules/display/README.md)
     * [Number between](fundamentals/rules/display/number-between.md)
     * [Text contains](fundamentals/rules/display/text-contains.md)
