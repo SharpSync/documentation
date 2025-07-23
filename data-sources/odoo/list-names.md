@@ -8,7 +8,11 @@ icon: bars
 
 When setting up an Odoo source, it is useful to query the Odoo instance for lists of values for use in nestedObject property mappings. This provides a way for you to keep the values that users can select in sync with those in Odoo.
 
-> \[!NOTE] For this to work the type in Odoo (as shown in SharpSync) must be `nestedObject`. We don't currently support list queries for other native SharpSync types like `array`
+{% hint style="warning" %}
+**Take note:** For this to work the type in Odoo (as shown in SharpSync) must be `nestedObject`.&#x20;
+
+We don't currently support list queries for other native SharpSync types like `array`
+{% endhint %}
 
 | List name              | Returns                                                                     | Sample data                                                           |
 | ---------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------- |
@@ -22,6 +26,7 @@ When setting up an Odoo source, it is useful to query the Odoo instance for list
 | resource.resource      | Lists all the registered Odoo resources. Can include people and workcenters | `[ 5, "Andrew Crumbs"], [12, "Work Center 1"]`                        |
 | stock.location         | Locations you can assign for warehouses                                     | `[ 14986, "MP" ], [ 14995, "MP/Assemble" ], [ 14990, "MP/Output" ],`  |
 | stock.route            | Routes available for selection \[2]                                         | `[ 1, "Replenish on Order (ROO)" ], [ 2, "Receive in 1 step (RIS)" ]` |
+| uom.uom                | Units of measure for BOM line items or individual products                  | `[ 'Each', 'Dozens']`                                                 |
 
 {% hint style="info" %}
 ```postman_json
