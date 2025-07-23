@@ -10,17 +10,18 @@ When setting up an Odoo source, it is useful to query the Odoo instance for list
 
 > \[!NOTE] For this to work the type in Odoo (as shown in SharpSync) must be `nestedObject`. We don't currently support list queries for other native SharpSync types like `array`
 
-| List name              | Returns                                                | Sample data                                                           |
-| ---------------------- | ------------------------------------------------------ | --------------------------------------------------------------------- |
-| mrp.workcenter         | List of work centers operations (will show duplicates  | \[ 1, "Assembly Line 1"], \[ 2, "Drilling" ]                          |
-| mrp.workcenter.tag     | List of work center tags                               | \[ 1, "Finishes" ]                                                    |
-| product.category       | Product template categories                            | `[ 1, "All" ], [ 9, "All / Consumable" ]`                             |
-| product.attribute \*\* | Returns registered attributes                          | \[ "Color", "Duration", "Finish" ]                                    |
-| product.tag            | Tags assigned on the `General Information` tab         | `[ 11, "Kit" ], [ 12, "Assemble" ], [ 81, "Switches" ]`               |
-| res.company            | List of all registered companies in your Odoo instance | \[ 3, "SharpSync CA"], \[1, "SharpSync USA"]                          |
-| resource.resource      | Lists all the registered Odoo resources                |                                                                       |
-| stock.location         | Locations you can assign for warehouses                | `[ 14986, "MP" ], [ 14995, "MP/Assemble" ], [ 14990, "MP/Output" ],`  |
-| stock.route            | Routes available for selection \[2]                    | `[ 1, "Replenish on Order (ROO)" ], [ 2, "Receive in 1 step (RIS)" ]` |
+| List name              | Returns                                                                     | Sample data                                                           |
+| ---------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| mrp.workcenter         | List of work centers operations (will show duplicates                       | `[ 1, "Assembly Line 1"], [ 2, "Drilling" ]`                          |
+| mrp.workcenter.tag     | List of work center tags                                                    | `[ 1, "Finishes" ]`                                                   |
+| product.category       | Product template categories                                                 | `[ 1, "All" ], [ 9, "All / Consumable" ]`                             |
+| product.attribute \*\* | Returns registered attributes                                               | `[ "Color", "Duration", "Finish" ]`                                   |
+| product.tag            | Tags assigned on the `General Information` tab                              | `[ 11, "Kit" ], [ 12, "Assemble" ], [ 81, "Switches" ]`               |
+| res.company            | List of registered companies in your Odoo instance                          | `[ 3, "SharpSync CA"], [1, "SharpSync USA"]`                          |
+| res.users              | List of registered users in your Odoo instance                              | `[ 5, "Andrew Crumbs"], [12, "Joe Soap"]`                             |
+| resource.resource      | Lists all the registered Odoo resources. Can include people and workcenters | `[ 5, "Andrew Crumbs"], [12, "Work Center 1"]`                        |
+| stock.location         | Locations you can assign for warehouses                                     | `[ 14986, "MP" ], [ 14995, "MP/Assemble" ], [ 14990, "MP/Output" ],`  |
+| stock.route            | Routes available for selection \[2]                                         | `[ 1, "Replenish on Order (ROO)" ], [ 2, "Receive in 1 step (RIS)" ]` |
 
 {% hint style="info" %}
 ```postman_json
