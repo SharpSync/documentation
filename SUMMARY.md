@@ -127,6 +127,7 @@
   * [Downloading and installing the add-in](data-sources/solidworks-pdm/downloading-and-installing-the-add-in.md)
   * [Configure the add-in](data-sources/solidworks-pdm/configure-the-add-in.md)
   * [Setting up the Solidworks PDM Web 2](data-sources/solidworks-pdm/setting-up-the-solidworks-pdm-web-2.md)
+  * [Data Management](data-sources/solidworks-pdm/data-management.md)
   * [Troubleshooting](data-sources/solidworks-pdm/troubleshooting.md)
   * [Advanced: Configure add-in for testing](data-sources/solidworks-pdm/advanced-configure-add-in-for-testing.md)
   * [Submitting a BOM for update](data-sources/solidworks-pdm/submitting-a-bom-for-update.md)
