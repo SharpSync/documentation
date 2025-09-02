@@ -43,3 +43,11 @@ Using the default color scheme for BOM comparison, you can expect the following 
 ### BOM Comparison Legend
 
 <table data-full-width="false"><thead><tr><th>Color scheme</th><th>Description</th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/image (20).png" alt="" data-size="original"></td><td>Blue border - DS1 and DS2 values are different. Without user modifications</td></tr><tr><td><img src="../.gitbook/assets/image (11).png" alt="" data-size="original"></td><td>Blue &#x26; green border - DS1 and DS2 values are different. With user modifications</td></tr><tr><td><img src="../.gitbook/assets/image (13).png" alt="" data-size="original"></td><td>Green border - DS1 and DS2 values are identical. With user modifications</td></tr><tr><td><img src="../.gitbook/assets/image (14).png" alt="" data-size="original"></td><td>Orange border - Value did not pass display mapping rule (Warning)</td></tr><tr><td><img src="../.gitbook/assets/image (15).png" alt="" data-size="original"></td><td>Red border - Value did not pass display mapping rule (Error)</td></tr><tr><td><img src="../.gitbook/assets/image (16).png" alt="" data-size="original"></td><td>Red background - Component is missing from the DS1 BOM. Will be unlinked from the DS2 BOM</td></tr><tr><td><img src="../.gitbook/assets/image (17).png" alt="" data-size="original"></td><td>Orange background - Component is present in DS2. Will be linked to the corresponding DS2 BOM</td></tr><tr><td><img src="../.gitbook/assets/image (18).png" alt="" data-size="original"></td><td>Green background - Component is missing from DS2. Will be added to DS2 and linked to the corresponding BOM</td></tr><tr><td><img src="../.gitbook/assets/image (19).png" alt="" data-size="original"></td><td>Blue background- Row line type is drawing used to configure drawing types derivatives</td></tr></tbody></table>
+
+If you ever find yourself in the need to review this information, click the `Legend` button at the bottom of the BOM Comparison screen
+
+{% hint style="success" %}
+These colors are modifiable under then User Settings
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/bom_legend (1).png" alt=""><figcaption></figcaption></figure>

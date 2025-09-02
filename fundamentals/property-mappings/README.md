@@ -19,9 +19,13 @@ The following Property Mappings columns are visible by default:
 
 Depending on your screen size, columns related to your Primary Data Source and Secondary Data Source might not all fit in the table. Use the scrollbar at the bottom, as shown in the screenshot below, to scroll other property mappings into view.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/property_mappings_scroll_right.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-Important: You have to add at least 2 Data Sources before being able to successfully add Property Mappings. If any of your sources have changes applied (new properties added), come back to this screen and click the `UPDATE`  button before you can select the new property.
+Important: You have to add at least 2 Data Sources before being able to successfully add Property Mappings.
+
+
+
+If any of your sources have changes applied (new properties added), come back to this screen and click the `UPDATE`  button before you can select the new property.
 {% endhint %}
 

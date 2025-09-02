@@ -56,6 +56,7 @@ To prevent stale data from hanging around, we've implemented a 30 day stale data
 * Hierarchical data
 * File derivatives
 * Backup copies of derivatives
+* Organizational data is kept up to&#x20;
 
 #### Conditions for triggering
 

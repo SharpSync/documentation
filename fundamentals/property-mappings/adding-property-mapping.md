@@ -21,7 +21,7 @@ SharpSync has built-in rules and settings for each property mapping. These rules
 * The column headers you entered in the Data Source BOM Configuration will populate each Property Mapping.
 * Each Property Mapping will be displayed as a column on the Component Assembly BOM page.
 
-<figure><img src="../../.gitbook/assets/select_property_mapping.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/property_mappings_add_mapping.png" alt=""><figcaption></figcaption></figure>
 
 3. Once you have selected the property mappings that you want to appear in the SharpSync BOM, confirm that the Accessors, Primary Data Source Properties, and Secondary Data Source Properties columns are correct. You can double-click on the cells in each column to change the value SharpSync will match. The accessor must be present in the appropriate Data Source.
 
