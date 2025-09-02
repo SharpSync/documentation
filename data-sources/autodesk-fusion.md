@@ -2,7 +2,11 @@
 icon: traffic-cone
 ---
 
-# Autodesk Fusion (In progress)
+# Autodesk Fusion
+
+{% hint style="danger" %}
+The Autodesk Fusion add-in is in Beta. If you would like to give it a test run, please [register](../fundamentals/getting-started/registration.md) on the SharpSync website and reach out to us for a downloadable.
+{% endhint %}
 
 ### Bill of Material (BOM) level features
 
