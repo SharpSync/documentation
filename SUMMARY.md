@@ -59,6 +59,7 @@
 ## Data Sources
 
 * [Autodesk Inventor](data-sources/autodesk-inventor.md)
+* [Autodesk Fusion (In progress)](data-sources/autodesk-fusion-in-progress.md)
 * [CSV](data-sources/editor/README.md)
   * [Getting Started](data-sources/editor/getting-started.md)
   * [Importing a Bill of Materials (BOM)](data-sources/editor/importing-a-bill-of-materials-bom.md)

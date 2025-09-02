@@ -1,5 +1,4 @@
 ---
-description: '[docs in progress]'
 icon: chart-tree-map
 ---
 
@@ -7,9 +6,9 @@ icon: chart-tree-map
 
 ### Bill of Material (BOM) level features
 
-<table><thead><tr><th width="335.0078125">Feature</th><th width="115.390625" align="center">Read</th><th width="144.890625" align="center">Create</th><th width="113.16796875" align="center">Update</th></tr></thead><tbody><tr><td>BOM hierarchy</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>BOM meta data **</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td>BOM quantities</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>Component thumbnails</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>BOM Configurations</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>File derivative transfers (e.g. STEP, DXF)</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr></tbody></table>
+<table><thead><tr><th width="335.0078125">Feature</th><th width="115.390625" align="center">Read</th><th width="144.890625" align="center">Create</th><th width="113.16796875" align="center">Update</th></tr></thead><tbody><tr><td>BOM hierarchy</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>BOM meta data **</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span>**</td></tr><tr><td>BOM quantities</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>Component thumbnails</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>BOM Configurations</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr><tr><td>File derivative transfers (e.g. STEP, DXF)</td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center">N/A</td><td align="center">N/A</td></tr></tbody></table>
 
-\*\* Updates to BOM metadata are available on request
+\*\* 2 way sync updates to BOM metadata are available on request
 
 ## SolidWorks Add-in Setup
 
@@ -31,7 +30,7 @@ SolidWorks files (\*.sldasm, \*.sldprt) are utilized to import Bills of Material
 
 #### Setup the CSV datasource in SharpSync
 
-* From the `Datasources` section, add the CSV datasource as the Primary datasource
+* From the [`Data sources` ](../fundamentals/data-sources.md#core-concept-sources) section, add the CSV Data Source as the Primary Data Source
 * Click the `Configure` button > `BOM Configuration`
 * On a new line each, enter the Custom Properties to read
 * These properties should be the standard properties that exist in any given SolidWorks file. If it does not exist, a blank value will be used
@@ -44,7 +43,11 @@ SolidWorks files (\*.sldasm, \*.sldprt) are utilized to import Bills of Material
 * Click the `Save` button
 * On the main Data Source tab, make sure that the `Primary Component Identifier` matches with your `Number` custom property.
 
-The primary component identifier is the identifier that is unique across data source domains. If this is `Number` or `No` or `PartNumber` then the assumption is this property exists in both SolidWorks and your ERP solution. (NOTE: It does not have to be called `Number`. It can be called anything as long as it exists as a SolidWorks custom property. If it does not exist, the file name will be used as the fallback value)
+The primary component identifier is the identifier that is unique across data source domains. If this is `Number` or `No` or `PartNumber` then the assumption is this property exists in both SolidWorks and your ERP solution.
+
+{% hint style="success" %}
+&#x20;It does not have to be called `Number`. It can be called anything as long as it exists as a SolidWorks custom property. If it does not exist, the file name will be used as the fallback value
+{% endhint %}
 
 In the example below I've setup
 
