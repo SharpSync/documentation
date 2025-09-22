@@ -19,63 +19,66 @@ CSV (Comma Separated Values) files are utilized to import Bills of Materials (BO
 
 * From the `Datasources` section, add the CSV datasource as the Primary datasource
 * Click the `Configure` button > `BOM Configuration`
-* On a new line each, enter the Custom Properties to read, the current built-in properties in Autodesk Inventor 2025 in the `Design Tracking Properties` Property Set are:
-  * Appearance
-  * Authority
-  * Catalog Web Link
-  * Categories
-  * Checked By
-  * Cost
-  * Cost Center
-  * Creation Time
-  * Date Checked
-  * Defer Updates
-  * Density
-  * Description
-  * Design Status
-  * Designer
-  * Document SubType
-  * Document SubType Name
-  * Engineer
-  * Engr Approved By
-  * Engr Date Approved
-  * External Property Revision Id
-  * Flat Pattern Area
-  * Flat Pattern Defer Update
-  * Flat Pattern Length
-  * Flat Pattern Width
-  * Language
-  * Last Updated With
-  * Manufacturer
-  * Mass
-  * Material
-  * Material Identifier
-  * Mfg Approved By
-  * Mfg Date Approved
-  * Parameterized Template
-  * Part Icon
-  * Part Number
-  * Part Property Revision Id
-  * Project
-  * Proxy Refresh Date
-  * Sheet Metal Area
-  * Sheet Metal Length
-  * Sheet Metal Rule
-  * Sheet Metal Width
-  * Size Designation
-  * Standard
-  * Standard Revision
-  * Standards Organization
-  * Stock Number
-  * SurfaceArea
-  * Template Row
-  * User Status
-  * Valid MassProps
-  * Vendor
-  * Volume
-  * Weld Material
-* Each value entered here will be available as an Accessor in the `Property Mappings` tab. See also the [Property Mappings](../fundamentals/property-mappings/) section.
-* Make sure to add an extra line with the `Quantity` property which is not an Inventor property but will be used later in the property mappings configuration.
+*   On a new line each, enter the Custom Properties to read, the current built-in properties in Autodesk Inventor 2025 in the `Design Tracking Properties` Property Set are:
+
+    ```
+    Appearance
+    Authority
+    Catalog Web Link
+    Categories
+    Checked By
+    Cost
+    Cost Center
+    Creation Time
+    Date Checked
+    Defer Updates
+    Density
+    Description
+    Design Status
+    Designer
+    Document SubType
+    Document SubType Name
+    Engineer
+    Engr Approved By
+    Engr Date Approved
+    External Property Revision Id
+    Flat Pattern Area
+    Flat Pattern Defer Update
+    Flat Pattern Length
+    Flat Pattern Width
+    Language
+    Last Updated With
+    Manufacturer
+    Mass
+    Material
+    Material Identifier
+    Mfg Approved By
+    Mfg Date Approved
+    Parameterized Template
+    Part Icon
+    Part Number
+    Part Property Revision Id
+    Project
+    Proxy Refresh Date
+    Quantity
+    Sheet Metal Area
+    Sheet Metal Length
+    Sheet Metal Rule
+    Sheet Metal Width
+    Size Designation
+    Standard
+    Standard Revision
+    Standards Organization
+    Stock Number
+    SurfaceArea
+    Template Row
+    User Status
+    Valid MassProps
+    Vendor
+    Volume
+    Weld Material
+    ```
+* Each value entered here will be available as an Accessor in the [`Property Mappings`](../fundamentals/property-mappings/) tab. See also the [Property Mappings](../fundamentals/property-mappings/) section.
 * Click the `Save` button
 * On the main datasource tab, make sure that the `Primary Identifier` matches with the `Part Number` Inventor property or any other Inventor property that you use as unique component identifier. The primary component identifier is the identifier that is unique across datasources.
 
