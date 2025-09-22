@@ -1,6 +1,6 @@
 ---
 description: Inventor is a CAD System for BREP solid body design
-icon: chart-tree-map
+icon: uncharted
 ---
 
 # Autodesk Inventor

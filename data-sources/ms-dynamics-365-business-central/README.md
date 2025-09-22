@@ -1,5 +1,5 @@
 ---
-icon: chart-tree-map
+icon: uncharted
 ---
 
 # MS Dynamics 365 Business Central

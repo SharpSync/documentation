@@ -1,5 +1,5 @@
 ---
-icon: chart-tree-map
+icon: uncharted
 ---
 
 # CSV
