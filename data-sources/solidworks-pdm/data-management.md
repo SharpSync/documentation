@@ -73,11 +73,9 @@ A1
 * Selecting the '@' configuration for A1 shows all the custom properties for all items below that assembly. It does not display the configuration specific properties, and does not honor suppression states.
 * Selecting the 'default' (or whichever you pick) configuration for A1 in the BOM view will _not_ show P3. <mark style="color:orange;">In 99% of the cases, this is the desired outcome.</mark>
 
-
-
 When you make a configuration selection in SharpSync, the configuration you choose ultimately determines the structure (based on suppression states) and the custom properties (or configuration specific properties in the case of a selected configuration).
 
-So if you can help it: Pick a 'default' (or whichever) configuration, not the '@'. This will give you the correct result. This is a completely separate issue to using configurations for assemblies and parts (bottom part of this email) which presents other challenges.
+So if you can help it: Pick a 'default' (or whichever) configuration, not the '@'. This will give you the correct result. This is a completely separate issue to using configurations for assemblies and parts which presents other challenges.
 
 
 
