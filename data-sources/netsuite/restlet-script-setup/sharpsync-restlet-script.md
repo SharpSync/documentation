@@ -30,13 +30,14 @@ Before uploading to Netsuite, save the below contents to a `*.js` file (example 
 /**
  * @param {string} assemblyId
  */
-define(["N/record", "N/search", "N/log", "N/encode", "N/error"], function (
-  record,
-  search,
-  log,
-  encode,
-  error
-) {
+define([
+  "N/record",
+  "N/search",
+  "N/log",
+  "N/encode",
+  "N/error",
+  "N/file",
+], function (record, search, log, encode, error, file) {
   // TODO - UPDATE/CHANGE THIS TO YOUR ORGANIZATION'S DEFAULT TAX SCHEDULE ID
   const organizationSpecificTaxScheduleId = 1;
 
