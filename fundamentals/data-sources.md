@@ -4,6 +4,8 @@ icon: uncharted
 
 # Data Sources
 
+<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+
 `Data Source` is exactly that - a source of data you configure to read/write data from, or a source of data with an add-in to push data to SharpSync.&#x20;
 
 A primary source will be a Bill of Materials (BOM) structure and metadata (e.g., part number, description, revision). A secondary source will be Inventory records and BOM data.
