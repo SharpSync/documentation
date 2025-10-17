@@ -44,7 +44,7 @@ To read these operations from the BOM, we map to the Odoo property&#x20;
 
 Create a new [Property Mapping](../../../../fundamentals/property-mappings/) with the following settings:
 
-<table><thead><tr><th width="301">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Property Name / Header</td><td>BOM Operations</td></tr><tr><td>Accessor</td><td>bomOperations</td></tr><tr><td>Primary Property</td><td>(Unmapped)</td></tr><tr><td>Secondary Property</td><td><code>mrp.bom.operation_ids</code></td></tr><tr><td>Update Odoo on Submit</td><td>false</td></tr><tr><td>Rendering Type</td><td><code>Advanced Multi Select List</code></td></tr><tr><td>List Display Selector</td><td>displayName</td></tr><tr><td>List Value Selector</td><td>id</td></tr><tr><td>List items</td><td><p> Here is a sample of what you can insert, but it can be anything, whatever you use most frequently [more on this below]**</p><pre class="language-json5"><code class="lang-json5">[
+<table><thead><tr><th width="301">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Property Name / Header</td><td>BOM Operations</td></tr><tr><td>Accessor</td><td>bomOperations</td></tr><tr><td>Primary Property</td><td>(Unmapped)</td></tr><tr><td>Secondary Property</td><td><code>mrp.bom.operation_ids</code></td></tr><tr><td>Update Odoo on Submit</td><td>false</td></tr><tr><td>Rendering Type</td><td><code>Advanced Multi Select List</code></td></tr><tr><td>List Display Selector</td><td>name</td></tr><tr><td>List Value Selector</td><td>workCenterId</td></tr><tr><td>List items</td><td><p> Here is a sample of what you can insert, but it can be anything, whatever you use most frequently [more on this below]**</p><pre class="language-json5"><code class="lang-json5">[
     {
         "workCenterId": 2,
         "name": "Drill",
@@ -89,13 +89,20 @@ Productivity Tip
 
 ***
 
-To easily convert the list into a list of values, go to your favourite GPT and type the following prompt, pasting the values with it:
+To easily convert the list into a list of values, go to your favorite GPT and type the following prompt, pasting the values of the previous step "Read BOM Workcenters" with it:
 
-{% code overflow="wrap" %}
+_Convert the following text into a list of JSON objects. Use the number as the 'workCenterId' and the text as the 'name'. For each entry, also include a 'value' key with the following structure:_
+
+```json
+"value": {
+    "sequence": {start at 10 and increment by 10 for each entry},
+    "name": {a single word or two words maximum that is directly related to the work center name, like 'Assemble' for 'Assembly VIC'. Ensure this name is unique for all entries by adding a specific descriptor if needed, e.g., 'General Assemble', 'Line Assemble', 'Fab Parts', etc.},
+    "workcenter_id": {use the work center id},
+    "time_mode": "manual",
+    "time_mode_batch": 10,
+    "time_cycle_manual": 60
+}
 ```
-Convert the following text into a list of json objects the number as the "id" and the text as the "name"
-```
-{% endcode %}
 {% endhint %}
 
 \*\* When creating this list, and you only want to read the values, you'll want to specify at least the Work center id, and the name of the operation. If you also want to write the values back to Odoo, then you'll have to specify the entire object required to add new operations and the default settings for the operation.&#x20;
