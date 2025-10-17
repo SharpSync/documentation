@@ -20,3 +20,6 @@ See one of the child sections:
 [read-bom-operations.md](read-bom-operations.md)
 {% endcontent-ref %}
 
+{% content-ref url="write-bom-operations.md" %}
+[write-bom-operations.md](write-bom-operations.md)
+{% endcontent-ref %}

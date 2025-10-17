@@ -23,7 +23,21 @@ Create a new [Property Mapping](../../../../fundamentals/property-mappings/) wit
   { "id": 1, "name": "Galvanizing Station" },
   { "id": 2, "name": "Drill Station 1"  }
 ]
-</code></pre></td></tr><tr><td>Enabled</td><td>true</td></tr><tr><td>Prefer Odoo Value</td><td>true</td></tr><tr><td></td><td></td></tr></tbody></table>
+</code></pre></td></tr><tr><td>Enabled</td><td>true</td></tr><tr><td>Prefer Odoo Value</td><td>true</td></tr></tbody></table>
+
+{% hint style="success" %}
+Productivity Tip
+
+***
+
+To easily convert the list into a list of values, go to your favourite GPT and type the following prompt, pasting the values with it:
+
+{% code overflow="wrap" %}
+```
+Convert the following text into a list of json objects the number as the "id" and the text as the "name"
+```
+{% endcode %}
+{% endhint %}
 
 After adding the new Property Mapping, add an import rule
 

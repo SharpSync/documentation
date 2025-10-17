@@ -84,6 +84,20 @@ Create a new [Property Mapping](../../../../fundamentals/property-mappings/) wit
 ]
 </code></pre></td></tr><tr><td>Enabled</td><td>true</td></tr><tr><td>Prefer Odoo Value</td><td>true</td></tr></tbody></table>
 
+{% hint style="success" %}
+Productivity Tip
+
+***
+
+To easily convert the list into a list of values, go to your favourite GPT and type the following prompt, pasting the values with it:
+
+{% code overflow="wrap" %}
+```
+Convert the following text into a list of json objects the number as the "id" and the text as the "name"
+```
+{% endcode %}
+{% endhint %}
+
 \*\* When creating this list, and you only want to read the values, you'll want to specify at least the Work center id, and the name of the operation. If you also want to write the values back to Odoo, then you'll have to specify the entire object required to add new operations and the default settings for the operation.&#x20;
 
 {% hint style="info" %}
@@ -92,7 +106,7 @@ Writing BOM operations is explained in the next topic [write-bom-operations.md](
 
 Some BOM operation properties that are available for reading are listed below. The list is not exhaustive and you may customize your own (See the Odoo Configuration options > Models > `mrp.routing.workcenter`):
 
-<table><thead><tr><th width="198">Property</th><th width="117">Type</th><th width="130">Availability</th><th data-type="checkbox">Required for reading in SharpSync</th></tr></thead><tbody><tr><td>active</td><td>bool</td><td>16, 17, 18</td><td>false</td></tr><tr><td>name</td><td>string</td><td>16, 17, 18</td><td>true</td></tr><tr><td>bom_id</td><td>integer</td><td>16, 17, 18</td><td>false</td></tr><tr><td>workcenter_id</td><td>integer</td><td>16,17,18</td><td>true</td></tr><tr><td>time_mode_batch</td><td>integer</td><td>16,17,18</td><td>false</td></tr><tr><td>time_cycle_manual</td><td>integer</td><td>16,17,18</td><td>false</td></tr><tr><td>note</td><td>string</td><td>16,17,18</td><td>false</td></tr><tr><td>sequence</td><td>integer</td><td>16,17,18</td><td>false</td></tr></tbody></table>
+<table><thead><tr><th width="198">Property</th><th width="117">Type</th><th width="157">Odoo Availability</th><th data-type="checkbox">Required for reading in SharpSync</th></tr></thead><tbody><tr><td>active</td><td>bool</td><td>16, 17, 18</td><td>false</td></tr><tr><td>name</td><td>string</td><td>16, 17, 18</td><td>true</td></tr><tr><td>bom_id</td><td>integer</td><td>16, 17, 18</td><td>false</td></tr><tr><td>workcenter_id</td><td>integer</td><td>16,17,18</td><td>true</td></tr><tr><td>time_mode_batch</td><td>integer</td><td>16,17,18</td><td>false</td></tr><tr><td>time_cycle_manual</td><td>integer</td><td>16,17,18</td><td>false</td></tr><tr><td>note</td><td>string</td><td>16,17,18</td><td>false</td></tr><tr><td>sequence</td><td>integer</td><td>16,17,18</td><td>false</td></tr></tbody></table>
 
 After adding the new Property Mapping, add an import rule
 
