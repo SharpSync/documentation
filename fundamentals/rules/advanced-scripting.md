@@ -1,5 +1,4 @@
 ---
-description: '[Work in progress]'
 icon: js
 cover: >-
   https://images.unsplash.com/photo-1518773553398-650c184e0bb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHxjb2RlfGVufDB8fHx8MTczNTgxODA2MHww&ixlib=rb-4.0.3&q=85
@@ -8,13 +7,14 @@ coverY: 0
 
 # Advanced Scripting
 
-Advanced Rules are more difficult to use, but they are much more powerful than the other rules.
+Advanced Rules are more difficult to use, but they are much more powerful than other (preset) rules.
 
 User scriptable rules (JavaScript) have access to 4 parameters, instead of just 1. The rules that fall into this category are:
 
 * Text Manipulation (import / export)
 * Text Evaluation (display)
 * Export Manipulation (export only)
+* Comparison (uncheck process checkbox)
 
 ### Parameters of a rule
 
@@ -27,7 +27,7 @@ Typical rules only manipulate or use the string value `s` which is passed to it.
 {% hint style="danger" %}
 When the rule is an Import or Export `Text Manipulation` rule, the result of the rule must always be a `string` or a representation of a `string` such as a JavaScript `object` (JSON) which has been serialized. If it does not return a value you may experience unexpected results in the UI, possibly even instability (BOM view not rendering).
 
-The result  must be an object containing a 'message' key, e.g.
+The result  must be an object containing a 'message' key, e.g. `{ 'message' : 'some result' }`
 {% endhint %}
 
 The resultant message is displayed onscreen during a rule evaluation failure
@@ -37,10 +37,10 @@ The resultant message is displayed onscreen during a rule evaluation failure
 ```
 
 {% hint style="info" %}
-Should you happen to break your BOM view using these custom scripts, simply disable the rules or delete them to restore the BOM view.
+Should you happen to break your BOM view using these custom scripts, simply disable the rule or delete them to restore the BOM view. Click the 'Undo Changes' button for rules to re-evaluate on the existing BOM.
 {% endhint %}
 
-<table><thead><tr><th width="193">Param</th><th>Description</th></tr></thead><tbody><tr><td>s</td><td>The current string value in the cell (changes with each successive import rule or export rule (if there are any)</td></tr><tr><td>rowData</td><td>The rowData object (more detail below **)</td></tr><tr><td>p</td><td>The pass / block value, does not change</td></tr><tr><td>pm</td><td>The Property Mapping's object. Does not change. (** more detail below)</td></tr></tbody></table>
+<table><thead><tr><th width="193">Param</th><th>Description</th></tr></thead><tbody><tr><td><code>s</code></td><td>The current string value in the cell (changes with each successive import rule or export rule (if there are any)</td></tr><tr><td><code>rowData</code></td><td>The rowData object (more detail below **)</td></tr><tr><td><code>p</code></td><td>The pass / block value, does not change</td></tr><tr><td><code>pm</code></td><td>The Property Mapping's object. Does not change. (** more detail below)</td></tr></tbody></table>
 
 ### `s` Parameter
 
@@ -60,37 +60,45 @@ If you see a value onscreen shown as \[object Object] this means you have a JSON
 
 &#x20;The `rowData` is the row itself including any cells, differences or modifications. It contains, but is not limited to, the following key/values:
 
-<table><thead><tr><th width="241">Key name</th><th>Description of the value</th></tr></thead><tbody><tr><td><code>isAssemblyRow</code></td><td>A bool value indicating if the current row value is an assembly row (contains children according to the source)</td></tr><tr><td><code>componentName</code></td><td>The primary identifier of each row - typically the name of the component</td></tr><tr><td><code>componentPathArray</code></td><td>The path of each component. So if you have assembly A1, with Part P1, then this value will be [ 'A1', 'P1' ]</td></tr><tr><td><code>cells</code></td><td><p>The row values for the entire row. A typical row object might look something like this (notice the nested `cells` key):</p><pre class="language-json"><code class="lang-json">{
+<table><thead><tr><th width="241">Key name</th><th>Description of the value</th></tr></thead><tbody><tr><td><code>isAssemblyRow</code></td><td>A bool value indicating if the current row value is an assembly row (contains children according to the source)</td></tr><tr><td><code>componentName</code></td><td>The primary identifier of each row - typically the name of the component</td></tr><tr><td><code>componentPathArray</code></td><td>The path of each component. So if you have assembly A1, with Part P1, then this value will be [ 'A1', 'P1' ]</td></tr><tr><td><code>cells</code></td><td><p>The row values for the entire row. The <code>.cells</code> object always stores the values from the primary source only. The differences stores any values from the Secondary that's <em>different.</em> A typical row object might look something like this (notice the nested `cells` key):</p><pre class="language-json"><code class="lang-json">{
   "isAssemblyRow" : false,
   "componentName" : "Part 1",
-  "componentPathArray" : [ "A1", "Part 1"],
+  "componentPathArray" : [ "A1", "PN-P1"],
   "cells" : {
-     "partNumber" : "P1",
+     "partNumber" : "PN-P1",
      "description" : "Side plate",
      "revision" : "A"
      "material" : "steel",
      "qty" : 1,
   }
 } 
-</code></pre></td></tr><tr><td><code>modifications</code></td><td><pre class="language-javascript"><code class="lang-javascript">{
+</code></pre></td></tr><tr><td><code>modifications</code></td><td><p>All changes made for cells in the row. This can occur when the user enters new text, makes a different selection, or the  secondary value is preferred (Prefer {<code>SecondaryDataSource</code> } Value checkbox in the property mapping settings)<br></p><pre class="language-json"><code class="lang-json">{
   "isAssemblyRow" : false,
   "componentName" : "Part 1",
-  "componentPathArray" : [ "A1", "Part 1"],
-  "modifications" : {
-     "partNumber" : "P1-PN",
-     "description" : "Side Plate",
+  "componentPathArray" : [ "A1", "PN-P1"],
+  "modifications" : { 
+     "description" : "Side Plate bracket",
      "material" : "Steel",
+  }
+} 
+</code></pre></td></tr><tr><td><code>differences</code></td><td><p>When the data is loaded from the <code>Primary</code> + <code>Secondary</code> DataSource, this contains the differences between each cell. Anything that is different is listed in this object.</p><pre class="language-json"><code class="lang-json">{
+  "isAssemblyRow" : false,
+  "componentName" : "Part 1",
+  "componentPathArray" : [ "A1", "PN-P1"],
+  "differences" : { 
+     "description" : "Side Plate bracket desc",
+     "material" : "Bronze",
   }
 } 
 </code></pre></td></tr><tr><td><code>primarySourceExportData</code></td><td>object containing the final set of data to send to the Primary Source. This is the final set of values to be sent.</td></tr><tr><td><code>secondarySourceExportData</code></td><td>object containing the final set of data to send to the Secondary Source. This is the final set of values to be sent</td></tr></tbody></table>
 
 ### `p` Parameter
 
-The `p`  parameter is the `PassOrBlock`value specified in the Property Mapping Rule options.
+The `p`  parameter is the `PassOrBlock`value specified in the Property Mapping Rule options. You cannot affect this with javascript, but you may read the value.
 
 ### `pm` Parameter
 
-The `pm`value contains values related to the [Property Mapping](../property-mappings/) used for this column. It cannot be modified, and any modifications to it are ignored. It contains, but is not limited to, the following key/values:
+The `pm` value contains values related to the [Property Mapping](../property-mappings/) used for this column. It cannot be modified, and any modifications to it are ignored. It contains, but is not limited to, the following key/values:
 
 | Key name                           | Description of the value                                           |
 | ---------------------------------- | ------------------------------------------------------------------ |
@@ -98,4 +106,6 @@ The `pm`value contains values related to the [Property Mapping](../property-mapp
 | `isVisible`                        | Whether the admin has selected this property as visible by default |
 | `shouldUpdatePrimaryDatasource`    | Whether to update the Primary Source                               |
 | `shouldUpdateSecondaryDatasource`  | Whether to update the Secondary Source                             |
+
+###
 
