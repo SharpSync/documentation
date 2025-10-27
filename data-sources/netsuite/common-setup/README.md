@@ -15,8 +15,10 @@ The pages below show common setup scenarios. It is by no means exhaustive, but w
 * [Configure locations mapping](configure-locations-mapping.md)
 * [Configure a `where-used`link mapping](configure-where-used-link-mapping.md)
 * [Configure thumbnail mapping](configure-thumbnail-mapping.md)
+* [Configure restlet.createRecord mapping](configure-restlet.createrecord-mapping.md)
+* [Read-Only NetSuite Fields](read-only-netsuite-fields.md)
 * [Common Mapping Rules](common-mapping-rules.md)
-* [Notes](read-only-netsuite-fields.md)
+* [Common List names](common-list-names.md)
 
 #### Caveats
 

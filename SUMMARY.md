@@ -89,6 +89,7 @@
     * [Configure locations mapping](data-sources/netsuite/common-setup/configure-locations-mapping.md)
     * [Configure Where Used Link mapping](data-sources/netsuite/common-setup/configure-where-used-link-mapping.md)
     * [Configure thumbnail mapping](data-sources/netsuite/common-setup/configure-thumbnail-mapping.md)
+    * [Configure restlet.createRecord mapping](data-sources/netsuite/common-setup/configure-restlet.createrecord-mapping.md)
     * [Read-Only NetSuite Fields](data-sources/netsuite/common-setup/read-only-netsuite-fields.md)
     * [Common Mapping Rules](data-sources/netsuite/common-setup/common-mapping-rules.md)
     * [Common List names](data-sources/netsuite/common-setup/common-list-names.md)
