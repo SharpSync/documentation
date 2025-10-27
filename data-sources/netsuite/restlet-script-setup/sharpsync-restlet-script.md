@@ -38,6 +38,7 @@ define([
   "N/error",
   "N/file",
 ], function (record, search, log, encode, error, file) {
+  const SHARPSYNC_RESTLET_SCRIPT_VERSION = "2.0.0";
   // TODO - UPDATE/CHANGE THIS TO YOUR ORGANIZATION'S DEFAULT TAX SCHEDULE ID
   const organizationSpecificTaxScheduleId = 1;
 
@@ -49,11 +50,15 @@ define([
     ITEM_TYPE: "itemType",
     NAME: "name",
     CUSTOM_PROPERTIES: "customProperties",
+    RELATED_ITEM_ID: "relatedItemId",
+    RECORD_TYPE: "recordType",
+    RECORD_PROPERTIES: "recordProperties",
   };
 
   const procedureTypes_e = {
     CREATE_FILE: "createFile",
     CREATE_ITEM: "createItem",
+    CREATE_RECORD: "createRecord",
   };
 
   const itemTypes_e = {
@@ -358,71 +363,71 @@ define([
     return itemRecord;
   }
 
-  function fileCreate(request) {
+  function createFileFromContext(context) {
     if (
-      typeof request.name == "undefined" ||
-      request.name === null ||
-      request.name === ""
+      typeof context.name == "undefined" ||
+      context.name === null ||
+      context.name === ""
     ) {
       throwParameterError("MISSING_PARAMETER", "No name was specified.");
     }
 
     if (
-      typeof request.fileType == "undefined" ||
-      request.fileType === null ||
-      request.fileType === ""
+      typeof context.fileType == "undefined" ||
+      context.fileType === null ||
+      context.fileType === ""
     ) {
       throwParameterError("MISSING_PARAMETER", "No fileType was specified.");
     }
 
-    if (typeof request.contents == "undefined" || request.contents === null) {
+    if (typeof context.contents == "undefined" || context.contents === null) {
       throwParameterError("MISSING_PARAMETER", "No contents was specified.");
     }
 
     if (
-      typeof request.description == "undefined" ||
-      request.description === null
+      typeof context.description == "undefined" ||
+      context.description === null
     ) {
       throwParameterError("MISSING_PARAMETER", "No description was specified.");
     }
 
-    if (typeof request.encoding == "undefined" || request.encoding === null) {
+    if (typeof context.encoding == "undefined" || context.encoding === null) {
       throwParameterError("MISSING_PARAMETER", "No encoding was specified.");
     }
 
     if (
-      typeof request.folderID == "undefined" ||
-      request.folderID === null ||
-      request.folderID === ""
+      typeof context.folderID == "undefined" ||
+      context.folderID === null ||
+      context.folderID === ""
     ) {
       throwParameterError("MISSING_PARAMETER", "No folderID was specified.");
     }
 
     if (
-      typeof request.isOnline == "undefined" ||
-      request.isOnline === null ||
-      request.isOnline === ""
+      typeof context.isOnline == "undefined" ||
+      context.isOnline === null ||
+      context.isOnline === ""
     ) {
-      request.isOnline = false;
+      context.isOnline = false;
     }
 
     if (
-      typeof request.isInactive == "undefined" ||
-      request.isInactive === null ||
-      request.isInactive === ""
+      typeof context.isInactive == "undefined" ||
+      context.isInactive === null ||
+      context.isInactive === ""
     ) {
-      request.isInactive = false;
+      context.isInactive = false;
     }
 
     var fileObj = file.create({
-      name: request.name,
-      fileType: request.fileType,
-      contents: request.contents,
-      description: request.description,
-      encoding: request.encoding,
-      folder: request.folderID,
-      isOnline: request.isOnline,
-      isInactive: request.isInactive,
+      name: context.name,
+      fileType: context.fileType,
+      contents: context.contents,
+      description: context.description,
+      encoding: context.encoding,
+      folder: context.folderID,
+      isOnline: context.isOnline,
+      isInactive: context.isInactive,
     });
 
     var fileID = fileObj.save();
@@ -434,8 +439,8 @@ define([
     response.file.info = fileObj;
 
     if (
-      typeof request.returnContent != "undefined" &&
-      request.returnContent === true
+      typeof context.returnContent != "undefined" &&
+      context.returnContent === true
     ) {
       var contents = fileObj.getContents();
 
@@ -451,6 +456,54 @@ define([
     return response;
   }
 
+  createRecordFromContext = function (context) {
+    if (
+      typeof context[sharpSyncConstants_e.RECORD_TYPE] == "undefined" ||
+      context[sharpSyncConstants_e.RECORD_TYPE] === null ||
+      context[sharpSyncConstants_e.RECORD_TYPE] === ""
+    ) {
+      throwParameterError("MISSING_PARAMETER", "No record type was specified.");
+    }
+
+    if (
+      typeof context[sharpSyncConstants_e.RELATED_ITEM_ID] == "undefined" ||
+      context[sharpSyncConstants_e.RELATED_ITEM_ID] === null ||
+      context[sharpSyncConstants_e.RELATED_ITEM_ID] === ""
+    ) {
+      throwParameterError(
+        "MISSING_PARAMETER",
+        "No related item id was specified."
+      );
+    }
+
+    var recordToCreate = record.create({
+      type: context[sharpSyncConstants_e.RECORD_TYPE],
+      defaultValues: { item: context[sharpSyncConstants_e.RELATED_ITEM_ID] },
+      isDynamic: true,
+    });
+
+    for (var key in context[sharpSyncConstants_e.RECORD_PROPERTIES]) {
+      if (context[sharpSyncConstants_e.RECORD_PROPERTIES].hasOwnProperty(key)) {
+        var value = context[sharpSyncConstants_e.RECORD_PROPERTIES][key];
+        recordToCreate.setValue({ fieldId: key, value: value });
+      }
+    }
+
+    var recordId = recordToCreate.save();
+
+    log.debug({
+      title: "Record created successfully via SharpSync RESTlet",
+      details:
+        "Record Type: " +
+        context[sharpSyncConstants_e.RECORD_TYPE] +
+        " - " +
+        "Record ID: " +
+        recordId,
+    });
+
+    return recordId;
+  };
+
   /*
   SharpSync always uses the following appState to confirm validity for GET and POST requests:
   X-APPLICATION => header naming the application
@@ -459,6 +512,11 @@ define([
   */
 
   function get(context) {
+    log.debug({
+      title: "GET request received for SharpSync RESTlet",
+      details: "Version: " + SHARPSYNC_RESTLET_SCRIPT_VERSION,
+    });
+
     validateGetRequestAppState(context, encode, log);
     if (context.queryType === getQueryResponseType_e.LIST) {
       if (context.queryTypeObject === getQueryTypeObjects_e.TAX_SCHEDULE) {
@@ -477,6 +535,11 @@ define([
   }
 
   function post(context) {
+    log.debug({
+      title: "POST request received for SharpSync RESTlet",
+      details: "Version: " + SHARPSYNC_RESTLET_SCRIPT_VERSION,
+    });
+
     validatePostRequestBody(context);
 
     if (
@@ -508,7 +571,11 @@ define([
     } else if (
       context[sharpSyncConstants_e.PROCEDURE] == procedureTypes_e.CREATE_FILE
     ) {
-      return fileCreate(context);
+      return createFileFromContext(context);
+    } else if (
+      context[sharpSyncConstants_e.PROCEDURE] == procedureTypes_e.CREATE_RECORD
+    ) {
+      return createRecordFromContext(context);
     }
 
     throwParameterError(
