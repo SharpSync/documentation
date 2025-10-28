@@ -137,6 +137,7 @@
 ## Advanced
 
 * [Derivatives](advanced/derivatives.md)
+* [Imported Row Component Renaming](advanced/imported-row-component-renaming.md)
 
 ## User management
 
