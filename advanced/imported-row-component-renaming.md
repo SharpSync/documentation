@@ -27,8 +27,9 @@ The structure of a rule depends on keywords to manipulate the name. An template 
 ```
 [
   {  
-    "searchTerm"    : "What to search for (e.g. Stainless Steel 304)",
-    "searchMatch"   : "How it is matched {exact|contains|startsWith|endsWith}",
+    "searchTerm"    : "Single value. What to search for (e.g. Stainless Steel 304)",,
+    "searchTerms"   : [ "Optional", "list", "of", "terms", "Use with isInList"],
+    "searchMatch"   : "How it is matched {exact|contains|startsWith|endsWith|isInList}",
     "returnValue"   : "Value to return when a match is found e.g. SS-304",
     "replaceMatch"  : "what is replaced {everything|firstMatch|lastMatch}" 
   }
@@ -37,19 +38,23 @@ The structure of a rule depends on keywords to manipulate the name. An template 
 
 Where the following keywords are used
 
-| Keyword                      | Option       | Meaning                                                                                                                                                         |
-| ---------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `searchTerm` **parameter**   |              | What to search for in the component name                                                                                                                        |
-| `searchMatch` **parameter**  |              | How the text that is being searched for is matched                                                                                                              |
-| parameter option             |  `exact`     | Matches the text exactly, the whole string                                                                                                                      |
-| parameter option             | `contains`   | Matches a part of the name. Can be anywhere in the string. So `ss` will match stainle`ss` steel and `ss`teel                                                    |
-| parameter option             | `startsWith` | Matches only if the string starts with the specified text                                                                                                       |
-| parameter option             | `endsWith`   | Matches only if the string ends with the specified text                                                                                                         |
-| `returnValue` **parameter**  |              | When a match is found, what is returned or used as a replacement value. This must be a string                                                                   |
-| `replaceMatch` **parameter** |              | When replacing the oldValue with the newValue, how is replacement handled                                                                                       |
-| parameter option             | `everything` | Replaces the entire string. This option replaces the entire string with the newValue. It does not keep any text other than the new value.                       |
-| parameter option             | `firstMatch` | Replaces only the first instance found. Replacing s with S in the string `stainless steel` will result in `Stainless steel`.                                    |
-| parameter option             | `lastMatch`  | <p>Replaces only the last instance found.<br><br>Replacing s with S in the string <code>stainless steel</code> will result in <code>stainless Steel</code>.</p> |
+| Type                  | Keyword         | Meaning                                                                                                                                                         |
+| --------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **parameter**         | `searchTerm`    | What to search for in the component name                                                                                                                        |
+| **parameter**         | `searchMatch`   | How the text that is being searched for is matched                                                                                                              |
+| **parameter**         | `searchTerms`   | Optional: specify a list of terms to search                                                                                                                     |
+| `searchMatch` option  | `exact`         | Matches the text exactly, the whole string                                                                                                                      |
+| `searchMatch` option  | `contains`      | Matches a part of the name. Can be anywhere in the string. So `ss` will match stainle`ss` steel and `ss`teel                                                    |
+| `searchMatch` option  | `startsWith`    | Matches only if the string starts with the specified text                                                                                                       |
+| `searchMatch` option  | `endsWith`      | Matches only if the string ends with the specified text                                                                                                         |
+| `searchMatch` option  | `isInList`      | Matches if a the given list of values contains the text                                                                                                         |
+| **parameter**         | `returnValue`   | When a match is found, what is returned or used as a replacement value. This must be a string                                                                   |
+| **parameter**         | `replaceMatch`  | When replacing the oldValue with the newValue, how is replacement handled                                                                                       |
+| `replaceMatch` option | `everything`    | Replaces the entire string. This option replaces the entire string with the newValue. It does not keep any text other than the new value.                       |
+| `replaceMatch` option | `firstMatch`    | Replaces only the first instance found. Replacing s with S in the string `stainless steel` will result in `Stainless steel`.                                    |
+| `replaceMatch` option | `lastMatch`     | <p>Replaces only the last instance found.<br><br>Replacing s with S in the string <code>stainless steel</code> will result in <code>stainless Steel</code>.</p> |
+| `replaceMatch` option | `includeRow`    | Used with `isInList` to determine if the row should remain                                                                                                      |
+| `replaceMatch` option | `excludeRow`    | Used with `isInList` to determine if the row should remain                                                                                                      |
 
 **Example: Substitute material name**&#x20;
 
