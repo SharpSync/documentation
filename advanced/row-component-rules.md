@@ -10,7 +10,11 @@ This feature is in beta and may be tested on request
 
 The row component rules are meant to assist with naming conventions when rows are imported.
 
-The current implementation focuses only on Material Rows generated. Future support is planned for non-material rows
+The current implementation focuses only on Material Rows generated. Future support is planned for non-material rows.
+
+{% hint style="success" %}
+You may think of row component rules as rules that affect the _structure_ of a BOM. The structure of the BOM is affected by renaming components or removing certain components
+{% endhint %}
 
 | Supported Row Types         | Supported            |
 | --------------------------- | -------------------- |
@@ -19,9 +23,18 @@ The current implementation focuses only on Material Rows generated. Future suppo
 | Drawing                     | \[future release]    |
 | Derivatives                 | not supported, use   |
 
+| Primary Source    | Supported            |
+| ----------------- | -------------------- |
+| Autodesk Inventor | \[future release]    |
+| Autodesk Fusion   | \[future release]    |
+| CSV               | \[future release]    |
+| Onshape           | :white\_check\_mark: |
+| SolidWorks        | \[future release]    |
+| SolidWorks PDM    | \[future release]    |
+
+<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+
 Material rows are rows that are generated for part documents that have a material assigned, and where a property mapping exists with the 'Is Material Mapping' enabled in the property mapping settings.
-
-
 
 * Each rule is run in order
 * Rules are additive, so if the first rule causes the 2nd rule to match that will trigger a multi-rule run
