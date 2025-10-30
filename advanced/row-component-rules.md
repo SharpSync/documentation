@@ -1,10 +1,16 @@
-# Imported Row Component Renaming
+---
+icon: list-check
+---
+
+# Row Component Rules
 
 {% hint style="danger" %}
 This feature is in beta and may be tested on request
 {% endhint %}
 
-The import row renaming rules are meant to assist with naming conventions when rows are imported.
+The row component rules are meant to assist with naming conventions when rows are imported.
+
+The current implementation focuses only on Material Rows generated. Future support is planned for non-material rows
 
 | Supported Row Types         | Supported            |
 | --------------------------- | -------------------- |
