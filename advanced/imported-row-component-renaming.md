@@ -84,6 +84,13 @@ If you're unfamiliar with JSON editors, I've found the easiest editor for JSON i
     "returnValue"   : "SS-304",
     "replaceMatch"  : "Everything" // always returns the same material code
   },
+  // rule 3 - actual
+  {  
+    "searchTerms"    : [ "Silicone-Rubber", "Neoprene", "1.5mm AL 5004", "2.5mm AL 5005"],
+    "searchMatch"   : "isInList",
+    "returnValue"   : "99-AS0002",
+    "replaceMatch"  : "Everything" 
+  } 
   // rule n ... 
 ]
 
