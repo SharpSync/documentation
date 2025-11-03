@@ -19,9 +19,12 @@ First and foremost:&#x20;
 
 Sometimes the errors might occur onscreen when attempting to load Bill of Material (BOM) information.
 
-Below are some of the common issues that you might encounter and tips for solving the problems:
+Below are some of the common issues that you might encounter and tips for avoiding or solving the problems:
 
-* [Duplicate component paths](duplicate-component-paths.md)
+* Items / components / parts must have a unique identifier in each of your sources. This could be the part number, the part name, or the part id but it must be unique within each source and cannot be empty.
+* Make sure you have set up the correct primary component identifier for each of your SharpSync Data Sources that correspond to your source's unique identifier field. See here for more info: [DataSource \ Primary Identifiers](broken-reference)
+* Make sure you have set up one quantity mapping to have SharpSync use when building an internal BOM hierarchy model. See here for more info: [Property Mapping Settings](../property-mappings/property-mapping-settings.md)
+* Avoid [Duplicate Component Paths](duplicate-component-paths.md)
 * [OAuth 2.0](oauth-2.0.md)
 
 If you cannot find the information above, reach out to us on our [support desk](https://sharpsync.atlassian.net/servicedesk/customer/portals).
