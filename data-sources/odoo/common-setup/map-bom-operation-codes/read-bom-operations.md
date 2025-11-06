@@ -8,6 +8,13 @@ BOM operations are _individual_ operations that are performed on the item. This 
 
 So even if you see duplicates in Odoo, they each have their own underlying unique  `operationId` _for that line in the BOM._
 
+{% hint style="success" %}
+**Summary of article's major steps**
+
+* Create a new Property Mapping&#x20;
+* Add an import rule to format the object and make it ready for SharpSync
+{% endhint %}
+
 {% hint style="info" %}
 The best way to manage operations is to be consistent in your naming convention for your operations.&#x20;
 
@@ -36,18 +43,19 @@ BOM operations can often include one or more of the following items in the table
 | Galvanizing           | Powder Coating            |
 | etc.                  | Wiring                    |
 
-
-
 To read these operations from the BOM, we map to the Odoo property&#x20;
 
-> mrp.bom.operation\_id
+> mrp.bom.operation\_ids
 
-Create a new [Property Mapping](../../../../fundamentals/property-mappings/) with the following settings:
+### Create a new Property Mapping
 
-<table><thead><tr><th width="301">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Property Name / Header</td><td>BOM Operations</td></tr><tr><td>Accessor</td><td>bomOperations</td></tr><tr><td>Primary Property</td><td>(Unmapped)</td></tr><tr><td>Secondary Property</td><td><code>mrp.bom.operation_ids</code></td></tr><tr><td>Update Odoo on Submit</td><td>false</td></tr><tr><td>Rendering Type</td><td><code>Advanced Multi Select List</code></td></tr><tr><td>List Display Selector</td><td>name</td></tr><tr><td>List Value Selector</td><td>workCenterId</td></tr><tr><td>List items</td><td><p> Here is a sample of what you can insert, but it can be anything, whatever you use most frequently [more on this below]**</p><pre class="language-json5"><code class="lang-json5">[
+Create a new [Property Mapping](../../../../fundamentals/property-mappings/) with the following settings (create one for each one you would like to map. So if the first is `bomOperation1`, then the last would be `bomOperationN`) :
+
+<table><thead><tr><th width="301">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Property Name / Header</td><td>BOM Operation 1 (or 2, 3..n)</td></tr><tr><td>Accessor</td><td>bomOperation1</td></tr><tr><td>Primary Property</td><td>(Unmapped) (or a related property in the Primary Source)</td></tr><tr><td>Secondary Property</td><td><code>mrp.bom.operation_ids</code></td></tr><tr><td>List Name</td><td>mrp.workcenter</td></tr><tr><td>List Value Selector</td><td>{id}:{name}</td></tr><tr><td>Update Odoo on Submit</td><td>false</td></tr><tr><td>Rendering Type</td><td><code>Advanced List</code></td></tr><tr><td>List Display Selector</td><td><code>operationName</code></td></tr><tr><td>List Value Selector</td><td><code>workCenterId</code></td></tr><tr><td>List items</td><td><p> Here is a sample of what you can insert, but it can be anything, whatever you use most frequently [more on this below]**</p><pre class="language-json5"><code class="lang-json5">[
     {
-        "workCenterId": 2,
+        "workCenterId": 1,
         "name": "Drill",
+        "operationName" : "Drill",
         "value": {
             "sequence": 10,
             "name": "Drill",
@@ -58,8 +66,9 @@ Create a new [Property Mapping](../../../../fundamentals/property-mappings/) wit
         }
     },
     {
-        "workCenterId": 1,
+        "workCenterId": 2,
         "name": "Galvanize",
+        "operationName" : "Galvanize",
         "value": {
             "sequence": 20,
             "name": "Galvanize",
@@ -69,75 +78,61 @@ Create a new [Property Mapping](../../../../fundamentals/property-mappings/) wit
             "time_cycle_manual": 60
         }
     },
-    {
-        "workCenterId": 3,
-        "name": "Punch",
-        "value": {
-            "sequence": 30,
-            "name": "Punch",
-            "workcenter_id": 3,
-            "time_mode": "manual",
-            "time_mode_batch": 10,
-            "time_cycle_manual": 60
-        }
-    },
+    // add as many as you like....
 ]
 </code></pre></td></tr><tr><td>Enabled</td><td>true</td></tr><tr><td>Prefer Odoo Value</td><td>true</td></tr></tbody></table>
 
-{% hint style="success" %}
-Productivity Tip
+Once you have the property mapping set up, create a 2nd, 3rd and 4th Property Mapping for each additional operation you would like to map (you don't _have_ to create this many, they just serve as place holders).
 
-***
+### Add an import rule
 
-To easily convert the list into a list of values, go to your favorite GPT and type the following prompt, pasting the values of the previous step "Read BOM Workcenters" with it:
-
-_Convert the following text into a list of JSON objects. Use the number as the 'workCenterId' and the text as the 'name'. For each entry, also include a 'value' key with the following structure:_
-
-```json
-"value": {
-    "sequence": {start at 10 and increment by 10 for each entry},
-    "name": {a single word or two words maximum that is directly related to the work center name, like 'Assemble' for 'Assembly VIC'. Ensure this name is unique for all entries by adding a specific descriptor if needed, e.g., 'General Assemble', 'Line Assemble', 'Fab Parts', etc.},
-    "workcenter_id": {use the work center id},
-    "time_mode": "manual",
-    "time_mode_batch": 10,
-    "time_cycle_manual": 60
-}
-```
-{% endhint %}
-
-\*\* When creating this list, and you only want to read the values, you'll want to specify at least the Work center id, and the name of the operation. If you also want to write the values back to Odoo, then you'll have to specify the entire object required to add new operations and the default settings for the operation.&#x20;
+For each of these Property Mappings, add the following `Text Manipulation` (import) rule which parses the value of `mrp.bom.operation_ids` and converts it into a value in the column
 
 {% hint style="info" %}
 Writing BOM operations is explained in the next topic [write-bom-operations.md](write-bom-operations.md "mention")&#x20;
 {% endhint %}
 
-Some BOM operation properties that are available for reading are listed below. The list is not exhaustive and you may customize your own (See the Odoo Configuration options > Models > `mrp.routing.workcenter`):
+<table><thead><tr><th width="235">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Type</td><td>import</td></tr><tr><td>Name</td><td><code>Text Manipulation</code></td></tr><tr><td>Process for {Primary}</td><td>false</td></tr><tr><td>Process for Odoo</td><td>true</td></tr><tr><td>JavaScript expression</td><td><pre class="language-javascript"><code class="lang-javascript">if (!s || s.length === 0) 
+   return "";
+   
+const operationToSelect = 1; /* change this to 1, 2,3,4... based on the number of operations*/
 
-<table><thead><tr><th width="198">Property</th><th width="117">Type</th><th width="157">Odoo Availability</th><th data-type="checkbox">Required for reading in SharpSync</th></tr></thead><tbody><tr><td>active</td><td>bool</td><td>16, 17, 18</td><td>false</td></tr><tr><td>name</td><td>string</td><td>16, 17, 18</td><td>true</td></tr><tr><td>bom_id</td><td>integer</td><td>16, 17, 18</td><td>false</td></tr><tr><td>workcenter_id</td><td>integer</td><td>16,17,18</td><td>true</td></tr><tr><td>time_mode_batch</td><td>integer</td><td>16,17,18</td><td>false</td></tr><tr><td>time_cycle_manual</td><td>integer</td><td>16,17,18</td><td>false</td></tr><tr><td>note</td><td>string</td><td>16,17,18</td><td>false</td></tr><tr><td>sequence</td><td>integer</td><td>16,17,18</td><td>false</td></tr></tbody></table>
-
-After adding the new Property Mapping, add an import rule
-
-<table><thead><tr><th width="235">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Type</td><td>import</td></tr><tr><td>Name</td><td><code>Text Manipulation</code></td></tr><tr><td>Process for {Primary}</td><td>false</td></tr><tr><td>Process for Odoo</td><td>true</td></tr><tr><td>JavaScript expression</td><td><pre class="language-javascript"><code class="lang-javascript">if (!s) 
-  return [];
-
-if (Array.isArray(s)) 
-  return s.map((item) => item.workcenter_id["id"]);
+if (Array.isArray(s)) {
+  if (s.length == 0) return "";
+  if (
+    s.length > operationToSelect &#x26;&#x26;
+    s[operationToSelect].workcenter_id &#x26;&#x26;
+    s[operationToSelect].workcenter_id.length > 0
+  ) {
+    return Number(s[operationToSelect].workcenter_id[0]);
+  }
+  return "";
+}
 
 if (typeof s === "string") {
   try {
+    console.log("Parsing operationWorkCenters JSON string:", s);
     const parsed = JSON.parse(s);
     if (Array.isArray(parsed)) {
-      return parsed.map((item) => item.workcenter_id["id"]);
+      /* If the parsed string is an array, return the workcenter ID of the first element */ if (
+        parsed.length > operationToSelect &#x26;&#x26;
+        parsed[operationToSelect].workcenter_id &#x26;&#x26;
+        parsed[operationToSelect].workcenter_id.length > 0
+      ) {
+        return Number(parsed[operationToSelect].workcenter_id[0]);
+      }
+      return "";
     } else {
-      console.log("Parsed JSON is not an array, it is " + typeof parsed, parsed);
-      return [];
+      console.log("Parsed operationWorkCenters JSON is not an array, it is " + typeof parsed, parsed);
+      return "";
     }
   } catch (e) {
-    console.log("Invalid JSON string:", s, "Error:", e.message);
-    return [];
+    console.log("Invalid operationWorkCenters JSON string:", s, "Error:", e.message);
+    return "";
   }
 }
-console.log("Input is not an array or valid JSON string, it is " + typeof s, s);
-return [];
+return "";
 
 </code></pre></td></tr></tbody></table>
+
+After adding the new Property Mapping, add an import rule

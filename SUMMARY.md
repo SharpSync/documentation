@@ -9,6 +9,7 @@
   * [Landing Page](fundamentals/getting-started/landing-page.md)
   * [Support](fundamentals/getting-started/support.md)
   * [Subscription](fundamentals/getting-started/subscription.md)
+  * [Checklist for automation](fundamentals/getting-started/checklist-for-automation.md)
 * [Data Sources](fundamentals/data-sources.md)
 * [Property Mappings](fundamentals/property-mappings/README.md)
   * [Adding Property Mapping](fundamentals/property-mappings/adding-property-mapping.md)
