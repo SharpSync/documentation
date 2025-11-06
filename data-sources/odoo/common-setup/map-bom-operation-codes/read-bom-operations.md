@@ -15,7 +15,9 @@ So even if you see duplicates in Odoo, they each have their own underlying uniqu
 * Add an import rule to format the object and make it ready for SharpSync
 {% endhint %}
 
-{% hint style="info" %}
+<figure><img src="../../../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="success" %}
 The best way to manage operations is to be consistent in your naming convention for your operations.&#x20;
 
 In other words, if you are going to assemble something, always give it the exact same name (e.g. `Assembly` or `Assemble`).
