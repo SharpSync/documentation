@@ -124,6 +124,7 @@
   * [Setting up Derivatives](data-sources/onshape/setting-up-derivatives.md)
   * [Export Weldment Cut Lists](data-sources/onshape/export-weldment-cut-lists.md)
 * [Propel PLM](data-sources/propel-plm/README.md)
+  * [OAuth Setup](data-sources/propel-plm/oauth-setup.md)
   * [Getting Started](data-sources/propel-plm/getting-started.md)
 * [SolidWorks](data-sources/solidworks.md)
 * [SolidWorks PDM](data-sources/solidworks-pdm.md)
