@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Welcome](README.md)
+* [What Is SharpSync](what-is-sharpsync.md)
 
 ## Fundamentals
 
