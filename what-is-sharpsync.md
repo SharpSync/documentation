@@ -96,7 +96,9 @@ You can edit values just like you do in any spreadsheet type software, simply do
 
 <figure><img src=".gitbook/assets/Screenshot 2025-11-10 at 12.55.02 PM.png" alt=""><figcaption></figcaption></figure>
 
-SharpSync also provides you with a BOM Rules panel at the individual cell level to help you visualize the associated data's journey from when it is fetched from the source, the rules it is subject too, and any transformation prior to sending back to the sources for update.&#x20;
+#### Inspect your own setup
+
+SharpSync provides you with a BOM Rules panel at the individual cell level to help you visualize and troubleshoot your data's journey from when it is fetched from the source, the rules it is subject to, and any transformations (changes) prior to sending it back to the source for update.&#x20;
 
 <figure><img src=".gitbook/assets/Screen Shot 2025-11-10 at 12.48.33 PM [2].png" alt=""><figcaption></figcaption></figure>
 
