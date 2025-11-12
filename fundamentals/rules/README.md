@@ -45,7 +45,7 @@ The colors displayed can be modified under Profile > User Settings > Display
 
 Start by navigating to Property Mappings and click on "Rules" for the Property Mapping you want to edit.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 A panel will appear on the side. Expand the Rules dropdown to reveal the available list of rules that can be applied.
 
