@@ -7,7 +7,7 @@ icon: house
 
 After logging in, you'll be redirected to the landing page.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 From here you can perform the following actions:
 

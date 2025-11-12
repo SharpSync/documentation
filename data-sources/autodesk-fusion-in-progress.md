@@ -83,7 +83,7 @@ To install the add-in:
 * Extract to a convention location
 * In Fusion click Utilities > Addins > Script or add-in from device
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 * Select the folder where the files were extracted
 * Select > Run

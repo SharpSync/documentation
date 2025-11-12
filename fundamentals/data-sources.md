@@ -48,7 +48,7 @@ If nothing is found using an exact match (i.e. no component identifier `PartNumb
 
 As an example of a Primary Identifier, we have included a screenshot from OnShape. This will of course vary from other platforms:
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption><p>OnShape Property Map</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt="" width="563"><figcaption><p>OnShape Property Map</p></figcaption></figure>
 
 ### Core concept: Bom Revision Names
 

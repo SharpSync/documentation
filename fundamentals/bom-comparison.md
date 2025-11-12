@@ -7,7 +7,7 @@ icon: table-list
 
 # BOM Comparison
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 The BOM comparison screen is where you will ultimately spend most of your time
 
@@ -51,3 +51,13 @@ These colors are modifiable under then User Settings
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/bom_legend (1).png" alt=""><figcaption></figcaption></figure>
+
+BOM Submittal Statuses
+
+When submitting a Bill of Materials (BOM), the BOM runs through a number of stages. You can hover over the dot of the BOM to understand it's status before submittal and after submittal.
+
+<figure><img src="../.gitbook/assets/image.png" alt="Hovering over a dot will show the status"><figcaption><p>Hovering over a dot will show the status</p></figcaption></figure>
+
+Below is a table listing common statuses
+
+<table><thead><tr><th width="120">Dot</th><th width="122">Dot color</th><th>Explanation</th></tr></thead><tbody><tr><td><div><figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure></div></td><td>Light Gray</td><td>Bill of Materials has been created, but not submitted. It may or may not have been loaded</td></tr><tr><td><div><figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div></td><td>Yellow</td><td>Bill of Materials has been submitted, but it is being processed. The possible processing states depends on whether it is a Primary or Secondary source. A Primary Source may generate derivatives first before the data is ready for the Secondary Source to process</td></tr><tr><td><div><figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure></div></td><td>Orange</td><td>The Bill of Materials completed with warnings. These are typically warnings that you may ignore, but you should have a look to see what happened. This can happen if you send invalid values to a source (e.g. text instead of a number)</td></tr><tr><td><div><figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure></div></td><td>Red</td><td>The Bill of Materials completed with errors. This usually means there was something that happened that prevented the BOM from completing fully. You should look at the errors to see what happened.  </td></tr></tbody></table>
