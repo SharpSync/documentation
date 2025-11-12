@@ -52,7 +52,7 @@ These colors are modifiable under then User Settings
 
 <figure><img src="../.gitbook/assets/bom_legend (1).png" alt=""><figcaption></figcaption></figure>
 
-BOM Submittal Statuses
+### BOM Submittal Statuses
 
 When submitting a Bill of Materials (BOM), the BOM runs through a number of stages. You can hover over the dot of the BOM to understand it's status before submittal and after submittal.
 
