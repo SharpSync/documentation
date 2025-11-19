@@ -5,10 +5,10 @@ icon: list-check
 # Row Component Rules
 
 {% hint style="danger" %}
-This feature is in beta and may be tested on request
+This feature is in early beta and may be tested on request
 {% endhint %}
 
-The row component rules are meant to assist with naming conventions when rows are imported.
+When importing rows, you may want materials to automatically be listed as children of part components. The row component rules are meant to assist with this.
 
 The current implementation focuses only on Material Rows generated. Future support is planned for non-material rows.
 
