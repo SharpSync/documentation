@@ -55,11 +55,8 @@ Given this input, create the following rules:
 
 *   `Select From Json` import rule for NetSuite (check the checkbox for `Process for NetSuite`) with the following text:
 
-    {% code overflow="wrap" %}
-    ```javascript
-    items
-    ```
-    {% endcode %}
+    <pre class="language-javascript" data-overflow="wrap"><code class="lang-javascript">items
+    </code></pre>
 * `Text Manipulation` import rule for NetSuite (check the checkbox for `Process for NetSuite`) with the following text:
 
 {% code overflow="wrap" %}

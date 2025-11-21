@@ -50,7 +50,7 @@ It is important to note that the `s`parameter is a _per-source_ value. It is not
 
 Below is a graphic representing how the value is treated and displayed onscreen
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you see a value onscreen shown as \[object Object] this means you have a JSON object or array that needs to be parsed or converted into a different _type_
@@ -98,7 +98,7 @@ The `p`  parameter is the `PassOrBlock`value specified in the Property Mapping R
 
 ### `pm` Parameter
 
-The `pm` value contains values related to the [Property Mapping](../property-mappings/) used for this column. It cannot be modified, and any modifications to it are ignored. It contains, but is not limited to, the following key/values:
+The `pm` value contains values related to the [Property Mapping](../../property-mappings/) used for this column. It cannot be modified, and any modifications to it are ignored. It contains, but is not limited to, the following key/values:
 
 | Key name                           | Description of the value                                           |
 | ---------------------------------- | ------------------------------------------------------------------ |

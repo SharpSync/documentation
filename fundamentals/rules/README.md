@@ -86,7 +86,7 @@ The final result for both rules are overlaid in the user interface (the default 
 
 * Data Source 1 is DS1
 * Data Source 2 is DS2
-* 's' is the [rowData](advanced-scripting.md) string value being evaluated
+* 's' is the [rowData](advanced-scripting/) string value being evaluated
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
@@ -131,7 +131,7 @@ Note that returning any value in the `message` above can be customized by you.
 
 The data from DS2 is imported after that of DS1. The rules start running for DS2.
 
-Be sure also to read and understand [Advanced Scripting](advanced-scripting.md).
+Be sure also to read and understand [Advanced Scripting](advanced-scripting/).
 
 ### Display Rules
 

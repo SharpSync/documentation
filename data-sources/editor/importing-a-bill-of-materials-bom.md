@@ -42,4 +42,4 @@ The BOM is now ready to be accessed once it is uploaded. Click on the BOM to vie
 
 <figure><img src="../../.gitbook/assets/csv_view_bom.png" alt=""><figcaption><p>The Bill of Materials detail is displayed when selected</p></figcaption></figure>
 
-\
+<br>

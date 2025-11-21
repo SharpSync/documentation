@@ -147,8 +147,7 @@ Advice given to customers over the years have been (If you want to speed up desi
 1. Have a master part with a configuration table. Configure the part => save as external and use that new part going forward (this is known as configuration ripping) OR
 2. Have a master part with equations. Open the file, tweak the equations, save a copy out as a new file and use the new file in any assemblies.
 3. Name this master part accordingly (e.g. Prefix it with MP or something so that if anyone sees it, they know this is a base for other parts).
-4. Prevent the part from moving through a normal workflow with some condition. It will prevent it from being used in production assemblies.\
-
+4. Prevent the part from moving through a normal workflow with some condition. It will prevent it from being used in production assemblies.<br>
 
 Here are the justifications for the above reasoning:
 
@@ -164,8 +163,7 @@ Here are the justifications for the above reasoning:
 Here are the benefits:
 
 * 1 click import ⇒ your ERP of choice.
-* ... no other reasons needed.\
-
+* ... no other reasons needed.<br>
 
 Seriously though. The import (overarching) goal here is this: Your company wants to take their data to the next level. You want to go on holiday. That means working smarter not harder. That means automation, not manual input. Moving the data between different systems automatically. And the golden rule of CAD data automation is:&#x20;
 

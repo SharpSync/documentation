@@ -25,8 +25,7 @@ An email with a verification link will be sent; click on the link to complete th
 
 #### Inviting New Users
 
-\
-
+<br>
 
 <figure><img src="../../.gitbook/assets/users_icon.png" alt=""><figcaption></figcaption></figure>
 

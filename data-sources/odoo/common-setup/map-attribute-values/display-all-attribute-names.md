@@ -227,8 +227,7 @@ If you get an error reading
 
 `Fail: Failed to evaluate rule with error: TypeError: s.map is not a function`
 
-Add a new import rule before the selection import rule to convert the text to JSON (enabled only for Odoo):\
-
+Add a new import rule before the selection import rule to convert the text to JSON (enabled only for Odoo):<br>
 
 ```javascript
 return JSON.parse(s ?? "[]");
