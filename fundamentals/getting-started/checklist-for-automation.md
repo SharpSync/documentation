@@ -20,4 +20,25 @@ A component is a part or assembly at any hierarchy level in the assembly. A comp
 
 <table><thead><tr><th width="187">Requirement Status</th><th width="213">Item</th><th>Description</th></tr></thead><tbody><tr><td>Required</td><td>Part Number</td><td>Each component has a unique part number that is in the CAD, PDM, PLM or ERP</td></tr><tr><td>Optional</td><td>Part Description</td><td>Each component has a non-unique description that is in the CAD, PDM, PLM or ERP</td></tr><tr><td>Optional</td><td>Matching item code</td><td>Each component has a unique matching  number that spans the CAD, PDM, PLM and also in the ERP</td></tr></tbody></table>
 
-That is it. If you have unique part numbers, we can do the rest
+That is it. If you have unique part numbers, you're off to a good start. This is almost the only thing you need. Of course there's more to automation than just synchronizing Part Numbers.&#x20;
+
+Part Numbers are the bridge. They are the unique codes that span multiple systems. In our use case, it will be the same number across the CAD, PDM, PLM or ERP.
+
+Here is a typical list of things that you'll want to synchronize in addition to creating.
+
+* Part Number
+* Description
+* Revision
+* Quantity
+
+
+
+And then here's some extended items that you might want to send to your ERP:
+
+* Weight
+* Unit of Measure
+* BOM Operations or Routes
+* Material
+* Thumbnail
+* Whether an item is phantom&#x20;
+* Whether an item is assembled, kitted, bundled, you name it
