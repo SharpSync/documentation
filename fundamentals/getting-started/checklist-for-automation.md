@@ -42,3 +42,13 @@ And then here's some extended items that you might want to send to your ERP:
 * Thumbnail
 * Whether an item is phantom&#x20;
 * Whether an item is assembled, kitted, bundled, you name it
+
+### What you don't need for automation
+
+We are experts at what we do. You're an expert at what you do. Very few people bridge the gap between CAD, PDM, PLM (on the left) and ERP (on the right). Let's refer to this as our fence with to parties on either side.
+
+We don't need you to be an expert on _both sides of this fence._ That's where our expertise comes in.
+
+If you're struggling to get the information or meta data ready on either side of this fence, we have consultants that can assist with that.
+
+if you're struggling, please reach out to us on our homepage.
