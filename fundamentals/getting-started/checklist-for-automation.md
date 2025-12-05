@@ -51,4 +51,4 @@ We don't need you to be an expert on _both sides of this fence._ That's where ou
 
 If you're struggling to get the information or meta data ready on either side of this fence, we have consultants that can assist with that.
 
-if you're struggling, please reach out to us on our homepage.
+If you're struggling, please reach out to us on our homepage.
