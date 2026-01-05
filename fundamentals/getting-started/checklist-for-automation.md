@@ -4,7 +4,7 @@ icon: list-check
 
 # Checklist for automation
 
-When automating data transferral, there are some fundamentals that must be in place.
+When automating data transfers, there are some fundamentals that must be in place.
 
 {% hint style="success" %}
 The golden rule of data automation is:&#x20;
@@ -13,6 +13,12 @@ The golden rule of data automation is:&#x20;
 {% endhint %}
 
 Below is a checklist to assist you to successfully automate your data transfer, with optional items marked accordingly.
+
+* Components with at least some form of unique identifier. We'll refer to this as the Part Number.
+* A sandbox environment for the ERP.
+* Access to SharpSync staff for the Sandbox environment. (e.g. a credential to test synchronization)
+* An idea of the data that needs to be transferred to the ERP.
+* Optional: A sandbox environment for your CAD data (if doing bi-directional synchronization).
 
 **Definition: Component**
 

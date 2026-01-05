@@ -7,9 +7,17 @@ coverY: 0
 
 # Advanced Scripting
 
-Advanced Rules are more difficult to use, but they are much more powerful than other (preset) rules.
+### Rule types
 
-User scriptable rules (JavaScript) have access to 4 parameters, instead of just 1. The rules that fall into this category are:
+These are the types of rules in the application and they are run in this order:
+
+<table><thead><tr><th width="77">Order</th><th width="176">Rule Type</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>Import Rules</td><td>Processes data <em>coming from</em> a data source</td></tr><tr><td>2</td><td>Comparison Rules</td><td>Processes data that has already been processed by import rules for <em>both sources</em></td></tr><tr><td>3</td><td>Display Rules</td><td>Displays warning or error rectangles (orange or red) based on the outcome of a rule</td></tr><tr><td>4</td><td>Export Rules</td><td>Changes data <em>going to</em> a data source</td></tr></tbody></table>
+
+The basic rules (preset rules you choose from the list) all fall into categories 1,3,4.
+
+Advanced Rules on the other hand fall into all the categories and are more difficult to use, but they are much more powerful than other (preset) rules.
+
+Advanced rules may be reworded as User Scriptable Rules (JavaScript) and have access to 4 parameters, instead of being limited to the provided parameters. The rules that fall into this category are:
 
 * Text Manipulation (import / export)
 * Text Evaluation (display)
