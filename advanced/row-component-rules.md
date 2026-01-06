@@ -73,7 +73,7 @@ The structure of a rule depends on keywords to manipulate the name. An template 
 
 Where the following keywords are used
 
-<table><thead><tr><th width="184">Required Keyword</th><th>Description</th></tr></thead><tbody><tr><td><code>order</code></td><td>The order in which a rule is executed</td></tr><tr><td><code>description</code></td><td>A user-friendly description of what the rule does. You may enter anything here</td></tr><tr><td><code>searchRule</code> </td><td>What to search for. This can be a single or multiple criteria. See [1].</td></tr><tr><td><code>actions</code></td><td>The actions to perform when the <code>searchRule</code> is matched. If searching for say, PRT-123, and you find a match, the specified action will be performed. See [2]</td></tr></tbody></table>
+<table><thead><tr><th width="184">Required Keyword</th><th>Description</th></tr></thead><tbody><tr><td><code>order</code></td><td>The order in which a rule is executed</td></tr><tr><td><code>description</code></td><td>A user-friendly description of what the rule does. You may enter anything here</td></tr><tr><td><code>searchRule</code> </td><td>What to search for. This can be a single or multiple criteria. See <a href="row-component-rules.md#id-1-searching">[1]</a>.</td></tr><tr><td><code>actions</code></td><td>The actions to perform when the <code>searchRule</code> is matched. If searching for say, PRT-123, and you find a match, the specified action will be performed. See <a href="row-component-rules.md#id-2-row-actions">[2]</a></td></tr></tbody></table>
 
 {% hint style="danger" %}
 Do not include the comments // in the rules. They're only for illustration purposes.
@@ -156,7 +156,7 @@ And now for the gory technical details
 
 ### Technical Details
 
-#### Searching
+#### \[1] Searching
 
 When searching for a condition to be met, you have some options to play with for the `searchRule` parameter.
 
@@ -170,7 +170,7 @@ Some options have more than 1 way of being specified and is listed on different 
 
 <table><thead><tr><th width="195">Condition Text</th><th>Explanation</th></tr></thead><tbody><tr><td>contains</td><td>The value your looking to match contains the text specified</td></tr><tr><td>is<br>containsExact</td><td>The value your looking to match is exactly the text specified</td></tr><tr><td>endsWith</td><td>The value your looking to match ends with the text specified</td></tr><tr><td>endsWithExact</td><td>The value your looking to match ends with the text specified, including the casing of the text. So 'A' is not the same as 'a'</td></tr><tr><td>equals<br>equal<br>==<br>=</td><td>The value your looking to match is equal to the value specified, ignoring the casing of the value specified. so 'Text' is equal to 'text'</td></tr><tr><td>equalsExact<br>===</td><td>The value your looking to match is equal to the value specified, considering the casing of the value specified. so 'Text' is not equal to 'text'</td></tr><tr><td>isInList<br>in<br>inList</td><td>The value your looking to match is in the list of values. If looking for Alu, you may search in the list [ "alu", "aluminium", "aluminum" ]</td></tr><tr><td>!=</td><td>Does not equal. Does not consider casing.</td></tr><tr><td>doesNotContain<br>not<br>notContain<br>notContains</td><td>The value your looking to match does not contains the specified text, not taking into account the casing. Use this sparingly as this will match most rows.</td></tr><tr><td>notContainsExact</td><td>The value your looking to match does not contains the specified text, taking into account the casing. Use this sparingly as this will match most rows.</td></tr><tr><td>notExact<br>notExactly<br>&#x3C;></td><td>The value your looking to match does not equal the full specified text, taking into account the casing. Use this sparingly as this will match most rows.</td></tr><tr><td>regex</td><td>The value your looking to match may be found with the specified regular expression</td></tr><tr><td>startsWith</td><td>The value your looking to match starts with the specified text, ignoring the casing.</td></tr><tr><td>startsWithExact</td><td>The value your looking to match starts with the specified text, taking into account the casing.</td></tr></tbody></table>
 
-Row Actions
+### \[2] Row Actions
 
 Row actions are actions that are performed on existing rows or new rows. There are 2 types of actions: `RowCellAction` and `RowCreationAction`
 
