@@ -13,18 +13,20 @@ The BOM comparison screen is where you will ultimately spend most of your time
 
 ### BOM row updates
 
-BOM row updates can occur in the primary or secondary Data Source and is influenced by your settings for:
+BOM row updates can occur in the Primary or Secondary Data Source and is influenced by your settings for:
 
 * Property Mappings
 * Rules
+  * Import Rules
+  * Display Rules
 
-BOM row updates are also influenced by whether the `PROCESS` checkbox is checked or unchecked. You can use the context menu of any given row's `PROCESS` cell to bulk check/uncheck the `PROCESS` checkbox of related rows and children rows.
+BOM row updates (updating values + the BOM structure) in the Secondary Data Source are also influenced by whether the `PROCESS` checkbox is checked or unchecked. You can use the context menu of any given row's `PROCESS` cell to bulk check/uncheck the `PROCESS` checkbox of related rows and children rows.
 
 #### Primary Source updates
 
-When updating BOM rows the following table illustrates how updates occur at the primary source.
+When updating BOM rows in a Data Source the following table illustrates how updates occur at the Primary source.
 
-A primary source is typically a CAD or PDM or PLM system. For primary sources, quantity values are typically not updated.
+A Primary source is typically a CAD or PDM or PLM system. For primary sources, quantity values cannot updated, neither can component or item Names.
 
 Using the default color scheme for BOM comparison, you can expect the following results:
 
@@ -32,9 +34,9 @@ Using the default color scheme for BOM comparison, you can expect the following 
 
 #### Secondary Source updates
 
-When updating BOM rows the following table illustrates how updates occur at the secondary source.
+When updating BOM rows the following table illustrates how updates occur at the Secondary Data Source.
 
-A secondary source is typically an ERP or PLM system. For secondary sources, quantity values are typically updated to reflect the quantities of the primary source.
+A Secondary source is typically an ERP or PLM system. For Secondary Data Sources, quantity values are typically updated to reflect the quantities of the primary source. In addition to quantity values, new items (or components) may be created or items may be unlinked from Bill of Materials.
 
 Using the default color scheme for BOM comparison, you can expect the following results:
 
@@ -83,7 +85,7 @@ When submitting a Bill of Materials (BOM), the BOM runs through a number of stag
 
 Below is a table listing common statuses
 
-<table><thead><tr><th width="120">Dot</th><th width="122">Dot color</th><th>Explanation</th></tr></thead><tbody><tr><td><div><figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure></div></td><td>Light Gray</td><td>Bill of Materials has been created, but not submitted. It may or may not have been loaded</td></tr><tr><td><div><figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div></td><td>Yellow</td><td>Bill of Materials has been submitted, but it is being processed. The possible processing states depends on whether it is a Primary or Secondary source. A Primary Source may generate derivatives first before the data is ready for the Secondary Source to process**</td></tr><tr><td><div><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div></td><td>Green</td><td>The Bill of Materials has successfully completed all specified operations.</td></tr><tr><td><div><figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div></td><td>Orange</td><td>The Bill of Materials completed with warnings. These are typically warnings that you may ignore, but you should have a look to see what happened. This can happen if you send invalid values to a source (e.g. text instead of a number)</td></tr><tr><td><div><figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div></td><td>Red</td><td>The Bill of Materials completed with errors. This usually means there was something that happened that prevented the BOM from completing fully. You should look at the errors to see what happened.  </td></tr></tbody></table>
+<table><thead><tr><th width="120">Dot</th><th width="122">Dot color</th><th>Explanation</th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/image (4).png" alt="" data-size="original"></td><td>Light Gray</td><td>Bill of Materials has been created, but not submitted. It may or may not have been loaded</td></tr><tr><td><img src="../.gitbook/assets/image (3).png" alt="" data-size="original"></td><td>Yellow</td><td>Bill of Materials has been submitted, but it is being processed. The possible processing states depends on whether it is a Primary or Secondary source. A Primary Source may generate derivatives first before the data is ready for the Secondary Source to process**</td></tr><tr><td><img src="../.gitbook/assets/image.png" alt="" data-size="original"></td><td>Green</td><td>The Bill of Materials has successfully completed all specified operations.</td></tr><tr><td><img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="original"></td><td>Orange</td><td>The Bill of Materials completed with warnings. These are typically warnings that you may ignore, but you should have a look to see what happened. This can happen if you send invalid values to a source (e.g. text instead of a number)</td></tr><tr><td><img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="original"></td><td>Red</td><td>The Bill of Materials completed with errors. This usually means there was something that happened that prevented the BOM from completing fully. You should look at the errors to see what happened.  </td></tr></tbody></table>
 
 \*\* When a Bill of Materials is submitted, there are sub-process which may run which lengthens the time to process the BOM. You can close your tab and come back later, or wait for the toast notification to show when it's done (the color will change)
 
