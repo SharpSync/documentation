@@ -17,7 +17,7 @@ SharpSync has developed its own script based on the SuiteAPI open source code. Y
 #### Step: Upload Script File To NetSuite
 
 * In NetSuite Navigate to `Documents` > `Files` > `File Cabinet`, select the system folder called `SuiteScripts`
-* Click on the `New Folder` button again
+* Click on the `New Folder` button
   * Folder name: `SharpSync`
   * Subfolder of: `SuiteScripts`
   * Type `Documents and Files`
@@ -36,11 +36,11 @@ or
 * Click `Create Script Record`
 * On the new form enter the values:
   * Name: `SharpSyncRESTletScript`
-  * ID: `sharpsync-restlet-script`
+  * ID: `sharpsync_restlet_script`
   * Description: `Restlet for uploading files and thumbnails for SharpSync and creating items for advanced BOMS`
 * Click on the `Deployments` tab at the bottom and in the first row set
   * Title: `SharpSyncRESTletScriptDeployment`
-  * ID: `harpsync-restlet-script-deployment`
+  * ID: `sharpsync_restlet_script_dep`
   * Deployed: `Yes`
   * Status: Change from `Testing` to `Released`
 * Click `Save`
