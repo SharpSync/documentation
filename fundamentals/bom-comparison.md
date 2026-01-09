@@ -42,7 +42,7 @@ Using the default color scheme for BOM comparison, you can expect the following 
 
 ### BOM Comparison Legend
 
-<table data-full-width="false"><thead><tr><th>Color scheme</th><th>Description</th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/image (20).png" alt="" data-size="original"></td><td>Blue border - DS1 and DS2 values are different. Without user modifications</td></tr><tr><td><img src="../.gitbook/assets/image (11).png" alt="" data-size="original"></td><td>Blue &#x26; green border - DS1 and DS2 values are different. With user modifications</td></tr><tr><td><img src="../.gitbook/assets/image (13).png" alt="" data-size="original"></td><td>Green border - DS1 and DS2 values are identical. With user modifications</td></tr><tr><td><img src="../.gitbook/assets/image (14).png" alt="" data-size="original"></td><td>Orange border - Value did not pass display mapping rule (Warning)</td></tr><tr><td><img src="../.gitbook/assets/image (15).png" alt="" data-size="original"></td><td>Red border - Value did not pass display mapping rule (Error)</td></tr><tr><td><img src="../.gitbook/assets/image (16).png" alt="" data-size="original"></td><td>Red background - Component is missing from the DS1 BOM. Will be unlinked from the DS2 BOM</td></tr><tr><td><img src="../.gitbook/assets/image (17).png" alt="" data-size="original"></td><td>Orange background - Component is present in DS2. Will be linked to the corresponding DS2 BOM</td></tr><tr><td><img src="../.gitbook/assets/image (18).png" alt="" data-size="original"></td><td>Green background - Component is missing from DS2. Will be added to DS2 and linked to the corresponding BOM</td></tr><tr><td><img src="../.gitbook/assets/image (19).png" alt="" data-size="original"></td><td>Blue background- Row line type is drawing used to configure drawing types derivatives</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="227">Color scheme</th><th>Description</th></tr></thead><tbody><tr><td>[no color]</td><td>No border on the cell. The Primary Data Source and the Secondary Data Source are the same, with no user modifications</td></tr><tr><td><img src="../.gitbook/assets/image (20).png" alt="" data-size="original"></td><td>Blue border - Primary Data Source and Secondary Data Source values are different. Without user modifications</td></tr><tr><td><img src="../.gitbook/assets/image (11).png" alt="" data-size="original"></td><td>Blue &#x26; green border - Primary Data Source and Secondary Data Source values are different. With user modifications. See <a href="bom-comparison.md#id-1-preferred-values-and-user-modifications">[1]</a></td></tr><tr><td><img src="../.gitbook/assets/image (13).png" alt="" data-size="original"></td><td>Green border - Primary Data Source  and Secondary Data Source values are identical. With user modifications. See <a href="bom-comparison.md#id-1-preferred-values-and-user-modifications">[1]</a></td></tr><tr><td><img src="../.gitbook/assets/image (14).png" alt="" data-size="original"></td><td>Orange border - Cell value did not pass one or more Property Mapping Display Rule. The rule was set to show as a Warning. You may still submit the BOM but should take note of the warning shown by hovering over the cell or opening the Cell Rules Panel using Right Click > Open Cell Rules Panel</td></tr><tr><td><img src="../.gitbook/assets/image (15).png" alt="" data-size="original"></td><td>Red border - Cell value did not pass one or more Property Mapping Display Rule. The rule was set to show as an Error. The submit button for the BOM is disabled until the Error is addressed. Either fix the source data or fix the data on-screen if the column is writeable. Take note of the error shown by hovering over the cell or opening the Cell Rules Panel using Right Click > Open Cell Rules Panel</td></tr><tr><td><img src="../.gitbook/assets/image (16).png" alt="" data-size="original"></td><td>Red background - Component is missing from the Primary Data Source BOM. It exists in the Secondary Data Source, but not in the Primary. If you do not uncheck the 'Process' checkbox, it will be unlinked from the Secondary Data Source BOM. The item will <em>not be deleted</em> in the Secondary Data Source. SharpSync never deletes items.</td></tr><tr><td><img src="../.gitbook/assets/image (17).png" alt="" data-size="original"></td><td>Orange background - Component is present in Secondary Data Source but does not exists as a row item in the BOM in the Secondary Data Source. The item will be linked to the corresponding Secondary Data Source BOM.</td></tr><tr><td><img src="../.gitbook/assets/image (18).png" alt="" data-size="original"></td><td>Green background - Component is missing or not found in Secondary Data Source. A new item will be created in the Secondary Data Source and linked to the corresponding parent BOM.</td></tr><tr><td><img src="../.gitbook/assets/image (19).png" alt="" data-size="original"></td><td>Blue background- Row line type is drawing used to configure drawing types derivatives. A user cannot interact with drawing Rows</td></tr></tbody></table>
 
 If you ever find yourself in the need to review this information, click the `Legend` button at the bottom of the BOM Comparison screen
 
@@ -52,9 +52,32 @@ These colors are modifiable under then User Settings
 
 <figure><img src="../.gitbook/assets/bom_legend (1).png" alt=""><figcaption></figcaption></figure>
 
+#### &#x20;\[1] Preferred values and user modifications
+
+Property Mappings have a setting which can be turned on to prefer the Secondary Source's (ERP) data. This means that, when loading the Bill of Materials (BOM), this sequence of events is executed:
+
+* Load the BOM from the Primary (CAD, PDM, PLM)
+* Load the BOM from the Secondary (ERP)
+* Display the Primary BOM onscreen
+* For each Property Mapping that has the 'Prefer Secondary' setting turned on, overwrite any values from the Primary with that of the Secondary&#x20;
+
+When you use the setting "Prefer {source} Value", SharpSync will use the value from the Secondary source (the ERP), in favor of the Primary Source (CAD, PDM, PLM), marking it as a _Modification_. This affects the border color of the cell.&#x20;
+
+Both values are still present, it's just that the Secondary's value is displayed in favor of the Primary's value.&#x20;
+
+To select the Primary Source's value, Right Click the cell and pick the value from the Primary or turn off the setting (affects all cells in that column).&#x20;
+
+{% hint style="info" %}
+Your colors may vary based on personal settings, but they will show in the legend
+{% endhint %}
+
+When the 'Prefer {source} Value' setting is turned on, the following table applies based on settings:
+
+<table><thead><tr><th width="223">Value for both sources</th><th width="207">Color Rectangle</th><th>Explanation</th></tr></thead><tbody><tr><td> Are The same</td><td>Dark Green</td><td>The CAD value shows as a 'modified' value or a <em>Modification</em> because you've chosen to overwrite the Primary source data using a preference. Using the Legend as a reference, modifications are shown as Dark Green</td></tr><tr><td>Are Different</td><td>Dark Green + Light Blue</td><td>The value shows as a <em>Difference</em> and a Modification.  Using the Legend as a reference, modifications are shown as Dark Green + Light Blue</td></tr></tbody></table>
+
 ### BOM Submittal Statuses
 
-When submitting a Bill of Materials (BOM), the BOM runs through a number of stages. You can hover over the dot of the BOM to understand it's status before submittal and after submittal.
+When submitting a Bill of Materials (BOM), the BOM runs through a number of stages. You can hover over the dot of the BOM to understand its status before submittal and after submittal.
 
 <figure><img src="../.gitbook/assets/image (2).png" alt="Hovering over a dot will show the status"><figcaption><p>Hovering over a dot will show the status</p></figcaption></figure>
 
