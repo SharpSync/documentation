@@ -39,7 +39,8 @@ To create a new integration record do the following:
   * Rest Web Services
 * Uncheck the boxes for:
   * TBA: Authorization Flow
-* Paste the following OAuth 2.0 Redirect URI: `https://app.sharpsync.net/callback-oauth`
+* Paste the following OAuth 2.0 Redirect URI:&#x20;
+  * `https://app.sharpsync.net/callback-oauth`
 * Get the consumer key (`clientId)` and consumer secret (`clientSecret`) - this will be used later.
 
 Make sure to tick `Ask first time` under `OAUTH 2.0 CONSENT POLICY`
@@ -93,18 +94,15 @@ For a comprehensive list of permissions required for users and for setting up th
 
 #### Step: Browser redirect
 
-Execute the following /GET request in a browser window.
+Make sure you have the following fields:
 
-> https://`{companyId}`.app.netsuite.com/app/login/oauth2/authorize.nl?\
-> &#x20;`response_type`=code&\
-> &#x20;`client_id`={clientId}&\
-> &#x20;`redirect_uri`=https://sharpsync.net/callback-oauth&\
-> &#x20;`scope`=rest\_webservices,restlets&\
-> &#x20;`state`={someValue must be between 22 and 1024 charachters}
+* `{companyId}` --> from previous steps
+* `{clientId}` --> from previous steps
+* `{state}` --> random value/string of up to 22 characters
 
-This will redirect to the login page for the NetSuite account. Once logged in, the user will be redirected to the redirect\_uri (https://sharpsync.net) with the included state value.
+Replace the above fields to construct the below url and execute a /GET request in a browser window (ie copy/paste the below request url with the replaced field values into the address bar of your web browser and press enter):
 
-> NOTE: The redirect\_uri must be https://sharpsync.net/callback-oauth and must be url encoded (https%3A%2F%2Fsharpsync.net%2Fcallback-oauth)
+> `https://{companyId}.app.netsuite.com/app/login/oauth2/authorize.nl?response_type=code& client_id={clientId}&redirect_uri=https://app.sharpsync.net/callback-oauth&scope=rest_webservices,restlets&state={state}`
 
 If this step is successful, you'll see the login window and a code at the end of the URL displayed in the browser.
 
@@ -122,7 +120,7 @@ You should treat an access token and a refresh token the same as a username and 
 
 Execute the following /POST request to the token endpoint. This should be made within 30 seconds of the previous step. (Note that we're now using the `.suitetalk.api` subdomain)
 
-> https://`{companyId}`.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token
+> `https://{companyId}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token`
 
 The body of the request should be:
 
@@ -130,7 +128,7 @@ The body of the request should be:
 * include the following values:
 
 > `grant_type`=authorization\_code&\
-> `redirect_uri`=https%3A%2F%2Fsharpsync.net%2Fcallback-oauth&\
+> `redirect_uri`=https%3A%2F%2Fapp.sharpsync.net%2Fcallback-oauth&\
 > `code`={code}
 
 The result of this request will look like this (`refresh_token` AND `access_token`)
