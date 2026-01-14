@@ -15,6 +15,10 @@ You may think of row component rules as rules that affect the _structure_ of a B
 Compare this to Property Mapping rules that only affect the cell values, not the structure.
 {% endhint %}
 
+{% hint style="danger" %}
+You should not attempt to rename existing components. Only the creation & updates of new components are supported.&#x20;
+{% endhint %}
+
 ### Where to configure
 
 To configure these rules:
