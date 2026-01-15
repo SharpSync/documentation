@@ -160,13 +160,17 @@ And now for the gory technical details
 
 ### Technical Details
 
-#### \[1] Searching
+### \[1] Searching
 
 When searching for a condition to be met, you have some options to play with for the `searchRule` parameter.
 
-The way the `searchRule` works is that it takes a list of values
+The way the `searchRule` works is that it takes 3 parameters. These are
 
-<table><thead><tr><th width="168">Search Rule Parameters</th><th>Description</th></tr></thead><tbody><tr><td>1st Param</td><td><p><code>Property name</code>: The property to search for. This is any property available in <code>rowData.xxxx</code>.</p><p></p><p>This includes values like <code>rowData.isAssemblyRow</code>, <code>rowData.componentName</code>, etc. </p><p></p><p>If the property is not prefixed with <code>rowData.</code> then the assumption is your searching in the row cells. <br><br>If you want to find a cell where the value of X is "Y", you would put <br>[ "X", "==", "Y" ]<br><br>If you want to find a cell where the value of material is "Steel", you would put [ "material", "==", "Steel" ]<br><br>If you want to find a component where the name of part is "PRT-1", you would put [ "rowData.componentName", "==", "PRT-1" ]</p></td></tr><tr><td>2nd Param</td><td><code>Condition</code> : This is the condition that must be matched. The conditions available to you are listed in the conditions table below.<br>"contains" : a part of the value matches the specified string<br>"is" | "containsExact" : The value matches the complete string or numeric value you specified<br>"ends.<br><br>See the list of conditions below for all possible options</td></tr><tr><td>3rd Param</td><td><code>User specified text</code>. used to replace existing text</td></tr></tbody></table>
+* `Property name` . Single value
+* `Match condition` . Single value
+* `Search Text` . Can be a list of values
+
+<table><thead><tr><th width="168">Search Rule Parameters</th><th>Description</th></tr></thead><tbody><tr><td>1st Param</td><td><p><code>Property name</code>: The property to search for. This is any property available in <code>rowData.xxxx</code>.</p><p></p><p>This includes values like <code>rowData.isAssemblyRow</code>, <code>rowData.componentName</code>, etc. </p><p></p><p>If the property is not prefixed with <code>rowData.</code> then the assumption is your searching in the row cells. <br><br>If you want to find a cell where the value of X is "Y", you would put <br>[ "X", "==", "Y" ]<br><br>If you want to find a cell where the value of material is "Steel", you would put [ "material", "==", "Steel" ]<br><br>If you want to find a component where the name of part is "PRT-1", you would put [ "rowData.componentName", "==", "PRT-1" ]</p></td></tr><tr><td>2nd Param</td><td><code>Match Condition</code> : This is the condition that must be matched. The conditions available to you are listed in the conditions table below.<br>"contains" : a part of the value matches the specified string<br>"is" | "containsExact" : The value matches the complete string or numeric value you specified<br>"ends.<br><br>See the list of conditions below for all possible options</td></tr><tr><td>3rd Param</td><td><code>Search Text</code>. The text used to identify a row. If the text is matched (or not matched based on the condition), an action is taken.</td></tr></tbody></table>
 
 Search Conditions available in a rule (not case sensitive. Casing is applied below for ease of reading).
 
