@@ -37,3 +37,27 @@ return {
 ```
 
 The main key  `itemlocationconfiguration` of the returned object represent the NetSuite record type to be created, while the other key-value pairs (`subsidiary` , `location` , etc... ) represent the new record's field values to be set upon creation.
+
+To conditionally skip the creation of item related records, simply return an empty object when you want to skip creation. The above example can be modified as follows:
+
+```javascript
+if ( //...condition to skip... ) {
+  return {};
+} else {
+  return {
+    itemlocationconfiguration: {
+      subsidiary: "2",
+      location: "4",
+      atpleadtime: 90,
+      minimumrescheduledays: 1,
+      reschedulehorizon: 90,
+      rescheduleindays: 7,
+      rescheduleoutdays: 30,
+      supplylotsizingmethod: "FIXED_LOT_SIZE",
+      fixedlotsize: 1,
+      supplytype: rowData.isAssemblyRow === true ? "BUILD" : "PURCHASE",
+      iswip: true,
+    },
+  };
+}
+```
