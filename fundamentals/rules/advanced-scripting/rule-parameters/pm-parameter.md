@@ -1,3 +1,7 @@
+---
+icon: js
+---
+
 # pm Parameter
 
 The `pm` parameter is the settings for the Property Mapping. This includes, but is not limited to the following parameters:

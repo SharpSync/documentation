@@ -1,3 +1,7 @@
+---
+icon: js
+---
+
 # Rule Parameters
 
 ### Rule parameter context

@@ -1,3 +1,7 @@
+---
+icon: js
+---
+
 # rowData parameter
 
 The `rowData` parameter represents the entire row's data (all the cell values, modifications, differences, etc.).

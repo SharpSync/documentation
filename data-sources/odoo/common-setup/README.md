@@ -23,3 +23,6 @@ icon: sparkle
 [map-attribute-values](map-attribute-values/)
 {% endcontent-ref %}
 
+{% content-ref url="map-routes.md" %}
+[map-routes.md](map-routes.md)
+{% endcontent-ref %}

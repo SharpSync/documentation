@@ -1,3 +1,7 @@
+---
+icon: js
+---
+
 # p Parameter
 
 The `p` parameter is the value of the `passOrBlock` value in a rule.&#x20;

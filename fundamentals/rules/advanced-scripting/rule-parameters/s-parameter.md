@@ -1,3 +1,7 @@
+---
+icon: js
+---
+
 # s Parameter
 
 The `s` parameter is the current string representation of a value from a source.

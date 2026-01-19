@@ -12,6 +12,8 @@ In Odoo the default values for BOM types can be in the range
 
 \[These can depend on your installation, but it is a common theme]
 
+### Add a Property Mapping
+
 To update this from SharpSync, start by adding a [Property Mapping ](../../../fundamentals/property-mappings/)for&#x20;
 
 > mrp.bom.type
@@ -69,3 +71,7 @@ For the list items, paste the value in your clipboard specified in the previous 
 ```
 
 I'm now able to display + update the values from Odoo
+
+### Add an import rule
+
+The next step is to add an import rule of your choice to handle the difference cases. You can look at [advanced rules](../../../fundamentals/rules/advanced-scripting/) to do this or contact us on our support desk to get this setup
