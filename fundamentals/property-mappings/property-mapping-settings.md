@@ -49,7 +49,7 @@ Changes the behaviour display of the Property Mapping when the Bill of Materials
 | Select List                | <ol><li>Enter a list of values in the <code>List Items</code> textbox </li><li>Separate each entry with a vertical Pipe (see example below) </li><li>Potential import / export rules.</li></ol>                |
 | Multi Select List          | <ol><li>Enter a list of values in the <code>List Items</code> textbox</li><li>Separate each entry with a vertical Pipe  </li><li>Potential import / export rules logic</li></ol>                               |
 | Advanced List              | <ol><li>Enter a list of values in the textbox in the JavaScript array form <code>[ {}, {} ]</code></li><li>Separate each entry with a comma (see example below) </li><li>Import / export rules logic</li></ol> |
-| Advanced Multi Select List | <ul><li>Enter a list of values in the textbox in the JavaScript array form <code>[ {}, {} ]</code></li><li>Separate each entry with a comma (see example below) </li><li>Import / export rules logic</li></ul> |
+| Advanced Multi Select List | <ol><li>Enter a list of values in the textbox in the JavaScript array form <code>[ {}, {} ]</code></li><li>Separate each entry with a comma (see example below) </li><li>Import / export rules logic</li></ol> |
 | URL                        | None Required                                                                                                                                                                                                  |
 
 
