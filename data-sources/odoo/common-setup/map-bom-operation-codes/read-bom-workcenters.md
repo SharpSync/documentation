@@ -4,6 +4,8 @@ icon: magnifying-glass
 
 # Read BOM WorkCenters
 
+
+
 {% hint style="info" %}
 ### Choose what to display
 
@@ -16,6 +18,8 @@ The work centers and operations both depend on `mpr.bom.operation_ids`. You'll w
 
 For more complicated mappings, please contact us through the support portal.
 {% endhint %}
+
+### Create a new Property Mapping
 
 Create a new [Property Mapping](../../../../fundamentals/property-mappings/) with the following settings:
 
@@ -38,6 +42,8 @@ Convert the following text into a list of json objects the number as the "id" an
 ```
 {% endcode %}
 {% endhint %}
+
+### Add an import rule
 
 After adding the new Property Mapping, add an import rule
 
