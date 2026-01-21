@@ -30,15 +30,3 @@ if (rowData.isAssemblyRow === true)
 return s;
 
 ```
-
-<details>
-
-<summary>Example</summary>
-
-* Cell value: 12.53 m
-* Rule values:
-  * Number of decimals: 4
-  * Remove text: kg|Kg|g|mg|m|mm|each|L|ml|oz|fl
-* Result: 12.5300
-
-</details>
