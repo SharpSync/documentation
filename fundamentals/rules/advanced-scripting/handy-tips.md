@@ -24,7 +24,7 @@ Does not work for&#x20;
 &#x20;
 
 ```javascript
-const isNewRow = rowData.isMissingInSecondaryDatasource == true && rowData.isFoundInSecondaryDataso
+const isNewRow = rowData.isMissingInSecondaryDatasource === true && rowData.isFoundInSecondaryDatasource  === false;
 ```
 
 ### Converting text to a JSON  list
