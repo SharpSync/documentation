@@ -52,7 +52,6 @@
     * [Text not starts with](fundamentals/rules/display/text-not-starts-with.md)
     * [Text starts with](fundamentals/rules/display/text-starts-with.md)
   * [Advanced Scripting](fundamentals/rules/advanced-scripting/README.md)
-    * [Checking for New Rows](fundamentals/rules/advanced-scripting/checking-for-new-rows.md)
     * [Rule Parameters](fundamentals/rules/advanced-scripting/rule-parameters/README.md)
       * [s Parameter](fundamentals/rules/advanced-scripting/rule-parameters/s-parameter.md)
       * [rowData parameter](fundamentals/rules/advanced-scripting/rule-parameters/rowdata-parameter.md)

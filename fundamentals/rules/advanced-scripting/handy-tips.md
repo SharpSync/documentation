@@ -1,8 +1,31 @@
 ---
+description: This page
 icon: js
+cover: >-
+  https://images.unsplash.com/photo-1518773553398-650c184e0bb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHxjb2RlfGVufDB8fHx8MTczNTgxODA2MHww&ixlib=rb-4.0.3&q=85
+coverY: 0
 ---
 
 # Handy Tips
+
+### Checking for new rows
+
+Include the following code at the start of your rule to check for new rows. Only works for:
+
+* Export Manipulation
+* Text Manipulation (Export)
+* Comparison Rules&#x20;
+* Display rules
+
+Does not work for&#x20;
+
+* Text Manipulation (Import) because you only have access to a single source
+
+&#x20;
+
+```javascript
+const isNewRow = rowData.isMissingInSecondaryDatasource == true && rowData.isFoundInSecondaryDataso
+```
 
 ### Converting text to a JSON  list
 
