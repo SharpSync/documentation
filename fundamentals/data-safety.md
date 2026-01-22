@@ -40,7 +40,7 @@ We provide access to setup and administration via role based access controls. Th
 
 This is great for inviting other users to your SharpSync instance and sharing BOM information with them without exposing your authentication secrets. Each user's session is authenticated individually with a source and kept separate from other users.
 
-See more about permissions at [application-permissions.md](../user-management/application-permissions.md "mention") and [Broken link](broken-reference "mention")
+See more about permissions at [application-permissions.md](../user-management/application-permissions.md "mention") and [Broken link](/broken/pages/xBRhptqXyFeYT0p7TfFp "mention")
 
 ### Pre-empting Data Leaks
 

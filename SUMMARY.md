@@ -58,7 +58,7 @@
       * [rowData parameter](fundamentals/rules/advanced-scripting/rule-parameters/rowdata-parameter.md)
       * [p Parameter](fundamentals/rules/advanced-scripting/rule-parameters/p-parameter.md)
       * [pm Parameter](fundamentals/rules/advanced-scripting/rule-parameters/pm-parameter.md)
-    * [Common operations on data](fundamentals/rules/advanced-scripting/common-operations-on-data.md)
+    * [Handy Tips](fundamentals/rules/advanced-scripting/handy-tips.md)
 * [BOM Comparison](fundamentals/bom-comparison.md)
 * [Data Safety](fundamentals/data-safety.md)
 * [Troubleshooting](fundamentals/troubleshooting/README.md)

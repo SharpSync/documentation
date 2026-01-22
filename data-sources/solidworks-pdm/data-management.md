@@ -126,7 +126,7 @@ A1 : 1
 
 \*\* new subitem added for each item made from raw materials. This shows the total qty consumed
 
-SharpSync has the ability to generate material rows automagically using the 'Is Material Property' setting in property mapping in conjunction with the setting "Generate Materials Sub items" in the Primary Data source (See [Broken link](broken-reference "mention"))
+SharpSync has the ability to generate material rows automagically using the 'Is Material Property' setting in property mapping in conjunction with the setting "Generate Materials Sub items" in the Primary Data source (See [Broken link](/broken/pages/7aUFmnCMx9m4smGncsXL "mention"))
 
 <figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 

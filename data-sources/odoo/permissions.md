@@ -14,5 +14,5 @@ The Odoo module integration requires the following permission to correctly read 
 
 See also:
 
-* [Property mappings](broken-reference)
+* [Property mappings](/broken/pages/wZ9H53hmQPxiGjruwHpY)
 

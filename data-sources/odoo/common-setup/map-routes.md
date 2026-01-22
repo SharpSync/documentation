@@ -18,7 +18,7 @@ To update this from SharpSync, start by adding a [Property Mapping ](../../../fu
 
 After adding the List value selector, click the Save button at the bottom.
 
-The list values will update.  Use this to [generate a list of JSON objects](../../../fundamentals/rules/advanced-scripting/common-operations-on-data.md)&#x20;
+The list values will update.  Use this to [generate a list of JSON objects](../../../fundamentals/rules/advanced-scripting/handy-tips.md)&#x20;
 
 Change rendering type
 
