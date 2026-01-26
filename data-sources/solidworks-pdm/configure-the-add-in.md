@@ -15,9 +15,11 @@ The SharpSync PDM add-in has several pages for local configuration. These may be
 
 ### Step: Configure a BOM view
 
-A BOM view in PDM lets you view columns of data. SharpSync uses this information to populate data in SharpSync in combination with the property mappings.
+A BOM view in PDM lets you view columns of data. You can use this information to confirm data in SharpSync in combination with the property mappings.&#x20;
 
-The BOM view must contain the same columns as the columns mapped in the Property Mappings, with the exception of any column names wrapped in angled brackets '<>'. For example \<state> and \<folder> does not have to appear in the BOM view.
+For convenience, the BOM view must contain the same columns as the columns mapped in the Property Mappings, with the exception of any column names wrapped in angled brackets '<>'. For example \<state> and \<folder> does not have to appear in the BOM view.
+
+If a column is not visible in the BOM view, the value from the data card will be used for the configuration referenced.
 
 ### Step: Configure the PDM client for the vault
 
@@ -31,7 +33,7 @@ When configuring the add-in for the vault, these are the sections to configure:
 
 This image shows a landing screen of the setup.
 
-<figure><img src="../../.gitbook/assets/swpdm_client_configuration_general.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sharpsync_addin_swpdm_addin_configuration.png" alt="When connecting to SharpSync, the settings are loaded in the add-in UI"><figcaption><p>When connecting to SharpSync, the settings are loaded in the add-in UI</p></figcaption></figure>
 
 The following fields must be configured:
 
@@ -53,29 +55,34 @@ First go to SharpSync > Data Sources (you must be an admin) > Add the PDM Data S
 
 #### BOM Configuration setup
 
-Setting up the BOM configuration allows you to customize how Bill of materials are uploaded to SharpSync.
+When exporting a BOM from PDM, the columns shown in the PDM BOM view is helpful, but the settings for values exported are controlled in the add-in's setup.&#x20;
 
-| Section             | Option                                  | Description                                                                                                              |
-| ------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| BOM export          | As Built                                | Export the version of the BOM and its associated references as at the version selected                                   |
-| BOM export          | Latest                                  | Export the latest version of the BOM and its associated references                                                       |
-| Weldments           | Export a weldment part as a part        | Exports the weldment with the same qty referenced in the original BOM. Does not add children items from weldment members |
-| Weldments           | Export a weldment part as a assembly    | Exports the weldment with the same qty referenced in the original BOM. _DOES_ add children items                         |
-| Sheetmetal          | Export a sheet metal part as a part     | Exports the weldment with the same qty referenced in the original BOM. Does not add children items from multibody parts  |
-| Sheetmetal          | Export a sheet metal part as a assembly | Exports the weldment with the same qty referenced in the original BOM. _DOES_ add children items                         |
-| Excluded file types | Add file types on new lines             | If a linked reference is found in the PDM BOM, it is not exported to SharpSync                                           |
+Setting up the BOM settings in the PDM add-in allows you to customize how Bill of Material defaults are controlled when sending BOM data to SharpSync.
+
+<table><thead><tr><th width="184">Section</th><th width="195">Option</th><th>Description</th></tr></thead><tbody><tr><td>BOM export</td><td>As Built</td><td>Export the version of the BOM and its associated references as at the version selected</td></tr><tr><td>BOM export</td><td>Latest</td><td>Export the latest version of the BOM and its associated references</td></tr><tr><td>Weldments</td><td>Export a weldment part as a part</td><td>Exports the weldment with the same qty referenced in the original BOM. Does not add children items from weldment members</td></tr><tr><td>Weldments</td><td>Export a weldment part as a assembly</td><td>Exports the weldment with the same qty referenced in the original BOM. <em>DOES</em> add children items</td></tr><tr><td>Sheetmetal</td><td>Export a sheet metal part as a part</td><td>Exports the weldment with the same qty referenced in the original BOM. Does not add children items from multibody parts</td></tr><tr><td>Sheetmetal</td><td>Export a sheet metal part as a assembly</td><td>Exports the weldment with the same qty referenced in the original BOM. <em>DOES</em> add children items</td></tr><tr><td>Excluded file types</td><td>Add file types on new lines</td><td>If a linked reference is found in the PDM BOM, it is not exported to SharpSync</td></tr></tbody></table>
 
 <figure><img src="../../.gitbook/assets/swpdm_client_bom_configuration_bom_export.png" alt=""><figcaption></figcaption></figure>
 
 #### SQL setup
 
-The SQL configuration page requires `data_reader` access for SQL Server.
+The SQL configuration page requires:
 
-<figure><img src="../../.gitbook/assets/swpdm_client_sql_configuration.png" alt=""><figcaption></figcaption></figure>
 
-This image shows a screen of the setup&#x20;
 
-Setting up the BOM configuration allows you to customize how Bill of materials are uploaded to SharpSync.
+* `data_writer` access when setting up the add-in for first time use <sup>\*\*</sup>
+* &#x20;`data_reader` access when operating normally for connected client machines.
+
+<sup>\*\*</sup> Initially when connecting the account will need the ability to create stored procedures, a new stored procedure will be created called `SharpSyncDocumentChildrenTypes` . &#x20;
+
+{% hint style="info" %}
+The SQL server connection information is never sent to the SharpSync servers or surfaced in developer logs (unless you send it). This information is used by your LAN or WAN clients to help collect BOM information during the BOM rows collection step before the BOM data is sent to SharpSync.
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/swpdm_client_sql_configuration.png" alt="Enter your SQL server connection information. During the setup process, enter &#x60;data_writer&#x60; information. Once the setup is complete, change this to an account that has &#x60;data_reader&#x60; access"><figcaption><p>Enter your SQL server connection information. During the setup process, enter <code>data_writer</code> information. Once the setup is complete, change this to an account that has <code>data_reader</code> access</p></figcaption></figure>
+
+
+
+Settings are explained in more detail below:
 
 | Section          | Option            | Description                                                                                                          |
 | ---------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -84,7 +91,9 @@ Setting up the BOM configuration allows you to customize how Bill of materials a
 | SQL Credentials  | PDM SQL Username  | Name of a user which has the ability to create and execute stored procedures.                                        |
 | SQL Credentials  | PDM SQL Password  | Password of a user which has the ability to create and execute stored procedures.                                    |
 
-Note: The SQL connection details are not stored in SharpSync online services. The credentials are stored in a vault dictionary called SharpSync using the PDM API. You can search for it using SQL Server Management Studio and going to the Vault Database > Tables > Dictionaries > SharpSync
+Note: The SQL connection details are not stored in SharpSync online services. The credentials are stored in a vault dictionary called `SharpSync` using the PDM Approved API. You can search for it using SQL Server Management Studio and going to the Vault Database&#x20;
+
+> Database > Tables > Dictionaries > SharpSync
 
 ### Step: Configure the PDM client for the logged in user
 
@@ -95,12 +104,16 @@ This is so that each BOM that is uploaded is associated with a user in SharpSync
 To configure the add-in for the logged in user, follow these steps:
 
 * Login to the PDM Professional Vault
-* Right click in the background or on any file > SharpSync > Configure SharpSync user...
+* Right click in the background or on any file > SharpSync >Login ...
 
-<figure><img src="../../.gitbook/assets/swpdm_client_configure_user.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sharpsync_addin_swpdm_context_menu.png" alt=""><figcaption></figcaption></figure>
 
 Specify the user credentials that will be used to upload BOMs to SharpSync.
 
 _(This is the name of user that has access in SharpSync, not the details of the user in PDM)_
 
-<figure><img src="../../.gitbook/assets/swpdm_client_setup_user.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sharpsync_offline_client_login.png" alt=""><figcaption></figcaption></figure>
+
+This user will stay logged in for a period of 30 days after which they will be logged out. You'll be required to refresh the credentials every 30 days.
+
+Multiple users of PDM are not currently supported _on the same machine_. You'll have to logout and login for each user.
