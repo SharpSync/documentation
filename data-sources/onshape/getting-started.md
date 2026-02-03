@@ -165,7 +165,9 @@ To map an Onshape document URL to a property in the ERP do the following:
 
 ### Export Release Package Contents (Assemblies & Parts) from Onshape
 
-* You can export the contents (Assemblies & Parts)  of a Release Package from Onshape to SharpSync via:
+* An Onshape release package can contain versioned parts, assemblies and drawings from different Onshape documents, and you may want to export and sync all the top level versioned assemblies and parts of a release package automatically without having to track each related versioned assembly and part in Onshape to export individually to SharpSync.
+* The "Export Release Contents" Onshape context menu allows the export of all top level parts and assemblies to SharpSync in one shot. For example, if at the top level there are 2 assemblies, and 3 parts that are part of the release package, the button will create 5 BOMs in SharpSync. SharpSync will not create BOMs for the children of a top level assembly in a release package, even if they have been versioned, because they will be synced along with the parent assembly.
+* You can export the contents (Assemblies & Parts) of a Release Package from Onshape to SharpSync via:
   * Selecting the desired Release Package by Left-Clicking on the related version in the Onshape Document Version Tree
   * Clicking on "Export Release Contents" in the Onshape Assembly Tab Context Menu&#x20;
 * SharpSync will query the Release Package for Assemblies and Parts and will automatically create a SharpSync BOM per top level Assembly and Part and ignoring their nested children.
