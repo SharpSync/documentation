@@ -11,24 +11,29 @@ To integrate with an Odoo instance, we have to setup an&#x20;
 *   Change the Server URL to:
 
     ```
-    https://{myEnterpriseInstance}.dev.odoo.com
+    https://{myEnterpriseInstance}.odoo.com
     ```
-* Scroll to the bottom of the page and click UPDATE
-* Click CONFIGURE
-* On the first tab (Authentication), change the Base API Path to: `https://{myEnterpriseInstance}.dev.odoo.com`
+* Scroll to the bottom of the page and click `UPDATE`
+
+### Update the database name and login credentials
+
+* Click `CONFIGURE`
+* On the first tab (Authentication), change the Base API Path to: `https://{myEnterpriseInstance}.odoo.com`
+* This should match the first url you entered as the server url in the previous step
 * Leave the Authentication Types drop-down on `Basic Authentication`.
-* Enter the Database name. You can find this in one of 2 ways:&#x20;
+* Enter the Database name.&#x20;
+* You can find this in one of 2 ways:&#x20;
 
 {% hint style="info" %}
-1st option: To find the database name navigate to [https://{myEnterpriseInstance}/web/database/selector](https://your-odoo-instance/web/database/selector)
+**1st option:** To find the database name navigate to [https://{myEnterpriseInstance}.odoo.com/web/database/selector](https://your-odoo-instance/web/database/selector)
 
 \[This may be disabled for your instance]
 {% endhint %}
 
 {% hint style="info" %}
-2nd option: To find the database name navigate to &#x20;
+**2nd option:** To find the database name navigate to &#x20;
 
-{YourOdooInstance} > Settings > Activate developer mode (right at the bottom)
+{`myEnterpriseInstance`} > `Settings` > `Activate developer mode` (right at the bottom)
 
 After selecting this, the database name will be displayed in the top right corner
 {% endhint %}
@@ -48,7 +53,7 @@ The database name is case sensitive.
 
 ### Primary and Alternative component identifiers
 
-The primary and alternative identifiers can be used for product.product  or product.template, though if you plan on using configurations, you would probably select a field for `product.product`
+The primary and alternative identifiers can be used for `product.product`  or `product.template` . &#x20;
 
 Configure the [Primary and Alternative ](../../../fundamentals/data-sources.md)component Identifiers as follows:
 
@@ -74,7 +79,7 @@ Base API path
 <mark style="color:orange;">This is the full link \[including your customer id] to the Odoo Instance. Typically something like:</mark>
 
 ```url
-https://odoo.sharpsync.net
+https://sharpsync.odoo.com
 ```
 
 Authentication Types (see below\*\*)
@@ -107,12 +112,12 @@ Basic Auth Password
 {% endtab %}
 
 {% tab title="Configuration" %}
-Major version of Odoo that you have (e.g. 17 or 16)
+Major version of Odoo that you have (e.g. 19 or 18)
 
 <mark style="color:orange;">The version of Odoo that is installed and will be used. 2 digit number</mark>
 
 ```
-17
+19
 ```
 
 If specified, use this custom property to display the name in the hierarchy
@@ -120,7 +125,7 @@ If specified, use this custom property to display the name in the hierarchy
 <mark style="color:orange;">A property used to show the names of components in SharpSync.</mark>
 
 ```
-name
+default_code
 ```
 
 If specified, loads additional properties from these models (each on new line)
@@ -142,19 +147,19 @@ Use this scheme to create new BOM revision names
 {% endtab %}
 {% endtabs %}
 
-\*\* For searching, this is based on the raw data from the Primary Source data before any Property Mapping rules (Import) have run. When a new BOM is created, the final value from the rows cells will be used. So if you manipulate the text in SharpSync to
+\*\* **Revision scheme:** Used for searching, this is based on the raw data from the Primary Source data _before_ any Property Mapping rules (Import) have run. When a new BOM is created, the final value from the rows cells will be used. So if you manipulate the text in SharpSync to
 
 1. Change from&#x20;
 2. `Assembly A1, Rev A` to&#x20;
 3. `Assembly A1, Rev B`
-4. Then the Bill of Materials Name will be `A1_B`instead of `A1_A`
+4. Then the Bill of Materials Name will be `A1_B` instead of `A1_A`
 
 <details>
 
 <summary>** Authentication Types</summary>
 
-* OAuth 2.0 - not support - contact us for implementation&#x20;
-* API Key - not currently supported
+* OAuth 2.0 - not supported - contact us for implementation&#x20;
+* API Key - not currently supported - contact us for implementation
 * Basic Auth (username / password) - supported
 
 </details>
