@@ -4,19 +4,23 @@ icon: list-check
 
 # Row Component Rules
 
-We introduce here pre-BOM-load generation rules, or _Row Component_ rules. These rules run:
+Row Component Rules are rules that run before the BOM is shown on screen the first time. It affects not only the data of the BOM, but also (optionally) _the structure._
 
-* _After_ the BOM is generated in the Primary Datasource, but&#x20;
+These rules are (different from [Property Mapping rules](../fundamentals/rules/)) pre-BOM-load generation rules, or _Row Component_ rules. These rules run:
+
+* _After_ the BOM is generated in the Primary data source, but&#x20;
 * _Before_ the BOM is displayed on-screen. This is different to the client-side rules (Property Mapping Rules), which only run per-source, _after_ the BOM is displayed on-screen.
+
+<figure><img src="../.gitbook/assets/row-component-rules.png" alt="Row Component Rules Order"><figcaption><p>Row Component Rules Order</p></figcaption></figure>
 
 {% hint style="success" %}
 You may think of row component rules as rules that affect the _structure_ of a BOM. The structure of the BOM is affected by renaming components or adding new components.\
 \
-Compare this to Property Mapping rules that only affect the cell values, not the structure.
+Compare this to Property Mapping rules that only affect the cell values, not the structure or component names.
 {% endhint %}
 
 {% hint style="danger" %}
-You should not attempt to rename existing components. Only the creation & updates of new components are supported.&#x20;
+You should not attempt to rename existing components if you can help it. Only the creation & updates of new components are encouraged. That's not to say it should never be done, but should you chose to do it, use caution.&#x20;
 {% endhint %}
 
 ### Where to configure
@@ -37,12 +41,7 @@ The current implementation focuses only on Material Rows generated. Future suppo
 You may think of row component rules as rules that affect the _structure_ of a BOM. The structure of the BOM is affected by renaming components or removing certain components
 {% endhint %}
 
-| Supported Row Types         | Supported            |
-| --------------------------- | -------------------- |
-| Generated Component Rows    | :white\_check\_mark: |
-| Generated Material Children | :white\_check\_mark: |
-| Drawings                    | \[future release]    |
-| Derivatives                 | not supported        |
+<table><thead><tr><th width="437">Supported Row Types</th><th>Supported</th></tr></thead><tbody><tr><td>Generate Single Child Row</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td>Generate Multiple Child Rows at same level</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td>Generate Multiple Child Rows at different levels</td><td>❌</td></tr><tr><td>Generated Material Children</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td>Drawings</td><td>[future release]</td></tr><tr><td>Derivatives</td><td>❌</td></tr></tbody></table>
 
 | Primary Source    | Supported            |
 | ----------------- | -------------------- |
@@ -52,8 +51,6 @@ You may think of row component rules as rules that affect the _structure_ of a B
 | Onshape           | :white\_check\_mark: |
 | SolidWorks        | \[future release]    |
 | SolidWorks PDM    | \[future release]    |
-
-<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 New component rows (or material consumption rows) are rows that are generated for part documents that have a certain condition:
 
