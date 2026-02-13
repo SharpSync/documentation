@@ -50,9 +50,9 @@ This is great for inviting other users to your SharpSync instance and sharing BO
 
 See more about permissions at [application-permissions.md](../user-management/application-permissions.md "mention") and [Broken link](/broken/pages/xBRhptqXyFeYT0p7TfFp "mention")
 
-### Pre-empting Data Leaks
+### Data Governance: Pre-empting Data Leaks
 
-To pre-empt any potential data leakage, the following mechanism(s) are in place:
+To pre-empt any potential data leakage or unauthorized access, the following mechanism(s) are in place:
 
 #### Automatic deletion of unused or stale data
 
@@ -75,7 +75,7 @@ The removal of stale data condition is triggered when:
 
 When this condition is triggered, you will receive an optional email notifying you of the removal of the data. This does _not_ delete the data at the source (i.e. CAD, PLM or ERP source), it simply removes _your_ data from _our_ servers.
 
-### Reduced logging
+#### Reduced logging
 
 At SharpSync we use diagnostic logging to troubleshoot our software. This is what all great software companies do. We take this a step further by taking the following preventative measures:
 
@@ -87,7 +87,7 @@ At SharpSync we use diagnostic logging to troubleshoot our software. This is wha
 * We only store our application's internal ids for these objects
 * We automatically remove (delete) any log entries older than 7 days. This future proofs the logs by simply not making it available for a mining exfiltration attack.
 
-### Preventing Credentials Leakage
+#### Secure storage at rest
 
 You user authentication credentials are stored in a [vault](https://www.vaultproject.io/). SharpSync staff does not have access to it unless _you provide them_ with admin access to your instance.
 
@@ -122,4 +122,27 @@ The value of X is configurable and can be increased based on user requirements. 
 
 #### Long term auditing
 
-SharpSync does have long term auditing available as part of Enterprise implementations, but this comes at an additional cost.
+SharpSync does have long term auditing available as part of Enterprise implementations, but this comes at an additional cost. Long term logging stores the logs for as long as you would require and have the following features:
+
+* Log entries are tamper proof (each entry is calculated from the sum of the previous entry)
+* Log entries are stored long term (months to years)
+* Log rotation is not implemented (all logs are kept)&#x20;
+
+### SharpSync staff access&#x20;
+
+SharpSync developers have access to select parts of the application, more specifically:
+
+* development + production servers
+* Back end infrastructure + environment (containers, databases, logs and source code)
+* Front end infrastructure + environment (containers, source code)
+
+To prevent unauthorized access of databases and logs, credentials are assigned on an as-needed basis. A user will only have access to required servers or environment if it suits their role or support.
+
+### Reporting a data leak or breach
+
+If you become aware of, or suspect, that you account has been breached, please take the following actions:
+
+* Take note of the date and time and the information disclosed
+* Immediately reset your account credentials
+* Notify us through our support channels (email or support ticket)
+* Notify your colleagues
