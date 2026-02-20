@@ -174,6 +174,13 @@ To map an Onshape document URL to a property in the ERP do the following:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-07-07 at 3.47.08 PM.png" alt=""><figcaption></figcaption></figure>
 
+### Export Assembly Configurations from Onshape
+
+* The "Export Assembly Configurations" Onshape context menu allows the export of all the configurations of an assembly to SharpSync as part of a BOM Set.
+* You can export the configurations of an assembly from Onshape to SharpSync by clicking on "Export Assembly Configurations" in the Onshape Assembly Tab Context Menu&#x20;
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-02-20 at 12.48.35 PM (2).png" alt=""><figcaption></figcaption></figure>
+
 ### Troubleshooting
 
 #### Could not find data source

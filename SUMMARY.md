@@ -146,6 +146,7 @@
 
 ## Advanced
 
+* [BOM Sets](advanced/bom-sets.md)
 * [Derivatives](advanced/derivatives.md)
 * [Row Component Rules](advanced/row-component-rules.md)
 
