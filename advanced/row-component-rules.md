@@ -98,8 +98,7 @@ The following example, we check if a row's componentName starts with `PN-1785`. 
       [
         "createMaterialRow",
         "",
-        "",
-        ""
+        "" 
       ],
       [
         "setCellValue",
