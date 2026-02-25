@@ -4,13 +4,11 @@ icon: uncharted
 
 # Onshape
 
-Onshape is a cloud-based CAD system by PTC.  It comes in 3 flavours:
+Onshape is a cloud-based CAD platform (with built-in data management) by PTC.  It comes in 3 flavours:
 
-* Free
-* Professional
-* Enterprise
+<table><thead><tr><th width="207">Version</th><th>SharpSync Support</th></tr></thead><tbody><tr><td>Enterprise</td><td>✅ Full Support</td></tr><tr><td>Professional</td><td>✅ Full Support</td></tr><tr><td>Free</td><td>❌ Not Supported</td></tr></tbody></table>
 
-SharpSync supports all 3 versions out of the box.
+
 
 ## Onshape supported features
 
