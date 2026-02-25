@@ -4,11 +4,15 @@ icon: list-check
 
 # Row Component Rules
 
-Row Component Rules are rules that run before the BOM is shown on screen the first time. It affects not only the data of the BOM, but also (optionally) _the structure._
+{% hint style="info" %}
+**Attention**: There is a big update coming to the row component rules. Please check back here again soon. A new UI is coming which will let you define rules for incoming rows from a CAD, PDM or PLM source
+{% endhint %}
+
+Row Component Rules are rules that run _before_ the BOM is shown on screen the first time. It affects not only the data of the BOM, but also (optionally) _the structure._
 
 These rules are (different from [Property Mapping rules](../fundamentals/rules/)) pre-BOM-load generation rules, or _Row Component_ rules. These rules run:
 
-* _After_ the BOM is generated in the Primary data source, but&#x20;
+* _After_ the BOM is generated using the Primary Data Source, but&#x20;
 * _Before_ the BOM is displayed on-screen. This is different to the client-side rules (Property Mapping Rules), which only run per-source, _after_ the BOM is displayed on-screen.
 
 <figure><img src="../.gitbook/assets/row-component-rules.png" alt="Row Component Rules Order"><figcaption><p>Row Component Rules Order</p></figcaption></figure>
