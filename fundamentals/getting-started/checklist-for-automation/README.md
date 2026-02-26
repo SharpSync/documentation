@@ -32,7 +32,7 @@ In addition to the overall checklist above, here are some basic tips and strateg
 * Use templates for your parts or assemblies with pre-populated descriptions (such as Description Goes Here). This may seem redundant, but it is actually a surefire way to detect when a document is not ready for approval
 * Use an automated number generation system
   * Yes you can use a spreadsheet, but make sure everyone using the system is using the same spreadsheet
-  * No - don't thing smart component numbers solves this problem
+  * No - don't think smart component numbers solves this problem
 * Do not use smart component numbers
   * Use sequential numbers like PRT-12345, PRT-12346
   * It is easy to read and locate
