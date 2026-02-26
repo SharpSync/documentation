@@ -15,7 +15,7 @@ After setting up your Property Mappings and Rules, open one of the Primary [Data
 
 The following Property Mappings columns are visible by default:
 
-<table><thead><tr><th width="248">Name</th><th>Description</th></tr></thead><tbody><tr><td>Order</td><td>The order in which the columns appear in the Bill of Materials (double-click the cell to change the order)</td></tr><tr><td>Property Name</td><td>The name of the column as it appears in the Bill of Materials</td></tr><tr><td>Accessor</td><td>The unique internal name as it is used in SharpSync</td></tr><tr><td>Primary Data Source  Property</td><td>The property as it is known at the primary source</td></tr><tr><td>Primary Data Source Type</td><td>The approximated type as it is known at the primary source</td></tr><tr><td>Update Primary Data Source</td><td>When checked, the primary source value will be updated</td></tr><tr><td>Secondary Data Source Property</td><td>The property as it is known at the secondary source</td></tr><tr><td>Secondary Data Source Type</td><td>The approximated type as it is known at the secondary source</td></tr><tr><td>Update Secondary Data Source</td><td>When checked, the secondary source value will be updated</td></tr><tr><td>Visible</td><td>Toggle Visibility Status</td></tr><tr><td>Read Only</td><td>Toggle Read Only Status</td></tr><tr><td>Settings</td><td>Click to edit the settings</td></tr><tr><td>Delete</td><td>Click to delete Property Mapping (Cannot Undo)</td></tr></tbody></table>
+<table><thead><tr><th width="248">Name</th><th>Description</th></tr></thead><tbody><tr><td>Order</td><td>The order in which the columns appear in the Bill of Materials (double-click the cell to change the order)</td></tr><tr><td>Property Name</td><td>The name of the column as it appears in the Bill of Materials</td></tr><tr><td>Accessor</td><td>The unique internal name as it is used in SharpSync</td></tr><tr><td>Primary Data Source  Property</td><td>The property as it is known at the primary source</td></tr><tr><td>Primary Data Source Type</td><td>The approximated type as it is known at the primary source</td></tr><tr><td>Update Primary Data Source</td><td>When checked, the primary source value will be updated</td></tr><tr><td>Secondary Data Source Property</td><td>The property as it is known at the secondary source</td></tr><tr><td>Secondary Data Source Type</td><td>The approximated type as it is known at the secondary source</td></tr><tr><td>Update Secondary Data Source</td><td>When checked, the secondary source value will be updated</td></tr><tr><td>Visible</td><td>Toggle Visibility Status</td></tr><tr><td>Read Only</td><td>Toggle Read Only Status</td></tr><tr><td>Settings</td><td>Click to edit the settings</td></tr><tr><td>Delete</td><td>Click to delete Property Mapping (Cannot Undo)</td></tr><tr><td>History</td><td>Shows a trimmed log of the changes to a specific mapping</td></tr></tbody></table>
 
 Depending on your screen size, columns related to your Primary Data Source and Secondary Data Source might not all fit in the table. Use the scrollbar at the bottom, as shown in the screenshot below, to scroll other property mappings into view.
 
@@ -28,4 +28,12 @@ Important: You have to add at least 2 Data Sources before being able to successf
 
 If any of your sources have changes applied (new properties added), come back to this screen and click the `UPDATE`  button before you can select the new property.
 {% endhint %}
+
+### Warnings in the mappings
+
+If you see orange borders around some property mappings it means that you've recently updated you mappings, and the mappings with warnings shown no longer exist. They were renamed or deleted. They don't exist in the source any more.
+
+
+
+<figure><img src="../../.gitbook/assets/property_mapping_warnings_old.png" alt="Some Property Mappings are out of date"><figcaption><p>Some Property Mappings are out of date</p></figcaption></figure>
 
