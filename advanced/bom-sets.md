@@ -27,4 +27,14 @@ Once all configurations have been loaded with Onshape Load Status of  `loadCompl
 
 Column headers of BOM configuration CSV files represent the Display Names of the primary Data Source fields / properties as setup in the Property Mappings and their order is determined by the existing sort order of the mappings.&#x20;
 
-&#x20;
+#### **Reverting BOMs in a BOM Set**
+
+Should errors occur in the loading or syncing process of a BOM in a BOM Set, the option to revert a BOM will be displayed.
+
+<figure><img src="../.gitbook/assets/Screenshot 2026-03-05 at 11.34.24 AM.png" alt=""><figcaption></figcaption></figure>
+
+Reverting a BOM will reset its loading or sync status (if with errors or warnings).
+
+The option to mass revert all BOMs with issues in a BOM Set will also be enabled by right clicking on any cell under the `REVERT` column --> `Revert` --> `Revert All Boms With Issues`
+
+<figure><img src="../.gitbook/assets/Screen Shot 2026-03-05 at 11.34.33 AM [2].png" alt=""><figcaption></figcaption></figure>
