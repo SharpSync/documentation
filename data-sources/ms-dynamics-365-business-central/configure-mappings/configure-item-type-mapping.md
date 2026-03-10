@@ -19,16 +19,16 @@ Exactly one property mapping for _must_ be set as an item type mapping in order 
 
 ### Item Type Property Mapping Settings
 
-| Setting                   | Value                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------- |
-| Accessor                  | `itemType`                                                                      |
-| Primary accessor          | <p>(Unmapped) </p><p>or mapped to a Primary Source accessor if you have one</p> |
-| Secondary accessor        | (Unmapped)                                                                      |
-| Update Primary on Submit  | unchecked                                                                       |
-| Update NetSuite on Submit | checked (IMPORTANT)                                                             |
-| Rendering Type            | Select List                                                                     |
-| List Items                | `item\|resource`                                                                |
-| Is Item Type Property     | checked                                                                         |
+| Setting                      | Value                                                                           |
+| ---------------------------- | ------------------------------------------------------------------------------- |
+| Accessor                     | `itemType`                                                                      |
+| Primary accessor             | <p>(Unmapped) </p><p>or mapped to a Primary Source accessor if you have one</p> |
+| Secondary accessor           | (Unmapped)                                                                      |
+| Update Primary on Submit     | unchecked                                                                       |
+| Update Dynamics365 on Submit | checked (IMPORTANT)                                                             |
+| Rendering Type               | Select List                                                                     |
+| List Items                   | `item\|resource`                                                                |
+| Is Item Type Property        | checked                                                                         |
 
 When an item is created, it is typically one of the item types mentioned above. As such, add this as a list of options to pick from your `Select List`&#x20;
 
