@@ -70,10 +70,14 @@ To configure a Dynamics 365 Business Central datasource instance in SharpSync yo
 
 ### Configure Dynamics 365 Business Central Datasource
 
-* Login on the application
+* Login to SharpSync
 * Navigate to `Data Sources`
 * On the right > Select Dynamics365 > Add
-* Click the configure button
+* Change the `Server url` value to: `https://businesscentral.dynamics.com`
+* Change the `Primary Identifier` value to: `itemNumber`
+* Change the `Alternative Identifier`  value to: `resourceNumber`
+* Click on the `UPDATE` button
+* Next, click the `CONFIGURE` button
 * On the first tab `Authentication`, select the `OAuth 2.0` authentication type
 * On the second tab `Configuration`, enter your Company Id and Environment as described in the previous section
 * Click the `Save` button
