@@ -38,9 +38,11 @@ In addition to the overall checklist above, here are some basic tips and strateg
   * It is easy to read and locate
   * It's reusable
   * Don't use PRT-SOMEPROJECTLEVEL-SOMEMATERIAL-SOMEREVISION. It's not wrong, but it's a matter of time before you can't use that scheme for everything, why? Because
-    * SOMEPROJECTLEVEL
-    * SOMEREVISION should not be part of the part number. If it is, it means with every revision the partnumber changes. Using a serial number is better in this case
-    * You'll have tons of technical debt because of the reasons above which can't be easily addressed
+    * SOMEPROJECTLEVEL defeats the purpose of reusability at different levels
+    * SOMEMATERIAL is ok, but unnecessary - put it in the meta data
+    * SOMEREVISION should not be part of the part number. If it is, it means with every revision the part number changes. If you truly desire a new part number change for every revision, rather use a new number and put the revision in the meta data.
+    * Using a serial number is better in every case
+    * You'll have tons of technical debt because of the reasons above which can't be easily addressed. It only becomes apparent after about 10 months to a year
 * Approve your documents in your CAD, PDM or PLM system before sending it to the ERP.
 * Have meta data in your CAD documents. More meta data is better than less.&#x20;
   * Part has an operation? Add an operation field.&#x20;
