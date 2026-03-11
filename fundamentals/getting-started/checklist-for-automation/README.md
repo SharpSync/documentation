@@ -37,7 +37,10 @@ In addition to the overall checklist above, here are some basic tips and strateg
   * Use sequential numbers like PRT-12345, PRT-12346
   * It is easy to read and locate
   * It's reusable
-  * Don't use PRT-SOMEPROJECTLEVEL-SOMEMATERIAL-SOMEREVISION. It's not wrong, but it's a matter of time before you can't use that scheme for everything and then you'll have tons of technical debt which can't be synchronized to your ERP
+  * Don't use PRT-SOMEPROJECTLEVEL-SOMEMATERIAL-SOMEREVISION. It's not wrong, but it's a matter of time before you can't use that scheme for everything, why? Because
+    * SOMEPROJECTLEVEL
+    * SOMEREVISION should not be part of the part number. If it is, it means with every revision the partnumber changes. Using a serial number is better in this case
+    * You'll have tons of technical debt because of the reasons above which can't be easily addressed
 * Approve your documents in your CAD, PDM or PLM system before sending it to the ERP.
 * Have meta data in your CAD documents. More meta data is better than less.&#x20;
   * Part has an operation? Add an operation field.&#x20;
