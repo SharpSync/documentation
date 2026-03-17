@@ -38,6 +38,8 @@ See also Configure the add-in for testing
 
 _The PDM Web API must be accessible over the public internet._ This is required for SharpSync to be able to connect to the PDM vault.
 
+Click [here](solidworks-pdm/setting-up-the-solidworks-pdm-web-2.md) for instructions on how to make the PDM Web API publicly available.
+
 {% hint style="success" %}
 A domain name is not required. A public IP address is sufficient.&#x20;
 
