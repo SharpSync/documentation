@@ -21,7 +21,7 @@ The related configurations of a BOM Set will start loading automatically in the 
 
 <figure><img src="../.gitbook/assets/Screenshot 2026-02-20 at 1.17.48 PM.png" alt=""><figcaption></figcaption></figure>
 
-Once all configurations have been loaded with Onshape Load Status of  `loadCompleted` , a zip file containing a CSV file per configuration can be downloaded by clicking on the "Download CSVs" button.
+Once all configurations have been loaded with Primary Load Status of  `loadCompleted` , a zip file containing a CSV file per configuration can be downloaded by clicking on the "Download CSVs" button.
 
 <figure><img src="../.gitbook/assets/Screenshot 2026-02-20 at 1.17.48 PM (1).png" alt=""><figcaption></figcaption></figure>
 
