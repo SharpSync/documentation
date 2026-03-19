@@ -21,8 +21,6 @@ If you don't own a static IP address (preferable), then a dynamic DNS client is 
 This service lets you register your machine under a semi-custom domain name and keeps that domain name active for 30 days at a time. For testing purposes this is sufficient.
 {% endhint %}
 
-
-
 A domain name in turn points to a static IP address (your PDM server). A domain name is not strictly necessary but is more convenient to remember than an IP address. A domain name is something that your company would use on the internet to host your own website at e.g.
 
 > https://yourcompany.com.
@@ -49,18 +47,23 @@ For the more adventurous amongst you there are free TLS certificates available f
 
 #### Installing the Web2 API server
 
-* [x] Install the Web2 API server according to the installation instructions
-* [x] Host the web API server in IIS, then add the API to the List of WebAPI servers in the Administration tool.
-*
-[ ] 
-    <figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+* Install the Web2 API server according to the installation instructions
+* For more info on how to find and install Web2 API Server and / or Web2 PDM Server, check the following link:
+
+> [https://help.solidworks.com/2025/English/SolidWorks/install\_guide/t\_install\_PDM\_server\_SLDIM.htm](https://help.solidworks.com/2025/English/SolidWorks/install_guide/t_install_PDM_server_SLDIM.htm)
+
+> [https://www.goengineer.com/blog/solidworks-pdm-web2-guide-server-setup-accounts-application-pools-testing](https://www.goengineer.com/blog/solidworks-pdm-web2-guide-server-setup-accounts-application-pools-testing)
+
+* Host the web API server in IIS, then add the API to the List of WebAPI servers in the Administration tool.
+
+<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Expose the API to the public internet. The API must be exposed and visible (using CURL login, see below) from computers outside your network
 {% endhint %}
 
-* [x] Take note of the port number that is visible in the IIS configuration options (or if being forwarded from a reverse proxy, then take note of that port)
-* [x] Test the connection from an _external machine (e.g. your phone or another computer outside your network)_ by connecting to the API using the following curl request&#x20;
+* Take note of the port number that is visible in the IIS configuration options (or if being forwarded from a reverse proxy, then take note of that port)
+* Test the connection from an _external machine (e.g. your phone or another computer outside your network)_ by connecting to the API using the following curl request&#x20;
 
 ```bash
 curl -L https://{yourdomainOrStaticIpAndPort}/api/{vaultName}/authenticate \
@@ -76,26 +79,15 @@ or a more convenient one-liner (since Windows terminal doesn't always work so we
 curl -L http://{yourdomainOrStaticIpAndPort}/api/{vaultName}/authenticate -H "Content-Type: application/json" -d "{ 'Username': 'admin', 'Password': 'admin' }"
 ```
 
-
-
 This must return a 200 OK Response with a token
 
 {% hint style="danger" %}
 WARNING! DO NOT, under any circumstances, leave the default username of 'Admin' and password of 'Admin' enabled. This is a serious security vulnerability
 {% endhint %}
 
+* In SharpSync,  copy the URL of the Web2 API and enter it in the configuration options for SWPDM
 
-
-* [x] In SharpSync,  copy the URL of the Web2 API and enter it in the configuration options for SWPDM
-*
-[ ] 
-    <figure><img src="../../.gitbook/assets/swpdm_module_auth_port_config.png" alt=""><figcaption></figcaption></figure>
-
-###
-
-### Test the connection
-
-
+<figure><img src="../../.gitbook/assets/swpdm_module_auth_port_config.png" alt=""><figcaption></figcaption></figure>
 
 ### Installing the Web2 PDM Server (Optional)
 
