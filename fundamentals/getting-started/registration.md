@@ -7,9 +7,9 @@ icon: address-card
 
 ### Getting Started
 
-1. From the [sharpsync.net](https://app.sharpsync.net/login) main page, click on the Log In button to begin. To begin your SharpSync experience, you must first register your organization. Click on _Registering a new Organization?_ as shown below.
+1. From the [sharpsync.net](https://app.sharpsync.net/login) main page, click on the Log In button to begin. To begin your SharpSync experience, you must first register your organization. Click on _Sign up now_ as shown below.
 
-<figure><img src="../../.gitbook/assets/sharpsync_signup.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-03-24 at 3.21.55 PM.png" alt=""><figcaption></figcaption></figure>
 
 2. On the next screen, fill the information below. Once complete, click on Register.
 
@@ -19,19 +19,15 @@ icon: address-card
 
 <figure><img src="../../.gitbook/assets/sharpsync_register.png" alt=""><figcaption></figcaption></figure>
 
-
-
-An email with a verification link will be sent; click on the link to complete the registration. Login to begin.
+Your organization registration request will then be reviewed internally, and, once approved, an email will be sent with further instructions to add your user's credentials and verify to login.
 
 #### Inviting New Users
 
-<br>
+To add more users to your organization, click on the Users icon in the App Settings sidebar.
 
 <figure><img src="../../.gitbook/assets/users_icon.png" alt=""><figcaption></figcaption></figure>
 
-To add more users to your organization, click on the Users icon in the App Settings sidebar.
-
-1. In the Users section, enter the User's name and their email address.&#x20;
+1. In the Users section, enter the User's name and their email address.
 2. Click on Invite User. (An email will be sent to the user inviting them to join the organization on SharpSync).
 3. You can remove a User by clicking on the trash can icon in the Delete column.
 
