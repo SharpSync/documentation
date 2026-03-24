@@ -29,7 +29,7 @@ Below is a checklist to assist you to successfully automate your data transfers:
 In addition to the overall checklist above, here are some basic tips and strategies for data management that prepares your for successful automation:
 
 * Have a central fasteners library. Don't reuse (copy + paste) fasteners everywhere
-* Use templates for your parts or assemblies with pre-populated descriptions (such as Description Goes Here). This may seem redundant, but it is actually a surefire way to detect when a document is not ready for approval
+* Use templates for your parts or assemblies with pre-populated descriptions (such as 'Description Goes Here'). This may seem redundant, but it is actually a surefire way to detect when a document is not ready for approval
 * Use an automated number generation system
   * Yes you can use a spreadsheet, but make sure everyone using the system is using the same spreadsheet
   * No - don't think smart component numbers solves this problem

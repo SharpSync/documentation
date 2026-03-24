@@ -92,7 +92,7 @@ Cell border colours are associated with a cell value or a rule failure. For exam
 
 A failing value will warn you or block you from submitting a BOM until the value is modified to meet the rule condition.
 
-You can edit values just like you do in any spreadsheet type software, simply double clivk and edit text, or select from a list of available values.
+You can edit values just like you do in any spreadsheet type software, simply double-click and edit text, or select from a list of available values.
 
 <figure><img src=".gitbook/assets/Screenshot 2025-11-10 at 12.55.02 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -106,7 +106,7 @@ You can think of SharpSync as your gatekeeper that can even ensure that your sou
 
 #### Submit BOMs for source update
 
-Once you are satisfied with your changes, simply click on the BOM submit button, the sources update data is sent server-side and will run in the background.
+Once you are satisfied with your changes, simply click on the BOM submit button. The BOM's updated data is sent to the source. This will run in the background without any user interaction required.
 
 At this point, the web page can safely be closed and visited later later when the update process is complete.
 

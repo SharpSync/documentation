@@ -4,7 +4,7 @@ icon: square-check
 
 # Distinct Components
 
-This deserves it's own topic because there are polarizing views on how to manage your components.&#x20;
+This deserves its own topic because there are polarizing views on how to manage your components.&#x20;
 
 We present here not a universal way of using component numbers, but _a_ way of doing it which works for automation.
 
