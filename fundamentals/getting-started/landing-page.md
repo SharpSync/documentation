@@ -7,7 +7,7 @@ icon: house
 
 After logging in, you'll be redirected to the landing page.
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sharpsync_landing_page_no_boms.png" alt=""><figcaption><p>Landing Page with no BOMs visible</p></figcaption></figure>
 
 From here you can perform the following actions:
 
@@ -19,6 +19,3 @@ From here you can perform the following actions:
 {% hint style="info" %}
 Deleting a BOM in SharpSync does not delete the data at the Data Source, it simply removes the data from SharpSync.
 {% endhint %}
-
-
-
