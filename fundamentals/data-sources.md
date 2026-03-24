@@ -21,7 +21,7 @@ It works as follows:
 * A _Primary_ Data Source is typically a CAD / PDM / PLM source. It is the origin of your CAD data.
 * A &#x53;_&#x65;condary_ Data Source is typically an ERP / MRP source.
 * SharpSync uses both sources to do bi-directional synchronization, meaning it pulls information from the _Primary_ and writes to the _Secondary_. It can also pull information from the _Secondary_ and write to the _Primary_.
-* Currently the application is limited to a single _Primary_ source and a single _Secondary_ source
+* Currently the application is limited to a single _Primary_ source and a single _Secondary_ source.
 
 ### Core concept: Primary and Alternative Component Identifiers
 
@@ -104,11 +104,8 @@ For this we introduce pre-BOM-load generation rules, or _Row Component_ rules. T
 * _After_ the BOM is generated in the Primary Datasource, but&#x20;
 * _Before_ the BOM is displayed on-screen. This is different to the client-side rules (Property Mapping Rules), which only run per-source, _after_ the BOM is displayed on-screen.
 
-Data Source support for ServerSide rules are only available for Primary CAD sources an are listed in the table:
-
-<table data-full-width="false"><thead><tr><th width="213">Datasource</th><th width="108">Type</th><th width="119">Support</th><th>Status</th><th data-hidden>Documentation</th></tr></thead><tbody><tr><td><a href="../data-sources/autodesk-inventor.md">AutoDesk Inventor</a></td><td>CAD</td><td>None</td><td>[future release]</td><td>Documentation</td></tr><tr><td><a href="../data-sources/autodesk-fusion-in-progress.md">AutoDesk Fusion</a></td><td>CAD</td><td>None</td><td>[future release]</td><td></td></tr><tr><td><a href="../data-sources/editor/">CSV</a></td><td>Offline</td><td>None</td><td>[future release]</td><td>Documentation</td></tr><tr><td><a href="../data-sources/onshape/">Onshape</a></td><td>CAD</td><td>Full</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/solidworks.md">SOLIDWORKS</a></td><td>CAD</td><td>None</td><td>[future release]</td><td>Documentation</td></tr><tr><td><a href="../data-sources/solidworks-pdm.md">SOLIDWORKS PDM</a></td><td>PDM</td><td>None</td><td>[future release]</td><td>Documentation</td></tr></tbody></table>
+Data Source support for ServerSide rules is currently only available for data source Onshape.
 
 ### Technical detail
 
-See the Advanced Configuration Page on [row-component-rules.md](../advanced/row-component-rules.md "mention") for technical detail on how to manage rules
-
+See the Advanced Configuration Page on [row-component-rules.md](../advanced/row-component-rules.md "mention") for technical detail on how to manage rules.
