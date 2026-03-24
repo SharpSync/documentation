@@ -6,13 +6,13 @@ icon: money-bill-transfer
 
 SharpSync is free to register and try, but you will be unable to submit any of the final data to a [Data Source](/broken/pages/7aUFmnCMx9m4smGncsXL).
 
-The functionality matrix below details the difference between the versions
+The functionality matrix below details the difference between the versions:
 
 <table><thead><tr><th width="496">Function</th><th width="138" align="center">Trial Version</th><th width="128" align="center">Paid Version</th></tr></thead><tbody><tr><td><ul><li>Configure Data Sources</li></ul></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Configure Property Mappings</li></ul></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Configure Rules</li></ul></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Pull data from online Data Sources</li></ul></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Push data from offline Data Sources</li></ul></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Use data from static files (csv)</li></ul></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>View the data in the BOM compare</li></ul></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Refresh / reload data in the BOM compare</li></ul></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Submit the data to Data Source</li></ul></td><td align="center"></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Implementation support of Property Mappings</li></ul></td><td align="center"></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Implementation support of Rules</li></ul></td><td align="center"></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Feature enhancement requests</li></ul></td><td align="center"></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr><tr><td><ul><li>Upgrade support (ERP upgrade)</li></ul></td><td align="center"></td><td align="center"><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td></tr></tbody></table>
 
 \
 \
-Subscriptions are a way for a customer to make full use of the software after trialing it. Sometimes your not ready to commit to a payment yet - that's ok. Reach out to us at the [Help Center](https://sharpsync.atlassian.net/servicedesk/customer/user/login) and we'll gladly assist with any queries.
+Subscriptions allows users to make full utilization of the software after trialing it. If you're unsure about committing to a SharpSync subscription, reach out to us at the [Help Center](https://sharpsync.atlassian.net/servicedesk/customer/user/login) and we'll gladly assist with any queries. 
 
 ### Subscription scenarios
 
@@ -36,7 +36,7 @@ You have registered with SharpSync, tested the features to your heart's content,
 
 Let's say that you signed up on January 1st. The software will include the paid for functions from Jan 1st to December 31st. On Dec 31st your subscription renewal is due should you wish to continue.&#x20;
 
-Subscription is done through Stripe, so renewals are automatic unless you explicitly cancel
+Subscriptions are handled through our [Help Center](https://sharpsync.atlassian.net/servicedesk/customer/user/login)
 
 ### Scenario: Renewal
 
@@ -64,7 +64,7 @@ At then end of Dec, when renewal is due, you will be automatically billed for 3 
 
 You have registered with SharpSync on the base plan as shown above and added 2 additional users. In June you require the removal of the additional 2 users. You request the cancellation of the users using Billing > modify.
 
-Result: The subscription for the 2 additional users are immediately cancelled. Your users _still_ has access to the application since the users were paid for on an annual basis. The users can still make use of the software. In December the plan will renew with only 1 seat (part of the default base plan), at which point the maximum number of simultaneous users will be reduced to 1 again.
+Result: The subscription for the 2 additional users are immediately cancelled. Your users _still_ have access to the application since the users were paid for on an annual basis. The users can still make use of the software. In December the plan will renew with only 1 seat (part of the default base plan), at which point the maximum number of simultaneous users will be reduced to 1 again.
 
 ### Scenario: Refunds
 

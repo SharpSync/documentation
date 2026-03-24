@@ -17,7 +17,7 @@ From here you can perform the following actions:
 * View BOM submission error reports.
 
 {% hint style="info" %}
-Deleting a BOM does not delete a Data Source, it simply removes the data from SharpSync.
+Deleting a BOM in SharpSync does not delete the data at the Data Source, it simply removes the data from SharpSync.
 {% endhint %}
 
 

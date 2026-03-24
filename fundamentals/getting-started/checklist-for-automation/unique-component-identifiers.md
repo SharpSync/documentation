@@ -21,9 +21,9 @@ An identifier is some text that can be used to locate a part or component. A uni
 
 ### What part of the identifier do you need?
 
-For a UCI, we need the whole text or string value. We can't use a portion of it. Ideally we also should not be using more than the whole string (e.g. Attempting to append the revision of a component to the end of the part number is not a good idea. It's better to just use the part number, and store all the data in the CAD system, and simply link to the specific revision or version in the ERP)
+For a UCI, we need the whole text or string value. We can't use a portion of it. Ideally we also should not be using more than the whole string (e.g. Attempting to append the revision of a component to the end of the part number is not a good idea. It's better to use the part number, store the data in the CAD system, and simply link to the specific revision or version in the ERP)
 
-<table><thead><tr><th width="187">Requirement Status</th><th width="213">Item</th><th>Description</th></tr></thead><tbody><tr><td>Required</td><td>Part Number</td><td>Each component has a unique part number that is in the CAD, PDM, PLM or ERP</td></tr><tr><td>Optional</td><td>Part Description</td><td>Each component has a non-unique description that is in the CAD, PDM, PLM or ERP</td></tr><tr><td>Optional</td><td>Matching item code</td><td>Each component has a unique matching  number that spans the CAD, PDM, PLM and also in the ERP</td></tr></tbody></table>
+<table><thead><tr><th width="187">Requirement Status</th><th width="213">Item</th><th>Description</th></tr></thead><tbody><tr><td>Required</td><td>Part Number</td><td>Each component has a unique part number that is in the CAD, PDM, PLM or ERP</td></tr><tr><td>Optional</td><td>Part Description</td><td>Each component has a non-unique description that is in the CAD, PDM, PLM or ERP</td></tr><tr><td>Optional</td><td>Matching item code</td><td>Each component has a unique matching number that spans the CAD, PDM, PLM and also in the ERP</td></tr></tbody></table>
 
 That is it. If you have unique part numbers, you're off to a great start. This is almost the only thing you need. Of course there's more to automation than just synchronizing Part Numbers.&#x20;
 
