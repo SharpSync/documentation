@@ -20,9 +20,8 @@ Follow the steps below to begin importing data into SharpSync using Autodesk Inv
 * From the `Datasources` section, add the CSV data  source as the Primary Data source
 * Change the Primary Identifier to `Part Number`, click the `Save` button
 * Click the `Configure` button > `BOM Configuration`
-* On a new line each, enter the Custom Properties to read, the current built-in properties in Autodesk Inventor 2025 in the `Design Tracking Properties` Property Set are:
-
-
+* On a new line each, enter the Custom Properties to read
+* the current built-in properties in Autodesk Inventor 2025 in the `Design Tracking Properties` Property Set are:
 
 ```
 Appearance

@@ -36,8 +36,6 @@ If you would like to use a different Identity Provider such as SAML, OpenID Conn
 SharpSync does not store usernames and passwords for user logins, and never will.
 {% endhint %}
 
-
-
 ### Role Based Access Controls
 
 We provide access to setup and administration via role based access controls. The roles are:
@@ -101,8 +99,6 @@ We support OAuth2.0 authentication flow for sources (if supported at the source)
 
 In addition, we support API keys or basic credentials for older sources that don't support OAuth2.0
 
-
-
 ### Auditing
 
 SharpSync has built in short term auditing for all customers and all objects. We record the following information and answer the following questions:
@@ -114,18 +110,18 @@ SharpSync has built in short term auditing for all customers and all objects. We
 
 The audit logs can be searched and is queryable by administrators.
 
-#### Short term auditing
+#### Short-term auditing
 
 SharpSync's default audit log stores the last X entries per object. This means that every time you make an edit we only store the last X entries and remove the oldest entry. This is to protect you from the amount of data we store about you, and is sufficient for most use cases. Remember, the more information we store about you, the greater the chance that information leaks inside your own organization. So we keep this at an intentional minimum.
 
-The value of X is configurable and can be increased based on user requirements. The default is 10 entries per object (it may seem like little, but usually this is enough). If you want longer storage please see Long term auditing.
+The value of X is configurable and can be increased based on user requirements. The default is 10 entries per object (it may seem like little, but usually this is enough). For longer storage, see below.
 
-#### Long term auditing
+#### Long-term auditing
 
-SharpSync does have long term auditing available as part of Enterprise implementations, but this comes at an additional cost. Long term logging stores the logs for as long as you would require and have the following features:
+SharpSync does have long-term auditing available as part of Enterprise implementations, but this comes at an additional cost. Long-term logging stores the logs for as long as you would require and have the following features:
 
 * Log entries are tamper proof (each entry is calculated from the sum of the previous entry)
-* Log entries are stored long term (months to years)
+* Log entries are stored long-term (months to years)
 * Log rotation is not implemented (all logs are kept)&#x20;
 
 ### SharpSync staff access&#x20;

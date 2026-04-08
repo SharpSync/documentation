@@ -24,7 +24,7 @@ Before we go too deep, let's define some terms:
 | ------------------- | ----------------------------------------------------------------------------------------------------------- |
 | Render type         | How the user may interact with the cell                                                                     |
 | Accessor / Property | The internal name as SharpSync refers to it                                                                 |
-| Options             | An optional configuration option affecting the behavior of a column when the Bill Of materials is displayed |
+| Options             | An optional configuration option affecting the behavior of a column when the Bill of materials is displayed |
 
 **Rendering Types**
 

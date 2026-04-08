@@ -30,12 +30,8 @@ We don't currently support list queries for other native SharpSync types like `a
 | uom.uom                | Units of measure for BOM line items or individual products                  | `[ 'Each', 'Dozens']`                                                 |
 
 {% hint style="info" %}
-```postman_json
 You can view and configure all the attributes by navigating to Inventory > Configuration > Attributes
-```
 {% endhint %}
-
-
 
 \*\* The list `product.attribute` is special in that you can expand upon the query by adding attribute name at the end in square brackets. See [map-attribute-values](common-setup/map-attribute-values/ "mention") for a more exhaustive guide
 
@@ -49,7 +45,7 @@ However this may return complex values which you could refine with a value selec
 
 > {id} : {name}
 
-### The result returned from this may look something like this&#x20;
+The result returned from this may look something like this:
 
 > 1 : |10 : Powder Blue|2 : |3 : |4 : |9 : Satin Black
 

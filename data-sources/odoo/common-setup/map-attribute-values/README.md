@@ -26,7 +26,7 @@ Please read the information below carefully as it could result in data loss in O
 CAUTION: Removing an attribute value (if there is more than 1 value for the same attribute) will remove the associated variant (unless it is used in a purchase order). &#x20;
 {% endhint %}
 
-### Adding an removing  attributes in Odoo
+### Adding and removing attributes in Odoo
 
 When adding new attributes in Odoo, Odoo automatically creates new variants. It does not set the internal reference (you have to do that), but it creates multiple variants. Product Templates and Product Variants have a 1:N relationship in Odoo. For a single template attribute value, it is a 1:1 relationship. Anything more than that results in multiple product variants.
 

@@ -104,7 +104,7 @@ For this we introduce pre-BOM-load generation rules, or _Row Component_ rules. T
 * _After_ the BOM is generated in the Primary Datasource, but&#x20;
 * _Before_ the BOM is displayed on-screen. This is different to the client-side rules (Property Mapping Rules), which only run per-source, _after_ the BOM is displayed on-screen.
 
-Data Source support for ServerSide rules is currently only available for data source Onshape.
+Data Source support for server-side rules is currently only available for data source Onshape.
 
 ### Technical detail
 
