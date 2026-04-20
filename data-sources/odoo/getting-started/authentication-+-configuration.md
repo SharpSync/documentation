@@ -8,7 +8,7 @@ To integrate with an Odoo instance, we have to setup an&#x20;
 
 * In the Navigation Bar, select Data Sources
 * On the right (in Data Sources), select Odoo as the Data Source and click the `ADD DATASOURCE`  button&#x20;
-*   Change the Server URL to:
+*   Change the Server URL to the URL of your Odoo instance. This will usually be in the format:
 
     ```
     https://{myEnterpriseInstance}.odoo.com
