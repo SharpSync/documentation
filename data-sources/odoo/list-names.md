@@ -22,7 +22,7 @@ We don't currently support list queries for other native SharpSync types like `a
 | product.attribute \*\* | Returns registered attributes                                               | `[ "Color", "Duration", "Finish" ]`                                   |
 | product.tag            | Tags assigned on the `General Information` tab                              | `[ 11, "Kit" ], [ 12, "Assemble" ], [ 81, "Switches" ]`               |
 | res.company            | List of registered companies in your Odoo instance                          | `[ 3, "SharpSync CA"], [1, "SharpSync USA"]`                          |
-| res.partner            | List of Vendors (or partners)  available in Odoo                            | \[                                                                    |
+| res.partner            | List of Vendors (or partners)  available in Odoo                            | `[ 1, "CADSharp LLC" ], [ 7, "CompanyName LLC" ]`                     |
 | res.users              | List of registered users in your Odoo instance                              | `[ 5, "Andrew Crumbs"], [12, "Joe Soap"]`                             |
 | resource.resource      | Lists all the registered Odoo resources. Can include people and workcenters | `[ 5, "Andrew Crumbs"], [12, "Work Center 1"]`                        |
 | stock.location         | Locations you can assign for warehouses                                     | `[ 14986, "MP" ], [ 14995, "MP/Assemble" ], [ 14990, "MP/Output" ],`  |
