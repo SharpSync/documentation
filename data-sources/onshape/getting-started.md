@@ -57,7 +57,7 @@ Please make sure to set up your Secondary Data Source. For more information, ref
 * Choose one of the two paths below depending on your version of our product:
 
 {% tabs %}
-{% tab title="Professional or Free version" %}
+{% tab title="Professional" %}
 Base API path
 
 <mark style="color:orange;">The Base API we use to connect</mark>
