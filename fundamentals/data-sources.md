@@ -25,7 +25,7 @@ It works as follows:
 
 ### Core concept: Primary and Alternative Component Identifiers
 
-SharpSync is a synchronization tool. It synchronizes data between two Data Sources. To do this, it uses the following two settings:
+SharpSync is a synchronization tool. It synchronizes data between two Data Sources. To do this, it uses the following two parameters:
 
 * Primary Component Identifier: The preferred property or meta data name to search
 * Alternative Component Identifier: The alternative property or meta data name to search if the primary returns an empty result.
@@ -36,9 +36,11 @@ Typically this property (in a CAD environment) would be something like `Number`,
 
 Typically in an ERP system, this would be something like `Number`, `PartNo`, `ItemId`, `Id` or similar.
 
+{% hint style="warning" %}
+\*\*\* SharpSync's internal usage of component identifiers varies between sources. Some CAD or ERP sources are more restrictive and limit SharpSync to use the default source identifier.
+{% endhint %}
 
-
-**Example**
+**Example With Onshape**
 
 Let's say we're working with a part called '123'. Our primary identifier is `'PartNumber'` and our alternative identifier is `'name'.`
 
@@ -49,6 +51,22 @@ If nothing is found using an exact match (i.e. no component identifier `PartNumb
 As an example of a Primary Identifier, we have included a screenshot from OnShape. This will of course vary from other platforms:
 
 <figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="563"><figcaption><p>OnShape Property Map</p></figcaption></figure>
+
+Onshape primary identifier can be set with dynamic parts in SharpSync, for example:
+
+```
+{partNumber}-R{revision}
+```
+
+will assign a component name built from the `partNumber` and `revision` fields if mapped in the property mapping as Onshape fields (example `P123-R01` ).
+
+Onshape primary identifier can be set with conditional dynamic parts in SharpSync, for example:
+
+```
+{partNumber}{-R|category==CUSTOM}{revision|category==CUSTOM}
+```
+
+will assign `P123-R01`  or `P123`  if the `category` field is equal o `CUSTOM`  or not.
 
 ### Core concept: Bom Revision Names
 
