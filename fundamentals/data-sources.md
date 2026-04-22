@@ -60,13 +60,21 @@ Onshape primary identifier can be set with dynamic parts in SharpSync, for examp
 
 will assign a component name built from the `partNumber` and `revision` fields if mapped in the property mapping as Onshape fields (example `P123-R01` ).
 
-Onshape primary identifier can be set with conditional dynamic parts in SharpSync, for example:
+Onshape primary identifier can be set with conditional dynamic parts in SharpSync, for example (equality):
 
 ```
 {partNumber}{-R|category==CUSTOM}{revision|category==CUSTOM}
 ```
 
-will assign `P123-R01`  or `P123`  if the `category` field is equal o `CUSTOM`  or not.
+will assign `P123-R01`  if the `category` field is equal to `CUSTOM`  and `P123`  if not.
+
+or (non equality)
+
+```
+{partNumber}{-R|category!=CUSTOM}{revision|category!=CUSTOM}
+```
+
+will assign `P123-R01`  if the `category` field is not equal to `CUSTOM`  and `P123`  if it is.
 
 ### Core concept: Bom Revision Names
 
