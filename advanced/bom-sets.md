@@ -17,7 +17,9 @@ After exporting a BOM Set from a supported Primary DataSource, a BOM Set card wi
 
 <figure><img src="../.gitbook/assets/Screenshot 2026-02-20 at 1.00.52 PM.png" alt=""><figcaption></figcaption></figure>
 
-The related configurations of a BOM Set will start loading automatically in the background. And can be viewed by navigating to the individual BOM Set page by clinking on the BOM Set name or the navigation arrow.
+SharpSync will process the different configurations of a BOM Set in the background and will create an individual BOM Set BOM for each BOM Set configuration. Configuration processing indicators will be updated in real time to notify the user.
+
+Furthermore, the primary and Secondary BOMs related to each configuration of a BOM Set will also start loading automatically in the background. And can be viewed by navigating to the individual BOM Set page by clinking on the BOM Set name or the navigation arrow.
 
 <figure><img src="../.gitbook/assets/Screenshot 2026-02-20 at 1.17.48 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -25,7 +27,11 @@ Once all configurations have been loaded with Primary Load Status of  `loadCompl
 
 <figure><img src="../.gitbook/assets/Screenshot 2026-02-20 at 1.17.48 PM (1).png" alt=""><figcaption></figcaption></figure>
 
-Column headers of BOM configuration CSV files represent the Display Names of the primary Data Source fields / properties as setup in the Property Mappings and their order is determined by the existing sort order of the mappings.&#x20;
+Column headers of BOM configuration CSV files represent the Display Names of the primary Data Source fields / properties as setup in the Property Mappings and their order is determined by the existing sort order of the mappings.
+
+#### **Auto Build Comparison BOMs of BOM Set BOMs**
+
+The auto-build process of comparison BOMs of a BOM Set will be triggered when navigating to the individual BOM Set page after all configurations have been processed and all primary and secondary BOMs of BOM Set BOMs have successfully been loaded.
 
 #### **Reverting BOMs in a BOM Set**
 
