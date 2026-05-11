@@ -7,8 +7,8 @@ icon: sparkle
 
 # Common Setup
 
-{% content-ref url="map-bom-codes.md" %}
-[map-bom-codes.md](map-bom-codes.md)
+{% content-ref url="map-bom-codes-1.md" %}
+[map-bom-codes-1.md](map-bom-codes-1.md)
 {% endcontent-ref %}
 
 {% content-ref url="map-bom-operation-codes/" %}

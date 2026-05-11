@@ -2,20 +2,19 @@
 icon: diagram-subtask
 ---
 
-# Map BOM Codes
+# Map Product Template Company Id
 
-In Odoo the BOM code is a unique reference to the version of the BOM at the time of submitting it via Onshape.
+### Property Mapping Settings
 
-Multiple BOMs are supported per product template / product variant. To use this feature, different variations of a BOM may be completed, so we use a unique reference for each of these.
+In Odoo, if your instance is set for multi companies and you want to sync Products and BOMs, you can specify a company id to associate with Products and BOMs creation and update.
 
-To manage this, we set a BOM code to that of the component + the revision
+From SharpSync, start by adding a [Property Mapping](../../../fundamentals/property-mappings/) as follows:
 
-To update this from SharpSync, start by adding a [Property Mapping ](../../../fundamentals/property-mappings/)for&#x20;
+<table><thead><tr><th width="284">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary Accessor</td><td><code>(Unmapped)</code> or any mapping from which you can derive a company id</td></tr><tr><td>Secondary Accessor</td><td><code>product.template.company_id</code></td></tr><tr><td>Prefer Odoo Value</td><td>checked (if you are sure all existing Odoo Pproducts and BOMs are associated with the correct company id)</td></tr><tr><td>Update Odoo on submit</td><td>checked</td></tr><tr><td>Rendering Type</td><td>Free Text</td></tr></tbody></table>
 
-> mrp.bom.code
+### Property Mapping Rules
 
-<table><thead><tr><th width="284">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Primary Accessor</td><td>(Unmapped)</td></tr><tr><td>Secondary Accessor</td><td><code>mrp.bom.code</code></td></tr><tr><td>Prefer Odoo Value</td><td>checked</td></tr><tr><td>Update Odoo on submit</td><td>checked</td></tr><tr><td>Rendering Type</td><td>Free Text</td></tr></tbody></table>
+In addition to this you'll want to create the following rules:
 
-When displaying values in Odoo, the value from Odoo may be edited with rules in SharpSync.
-
-When the BOM is created or updated, the new code will be written to the BOM's code field.
+* A `Set cell value` rule for the Primary Source (CAD source) to assign the desired company id on data import (example: `2` ). Unless you can derive the company id from your business logic and the primary accessor that you have associated with this mapping.
+* A `Text not empty` rule. This will prevent errors when submitting the BOM&#x20;
