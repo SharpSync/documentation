@@ -92,10 +92,11 @@ It is important to note the following logic:
   * If not found, it is generated on the fly.
 * When mapping the DRAWING derivative \[checkbox `FOR DRAWINGS`] (e.g. SolidWorks drawing file SLDDRW / ONSHAPE DRAWING documents):
   * No new drawings will be generated in the source. Drawings cannot be auto generated.
-  * A new DRAWING BOM row will be created in the BOM view in SharpSync as child of each item (assemblies + parts) during the BOM loading process, only if a corresponding DRAWING is found in the source matching the defined file search pattern exactly (the search will be based on the DRAWING derivative template file search pattern and the metadata of the parent item.
+  * A new DRAWING BOM row will be created in the BOM view in SharpSync as child of each item (assemblies + parts) during the BOM loading process, only if a corresponding DRAWING is found in the source whose primary or alternative identifier field matches the defined file search pattern exactly (the search will be based on the DRAWING derivative template file search pattern and the metadata of the parent item.
 
 {% hint style="info" %}
-If the parent item part name is P1-PN, the search pattern `DRW-{rowData.componentName}` will search for a source DRAWING exactly named `DRW-P1-PN`).
+If the parent item part name is P1-PN, the search pattern `DRW-{rowData.componentName}` will search for a source DRAWING whose primary or alternative identifier field value is exactly `DRW-P1-PN`.\
+For Onshape, the primary and alternative identifiers are usually `partNumber` and `name`
 {% endhint %}
 
 * This created row will be read only&#x20;
