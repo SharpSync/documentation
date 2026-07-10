@@ -79,3 +79,20 @@ There are several things that can cause this error but these are the fixes that 
 * If that doesn't work, export the add-in from a working system as a `*.cex` and install it on the end users system by importing it. Bear in mind that this may cause other issues though, so only use it as a last resort.
 * It can also happen when the .net framework that the add-in is written against does not exist on the machine where the -is being installed
 
+### Updating the add-in
+
+If you need to update your add-in to a newer version, you'll need to replace the files in your current add-in with the files from a newly-downloaded version:
+
+* Download the newer version of the add-in from SharpSync
+* Open the SWPDM Administration tool and select the currently-installed add-in
+* In the Files tab of the currently-installed add-in, select Add Files
+
+<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+
+* Add the newly-downloaded files to the add-in. SolidWorks PDM will replace all of the outdated files with the newer ones.
+* Click OK
+
+{% hint style="info" %}
+Any client machines will need to be restarted before they can use the newer version of the add-in.
+{% endhint %}
+

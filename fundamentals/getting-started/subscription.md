@@ -4,7 +4,7 @@ icon: money-bill-transfer
 
 # Subscription
 
-SharpSync is free to register and try, but you will be unable to submit any of the final data to a [Data Source](/broken/pages/7aUFmnCMx9m4smGncsXL).
+SharpSync is free to register and try, but you will be unable to submit any of the final data to a [Data Source](https://app.gitbook.com/s/cO2KdHJXVWdQ1ou1L85s/data-sources).
 
 The functionality matrix below details the difference between the versions:
 

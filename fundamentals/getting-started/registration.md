@@ -31,6 +31,6 @@ To add more users to your organization, click on the Users icon in the App Setti
 2. Click on Invite User. (An email will be sent to the user inviting them to join the organization on SharpSync).
 3. You can remove a User by clicking on the trash can icon in the Delete column.
 
-For more information, check out the [User Management](/broken/pages/xBRhptqXyFeYT0p7TfFp) section.
+For more information, check out the [User Management](https://app.gitbook.com/s/cO2KdHJXVWdQ1ou1L85s/user-management) section.
 
 <figure><img src="../../.gitbook/assets/users_invite_screen.png" alt=""><figcaption></figcaption></figure>
