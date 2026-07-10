@@ -120,14 +120,6 @@ Major version of Odoo that you have (e.g. 19 or 18)
 19
 ```
 
-If specified, use this custom property to display the name in the hierarchy
-
-<mark style="color:orange;">A property used to show the names of components in SharpSync.</mark>
-
-```
-default_code
-```
-
 If specified, loads additional properties from these models (each on new line)
 
 <mark style="color:orange;">Additional models to load custom property mappings for. These are custom per installation (if any)</mark>
