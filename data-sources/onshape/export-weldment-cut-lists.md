@@ -1,3 +1,7 @@
+---
+icon: list-tree
+---
+
 # Export Weldment Cut Lists
 
 SharpSync supports the ability to export cut lists.
@@ -59,10 +63,10 @@ To get the cut list to show in SharpSync do the following:
 * Navigate to a cut list feature in Onshape
 * Right click the feature > Applications > Export Cut List
 * The cut list will show up in the SharpSync UI
+* The top level element metadata will be of the Onshape Part Studio Composite Part associated with the selected cut list feature.
 
 {% hint style="warning" %}
 **At the time of writing**
 
-* The top level name displayed will be the element name, this feature is still being fine tuned and your input would be appreciated, please reach out to use through the support portal by raising a new feature request or enhancement request
 * The Length column is automatically summed by the multiplying the Qty \* Length
 {% endhint %}
