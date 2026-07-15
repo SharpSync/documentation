@@ -67,29 +67,27 @@ Setting up the BOM settings in the PDM add-in allows you to customize how Bill o
 
 The SQL configuration page requires:
 
-
-
-* `data_writer` access when setting up the add-in for first time use <sup>\*\*</sup>
-* &#x20;`data_reader` access when operating normally for connected client machines.
-
-<sup>\*\*</sup> Initially when connecting the account will need the ability to create stored procedures, a new stored procedure will be created called `SharpSyncDocumentChildrenTypes` . &#x20;
+* **`db_datareader`, `db_datawriter`, and `db_ddladmin` (or `db_owner`)** access when setting up the add-in for first-time use. (When connecting for the first time, the account will need the ability to create stored procedures, a new stored procedure will be created called `SharpSyncDocumentChildrenTypes` )
+* **`db_datareader`** access (plus `EXECUTE` permission on the created stored procedure) when operating normally for connected client machines.
 
 {% hint style="info" %}
 The SQL server connection information is never sent to the SharpSync servers or surfaced in developer logs (unless you send it). This information is used by your LAN or WAN clients to help collect BOM information during the BOM rows collection step before the BOM data is sent to SharpSync.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/swpdm_client_sql_configuration.png" alt="Enter your SQL server connection information. During the setup process, enter &#x60;data_writer&#x60; information. Once the setup is complete, change this to an account that has &#x60;data_reader&#x60; access"><figcaption><p>Enter your SQL server connection information. During the setup process, enter <code>data_writer</code> information. Once the setup is complete, change this to an account that has <code>data_reader</code> access</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/swpdm_client_sql_configuration.png" alt="Enter your SQL server connection information. During the setup process, enter &#x60;data_writer&#x60; information. Once the setup is complete, change this to an account that has &#x60;data_reader&#x60; access"><figcaption><p>Enter your SQL server connection information. During the setup process, enter the elevated setup account credentials so the add-in can verify the vault version and generate the required stored procedure. Once the setup is complete, change this to a standard account that has <code>db_datareader</code> access.</p></figcaption></figure>
 
-
+{% hint style="info" %}
+Clicking the "Test connectivity" button in the SharpSync addin settings will cause SharpSync to test if the given user has setup permissions, even if the addin has already been set up.
+{% endhint %}
 
 Settings are explained in more detail below:
 
-| Section          | Option            | Description                                                                                                          |
-| ---------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------- |
-| SQL Connectivity | Hostname\instance | Enter the name of the server and the SQL instance. Use \MSSQL if the instance is not named                           |
-| SQL Connectivity | Database name     | Enter the name of the database. Typically the same as the vault name. Consult your IT Admin if you don't have access |
-| SQL Credentials  | PDM SQL Username  | Name of a user which has the ability to create and execute stored procedures.                                        |
-| SQL Credentials  | PDM SQL Password  | Password of a user which has the ability to create and execute stored procedures.                                    |
+| Section          | Option            | Description                                                                                                                                                            |
+| ---------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SQL Connectivity | Hostname\instance | Enter the name of the server and the SQL instance. Use \MSSQL if the instance is not named                                                                             |
+| SQL Connectivity | Database name     | Enter the name of the database. Typically the same as the vault name. Consult your IT Admin if you don't have access                                                   |
+| SQL Credentials  | PDM SQL Username  | Username of an admin or setup account (`db_owner` or `db_ddladmin` + `db_datareader`) used exclusively during initial configuration to provision the database objects. |
+| SQL Credentials  | PDM SQL Password  | Password of an admin or setup account (`db_owner` or `db_ddladmin` + `db_datareader`) used exclusively during initial configuration to provision the database objects. |
 
 Note: The SQL connection details are not stored in SharpSync online services. The credentials are stored in a vault dictionary called `SharpSync` using the PDM Approved API. You can search for it using SQL Server Management Studio and going to the Vault Database&#x20;
 
