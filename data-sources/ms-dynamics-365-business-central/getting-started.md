@@ -45,6 +45,11 @@ To configure a Dynamics 365 Business Central datasource instance in SharpSync yo
     https://login.microsoftonline.com/{{sharpsync-app-tenant-id}}/oauth2/v2.0/authorize
     ```
 
+    * Code Grant URL (alternate for users belonging to multiple tenants):
+
+    <pre data-overflow="wrap"><code>https://login.microsoftonline.com/{{sharpsync-app-tenant-id}}/oauth2/v2.0/authorize?prompt=select_account
+    </code></pre>
+
     * Refresh Token URL:&#x20;
 
     ```markdown
