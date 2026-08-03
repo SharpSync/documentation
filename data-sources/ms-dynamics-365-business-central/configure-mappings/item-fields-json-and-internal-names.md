@@ -2,11 +2,11 @@
 icon: code
 ---
 
-# Item Fields Json & Internal Names
+# Item Fields Json & BC Field Names
 
 
 
-| Item Fields Json Unique Identifiers        | Item Fields Internal Names     |
+| Item Fields Json Unique Identifiers        | BC Field Names                 |
 | ------------------------------------------ | ------------------------------ |
 | itemNumber                                 | No.                            |
 | itemNumber2                                | No. 2                          |
@@ -110,7 +110,7 @@ icon: code
 | coupledToDataverse                         | Coupled to Dataverse           |
 | assemblyPolicy                             | Assembly Policy                |
 | reservedQuantityOnAssemblyOrder            | Res. Qty. on Assembly Order    |
-| reservedQuantityOnAssemblyComponent        | Res. Qty. on Asm. Comp.        |
+| reservedQuantityOnAssemblyComponent        | Res. Qty. on  Asm. Comp.       |
 | quantityOnAssemblyOrder                    | Qty. on Assembly Order         |
 | quantityOnAssemblyComponent                | Qty. on Asm. Component         |
 | quantityOnJobOrder                         | Qty. on Job Order              |
