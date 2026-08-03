@@ -4,6 +4,12 @@ icon: list-check
 
 # List Names For nestedObject Mappings
 
+{% hint style="danger" %}
+This document is a work in progress.
+
+Check back here  frequently for updates.
+{% endhint %}
+
 When a mapped Business Central field points at a related table (a `nestedObject` mapping), SharpSync can attach a **list** to the mapping: the valid values are fetched from Business Central and offered as a dropdown in the BOM editor. The **list name** is the column of the related table whose values populate the list.
 
 List values are served by Business Central's standard API where available, complemented by the SharpSync extension. Related tables without such an endpoint currently have **no list support** — selecting a list name for them shows an explicit error. If you need a list from the unsupported group, contact support to request it.
