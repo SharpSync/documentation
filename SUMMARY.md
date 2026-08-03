@@ -82,6 +82,7 @@
     * [Configure Quantity Mapping](data-sources/ms-dynamics-365-business-central/configure-mappings/configure-quantity-mapping.md)
     * [Item Fields Json & BC Field Names](data-sources/ms-dynamics-365-business-central/configure-mappings/item-fields-json-and-internal-names.md)
     * [Resource Fields Json & BC Field Names](data-sources/ms-dynamics-365-business-central/configure-mappings/resource-fields-json-and-internal-names.md)
+    * [BOM Component Fields Json & BC Field Names](data-sources/ms-dynamics-365-business-central/configure-mappings/resource-fields-json-and-internal-names-1.md)
     * [Read-Only Fields](data-sources/ms-dynamics-365-business-central/configure-mappings/read-only-fields.md)
 * [NetSuite](data-sources/netsuite/README.md)
   * [OAuth Setup](data-sources/netsuite/oauth-setup/README.md)
