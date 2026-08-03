@@ -2,13 +2,13 @@
 icon: code
 ---
 
-# Resource Fields Json & Internal Names
+# Resource Fields Json & BC Field Names
 
 
 
-| Resource Fields Json Unique Identifiers | Resource Fields Internal Names |
+| Resource Fields Json Unique Identifiers | BC Field Names                 |
 | --------------------------------------- | ------------------------------ |
-| resourceNumber                          | No                             |
+| resourceNumber                          | No.                            |
 | type                                    | Type                           |
 | name                                    | Name                           |
 | searchName                              | Search Name                    |
@@ -16,12 +16,12 @@ icon: code
 | address                                 | Address                        |
 | address2                                | Address 2                      |
 | city                                    | City                           |
-| socialSecurityNo                        | Social Security No             |
+| socialSecurityNo                        | Social Security No.            |
 | jobTitle                                | Job Title                      |
 | education                               | Education                      |
 | contractClass                           | Contract Class                 |
 | employmentDate                          | Employment Date                |
-| resourceGroupNo                         | Resource Group No              |
+| resourceGroupNo                         | Resource Group No.             |
 | globalDimension1Code                    | Global Dimension 1 Code        |
 | globalDimension2Code                    | Global Dimension 2 Code        |
 | baseUnitOfMeasure                       | Base Unit of Measure           |
@@ -31,7 +31,7 @@ icon: code
 | profitPercentage                        | Profit %                       |
 | priceProfitCalculation                  | Price/Profit Calculation       |
 | unitPrice                               | Unit Price                     |
-| vendorNo                                | Vendor No                      |
+| vendorNo                                | Vendor No.                     |
 | lastDateModified                        | Last Date Modified             |
 | comment                                 | Comment                        |
 | blocked                                 | Blocked                        |
@@ -40,12 +40,12 @@ icon: code
 | capacity                                | Capacity                       |
 | qtyOnOrderJob                           | Qty. on Order (Job)            |
 | qtyQuotedJob                            | Qty. Quoted (Job)              |
-| usageQty                                | Usage (Qty)                    |
+| usageQty                                | Usage (Qty.)                   |
 | usageCost                               | Usage (Cost)                   |
 | usagePrice                              | Usage (Price)                  |
-| salesQty                                | Sales (Qty)                    |
+| salesQty                                | Sales (Qty.)                   |
 | salesCost                               | Sales (Cost)                   |
-| salesPrice                              | Sales (Price                   |
+| salesPrice                              | Sales (Price)                  |
 | chargeableFilter                        | Chargeable Filter              |
 | genProdPostingGroup                     | Gen. Prod. Posting Group       |
 | postCode                                | Post Code                      |
@@ -55,7 +55,7 @@ icon: code
 | taxGroupCode                            | Tax Group Code                 |
 | vatProdPostingGroup                     | VAT Prod. Posting Group        |
 | countryRegionCode                       | Country/Region Code            |
-| icPartnerPurchGLAccNo                   | IC Partner Purch. G/L Acc. No  |
+| icPartnerPurchGLAccNo                   | IC Partner Purch. G/L Acc. No. |
 | unitGroupExists                         | Unit Group Exists              |
 | image                                   | Image                          |
 | privacyBlocked                          | Privacy Blocked                |
