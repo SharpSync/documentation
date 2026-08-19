@@ -4,6 +4,8 @@ icon: magnifying-glass
 
 # Read BOM Operations
 
+
+
 BOM operations are _individual_ operations that are performed on the item. This means that, despite having the same name as other operations on other BOMs, the items shown are unique.&#x20;
 
 So even if you see duplicates in Odoo, they each have their own underlying unique  `operationId` _for that line in the BOM._
@@ -61,7 +63,7 @@ Create a new [Property Mapping](../../../../fundamentals/property-mappings/) wit
         "value": {
             "sequence": 10,
             "name": "Drill",
-            "workcenter_id": 2,
+            "workcenter_id": 1,
             "time_mode": "manual",
             "time_mode_batch": 10,
             "time_cycle_manual": 60
@@ -74,7 +76,7 @@ Create a new [Property Mapping](../../../../fundamentals/property-mappings/) wit
         "value": {
             "sequence": 20,
             "name": "Galvanize",
-            "workcenter_id": 1,
+            "workcenter_id": 2,
             "time_mode": "manual",
             "time_mode_batch": 10,
             "time_cycle_manual": 60

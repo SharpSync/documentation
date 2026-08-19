@@ -41,7 +41,7 @@ Create a new [Property Mapping](../../../../fundamentals/property-mappings/) wit
         "value": {
             "sequence": 10,
             "name": "Drill",
-            "workcenter_id": 2,
+            "workcenter_id": 1,
             "time_mode": "manual",
             "time_mode_batch": 10,
             "time_cycle_manual": 60
@@ -54,7 +54,7 @@ Create a new [Property Mapping](../../../../fundamentals/property-mappings/) wit
         "value": {
             "sequence": 20,
             "name": "Galvanize",
-            "workcenter_id": 1,
+            "workcenter_id": 2,
             "time_mode": "manual",
             "time_mode_batch": 10,
             "time_cycle_manual": 60
