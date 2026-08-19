@@ -4,13 +4,6 @@ icon: magnifying-glass
 
 # Write BOM Operations
 
-{% hint style="success" %}
-**Summary of article's major steps**
-
-* Create a new Property Mapping
-* Add 2 new export rules to format the object and make it ready for Odoo BOM&#x20;
-{% endhint %}
-
 BOM operations are _individual_ operations that are performed on the item.  This page follows on the progress from the previous topic [read-bom-operations.md](read-bom-operations.md "mention")
 
 {% hint style="info" %}
