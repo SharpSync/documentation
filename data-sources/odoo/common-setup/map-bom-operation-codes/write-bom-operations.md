@@ -72,60 +72,25 @@ Create a new [Property Mapping](../../../../fundamentals/property-mappings/) wit
 
 After adding the new Property Mapping, add 2 new export rules
 
-<table><thead><tr><th width="235">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Type</td><td>export</td></tr><tr><td>Name</td><td><code>Text Manipulation</code></td></tr><tr><td>Process for {Primary}</td><td>false</td></tr><tr><td>Process for Odoo</td><td>true</td></tr><tr><td>JavaScript expression</td><td><pre class="language-javascript"><code class="lang-javascript">let bomOperations = [];
-let updateValue = [];
-let existingOperationIds = [
-  { id: 0, operationId: 0 },
-  { id: 0, operationId: 0 },
-];
+<table><thead><tr><th width="235">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Type</td><td>export</td></tr><tr><td>Name</td><td><code>Text Manipulation</code></td></tr><tr><td>Process for {Primary}</td><td>false</td></tr><tr><td>Process for Odoo</td><td>true</td></tr><tr><td>JavaScript expression</td><td><pre class="language-javascript"><code class="lang-javascript">/* Collect the Work Centres chosen in the BOM Operation columns, in column order. */
+let selectedWorkCenterIds = [];
 
-/* bopOperation1 */
-if (rowData.modifications.bomOperation1 !== "") 
-{
-  if (rowData.differences.bomOperation1 &#x26;&#x26; rowData.differences.bomOperation1 !== "") 
-  {
-    existingOperationIds[0].id = JSON.parse(rowData.differences.bomOperations)[0]?.id || 0;
-    existingOperationIds[0].operationId = rowData.modifications.bomOperation1;
-  }
-  if (rowData.modifications.bomOperation1 &#x26;&#x26; rowData.modifications.bomOperation1 !== "") 
-  {
-    existingOperationIds[0].id = JSON.parse(rowData.differences.bomOperations)[0]?.id || 0;
-    existingOperationIds[0].operationId = rowData.modifications.bomOperation1;
-  }
-  bomOperations = bomOperations.concat(rowData.modifications.bomOperation1);
-} 
-else 
-  return updateValue;
-  
-/* bopOperation2 */
-if (rowData.modifications.bomOperation2 !== "") 
-{
-  if (rowData.differences.bomOperation2 &#x26;&#x26; rowData.differences.bomOperation2 !== "") {
-    existingOperationIds[1].id = JSON.parse(rowData.differences.bomOperations)[1]?.id || 0;
-    existingOperationIds[1].operationId = rowData.modifications.bomOperation2;
-  }
-  
-  if (rowData.modifications.bomOperation2 &#x26;&#x26; rowData.modifications.bomOperation2 !== "") {
-    existingOperationIds[1].id = JSON.parse(rowData.differences.bomOperations)[1]?.id || 0;
-    existingOperationIds[1].operationId = rowData.modifications.bomOperation2;
-  }
-  
-  bomOperations = bomOperations.concat(rowData.modifications.bomOperation2);
-}
+if (rowData.modifications.bomOperation1)
+  selectedWorkCenterIds = selectedWorkCenterIds.concat(rowData.modifications.bomOperation1);
 
+if (rowData.modifications.bomOperation2)
+  selectedWorkCenterIds = selectedWorkCenterIds.concat(rowData.modifications.bomOperation2);
+
+/* Turn each chosen Work Centre into the Operation defined in this mapping's List items. */
 const pmObjectListItems = JSON.parse(pm.objectListItems);
+const updateValue = [];
 
-for (let i = 0; i &#x3C; bomOperations.length; i++) 
-{
-  const bomOp = bomOperations[i];  
+selectedWorkCenterIds.forEach((workCenterId) => {
   pmObjectListItems.forEach((item) => {
-    if (item.workCenterId === bomOp) {
-      item.value.id = JSON.parse(rowData.differences.bomOperations)[i]?.id || 0;
-      item.value.id = JSON.parse(rowData.differences.bomOperations)[i]?.id || 0;
+    if (item.workCenterId === workCenterId)
       updateValue.push(item.value);
-    }
   });
-}
+});
 
 return updateValue;
 
