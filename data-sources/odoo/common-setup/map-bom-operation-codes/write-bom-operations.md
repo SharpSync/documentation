@@ -115,4 +115,6 @@ return s;
 
 **What this rule does:**
 
-If there is no value for the `bomOperations` value, then remove it, clearing the operations from Odoo
+Removes the `bomOperations` key from the payload when the column resolved to no Operations, so SharpSync skips this row's Operations altogether instead of sending an empty list.
+
+This does **not** clear the Operations on the BOM in Odoo, and no export rule can. An absent or empty value means "this sync has no opinion about Operations", not "this BOM has none". A sync can still _trim_ a routing — clearing one of two BOM Operation columns archives the Operation that is no longer mapped — but it will never empty one. Archived Operations stay visible in Odoo under the **Archived** filter and can be restored there. To remove a BOM's last remaining Operation, do it in Odoo directly.
