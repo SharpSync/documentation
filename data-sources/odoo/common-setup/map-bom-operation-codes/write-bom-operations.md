@@ -70,7 +70,9 @@ Create a new [Property Mapping](../../../../fundamentals/property-mappings/) wit
 
 ### Add new Export Rules
 
-After adding the new Property Mapping, add 2 new export rules
+After adding the new Property Mapping, add 2 new export rules:
+
+#### Rule 1
 
 <table><thead><tr><th width="235">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Type</td><td>export</td></tr><tr><td>Name</td><td><code>Text Manipulation</code></td></tr><tr><td>Process for {Primary}</td><td>false</td></tr><tr><td>Process for Odoo</td><td>true</td></tr><tr><td>JavaScript expression</td><td><pre class="language-javascript"><code class="lang-javascript">/* Collect the Work Centres chosen in the BOM Operation columns, in column order. */
 let selectedWorkCenterIds = [];
@@ -96,9 +98,13 @@ return updateValue;
 
 </code></pre></td></tr></tbody></table>
 
-#### What this rule does
+**What this rule does:**
 
-For the mapped BOM operations, get the id of the existing BOM operation line. Use this to determine if the BOM operation should be added or updated
+Reads the Work Centre selected in each BOM Operation column, looks it up in this mapping's **List items**, and returns the matching Operation definitions as the value to write.
+
+This rule does not decide whether an Operation is added or updated, and must never supply an `id`. SharpSync reads the BOM's current Operations from Odoo immediately before writing and matches them on Work Centre and Operation name, so an Operation that already exists is updated in place and only a genuinely new one is created.
+
+#### Rule 2
 
 <table><thead><tr><th width="235">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Type</td><td>export</td></tr><tr><td>Name</td><td><code>Export Manipulation</code></td></tr><tr><td>Process for {Primary}</td><td>false</td></tr><tr><td>Process for Odoo</td><td>true</td></tr><tr><td>JavaScript expression</td><td><pre class="language-javascript"><code class="lang-javascript">if (rowData.modifications.bomOperations &#x26;&#x26; rowData.modifications.bomOperations.length == 0)
   delete s["bomOperations"];
@@ -107,6 +113,6 @@ return s;
 
 </code></pre></td></tr></tbody></table>
 
-#### What this rule does
+**What this rule does:**
 
 If there is no value for the `bomOperations` value, then remove it, clearing the operations from Odoo
