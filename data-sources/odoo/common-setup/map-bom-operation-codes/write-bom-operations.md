@@ -23,6 +23,15 @@ The best way to manage operations is to be consistent in your naming convention 
 In other words, if you are going to assemble something, always give it the exact same name (e.g. `Assembly` or `Assemble`).
 {% endhint %}
 
+{% hint style="warning" %}
+**How SharpSync decides what to update**
+
+SharpSync reads the BOM's current Operations from Odoo immediately before writing, and matches each one on **Work Centre plus Operation name**, ignoring case and surrounding spaces. Sequence is not part of the match, so re-ordering a routing updates it in place rather than duplicating it.
+
+* **Renaming an Operation, or pointing it at a different Work Centre, is not an edit.** It no longer matches, so the old Operation is archived and a new one is created. This is why the naming convention above matters.
+* **The columns are the routing.** Whatever the BOM Operation columns resolve to is what the BOM will have. A cycle time tuned by hand in Odoo is reset to the value in **List items** on the next sync, and a hand re-ordered routing snaps back to the order of the columns. If you want a different cycle time, set it in **List items**.
+{% endhint %}
+
 ### Create a new Property Mapping
 
 To write these operations to the Odoo BOM, we map to the Odoo property&#x20;
