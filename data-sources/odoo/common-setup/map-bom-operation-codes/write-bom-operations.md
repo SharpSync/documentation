@@ -18,7 +18,7 @@ In other words, if you are going to assemble something, always give it the exact
 SharpSync reads the BOM's current Operations from Odoo immediately before writing, and matches each one on **Work Centre plus Operation name**, ignoring case and surrounding spaces. Sequence is not part of the match, so re-ordering a routing updates it in place rather than duplicating it.
 
 * **Renaming an Operation, or pointing it at a different Work Centre, is not an edit.** It no longer matches, so the old Operation is archived and a new one is created. This is why the naming convention above matters.
-* **The columns are the routing.** Whatever the BOM Operation columns resolve to is what the BOM will have. A cycle time tuned by hand in Odoo is reset to the value in **List items** on the next sync, and a hand re-ordered routing snaps back to the order of the columns. If you want a different cycle time, set it in **List items**.
+* **The columns are the routing.** Whatever the BOM Operation columns resolve to is what the BOM will have. A cycle time tuned by hand in Odoo is reset to the value in **List items** on the next sync, and a hand re-ordered routing snaps back to the order of the columns. If you want a different cycle time, change the cycle time value in the property mapping's **List items** setting. If you want SharpSync to keep the cycle time/ordering the same, you'll need to set up a custom mapping rule that does so.
 {% endhint %}
 
 ### Create a new Property Mapping
@@ -94,9 +94,9 @@ return updateValue;
 
 **What this rule does:**
 
-Reads the Work Centre selected in each BOM Operation column, looks it up in this mapping's **List items**, and returns the matching Operation definitions as the value to write.
+Reads the work center selected in the BOM operation columns set up in \[[Read BOM Operations](read-bom-operations.md)], looks it up in this mapping's **List items**, and returns the matching operation definitions as the value to write to Odoo.
 
-This rule does not decide whether an Operation is added or updated, and must never supply an `id`. SharpSync reads the BOM's current Operations from Odoo immediately before writing and matches them on Work Centre and Operation name, so an Operation that already exists is updated in place and only a genuinely new one is created.
+This rule does not determine whether an operation is added or updated. SharpSync reads the BOM's current operations from Odoo immediately before writing and matches them by checking the workcenter and operation name values, so an operation that already exists is updated in place and only an operation with no workcenter & operation name match in Odoo is created. An operation `id` value is not necessary for this, and if an operation `id` value is supplied then SharpSync will ignore it.
 
 #### Rule 2
 
@@ -109,6 +109,8 @@ return s;
 
 **What this rule does:**
 
-Removes the `bomOperations` key from the payload when the column resolved to no Operations, so SharpSync skips this row's Operations altogether instead of sending an empty list.
+This rule removes the `bomOperations` key from SharpSync's export payload when there are no operations to export, so SharpSync skips performing any actions on the BOM's operations altogether instead of processing an empty list.
 
-This does **not** clear the Operations on the BOM in Odoo, and no export rule can. An absent or empty value means "this sync has no opinion about Operations", not "this BOM has none". A sync can still _trim_ a routing — clearing one of two BOM Operation columns archives the Operation that is no longer mapped — but it will never empty one. Archived Operations stay visible in Odoo under the **Archived** filter and can be restored there. To remove a BOM's last remaining Operation, do it in Odoo directly.
+Sending an empty operation list to Odoo will **not** clear the operations from the BOM in Odoo, and no export rule can. SharpSync interprets an absent or empty operation list as an instruction to leave the current Odoo operations as-is. SharpSync can trim a BOM's operation list, but it cannot empty it. Removing all operations from a BOM must be done manually in Odoo.
+
+**Note:** Because sending an empty list is the same as sending no list at all, this rule is optional and is just for efficiency purposes.
