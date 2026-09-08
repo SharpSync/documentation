@@ -23,14 +23,14 @@ Two details are worth knowing:
 
 ## Certification
 
-Business Central only builds from a **Certified** BOM. SharpSync respects that, and treats the status it finds as follows:
+Business Central only builds from a **Certified** BOM. Writing to one means opening it first, and the setting _Certify BOMs automatically after syncing them_ decides what SharpSync does once it has finished writing. The rule behind it is simple: **the setting applies to BOMs that SharpSync itself opened or created. It never certifies a BOM that was already open when the sync found it.**
 
-| Status found in Business Central | What a sync does                                                                                                                                                                     |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Certified`                      | Opens the BOM for editing, writes the changes, then either **re-certifies** it or leaves it `Under Development`, depending on the setting _Certify BOMs automatically after syncing them_. |
-| `Under Development`              | Edited in place. The status is never touched, and the certification setting has no effect on it.                                                                                     |
-| `New`                            | Same as `Under Development` for an existing BOM. A BOM that SharpSync **creates** starts as `New` and is certified at the end of the sync when the setting is on.                    |
-| `Closed`                         | Never selected. A closed version is skipped, and a closed version that a revision points to fails the row (see below).                                                               |
+| Status found in Business Central | What a sync does                                                                                                                                                                                                                                        |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Certified`                      | SharpSync sets it to `Under Development`, writes the changes, and then closes it again. With the setting **on** it is **re-certified**. With the setting **off** it is left `Under Development` for someone to review and certify in Business Central. |
+| `Under Development`              | Already open, so SharpSync writes the changes and leaves the status exactly as it found it. **The setting does not certify it**, even when on: someone put this BOM under review on purpose, and only they should decide when it is ready.               |
+| `New`                            | Same as `Under Development` when the BOM already existed. A BOM that SharpSync **creates** during the sync starts as `New`, and that one does follow the setting: certified at the end of the sync when on, left `New` when off.                        |
+| `Closed`                         | Never selected. A closed version is skipped, and a closed version that a revision points to fails the row (see below).                                                                                                                                  |
 
 {% hint style="warning" %}
 With the certification setting **off** (the default), a sync leaves the BOM `Under Development`. Business Central then keeps building from the **previously certified** structure until someone reviews and certifies the new one. This is the intended engineering-change workflow, but it means a successful sync is not yet a change on the shop floor.
