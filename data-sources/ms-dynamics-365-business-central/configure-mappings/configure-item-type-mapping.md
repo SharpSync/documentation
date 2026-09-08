@@ -71,11 +71,24 @@ SharpSync never changes the type of a line that already exists in Business Centr
 To catch this before submitting, add a [`Text Evaluation`](../../../fundamentals/rules/display/text-evaluation.md) display rule on the item type mapping, set to **block**:
 
 ```javascript
-/* the differences object holds the Business Central value whenever the two sides differ */
-if (rowData.differences && rowData.differences.itemType !== undefined)
+/* Business Central's value: the differences object holds it whenever the two sides
+   differed at load, otherwise the loaded cell already is Business Central's value */
+const bcValue =
+  rowData.differences && rowData.differences.itemType !== undefined
+    ? rowData.differences.itemType
+    : rowData.cells.itemType;
+
+/* the value that will be submitted: a change made on screen lives in modifications,
+    otherwise it is the loaded cell */
+const chosenValue =
+  rowData.modifications && rowData.modifications.itemType !== undefined
+    ? rowData.modifications.itemType
+    : rowData.cells.itemType;
+
+if (bcValue !== undefined && chosenValue !== bcValue)
   return {
-    message: `The item type differs from Business Central (${rowData.differences.itemType}). Unlink the row and add it back with the new type.`,
+    message: `The item type differs from Business Central (${bcValue}). Unlink the row and add it back with the new type.`,
   };
 ```
 
-The key in `rowData.differences` is the accessor name of your mapping, `itemType` in the settings above.
+The key in `rowData.differences`, `rowData.modifications` and `rowData.cells` is the accessor name of your mapping, `itemType` in the settings above. A row that does not exist in Business Central yet has no value to differ from, so the rule passes for it.
