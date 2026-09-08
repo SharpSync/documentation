@@ -31,7 +31,7 @@ Also review the [item type mapping](configure-mappings/configure-item-type-mappi
 
 ### Create a new BOM version for each revision
 
-Off by default. When off, a sync updates the production BOM that Business Central builds today, in place. When on, SharpSync keeps one production BOM version per CAD revision, named by the version naming scheme below. The revision must reach SharpSync through a property mapping whose accessor is `revision`. The full behaviour is described under [One version per CAD revision](production-boms.md#one-version-per-cad-revision).
+Off by default. When off, a sync updates the production BOM that Business Central builds today, in place. If the BOM already has versions, that is the active version, not the header's own lines. When on, SharpSync keeps one production BOM version per CAD revision, named by the version naming scheme below. The revision must reach SharpSync through a property mapping whose accessor is `revision`. The full behaviour is described under [One version per CAD revision](production-boms.md#one-version-per-cad-revision).
 
 ### Certify BOMs automatically after syncing them
 

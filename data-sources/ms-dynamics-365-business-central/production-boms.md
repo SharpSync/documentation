@@ -14,7 +14,7 @@ Production BOMs are part of Business Central's **Manufacturing** functionality, 
 
 A production BOM in Business Central is a **header** (the BOM itself, with its own number and lines) that can optionally hold several **versions**, each with a starting date and a status. An item points at one header through its _Production BOM No._, and Business Central decides at build time which version applies: the latest version whose starting date is not in the future, or the header's own lines when no version qualifies.
 
-SharpSync follows exactly this chain. When you load a BOM, each item's rows come from the production BOM Business Central would build **today**, and when you submit, SharpSync writes back to that same header or version. You can verify what SharpSync is looking at with one click in Business Central: open the item card and use **Prod. Active BOM Version**.
+SharpSync follows exactly this chain. When you load a BOM, each item's rows come from the production BOM Business Central would build **today**, and when you submit, SharpSync writes back to that same header or version. Once a BOM has a qualifying version, Business Central ignores the header's own lines, so SharpSync never writes to them either: writing there would succeed and change nothing on the shop floor. You can verify what SharpSync is looking at with one click in Business Central: open the item card and use **Prod. Active BOM Version**.
 
 Two details are worth knowing:
 
@@ -61,6 +61,15 @@ With versioning on, this is what happens:
 * **Older versions are never closed.** Business Central's date ordering supersedes them naturally, and closing them would remove them from resolution for orders that still depend on them. Retiring a version stays a manual action in Business Central.
 * **A revision whose version is `Closed`** fails the row. Reopen or rename the version in Business Central first.
 * **Comment lines are not carried** into a version SharpSync creates.
+
+### Turning the option on or off
+
+The option only decides whether SharpSync **creates** versions. It does not change how the BOM to edit is chosen once versions exist, and it never deletes or closes anything.
+
+* **Turning it on** starts creating one version per CAD revision from the next sync, for revisions that do not have one yet. Existing versions are kept and edited when their code matches.
+* **Turning it off** stops creating versions. Each sync goes back to editing the BOM Business Central builds today, which is the latest qualifying version if the BOM has any, or the header's own lines if it has none. Versions created earlier stay in place and keep resolving by date.
+
+Because nothing is removed either way, you can switch the option in both directions at any time without cleaning up in Business Central.
 
 {% hint style="warning" %}
 Keep the revision in the version naming scheme. If the scheme produces the same code for every revision, every sync targets the same version and versioning gives you nothing. A blank revision is not an error: the scheme is applied with an empty value, so with the default scheme the code ends in an underscore, such as `SSY-A1_`.
