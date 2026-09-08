@@ -78,6 +78,7 @@
   * [Getting Started](data-sources/ms-dynamics-365-business-central/getting-started.md)
   * [Production BOMs](data-sources/ms-dynamics-365-business-central/production-boms.md)
   * [Configure BOM Mode](data-sources/ms-dynamics-365-business-central/configure-bom-mode.md)
+  * [Business Central Sync Limitations](data-sources/ms-dynamics-365-business-central/business-central-sync-limitations.md)
   * [Configure Mappings](data-sources/ms-dynamics-365-business-central/configure-mappings/README.md)
     * [List Names For nestedObject Mappings](data-sources/ms-dynamics-365-business-central/configure-mappings/list-names-for-nestedobject-mappings.md)
     * [Configure Item Type Mapping](data-sources/ms-dynamics-365-business-central/configure-mappings/configure-item-type-mapping.md)
