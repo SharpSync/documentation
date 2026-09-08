@@ -44,7 +44,7 @@ The comparison grid does not show a BOM's status by itself. To see which state w
 
 ## One version per CAD revision
 
-By default, a sync updates the production BOM that Business Central builds today, in place. If you turn on [_Create a new BOM version for each revision_](configure-bom-mode.md#create-a-new-bom-version-for-each-revision), SharpSync keeps one **production BOM version per CAD revision** instead. The version code comes from the setting [_Use this scheme to name new BOM versions_](configure-bom-mode.md#use-this-scheme-to-name-new-bom-versions), which defaults to:
+By default, a sync updates the production BOM that Business Central builds today, in place. If you turn on [_Create a new BOM version for each revision_](configure-bom-mode.md#create-a-new-bom-version-for-each-revision), SharpSync keeps one **production BOM version per CAD revision** instead. The version code comes from your version naming scheme, set in [_Use this scheme to name new BOM versions_](configure-bom-mode.md#use-this-scheme-to-name-new-bom-versions), which defaults to:
 
 ```
 {rowData.componentName}_{rowData.cells.revision}
@@ -63,7 +63,7 @@ With versioning on, this is what happens:
 * **Comment lines are not carried** into a version SharpSync creates.
 
 {% hint style="warning" %}
-Keep the revision in the version naming scheme. If the scheme produces the same code for every revision, every sync targets the same version and versioning gives you nothing. A blank revision produces a code ending in an underscore, such as `SSY-A1_`, rather than an error.
+Keep the revision in the version naming scheme. If the scheme produces the same code for every revision, every sync targets the same version and versioning gives you nothing. A blank revision is not an error: the scheme is applied with an empty value, so with the default scheme the code ends in an underscore, such as `SSY-A1_`.
 {% endhint %}
 
 ## Phantom BOMs
@@ -87,7 +87,7 @@ A phantom row is a production BOM, not an item. Line fields that only make sense
 
 ## BOMs SharpSync creates for items
 
-When an item in your CAD structure has components but no _Production BOM No._ in Business Central, SharpSync creates a production BOM for it, links the item to it, and writes the lines. The header is named by the setting [_Use this scheme to name new BOMs_](configure-bom-mode.md#use-this-scheme-to-name-new-boms), which defaults to:
+When an item in your CAD structure has components but no _Production BOM No._ in Business Central, SharpSync creates a production BOM for it, links the item to it, and writes the lines. The header is named by your naming scheme, set in [_Use this scheme to name new BOMs_](configure-bom-mode.md#use-this-scheme-to-name-new-boms), which defaults to:
 
 ```
 {rowData.componentName}_BOM

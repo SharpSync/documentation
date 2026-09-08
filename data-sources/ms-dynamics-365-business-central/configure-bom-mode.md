@@ -44,15 +44,15 @@ The setting never certifies a BOM that was already `Under Development` or `New` 
 
 ### Use this scheme to name new BOMs
 
-When an item has components but no _Production BOM No._ in Business Central, SharpSync creates a production BOM for it and links the item to it. This scheme names the new BOM. The default appends `_BOM` to the component name, so item `SSY-A1` gets production BOM `SSY-A1_BOM`.
+When an item has components but no _Production BOM No._ in Business Central, SharpSync creates a production BOM for it and links the item to it. This scheme names the new BOM, and you can change it to fit your numbering convention. The default appends `_BOM` to the component name, so with the default, item `SSY-A1` gets production BOM `SSY-A1_BOM`.
 
-Business Central limits a production BOM number to **20 characters**. With the default scheme, a component name longer than 16 characters cannot be used to create a BOM, and the row fails with Business Central's own error. Choose a shorter suffix, or keep component names short, if your part numbers are long.
+Business Central limits a production BOM number to **20 characters**, and the limit applies to the whole name the scheme produces. Whatever fixed text your scheme adds reduces the room left for the component name: with the default `_BOM` suffix, a component name longer than 16 characters cannot be used to create a BOM, and the row fails with Business Central's own error. If your part numbers are long, use a scheme that adds less, or nothing at all.
 
 The scheme is only used to **create**. An item that already has a _Production BOM No._ is synced to that BOM, whatever its name. A phantom created by SharpSync is not named by this scheme either: it takes the row's component name as-is.
 
 ### Use this scheme to name new BOM versions
 
-Names the version SharpSync creates when _Create a new BOM version for each revision_ is on and the CAD revision's version does not exist yet. The default combines the component name and the revision, so revision `B` of `SSY-A1` becomes version `SSY-A1_B`. A version code is also limited to 20 characters.
+Names the version SharpSync creates when _Create a new BOM version for each revision_ is on and the CAD revision's version does not exist yet. You can change this scheme as well. The default combines the component name and the revision, so with the default, revision `B` of `SSY-A1` becomes version `SSY-A1_B`. A version code is also limited to 20 characters, counted on the whole name the scheme produces.
 
 Keep the revision in the scheme. If the scheme produces the same code for every revision, every sync targets one version and versioning does nothing.
 

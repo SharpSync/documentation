@@ -16,7 +16,7 @@ This page lists what the Business Central sync deliberately does not do, and wha
 
 ### Names and numbers
 
-* **A production BOM number and a version code are limited to 20 characters.** SharpSync does not truncate, because two long names truncated to the same value would silently write one item's BOM into another's. A name that is too long fails the row with Business Central's own error, and the item is left without a BOM link. With the default naming scheme, which appends `_BOM`, the component name must be **16 characters or fewer**.
+* **A production BOM number and a version code are limited to 20 characters.** SharpSync does not truncate, because two long names truncated to the same value would silently write one item's BOM into another's. A name that is too long fails the row with Business Central's own error, and the item is left without a BOM link. The limit applies to the **whole name your naming scheme produces**, so the room left for the component name is 20 minus whatever fixed text your scheme adds. With the default scheme `{rowData.componentName}_BOM`, for example, the component name must be 16 characters or fewer. The same applies to the version naming scheme.
 * **Duplicate components under one parent fail the load.** Two rows with the same component name at the same level are rejected, as in every SharpSync data source.
 * **An item and a phantom can collide on a name.** Item numbers and production BOM numbers are separate namespaces in Business Central, so an item `SUBFRAME` and a production BOM `SUBFRAME` can both exist. As sibling rows under one parent they are reported as duplicates, and SharpSync does not decide which one you meant. Rename one of them in Business Central or in CAD.
 
@@ -49,7 +49,7 @@ This page lists what the Business Central sync deliberately does not do, and wha
 
 The failures above surface at sync time, as row-level errors. Display rules set to **block** catch the common ones in the comparison grid, before the BOM is submitted.
 
-**Names that are too long.** On the mapping that holds the component name, add a [Text maximum length](../../fundamentals/rules/display/text-maximum-length.md) rule with the value `17` when you use the default `_BOM` scheme, so a name of 17 or more characters is blocked. Use `21` if your scheme adds no suffix.
+**Names that are too long.** On the mapping that holds the component name, add a [Text maximum length](../../fundamentals/rules/display/text-maximum-length.md) rule. The rule fails when the value reaches the number you give, so use `21` minus the number of characters your naming scheme adds around the component name. With the default `{rowData.componentName}_BOM` scheme that is `17`. Recalculate it whenever you change the scheme, and check the version naming scheme the same way if you create versions.
 
 **A type mismatch with Business Central.** On the item type mapping, add the blocking [Text Evaluation](../../fundamentals/rules/display/text-evaluation.md) rule shown under [Catching a type mismatch before you submit](configure-mappings/configure-item-type-mapping.md#catching-a-type-mismatch-before-you-submit).
 
