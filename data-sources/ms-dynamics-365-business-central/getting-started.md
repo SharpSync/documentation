@@ -37,24 +37,28 @@ In MS Dynamics 365 Business Central, when logged in to your tenant as an adminis
 To configure a Dynamics 365 Business Central datasource instance in SharpSync you need:
 
 * The base API path of Dynamics 365 Business Central cloud which is: `https://api.businesscentral.dynamics.com`
-*   Dynamics 365 Business Central uses the OAuth 2.0 protocol to authenticate, therefore, a code grant url, a refresh token url and the OAuth scopes need to be supplied, they are of the form:
+*   Dynamics 365 Business Central uses the OAuth 2.0 protocol to authenticate, therefore, a code grant url, a refresh token url and the OAuth scopes need to be supplied. **Both URLs must contain your organization's own Microsoft Entra tenant id.** You can find it in the [Microsoft Entra admin center](https://entra.microsoft.com) under Overview, as `Tenant ID` (also called the Directory ID). The URLs are of the form:
 
     * Code Grant URL:&#x20;
 
     ```plaintext
-    https://login.microsoftonline.com/{{sharpsync-app-tenant-id}}/oauth2/v2.0/authorize
+    https://login.microsoftonline.com/<your-tenant-id>/oauth2/v2.0/authorize
     ```
 
     * Code Grant URL (alternate for users belonging to multiple tenants):
 
-    <pre data-overflow="wrap"><code>https://login.microsoftonline.com/{{sharpsync-app-tenant-id}}/oauth2/v2.0/authorize?prompt=select_account
+    <pre data-overflow="wrap"><code>https://login.microsoftonline.com/&#x3C;your-tenant-id>/oauth2/v2.0/authorize?prompt=select_account
     </code></pre>
 
     * Refresh Token URL:&#x20;
 
-    ```markdown
-    https://login.microsoftonline.com/{sharpsync-app-tenant-id}/oauth2/v2.0/token
+    ```plaintext
+    https://login.microsoftonline.com/<your-tenant-id>/oauth2/v2.0/token
     ```
+
+    {% hint style="danger" %}
+    SharpSync pre-fills both URLs with a tenant id that is **not yours**. If you leave them unchanged, sign-in appears to succeed but you are authenticated against the wrong directory, and the first request to Business Central fails with `Internal_CompanyNotFound`. The tenant id cannot go in the base API path instead: Business Central reads the tenant from the access token.
+    {% endhint %}
 
     * Scopes:
 
@@ -69,9 +73,9 @@ To configure a Dynamics 365 Business Central datasource instance in SharpSync yo
     * Under the troubleshooting section, click Inspect pages and data.
     * In the inspector, you can enter Id in the search field and the first result contains your company ID.
     * Id (8000, GUID) or $systemId (2000000000, GUID)
-  * The company environment is usually visible on the top right of your Dynamics 365 Business Central instance web interface.
-    * The environment is usually `Production` or `Sandbox`
-* All the above credentials (except for your instance's company id and environment) will already be set in SharpSync when you are configuring your data source.
+  * The environment is the **name** of your Business Central environment, not its type. The default production environment is named `Production` and a default sandbox `Sandbox`, but an environment created with its own name, such as `SB-01072026`, must be entered with that exact name.
+    * You can read the name in the [Business Central admin center](https://businesscentral.dynamics.com/admin) under Environments, or from the segment after `businesscentral.dynamics.com/` in the web client URL.
+* The base API path and the OAuth scopes are already set in SharpSync when you configure your data source. The two OAuth URLs are pre-filled but must be edited with your tenant id, and the company id and environment must be entered.
 
 ### Configure Dynamics 365 Business Central Datasource
 
@@ -83,10 +87,32 @@ To configure a Dynamics 365 Business Central datasource instance in SharpSync yo
 * Change the `Alternative Identifier`  value to: `resourceNumber`
 * Click on the `UPDATE` button
 * Next, click the `CONFIGURE` button
-* On the first tab `Authentication`, select the `OAuth 2.0` authentication type
+* On the first tab `Authentication`, select the `OAuth 2.0` authentication type, then replace the tenant id in both `OAuth Url` and `OAuth Token Url` with your own, as described in the previous section
 * On the second tab `Configuration`, enter your Company Id and Environment as described in the previous section
 * Click the `Save` button
-* Click the `Authenticate` button
+* Click the `Authenticate` button and sign in with a Business Central user of your organization
+
+{% hint style="info" %}
+Complete the configuration before you authenticate. Saving the configuration again later requires authenticating again.
+{% endhint %}
+
+### Troubleshooting
+
+**Sign-in completes without any prompt, and the first request fails with `Internal_CompanyNotFound`.** You are authenticated against the wrong tenant. Check that both OAuth URLs on the `Authentication` tab carry your own tenant id, save, and authenticate again. If your browser is signed in to several Microsoft accounts, use the alternate Code Grant URL with `?prompt=select_account` to get the account picker.
+
+**The data source connects, but fetching accessors fails with `NoEnvironment` or "Environment does not exist".** Authentication is fine, but the `Environment` value is not the name of your environment. Enter the exact environment name, as shown in the Business Central admin center, rather than the environment type.
+
+**Sign-in ends with "access request received" or a status of "submitted".** Your tenant requires an administrator to approve third-party applications before users can consent to them. This is a one-time action per tenant, not a SharpSync error.
+
+* Who can approve: a Global Administrator, Privileged Role Administrator, Cloud Application Administrator or Application Administrator in Microsoft Entra. Business Central administrator rights are not enough, as they belong to a different system.
+* How to approve: either act on the pending request under Microsoft Entra admin center > Enterprise applications > Admin consent requests, or have an administrator open the following URL, which grants consent for the whole organization at once:
+
+```plaintext
+https://login.microsoftonline.com/<your-tenant-id>/adminconsent?client_id=d811abe5-64d6-49ce-bc9e-4c0a64935d53
+```
+
+* What is approved: delegated permissions only, that is _Access Dynamics 365 Business Central as the signed-in user_ and _Sign in and read user profile_. SharpSync only ever acts as the user who signed in, and its access ends when that account is disabled.
+* After clicking Accept, the administrator is redirected to a SharpSync page that may show an error. The consent is granted regardless. You can verify it under Enterprise applications > SharpSync > Permissions.
 
 ### Definitions
 
