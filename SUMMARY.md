@@ -76,6 +76,7 @@
   * [Importing a Bill of Materials (BOM)](data-sources/editor/importing-a-bill-of-materials-bom.md)
 * [MS Dynamics 365 Business Central](data-sources/ms-dynamics-365-business-central/README.md)
   * [Getting Started](data-sources/ms-dynamics-365-business-central/getting-started.md)
+  * [Production BOMs](data-sources/ms-dynamics-365-business-central/production-boms.md)
   * [Configure Mappings](data-sources/ms-dynamics-365-business-central/configure-mappings/README.md)
     * [List Names For nestedObject Mappings](data-sources/ms-dynamics-365-business-central/configure-mappings/list-names-for-nestedobject-mappings.md)
     * [Configure Item Type Mapping](data-sources/ms-dynamics-365-business-central/configure-mappings/configure-item-type-mapping.md)
