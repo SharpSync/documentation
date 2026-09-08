@@ -77,6 +77,16 @@ When the 'Prefer {source} Value' setting is turned on, the following table appli
 
 <table><thead><tr><th width="223">Value for both sources</th><th width="207">Color Rectangle</th><th>Explanation</th></tr></thead><tbody><tr><td> Are The same</td><td>Dark Green</td><td>The CAD value shows as a 'modified' value or a <em>Modification</em> because you've chosen to overwrite the Primary source data using a preference. Using the Legend as a reference, modifications are shown as Dark Green</td></tr><tr><td>Are Different</td><td>Dark Green + Light Blue</td><td>The value shows as a <em>Difference</em> and a Modification.  Using the Legend as a reference, modifications are shown as Dark Green + Light Blue</td></tr></tbody></table>
 
+### BOM Loading Warnings and Errors
+
+Loading a Bill of Materials can report messages about the data it found in your sources. These behave the same way as Property Mapping Display Rules: **a warning informs you, an error blocks you.**
+
+<table><thead><tr><th width="140">Message</th><th>What it means</th></tr></thead><tbody><tr><td>Warning</td><td>SharpSync loaded the BOM and found something worth telling you about, usually a limitation of how the data is modelled in the source. <strong>You can still submit the BOM for sync.</strong> Read the message so you know what will and will not be updated</td></tr><tr><td>Error</td><td>SharpSync could not load part of the BOM correctly, and something has to change in the source before the sync can run. <strong>Submit and Undo are disabled until it is resolved.</strong> Fix the data in the source, then reload the BOM</td></tr></tbody></table>
+
+{% hint style="info" %}
+An error always tells you what to change and where. If a message does not ask you to change anything in the source, it is a warning and will not stand in your way.
+{% endhint %}
+
 ### BOM Submittal Statuses
 
 When submitting a Bill of Materials (BOM), the BOM runs through a number of stages. You can hover over the dot of the BOM to understand its status before submittal and after submittal.
