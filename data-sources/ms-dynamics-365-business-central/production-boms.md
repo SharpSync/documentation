@@ -4,7 +4,7 @@ icon: industry
 
 # Production BOMs
 
-SharpSync can sync your CAD structure to Business Central as either an **Assembly BOM** or a **Production BOM**. You choose which one in the data source configuration, with the setting _BOM type to sync_. This page explains how SharpSync works with production BOMs, and what you should expect to see in Business Central after a sync.
+SharpSync can sync your CAD structure to Business Central as either an **Assembly BOM** or a **Production BOM**. You choose which one in the data source configuration, with the setting [_BOM type to sync_](configure-bom-mode.md#bom-type-to-sync). This page explains how SharpSync works with production BOMs, and what you should expect to see in Business Central after a sync.
 
 {% hint style="info" %}
 Production BOMs are part of Business Central's **Manufacturing** functionality, which requires the **Premium** licence. Assembly BOMs work on Essentials.
@@ -23,7 +23,7 @@ Two details are worth knowing:
 
 ## Certification
 
-Business Central only builds from a **Certified** BOM. Writing to one means opening it first, and the setting _Certify BOMs automatically after syncing them_ decides what SharpSync does once it has finished writing. The rule behind it is simple: **the setting applies to BOMs that SharpSync itself opened or created. It never certifies a BOM that was already open when the sync found it.**
+Business Central only builds from a **Certified** BOM. Writing to one means opening it first, and the setting [_Certify BOMs automatically after syncing them_](configure-bom-mode.md#certify-boms-automatically-after-syncing-them) decides what SharpSync does once it has finished writing. The rule behind it is simple: **the setting applies to BOMs that SharpSync itself opened or created. It never certifies a BOM that was already open when the sync found it.**
 
 | Status found in Business Central | What a sync does                                                                                                                                                                                                                                        |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,7 +44,7 @@ The comparison grid does not show a BOM's status by itself. To see which state w
 
 ## One version per CAD revision
 
-By default, a sync updates the production BOM that Business Central builds today, in place. If you turn on _Create a new BOM version for each revision_, SharpSync keeps one **production BOM version per CAD revision** instead. The version code comes from the setting _Use this scheme to name new BOM versions_, which defaults to:
+By default, a sync updates the production BOM that Business Central builds today, in place. If you turn on [_Create a new BOM version for each revision_](configure-bom-mode.md#create-a-new-bom-version-for-each-revision), SharpSync keeps one **production BOM version per CAD revision** instead. The version code comes from the setting [_Use this scheme to name new BOM versions_](configure-bom-mode.md#use-this-scheme-to-name-new-bom-versions), which defaults to:
 
 ```
 {rowData.componentName}_{rowData.cells.revision}
@@ -87,7 +87,7 @@ A phantom row is a production BOM, not an item. Line fields that only make sense
 
 ## BOMs SharpSync creates for items
 
-When an item in your CAD structure has components but no _Production BOM No._ in Business Central, SharpSync creates a production BOM for it, links the item to it, and writes the lines. The header is named by the setting _Use this scheme to name new BOMs_, which defaults to:
+When an item in your CAD structure has components but no _Production BOM No._ in Business Central, SharpSync creates a production BOM for it, links the item to it, and writes the lines. The header is named by the setting [_Use this scheme to name new BOMs_](configure-bom-mode.md#use-this-scheme-to-name-new-boms), which defaults to:
 
 ```
 {rowData.componentName}_BOM
