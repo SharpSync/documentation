@@ -11,7 +11,7 @@ This page lists what the Business Central sync deliberately does not do, and wha
 * **Production BOMs require the Premium licence.** Assembly BOMs work on Essentials.
 * **Only the item-level BOM is synced.** Location- or variant-specific BOMs set up through Stockkeeping Units are neither read nor written. A sync succeeds even if a plant builds from a Stockkeeping Unit override that the sync never touched.
 * **Routings and resources are not synced yet.** A resource row in production mode fails with a row-level error saying it belongs in a routing. The resource record itself is still created in Business Central, and its mapped fields are still written, so the row is ready for when routing support arrives.
-* **Derivative file transfers** (STEP, DXF and similar) are not available for Business Central yet.
+* **Derivative files and links attach to items only.** The derivatives of phantom (`Production BOM`) and resource rows are skipped with a warning. SharpSync also never removes a file or link, so the files of older revisions stay on the item. See [Derivative Files and Links](derivatives.md).
 * **Item pictures** are uploaded from the CAD thumbnail on every sync.
 
 ### Names and numbers
