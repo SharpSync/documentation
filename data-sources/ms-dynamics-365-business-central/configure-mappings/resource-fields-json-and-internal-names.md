@@ -4,7 +4,9 @@ icon: code
 
 # Resource Fields Json & BC Field Names
 
-
+{% hint style="info" %}
+The personal fields of a person-type resource (address, social security number, education, employment date, contract class and time-sheet users) are not available to SharpSync, and neither is *Price/Profit Calculation*.
+{% endhint %}
 
 | Resource Fields Json Unique Identifiers | BC Field Names                 |
 | --------------------------------------- | ------------------------------ |
@@ -13,14 +15,7 @@ icon: code
 | name                                    | Name                           |
 | searchName                              | Search Name                    |
 | name2                                   | Name 2                         |
-| address                                 | Address                        |
-| address2                                | Address 2                      |
-| city                                    | City                           |
-| socialSecurityNo                        | Social Security No.            |
 | jobTitle                                | Job Title                      |
-| education                               | Education                      |
-| contractClass                           | Contract Class                 |
-| employmentDate                          | Employment Date                |
 | resourceGroupNo                         | Resource Group No.             |
 | globalDimension1Code                    | Global Dimension 1 Code        |
 | globalDimension2Code                    | Global Dimension 2 Code        |
@@ -29,7 +24,6 @@ icon: code
 | indirectCostPercentage                  | Indirect Cost %                |
 | unitCost                                | Unit Cost                      |
 | profitPercentage                        | Profit %                       |
-| priceProfitCalculation                  | Price/Profit Calculation       |
 | unitPrice                               | Unit Price                     |
 | vendorNo                                | Vendor No.                     |
 | lastDateModified                        | Last Date Modified             |
@@ -48,8 +42,6 @@ icon: code
 | salesPrice                              | Sales (Price)                  |
 | chargeableFilter                        | Chargeable Filter              |
 | genProdPostingGroup                     | Gen. Prod. Posting Group       |
-| postCode                                | Post Code                      |
-| county                                  | County                         |
 | automaticExtTexts                       | Automatic Ext. Texts           |
 | noSeries                                | No. Series                     |
 | taxGroupCode                            | Tax Group Code                 |
@@ -62,8 +54,6 @@ icon: code
 | coupledToDataverse                      | Coupled to Dataverse           |
 | qtyOnAssemblyOrder                      | Qty. on Assembly Order         |
 | useTimeSheet                            | Use Time Sheet                 |
-| timeSheetOwnerUserId                    | Time Sheet Owner User ID       |
-| timeSheetApproverUserId                 | Time Sheet Approver User ID    |
 | defaultDeferralTemplateCode             | Default Deferral Template Code |
 | qtyOnServiceOrder                       | Qty. on Service Order          |
 | serviceZoneFilter                       | Service Zone Filter            |

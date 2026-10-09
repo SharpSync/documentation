@@ -32,6 +32,15 @@ In MS Dynamics 365 Business Central, when logged in to your tenant as an adminis
   * [Customizing Business Central online using apps](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions)
   * [Install and Uninstall Extensions (Apps) in Business Central](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions-install-uninstall)
 
+### Give the SharpSync user access in Business Central
+
+SharpSync calls Business Central as the user who signs in when you connect the datasource. Unless that user has the `SUPER` permission set, assign them:
+
+* the permission set `SSY SHARPSYNC` (name *SharpSync*), which the extension installs and which gives access to SharpSync's API pages;
+* permissions to read and change the records SharpSync syncs (items, resources, BOMs, production BOMs and routings), usually through the permission sets the user's role already has.
+
+To assign the permission set, search for **Users**, open the user, and add `SSY SHARPSYNC` under **User Permission Sets**.
+
 ### Setup Dynamics 365 Business Central Datasource
 
 To configure a Dynamics 365 Business Central datasource instance in SharpSync you need:
