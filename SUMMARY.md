@@ -64,6 +64,7 @@
 * [BOM Comparison](fundamentals/bom-comparison.md)
 * [Data Safety](fundamentals/data-safety.md)
 * [Troubleshooting](fundamentals/troubleshooting/README.md)
+  * [BOM not saved](fundamentals/troubleshooting/bom-not-saved.md)
   * [Duplicate component paths](fundamentals/troubleshooting/duplicate-component-paths.md)
   * [OAuth 2.0](fundamentals/troubleshooting/oauth-2.0.md)
 
