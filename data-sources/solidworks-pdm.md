@@ -69,7 +69,17 @@ Update the following settings
 
 <table><thead><tr><th width="212">Setting</th><th>Value</th><th>Description</th></tr></thead><tbody><tr><td>Server Url</td><td><p><code>https://{myserver.com}</code>  </p><p>or</p><p><code>https://{myserver.com}:port</code></p></td><td>The address (including any ports) where your server may be reached on the public internet. VPNs are not supported.</td></tr><tr><td>Primary Identifier</td><td><code>Number</code></td><td>The unique identifier. Usually <code>Number</code>, but it can be any data card variable name. You can also use [filenameWithoutExtension] as a value to use the name of files</td></tr><tr><td>Alternative Identifier</td><td><code>[filenameWithoutExtension]</code></td><td>If a value for 'Number' is not found, fall back to this value. You can use this as your Primary Identifier if you wish to.</td></tr></tbody></table>
 
+{% hint style="info" %}
+**Recommended: use a dedicated PDM account for SharpSync**
 
+The **Username** and **Password** in the SWPDM data source are the one PDM account that SharpSync uses for everyone in your organization. SharpSync uses it to read thumbnails, data card variables and derivative files from the vault.
+
+Create a PDM user just for SharpSync (for example `sharpsync-svc`) instead of using a person's own login. If that person leaves or changes their password, thumbnails and derivatives stop working for every user.
+
+* Give it read/write access to the folders your BOMs come from.
+* It may use a PDM license while SharpSync is connected. Check with your SOLIDWORKS reseller which license type it needs.
+* Each engineer keeps their own PDM login, and SharpSync never asks for it. In the add-in, each user logs in with their own SharpSync account (see [Configure the PDM client for the logged in user](solidworks-pdm/configure-the-add-in.md#step-configure-the-pdm-client-for-the-logged-in-user)).
+{% endhint %}
 
 * Click the Save button.
 
