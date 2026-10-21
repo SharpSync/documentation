@@ -10,16 +10,9 @@ Once the Data Sources and Property Mappings have been set up (see section [Prope
 
 #### Get the CSV BOM
 
-<figure><img src="../../.gitbook/assets/csv_landing_page.png" alt=""><figcaption><p>A londing page  where CSV files may be dropped or selected</p></figcaption></figure>
-
-\
 On the SharpSync BOMs page, click **UPLOAD CSV BOM** at the bottom of the page. Drag and drop your .csv file into the dialog from a File Manager (Explorer for Windows, Finder for Mac), or click inside the box and navigate to where the file is located.
 
 #### Pre-Process Specifications
-
-<figure><img src="../../.gitbook/assets/csv_edit_pre_import_settings.png" alt=""><figcaption><p>Edit the file settings before importing</p></figcaption></figure>
-
-
 
 The dialog shows the file's name, the **Expected CSV columns** (the Primary Data Source Property of each enabled property mapping) and the first lines of the file. Check the settings below, then upload.
 
@@ -35,10 +28,6 @@ The dialog shows the file's name, the **Expected CSV columns** (the Primary Data
 8. Click **UPLOAD** to finish. The BOM page will show the newly added BOM.
 
 Column names must match the file's header row exactly, capital letters and spaces included. If the dialog can't find the Row Number Column, the Component Name Column, or a top-level row with a value in the Component Name Column, it doesn't upload the file and shows `CSV Processing Error - Unable to determine unique component number from the CSV`. Check both column names against the header row, and check that the file has a top-level row (see below).
-
-<figure><img src="../../.gitbook/assets/csv_click_to_process.png" alt=""><figcaption><p>The Bill of Materials is displayed after import</p></figcaption></figure>
-
-
 
 #### Import Success
 
