@@ -114,6 +114,8 @@ Pushing data from Fusion to SharpSync is easy and straight forward. To push a Bi
 
 * The BOM structure for the assembly is loaded in SharpSync.
 
+If SharpSync refuses the BOM, Fusion shows a message listing the problems, and nothing is saved. [BOM not saved](../fundamentals/troubleshooting/bom-not-saved.md) explains each message and how to fix it.
+
 
 
 In the example below, the hierarchy in SharpSync is displayed using the mapped `Number` property mapped in SharpSync.

@@ -65,3 +65,37 @@ Should this happen, do the following
 <figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
 * Sometimes you might have to restart the machine, but simply logging back in to the vault should complete the registration process.
+
+## **Issue: Send BOM shows an error and the BOM isn't saved**
+
+After **SharpSync > Send BOM...**, an error dialog appears and the BOM doesn't appear on the SharpSync BOMs page. SharpSync checked the BOM's structure, found a problem and saved nothing.
+
+The dialog also shows technical detail. Look for the line starting `The BOM was not saved`: the problems follow it, separated by `\n`.
+
+#### The fix
+
+Fix the problems in the files, then Send BOM again. [BOM not saved](../../fundamentals/troubleshooting/bom-not-saved.md) explains each message and how to fix it.
+
+## **Issue: Every row says quantity is empty**
+
+Send BOM is refused with `quantity is empty` on every row, although the PDM BOM shows the quantities.
+
+This can happen when two property mappings have **Is Quantity Property** checked and one of them is disabled. The add-in can write the quantity under the disabled mapping's Primary Data Source Property, where SharpSync doesn't look for it.
+
+#### The fix
+
+On the Property Mappings page, delete the disabled mapping that has **Is Quantity Property** checked in its [settings](../../fundamentals/property-mappings/property-mapping-settings.md). Then Send BOM again.
+
+## **Issue: Quantities show a decimal comma, such as 1,5**
+
+On a machine set to use a decimal comma, the add-in sends quantities as PDM shows them, such as `1,5`. SharpSync saves them as they are.
+
+#### The fix
+
+Add an import rule that replaces `,` with `.`. See [Quantities SharpSync accepts](../../fundamentals/troubleshooting/bom-not-saved.md#quantities-sharpsync-accepts).
+
+## **Issue: A part no longer reaches the ERP as an assembly**
+
+A part whose only references in the PDM BOM are [excluded file types](configure-the-add-in.md), such as its PDF or STEP files, used to be sent as an assembly with no components. SharpSync now works out which rows are assemblies from the BOM itself, so this part arrives as a part and reaches your ERP as a part.
+
+This is expected, and there is nothing to fix.
