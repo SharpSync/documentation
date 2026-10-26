@@ -21,3 +21,13 @@ To create more variants, you navigate to the `Attributes and Variants` tab in Od
 For the combination of attributes above, we can see many variants being created
 
 <figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+
+### Product Category of new products
+
+When SharpSync creates a new product and Product Category (`product.template.categ_id`) is not mapped, the category depends on your Odoo version:
+
+* **Odoo 17 and 18:** Odoo puts the product in its default category, **All**.
+* **Odoo 19:** the product has no category. Odoo 19 does not require one.
+* **Odoo 16:** SharpSync puts the product in the category with ID 1, which is normally **All**.
+
+To choose the category of new products, map Product Category. The values are listed under `product.category` in [List Names](list-names.md).
