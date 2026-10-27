@@ -71,11 +71,12 @@ A1
 
 * Selecting the '@' configuration for A1 in the BOM view _will_ show P3 and select its _custom properties_, not its configuration properties.
 * Selecting the '@' configuration for A1 shows all the custom properties for all items below that assembly. It does not display the configuration specific properties, and does not honor suppression states.
+* Selecting the '@' configuration for A1 lists a part used in several configurations only once, with the quantities added up. SharpSync can't tell the configurations apart, so it can't refuse two configurations that share one part number.
 * Selecting the 'default' (or whichever you pick) configuration for A1 in the BOM view will _not_ show P3. <mark style="color:orange;">In 99% of the cases, this is the desired outcome.</mark>
 
 When you make a configuration selection in SharpSync, the configuration you choose ultimately determines the structure (based on suppression states) and the custom properties (or configuration specific properties in the case of a selected configuration).
 
-So if you can help it: Pick a 'default' (or whichever) configuration, not the '@'. This will give you the correct result. This is a completely separate issue to using configurations for assemblies and parts which presents other challenges.
+So if you can help it: Pick a 'default' (or whichever) configuration, not the '@'. This will give you the correct result. The **Send BOM** window selects '@' by default because PDM lists it first, so change the _Configurations_ list before you click **COMPARE**. SharpSync then reads each file's part number from that configuration's tab on the data card, so fill it in on every configuration you use. This is a completely separate issue to using configurations for assemblies and parts which presents other challenges.
 
 
 
