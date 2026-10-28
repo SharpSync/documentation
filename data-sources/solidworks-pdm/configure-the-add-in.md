@@ -71,7 +71,7 @@ The SQL configuration page requires:
 * **`db_datareader`** access (plus `EXECUTE` permission on the created stored procedure) when operating normally for connected client machines.
 
 {% hint style="info" %}
-The SQL server connection information is never sent to the SharpSync servers or surfaced in developer logs (unless you send it). This information is used by your LAN or WAN clients to help collect BOM information during the BOM rows collection step before the BOM data is sent to SharpSync.
+The SQL server connection information is never sent to the SharpSync servers. From version 202601041, the add-in doesn't write it to its log files either. Older versions did: see [Delete the old log files](downloading-and-installing-the-add-in.md#delete-the-old-log-files). This information is used by your LAN or WAN clients to help collect BOM information during the BOM rows collection step before the BOM data is sent to SharpSync.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/swpdm_client_sql_configuration.png" alt="Enter your SQL server connection information. During the setup process, enter &#x60;data_writer&#x60; information. Once the setup is complete, change this to an account that has &#x60;data_reader&#x60; access"><figcaption><p>Enter your SQL server connection information. During the setup process, enter the elevated setup account credentials so the add-in can verify the vault version and generate the required stored procedure. Once the setup is complete, change this to a standard account that has <code>db_datareader</code> access.</p></figcaption></figure>
