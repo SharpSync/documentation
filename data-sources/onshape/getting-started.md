@@ -21,11 +21,11 @@ icon: sparkle
 
 <figure><img src="../../.gitbook/assets/onshape_subscribe.png" alt=""><figcaption></figcaption></figure>
 
-* Find and subscribe to the [SharpSync.net](https://appstore.onshape.com/apps/ERP%20Connector/D375UTR5KWRHUES3LFV56CCHA5VBYDFPXTGPXPQ=/description) OnShape app in the Onshape App Store&#x20;
+* Find and subscribe to the [SharpSync.net](https://appstore.onshape.com/apps/ERP%20Connector/D375UTR5KWRHUES3LFV56CCHA5VBYDFPXTGPXPQ=/description) OnShape app in the Onshape App Store
 
-<figure><img src="../../.gitbook/assets/onshape_app_permissions (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/onshape_app_permissions.png" alt=""><figcaption></figcaption></figure>
 
-* For Onshape Enterprise users, make sure to add the related Onshape users to the list of users that have permission to access the Onhsape App Store&#x20;
+* For Onshape Enterprise users, make sure to add the related Onshape users to the list of users that have permission to access the Onhsape App Store
 
 ### Setting up Onshape Data Source in SharpSync
 
@@ -40,10 +40,10 @@ https://cad.onshape.com
 * Scroll to the bottom of the page and click UPDATE
 * Change the Authentication Type to OAuth2
 * [Configure the authentication options](getting-started.md#configure-the-authentication-options)
-* Click AUTHENTICATE. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
+* Click AUTHENTICATE. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.
 * Configure the Primary and Secondary Identifiers as follows:
   * Primary Identifier: `partNumber`
-  * Secondary Identifier: `name`&#x20;
+  * Secondary Identifier: `name`
 
 After successfully authenticating with OnShape, the update should automatically trigger. If it does not, click the _Update_ button.
 
@@ -68,7 +68,7 @@ Base API path
 
 #### Authentication Types (see below\*\*)
 
-<mark style="color:orange;">The type of authentication method to use when authenticating with OnShape.</mark>&#x20;
+<mark style="color:orange;">The type of authentication method to use when authenticating with OnShape.</mark>
 
 We only support:
 
@@ -102,7 +102,7 @@ https://{enterpriseName}.onshape.com/api
 
 #### Authentication Types (see below\*\*)
 
-<mark style="color:orange;">The type of authentication method to use when authenticating with OnShape.</mark>&#x20;
+<mark style="color:orange;">The type of authentication method to use when authenticating with OnShape.</mark>
 
 We only support:
 
@@ -139,8 +139,6 @@ To map an Onshape document URL to a property in the ERP do the following:
 
 <figure><img src="../../.gitbook/assets/onshape_update_import_rule.png" alt=""><figcaption></figcaption></figure>
 
-
-
 * Click Save
 * Reload the BOM to display in the BOM Comparison screen
 * Click Submit to update
@@ -149,17 +147,17 @@ To map an Onshape document URL to a property in the ERP do the following:
 
 *   You can export a Assembly BOM from Onshape to SharpSync via:
 
-    * The Onshape Tree Structure Assembly Context Menu&#x20;
+    * The Onshape Tree Structure Assembly Context Menu
 
     <figure><img src="../../.gitbook/assets/onshape_export_to_sharpsync.png" alt=""><figcaption></figcaption></figure>
 
-    * The Onshape Assembly Tab Context Menu&#x20;
+    * The Onshape Assembly Tab Context Menu
 
     <figure><img src="../../.gitbook/assets/onshape_export_assembly_tab.png" alt=""><figcaption></figcaption></figure>
 
     ### Export Part Studio Part from Onshape
 * You can export a Part Studio Part BOM from Onshape to SharpSync via:
-  * The Onshape Part Studio Tab Part Context Menu&#x20;
+  * The Onshape Part Studio Tab Part Context Menu
 
 <figure><img src="../../.gitbook/assets/onshape_export_individual_part.png" alt=""><figcaption></figcaption></figure>
 
@@ -169,7 +167,7 @@ To map an Onshape document URL to a property in the ERP do the following:
 * The "Export Release Contents" Onshape context menu allows the export of all top level parts and assemblies to SharpSync in one shot. For example, if at the top level there are 2 assemblies, and 3 parts that are part of the release package, the button will create 5 BOMs in SharpSync. SharpSync will not create BOMs for the children of a top level assembly in a release package, even if they have been versioned, because they will be synced along with the parent assembly.
 * You can export the contents (Assemblies & Parts) of a Release Package from Onshape to SharpSync via:
   * Selecting the desired Release Package by Left-Clicking on the related version in the Onshape Document Version Tree
-  * Clicking on "Export Release Contents" in the Onshape Assembly Tab Context Menu&#x20;
+  * Clicking on "Export Release Contents" in the Onshape Assembly Tab Context Menu
 * SharpSync will query the Release Package for Assemblies and Parts and will automatically create a SharpSync BOM per top level Assembly and Part and ignoring their nested children.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-07-07 at 3.47.08 PM.png" alt=""><figcaption></figcaption></figure>
@@ -204,7 +202,7 @@ OR
 {"message":"Could not find datasource for organization {uuid} and module Onshape","data":[]}
 ```
 
-You are trying to sync to an organization in SharpSync that has not yet been created.&#x20;
+You are trying to sync to an organization in SharpSync that has not yet been created.
 
 First, create the organization by following the setup steps in [Data Sources](../../fundamentals/data-sources.md).
 

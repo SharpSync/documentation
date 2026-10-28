@@ -21,22 +21,22 @@ If you configured this mapping with the lowercase `item|resource` values that ea
 
 What the values mean:
 
-- `Item`: a component that is an item in Business Central. Assemblies and sub-assemblies are items too.
-- `Resource`: a resource line, such as labour, on an assembly BOM. Resource rows are not supported on production BOMs yet, and fail with a row-level error in production mode.
-- `Production BOM`: a **phantom**, which is a line that points at another production BOM instead of an item. See [Production BOMs](../production-boms.md) for how phantoms are shown, created and shared.
+* `Item`: a component that is an item in Business Central. Assemblies and sub-assemblies are items too.
+* `Resource`: a resource line, such as labour, on an assembly BOM. Resource rows are not supported on production BOMs yet, and fail with a row-level error in production mode.
+* `Production BOM`: a **phantom**, which is a line that points at another production BOM instead of an item. See [Production BOMs](../production-boms.md) for how phantoms are shown, created and shared.
 
 ### Item Type Property Mapping Settings
 
-| Setting                      | Value                                                                                                            |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Accessor                     | `itemType`                                                                                                       |
-| Primary accessor             | <p>(Unmapped) </p><p>or mapped to a Primary Source accessor if you have one</p>                                  |
-| Secondary accessor           | (Unmapped)                                                                                                       |
-| Update Primary on Submit     | unchecked                                                                                                        |
-| Update Dynamics365 on Submit | checked (IMPORTANT)                                                                                              |
-| Rendering Type               | Select List                                                                                                      |
-| List Items                   | <p><code>Item\|Resource</code> for Assembly BOMs</p><p><code>Item\|Production BOM</code> for Production BOMs</p> |
-| Is Item Type Property        | checked                                                                                                          |
+| Setting                      | Value                                                                                                          |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Accessor                     | `itemType`                                                                                                     |
+| Primary accessor             | <p>(Unmapped)</p><p>or mapped to a Primary Source accessor if you have one</p>                                 |
+| Secondary accessor           | (Unmapped)                                                                                                     |
+| Update Primary on Submit     | unchecked                                                                                                      |
+| Update Dynamics365 on Submit | checked (IMPORTANT)                                                                                            |
+| Rendering Type               | Select List                                                                                                    |
+| List Items                   | <p><code>Item|Resource</code> for Assembly BOMs</p><p><code>Item|Production BOM</code> for Production BOMs</p> |
+| Is Item Type Property        | checked                                                                                                        |
 
 The List Items give the user a list of allowed values to pick from in the comparison grid. Only include the values for the BOM type you sync.
 
@@ -44,13 +44,13 @@ The List Items give the user a list of allowed values to pick from in the compar
 
 CAD systems generally have no item type property, so the value has to come from a rule. Add the following:
 
-- A `Text Manipulation` import rule for the Primary Source (CAD source) that returns the type (can be based on metadata coming from your Primary Source). In most configurations every row is an item:
+* A `Text Manipulation` import rule for the Primary Source (CAD source) that returns the type (can be based on metadata coming from your Primary Source). In most configurations every row is an item:
 
 ```javascript
 return "Item";
 ```
 
-- For production BOMs, return `Production BOM` only for the rows that really are phantoms. A phantom needs an explicit signal, such as a CAD property, a naming convention, or a known sub-assembly name:
+* For production BOMs, return `Production BOM` only for the rows that really are phantoms. A phantom needs an explicit signal, such as a CAD property, a naming convention, or a known sub-assembly name:
 
 ```javascript
 if (rowData.cells.partNumber.startsWith("PH-")) return "Production BOM";
@@ -62,7 +62,7 @@ return "Item";
 Do **not** return `Production BOM` for every assembly row, for example with `rowData.isAssemblyRow`. That would turn every sub-assembly into a phantom, and a phantom is not an item in Business Central.
 {% endhint %}
 
-- A [`Text is not empty`](../../../fundamentals/rules/display/text-is-not-empty.md) display rule set to **block**. This prevents errors when submitting a BOM with no item type on a row.
+* A [`Text is not empty`](../../../fundamentals/rules/display/text-is-not-empty.md) display rule set to **block**. This prevents errors when submitting a BOM with no item type on a row.
 
 ### Catching a type mismatch before you submit
 

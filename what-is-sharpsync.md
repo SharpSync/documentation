@@ -32,7 +32,7 @@ SharpSync lets you assign your own (Primary / CAD) and (Secondary / ERP) sources
 You should be able to map your own mappings. Not pay a developer to do it.
 {% endhint %}
 
-Property Mappings are SharpSync's way to let you connect matching fields from your sources.&#x20;
+Property Mappings are SharpSync's way to let you connect matching fields from your sources.
 
 SharpSync lets you map unlimited mappings, be it mapping the same CAD field to many ERP fields or vice versa, and even create a mapping with only one source field if you want visibility on certain source fields that do not have their counterpart in the other source.
 
@@ -76,7 +76,7 @@ SharpSync lets you add as many BOMs as you want and work on them simultaneously.
 
 The first time you click on a BOM, SharpSync automatically starts the process of loading the structure and components metadata from the sources, then superposes the data in a user friendly, hierarchical and colour-coded tabular format.
 
-<figure><img src=".gitbook/assets/Screen Shot 2025-11-10 at 12.09.31 PM [2] (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2025-11-10 at 12.09.31 PM [2].png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 The BOM legend is your quick reference for any colour-coded information or operation.
@@ -98,7 +98,7 @@ You can edit values just like you do in any spreadsheet type software, simply do
 
 #### Inspect your own setup
 
-SharpSync provides you with a BOM Rules panel at the individual cell level to help you visualize and troubleshoot your data's journey from when it is fetched from the source, the rules it is subject to, and any transformations (changes) prior to sending it back to the source for update.&#x20;
+SharpSync provides you with a BOM Rules panel at the individual cell level to help you visualize and troubleshoot your data's journey from when it is fetched from the source, the rules it is subject to, and any transformations (changes) prior to sending it back to the source for update.
 
 <figure><img src=".gitbook/assets/Screen Shot 2025-11-10 at 12.48.33 PM [2].png" alt=""><figcaption></figcaption></figure>
 

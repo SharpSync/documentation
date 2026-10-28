@@ -10,7 +10,7 @@ To configure the rules for each Property Mapping, click on the corresponding rul
 
 Rules for property mappings fall into one of these types:
 
-<table><thead><tr><th width="121.44140625">Rule Type</th><th width="304.93359375">What the rule does</th><th width="191.2265625">Internal Reference</th><th width="180.7265625">Visibility</th></tr></thead><tbody><tr><td>Import</td><td>Modifies incoming source BOMs data </td><td>Data Transformation</td><td>Tooltip</td></tr><tr><td>Comparison</td><td>Modifies comparison BOM data</td><td>Data Transformation</td><td>Tooltip</td></tr><tr><td>Display</td><td>Validates data on-screen</td><td>Data Validation</td><td>Tooltip + Cell border</td></tr><tr><td>Export</td><td>Modifies outgoing data</td><td>Data Transformation</td><td>Tooltip</td></tr></tbody></table>
+<table><thead><tr><th width="121.44140625">Rule Type</th><th width="304.93359375">What the rule does</th><th width="191.2265625">Internal Reference</th><th width="180.7265625">Visibility</th></tr></thead><tbody><tr><td>Import</td><td>Modifies incoming source BOMs data</td><td>Data Transformation</td><td>Tooltip</td></tr><tr><td>Comparison</td><td>Modifies comparison BOM data</td><td>Data Transformation</td><td>Tooltip</td></tr><tr><td>Display</td><td>Validates data on-screen</td><td>Data Validation</td><td>Tooltip + Cell border</td></tr><tr><td>Export</td><td>Modifies outgoing data</td><td>Data Transformation</td><td>Tooltip</td></tr></tbody></table>
 
 ### Order of Rules
 
@@ -49,7 +49,7 @@ Start by navigating to Property Mappings and click on "Rules" for the Property M
 
 A panel will appear on the side. Expand the Rules dropdown to reveal the available list of rules that can be applied.
 
-<div data-full-width="false"><figure><img src="../../.gitbook/assets/Screenshot 2025-07-22 at 3.02.26 PM (1).png" alt=""><figcaption></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="../../.gitbook/assets/Screenshot 2025-07-22 at 3.02.26 PM.png" alt=""><figcaption></figcaption></figure></div>
 
 1. Select the rule type first (import, comparison, display or export) which will filter the applicable rule template:
    * Import rules run before all other rules. They are used to transform the sources data before being compared to build the comparison BOM.
@@ -82,7 +82,7 @@ In the example below, the `Format as decimal number` rule runs for both [Data So
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-07-22 at 3.18.04 PM.png" alt=""><figcaption></figcaption></figure>
 
-The final result for both rules are overlaid in the user interface (the default would be a blue rectangle). Below is a conceptual illustration of the process where&#x20;
+The final result for both rules are overlaid in the user interface (the default would be a blue rectangle). Below is a conceptual illustration of the process where
 
 * Data Source 1 is DS1
 * Data Source 2 is DS2
@@ -162,8 +162,6 @@ const myValue2 = "myProperty2" in rowData.modifications ? rowData.modifications.
 if ({conditionBasedOnMyValue2})
   return { message: `the message you want to return` };
 ```
-
-
 
 Interpreting the Results
 

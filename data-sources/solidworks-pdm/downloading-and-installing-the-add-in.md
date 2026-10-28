@@ -24,7 +24,9 @@ The PDM Client is only available for Windows machines. It is not available for M
 * Navigate to the Downloads section
 * Download the **SharpSync SOLIDWORKS PDM Client**. Its name ends with the add-in's version (for example `v202601041`), and the same download is for every PDM version from 2024 on
 
-<figure><img src="../../.gitbook/assets/swpdm_client_download.png" alt=""><figcaption><p>These were the PDM client versions at the time of writing</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-10-28 at 10.01.26 AM.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ### Installing the add-in
 
@@ -106,4 +108,3 @@ On each computer that has the add-in, for each Windows user who uses it:
 {% hint style="warning" %}
 If you've sent these log files to anyone, including SharpSync support, change the password of every SQL account entered on the **SQL Configuration** tab of Configure SharpSync, including the setup account, and enter the new password there.
 {% endhint %}
-

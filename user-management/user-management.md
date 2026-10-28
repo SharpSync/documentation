@@ -4,7 +4,7 @@ icon: user-check
 
 # User Management
 
-<figure><img src="../.gitbook/assets/section_header_users.png" alt=""><figcaption><p>Section: Users</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/users_icon.png" alt=""><figcaption><p>Section: Users</p></figcaption></figure>
 
 From this section, an administrator can add users, edit users, or remove users.
 
