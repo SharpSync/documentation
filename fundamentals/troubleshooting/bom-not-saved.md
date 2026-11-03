@@ -28,6 +28,7 @@ Fix the problems in your CAD files or your CSV, then send or upload the BOM agai
 
 * **CSV upload:** a red alert on the BOMs page with one problem per line. Hover over the alert to keep it open. The refused file isn't kept, so upload the corrected file.
 * **SOLIDWORKS PDM:** an error dialog after **SharpSync > Send BOM...**. The dialog also shows technical detail. Look for the line starting `The BOM was not saved`: the problems follow it, separated by `\n`.
+* **SOLIDWORKS:** a `BOM not sent` dialog listing the problems. The add-in also checks your files itself before it sends the BOM: see [When the BOM is not sent](../../data-sources/solidworks.md#when-the-bom-is-not-sent).
 * **Autodesk Fusion:** an error message listing the problems.
 
 ## The structure of the BOM
