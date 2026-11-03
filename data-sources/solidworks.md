@@ -23,7 +23,7 @@ SolidWorks files (\*.sldasm, \*.sldprt) are utilized to import Bills of Material
 ### Prerequisites
 
 * An installation of SOLIDWORKS 2024 or later
-* Download the SOLIDWORKS add-in installer from the `Downloads` section in `SharpSync`, close SOLIDWORKS and run the installer. It replaces any older version of the add-in
+* Download the **SharpSync SOLIDWORKS Client** from the `Downloads` section in `SharpSync`. Its name ends with the add-in's version (for example `v3.1.1`). Close SOLIDWORKS and run the installer. It replaces any older version of the add-in
 * An assembly or part file
 * Drawings Bill of Materials are not supported yet, but talk to us about integration
 
