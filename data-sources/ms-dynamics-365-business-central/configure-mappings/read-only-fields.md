@@ -25,12 +25,13 @@ It is recommended to disable the setting for the following fields to prevent any
 
 ## Production BOM fields
 
-For production BOMs the rule is **enforced**. A mapping to one of the fields below with _Update MS Dynamics 365 On Submit_ on produces an error on the row at sync time, and the field is not written. The rest of the row's mapped fields are still written, so the error is a reminder to fix the mapping rather than a failed sync. The message reads:
+In [production BOM mode](../configure-bom-mode.md) the rule is **enforced**. A mapping to one of the fields below with _Update MS Dynamics 365 On Submit_ on produces an error on the row at sync time, and the field is not written. The rest of the row's mapped fields are still written, so the error is a reminder to fix the mapping rather than a failed sync. The message reads:
 
 > _'status' is read-only to property mappings: SharpSync manages it as part of the BOM structure and did not write it. Untick 'Update Dynamics365' on that mapping to keep displaying the field without this error._
 
 | Record                 | Json Unique Identifier | BC Field Name      | Why it is read-only                                                              |
 | ---------------------- | ---------------------- | ------------------ | -------------------------------------------------------------------------------- |
+| Item                   | `productionBomNumber`  | Production BOM No. | SharpSync links each item to its production BOM itself, and refuses a BOM another item already uses. Writing it would point the item at a different BOM. In assembly BOM mode it is an ordinary item field. |
 | Production BOM Header  | `status`               | Status             | Certification is controlled by the data source configuration, not by a mapping.  |
 | Production BOM Header  | `number`               | No.                | Identifies the BOM. Writing it would rename it.                                   |
 | Production BOM Version | `status`               | Status             | Same as the header status.                                                        |
