@@ -10,27 +10,28 @@ This document is a work in progress.
 Check back here  frequently for updates.
 {% endhint %}
 
-### Install SharpSync custom extension for Dynamics 365 Business Central
+### Install the SharpSync app for Dynamics 365 Business Central
 
-In SharpSync, when logged in to your organization as an admin user:
+SharpSync connects to Business Central through the **SharpSync for Dynamics 365 Business Central** app, published by CADSharp on [Microsoft Marketplace](https://marketplace.microsoft.com/en-us/product/PUBID.cadsharp%7CAID.sharpsync-for-dynamics-365-bc%7CPAPPID.9ab23efc-f2ae-4a3e-8514-3a6cb62a713e). The app is free, but it needs a SharpSync subscription. It runs on Business Central online, version 26 or later.
 
-* Navigate to [Downloads](https://app.sharpsync.net/admin/downloads)
-* Locate and download the `SHARPSYNC APP FOR DYNAMICS 365` custom extension app which should save locally a file ending in `*.app`&#x20;
+Install it while signed in to Business Central as an administrator. The permission set you need is usually `EXTENSION MGT. - ADMIN`.
 
-In MS Dynamics 365 Business Central, when logged in to your tenant as an administrator (appropriate permissions are typically the EXTENSION MGT. - ADMIN permission set):
+To install the app from inside Business Central:
 
-* Navigate to Extension Management: From the Business Central home page, use the search feature and type "Extension Management." Select the appropriate link.
-* Upload the Extension: On the Extension Management page, click Manage and choose Upload Extension. You will be prompted to select the .app file for your extension that you previously downloaded.
-* Deploy the Extension:
-  * Choose `Target` = `Current version` (unless releasing for next BC upgrade).
-  * Choose `Schema Sync Mode` = `Add` (unless the version includes schema changes, you may have to select `Force Sync` )
-  * Accept the disclaimer and click Deploy.
-* The deployment is processed in the background.
-* You can monitor the progress using Installation Status (Click Manage → Installation Status), then refresh once it’s complete.
-* Upon successful deployment, the app should now appear in your extensions table with the checkbox for `Is Installed` checked and the `Published As` value as `PTE`
-* Additional documentation can be found in the following links:
-  * [Customizing Business Central online using apps](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions)
-  * [Install and Uninstall Extensions (Apps) in Business Central](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions-install-uninstall)
+1. Search for **Microsoft AppSource apps** and open the page.
+2. Find **SharpSync for Dynamics 365 Business Central** (publisher CADSharp) and open it.
+3. On the **App overview** page, choose **Install App**.
+4. On the **Install extension** page, choose the language and then **Install**. Installing during business hours may disrupt other users. Your session refreshes when the installation is done.
+
+You can also start from the [Marketplace listing](https://marketplace.microsoft.com/en-us/product/PUBID.cadsharp%7CAID.sharpsync-for-dynamics-365-bc%7CPAPPID.9ab23efc-f2ae-4a3e-8514-3a6cb62a713e): choose **Get it now**, sign in with the account you use for Business Central, and follow the prompts.
+
+To check the installation, search for **Extension Management**. The app is listed with **Is Installed** checked and **Published As** set to `Global`.
+
+{% hint style="warning" %}
+**Installed an earlier version from a `.app` file?** Earlier versions were uploaded by hand, and Extension Management shows them with **Published As** set to `PTE`. That copy has the same app ID as the AppSource app, so Business Central won't install the AppSource app next to it. On the **Extension Management** page, select the old copy, choose **Uninstall**, then **Unpublish**, and install from AppSource as described above. Afterwards, check that the SharpSync user still has the `SSY SHARPSYNC` permission set (see the next section).
+{% endhint %}
+
+For more information, see Microsoft's [Install and Uninstall Extensions (Apps) in Business Central](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions-install-uninstall).
 
 ### Give the SharpSync user access in Business Central
 
