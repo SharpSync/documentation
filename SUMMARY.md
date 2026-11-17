@@ -145,7 +145,7 @@
   * [OAuth Setup](data-sources/propel-plm/oauth-setup.md)
   * [Getting Started](data-sources/propel-plm/getting-started.md)
 * [SolidWorks](data-sources/solidworks.md)
-* [SolidWorks PDM](data-sources/solidworks-pdm.md)
+* [SolidWorks PDM](data-sources/solidworks-pdm/README.md)
   * [Setting up the Solidworks PDM Web 2](data-sources/solidworks-pdm/setting-up-the-solidworks-pdm-web-2.md)
   * [Downloading and installing the add-in](data-sources/solidworks-pdm/downloading-and-installing-the-add-in.md)
   * [Configure the add-in](data-sources/solidworks-pdm/configure-the-add-in.md)

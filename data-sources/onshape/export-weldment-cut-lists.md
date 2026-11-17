@@ -15,14 +15,14 @@ We're still building this feature out with more functionality, so please reach o
 To work with cut weldment lists, do the following:
 
 * Navigate to Data Sources > Onshape > Configure > Configuration
-* Change the selection for cut list properties from `None` to `Specify`&#x20;
+* Change the selection for cut list properties from `None` to `Specify`
 *   You'll note the default columns as:
 
     * Qty
     * Description
     * Length
 
-    <figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 * Once all the columns have been specified, click the `Save` button
 
 {% hint style="success" %}
@@ -30,7 +30,7 @@ Tip! You may add any additional column header names here. The name must match th
 {% endhint %}
 
 {% hint style="warning" %}
-Whenever you click the `Save`  button for a Data Source, you _must_ click the `Authenticate` button again before proceeding to the <code class="expression">space.vars.entity_property_mappings</code>
+Whenever you click the `Save` button for a Data Source, you _must_ click the `Authenticate` button again before proceeding to the <code class="expression">space.vars.entity_property_mappings</code>
 {% endhint %}
 
 ### Update the <code class="expression">space.vars.entity_property_mappings</code>
@@ -40,12 +40,12 @@ To use the columns in a <code class="expression">space.vars.entity_property_mapp
 * Navigate to Property Mappings > Click the \`Update\` button for Onshape
 * There will be new properties that are listed for the cut list items (they will match the columns specified in the first point)
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Minimum required Property Mappings**
 
-Add the following _minimum_ properties for cut lists to work:&#x20;
+Add the following _minimum_ properties for cut lists to work:
 
 * Cut List (Length)
 * Cut List (Qty)

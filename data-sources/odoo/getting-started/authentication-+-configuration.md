@@ -4,10 +4,10 @@ icon: user
 
 # Authentication + Configuration
 
-To integrate with an Odoo instance, we have to setup an&#x20;
+To integrate with an Odoo instance, we have to setup an
 
 * In the Navigation Bar, select Data Sources
-* On the right (in Data Sources), select Odoo as the Data Source and click the `ADD DATASOURCE`  button&#x20;
+* On the right (in Data Sources), select Odoo as the Data Source and click the `ADD DATASOURCE` button
 *   Change the Server URL to the URL of your Odoo instance. This will usually be in the format:
 
     ```
@@ -21,8 +21,8 @@ To integrate with an Odoo instance, we have to setup an&#x20;
 * On the first tab (Authentication), change the Base API Path to: `https://{myEnterpriseInstance}.odoo.com`
 * This should match the first url you entered as the server url in the previous step
 * Leave the Authentication Types drop-down on `Basic Authentication`.
-* Enter the Database name.&#x20;
-* You can find this in one of 2 ways:&#x20;
+* Enter the Database name.
+* You can find this in one of 2 ways:
 
 {% hint style="info" %}
 **1st option:** To find the database name navigate to [https://{myEnterpriseInstance}.odoo.com/web/database/selector](https://your-odoo-instance/web/database/selector)
@@ -31,7 +31,7 @@ To integrate with an Odoo instance, we have to setup an&#x20;
 {% endhint %}
 
 {% hint style="info" %}
-**2nd option:** To find the database name navigate to &#x20;
+**2nd option:** To find the database name navigate to
 
 {`myEnterpriseInstance`} > `Settings` > `Activate developer mode` (right at the bottom)
 
@@ -45,20 +45,20 @@ The database name is case sensitive.
 * Enter the username and password.
 * The configuration should look something like the image below:
 
-<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 * On the second tab (BOM Configuration) enter the version number in the form of 2 digits (e.g. 16, 17, or 18). \[Do not append a version at the end (e.g. 18.3), only use 2 digits
 * Click the `SAVE` button to save your connection details and close the form.
-* Click `AUTHENTICATE`. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.&#x20;
+* Click `AUTHENTICATE`. If the configuration is successful, the Authentication Status will update and show <mark style="color:green;">Connected</mark>.
 
 ### Primary and Alternative component identifiers
 
-The primary and alternative identifiers can be used for `product.product`  or `product.template` . &#x20;
+The primary and alternative identifiers can be used for `product.product` or `product.template` .
 
 Configure the [Primary and Alternative ](../../../fundamentals/data-sources.md)component Identifiers as follows:
 
 * Primary Identifier: `default_code`
-* Alternative Identifier:  `name`
+* Alternative Identifier: `name`
 
 {% hint style="info" %}
 You can specify any Primary Identifier (field linked to the product.template model) that is used on product templates e.g. name, barcode. You can even use custom field names, as long as the field uniquely identifies the part (it must be a unique identifier)
@@ -67,8 +67,6 @@ You can specify any Primary Identifier (field linked to the product.template mod
 {% hint style="info" %}
 An alternative identifier is that field which is used when no value (or a blank value) is found in the Primary Identifier
 {% endhint %}
-
-
 
 Odoo supports a number of types of authentication. The auth method supported in SharpSync is `Basic`. The configuration values in SharpSync are shown below.
 
@@ -98,7 +96,7 @@ odoo.app.17.713
 
 Basic Auth Username
 
-<mark style="color:orange;">The name of the user connecting to Odoo.</mark>&#x20;
+<mark style="color:orange;">The name of the user connecting to Odoo.</mark>
 
 ```
 yourusername@domain.com
@@ -107,8 +105,6 @@ yourusername@domain.com
 Basic Auth Password
 
 <mark style="color:orange;">The password used to connect with the associated username</mark>
-
-
 {% endtab %}
 
 {% tab title="Configuration" %}
@@ -141,8 +137,8 @@ Use this scheme to create new BOM revision names
 
 \*\* **Revision scheme:** Used for searching, this is based on the raw data from the Primary Source data _before_ any Property Mapping rules (Import) have run. When a new BOM is created, the final value from the rows cells will be used. So if you manipulate the text in SharpSync to
 
-1. Change from&#x20;
-2. `Assembly A1, Rev A` to&#x20;
+1. Change from
+2. `Assembly A1, Rev A` to
 3. `Assembly A1, Rev B`
 4. Then the Bill of Materials Name will be `A1_B` instead of `A1_A`
 
@@ -150,7 +146,7 @@ Use this scheme to create new BOM revision names
 
 <summary>** Authentication Types</summary>
 
-* OAuth 2.0 - not supported - contact us for implementation&#x20;
+* OAuth 2.0 - not supported - contact us for implementation
 * API Key - not currently supported - contact us for implementation
 * Basic Auth (username / password) - supported
 

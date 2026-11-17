@@ -78,13 +78,11 @@ When you make a configuration selection in SharpSync, the configuration you choo
 
 So if you can help it: Pick a 'default' (or whichever) configuration, not the '@'. This will give you the correct result. The **Send BOM** window selects '@' by default because PDM lists it first, so change the _Configurations_ list before you click **COMPARE**. SharpSync then reads each file's part number from that configuration's tab on the data card, so fill it in on every configuration you use. This is a completely separate issue to using configurations for assemblies and parts which presents other challenges.
 
-
-
 ## How should we manage weldments and sheet metal lengths or quantities?
 
 Weldments and sheet metal tend to be problematic for companies because of the way their lengths, units of measure and general material consumption works.
 
-Let's continue with our assembly example:&#x20;
+Let's continue with our assembly example:
 
 \
 A1 has weldment P1 with Qty 1. It also has weldment P2, so
@@ -111,7 +109,7 @@ Here comes the problem, because the parts are inserted as parts (not as weldment
 
 To correct this, override the BOM properties for the parts so that what you should be seeing is:
 
-<figure><img src="../../.gitbook/assets/image (44).png" alt="BOM Quantity Overwritten in SolidWorks"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54).png" alt="BOM Quantity Overwritten in SolidWorks"><figcaption></figcaption></figure>
 
 The alternative to this method is to create a subitem (not overriding the BOM qty) for each raw material item, where the structure would then resemble this:
 
@@ -129,18 +127,18 @@ A1 : 1
 
 SharpSync has the ability to generate material rows automagically using the 'Is Material Property' setting in property mapping in conjunction with the setting "Generate Materials Sub items" in the Primary Data source (See [Data Sources](https://app.gitbook.com/s/cO2KdHJXVWdQ1ou1L85s/data-sources "mention"))
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 ## Configuration Management for PDM
 
-Configurations in PDM ... the elephant in the room... lets talk about configurations as a tool.&#x20;
+Configurations in PDM ... the elephant in the room... lets talk about configurations as a tool.
 
 First and foremost: Configurations are a _design_ tool. It was never meant for automating data transfer. It is meant to speed up _design_.
 
 \
 In SolidWorks you have the ability to create configurations, derived configurations, and derived parts with derived configurations. Derived parts with projected geometry from derived configurations of inserted parts into other parts. We can easily see how this can go wrong in so many ways.
 
-Just because you have a hammer, that doesn't mean everything is a nail. It's not because the software can't do it. It's because, as humans, we have only so much processing power available to use when the pressures of work mounts. To reduce errors, simple = successful. Is it more work now? Yes. Is it less painful later? Yes!!  It's like going to the gym or starting a new diet - of course it's horrible for you now right!? But later on ... 100% satisfaction.
+Just because you have a hammer, that doesn't mean everything is a nail. It's not because the software can't do it. It's because, as humans, we have only so much processing power available to use when the pressures of work mounts. To reduce errors, simple = successful. Is it more work now? Yes. Is it less painful later? Yes!! It's like going to the gym or starting a new diet - of course it's horrible for you now right!? But later on ... 100% satisfaction.
 
 \
 Advice given to customers over the years have been (If you want to speed up design to a maximum):
@@ -159,17 +157,15 @@ Here are the justifications for the above reasoning:
 * File exports suffer from the same problem (imagine export DXFs or a multiconfiguration part) - its hard to track.
 * This list goes on...
 
-
-
 Here are the benefits:
 
 * 1 click import ⇒ your ERP of choice.
 * ... no other reasons needed.<br>
 
-Seriously though. The import (overarching) goal here is this: Your company wants to take their data to the next level. You want to go on holiday. That means working smarter not harder. That means automation, not manual input. Moving the data between different systems automatically. And the golden rule of CAD data automation is:&#x20;
+Seriously though. The import (overarching) goal here is this: Your company wants to take their data to the next level. You want to go on holiday. That means working smarter not harder. That means automation, not manual input. Moving the data between different systems automatically. And the golden rule of CAD data automation is:
 
 > Things must be _consistent and predictable._
 
-If you sometimes use configurations, and some times do not, then there is no cohesive decision in the company about how design is structured.&#x20;
+If you sometimes use configurations, and some times do not, then there is no cohesive decision in the company about how design is structured.
 
 The important decision process here: Start with your ERP. Find out how to manage that well. Work your way back through the maze to your CAD / PDM system. Standardize how things are done. Then let SharpSync do the heavy lifting for you. You got this!

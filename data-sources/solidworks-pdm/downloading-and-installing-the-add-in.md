@@ -86,7 +86,7 @@ If you need to update your add-in to a newer version, you'll need to replace the
 * Open the SWPDM Administration tool and select the currently-installed add-in
 * In the Files tab of the currently-installed add-in, select Add Files
 
-<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
 
 * Add the newly-downloaded files to the add-in. SolidWorks PDM will replace all of the outdated files with the newer ones.
 * Click OK

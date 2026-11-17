@@ -30,12 +30,12 @@ The parameters available to these rules are listed below:
 
 <table><thead><tr><th width="139">Parameter</th><th width="325">Description</th><th>Note</th></tr></thead><tbody><tr><td>s</td><td>The current string value from the source</td><td>Can be modified by previous rule</td></tr><tr><td>rowData</td><td>The entire row's data (all the cell values, modifications, differences, etc.)</td><td>Cannot be modified, read-only</td></tr><tr><td>p</td><td>The pass / block value</td><td>Cannot be modified, read-only</td></tr><tr><td>pm</td><td>The property mapping object</td><td>Contains additional options such as "Is it read-only"</td></tr></tbody></table>
 
-Typical rules only manipulate or use the string value `s` which is passed to it. The table above lists the data to which special rules have access to. It allows for much greater scripting capability.&#x20;
+Typical rules only manipulate or use the string value `s` which is passed to it. The table above lists the data to which special rules have access to. It allows for much greater scripting capability.
 
 {% hint style="danger" %}
 When the rule is an Import or Export `Text Manipulation` rule, the result of the rule must always be a `string` or a representation of a `string` such as a JavaScript `object` (JSON) which has been serialized. If it does not return a value you may experience unexpected results in the UI, possibly even instability (BOM view not rendering).
 
-The result  must be an object containing a 'message' key, e.g. `{ 'message' : 'some result' }`
+The result must be an object containing a 'message' key, e.g. `{ 'message' : 'some result' }`
 {% endhint %}
 
 The resultant message is displayed onscreen during a rule evaluation failure
@@ -52,13 +52,13 @@ Should you happen to break your BOM view using these custom scripts, simply disa
 
 ### `s` Parameter
 
-The `s` parameter is the representation of the cell value. Most of the time this is a value of _type_ `string`  but sometimes it can be a _type_ JSON `object` or a JSON `array` (if using say an import manipulation rule to change the type).
+The `s` parameter is the representation of the cell value. Most of the time this is a value of _type_ `string` but sometimes it can be a _type_ JSON `object` or a JSON `array` (if using say an import manipulation rule to change the type).
 
 It is important to note that the `s`parameter is a _per-source_ value. It is not shared between sources.
 
 Below is a graphic representing how the value is treated and displayed onscreen
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you see a value onscreen shown as \[object Object] this means you have a JSON object or array that needs to be parsed or converted into a different _type_
@@ -66,7 +66,7 @@ If you see a value onscreen shown as \[object Object] this means you have a JSON
 
 ### `rowData` Parameter
 
-&#x20;The `rowData` is the row itself including any cells, differences or modifications. It contains, but is not limited to, the following key/values:
+The `rowData` is the row itself including any cells, differences or modifications. It contains, but is not limited to, the following key/values:
 
 <table><thead><tr><th width="241">Key name</th><th>Description of the value</th></tr></thead><tbody><tr><td><code>isAssemblyRow</code></td><td>A bool value indicating if the current row value is an assembly row (contains children according to the source)</td></tr><tr><td><code>componentName</code></td><td>The primary identifier of each row - typically the name of the component</td></tr><tr><td><code>componentPathArray</code></td><td>The path of each component. So if you have assembly A1, with Part P1, then this value will be [ 'A1', 'P1' ]</td></tr><tr><td><code>cells</code></td><td><p>The row values for the entire row. The <code>.cells</code> object always stores the values from the primary source only. The differences stores any values from the Secondary that's <em>different.</em> A typical row object might look something like this (notice the nested `cells` key):</p><pre class="language-json"><code class="lang-json">{
   "isAssemblyRow" : false,
@@ -80,7 +80,7 @@ If you see a value onscreen shown as \[object Object] this means you have a JSON
      "qty" : 1,
   }
 } 
-</code></pre></td></tr><tr><td><code>modifications</code></td><td><p>All changes made for cells in the row. This can occur when the user enters new text, makes a different selection, or the  secondary value is preferred (Prefer {<code>SecondaryDataSource</code> } Value checkbox in the property mapping settings)<br></p><pre class="language-json"><code class="lang-json">{
+</code></pre></td></tr><tr><td><code>modifications</code></td><td><p>All changes made for cells in the row. This can occur when the user enters new text, makes a different selection, or the secondary value is preferred (Prefer {<code>SecondaryDataSource</code> } Value checkbox in the property mapping settings)<br></p><pre class="language-json"><code class="lang-json">{
   "isAssemblyRow" : false,
   "componentName" : "Part 1",
   "componentPathArray" : [ "A1", "PN-P1"],
@@ -102,18 +102,17 @@ If you see a value onscreen shown as \[object Object] this means you have a JSON
 
 ### `p` Parameter
 
-The `p`  parameter is the `PassOrBlock`value specified in the Property Mapping Rule options. You cannot affect this with javascript, but you may read the value.
+The `p` parameter is the `PassOrBlock`value specified in the Property Mapping Rule options. You cannot affect this with javascript, but you may read the value.
 
 ### `pm` Parameter
 
 The `pm` value contains values related to the [Property Mapping](../../property-mappings/) used for this column. It cannot be modified, and any modifications to it are ignored. It contains, but is not limited to, the following key/values:
 
-| Key name                           | Description of the value                                           |
-| ---------------------------------- | ------------------------------------------------------------------ |
-| `isReadOnly`                       | Whether the admin has selected this property as editable           |
-| `isVisible`                        | Whether the admin has selected this property as visible by default |
-| `shouldUpdatePrimaryDatasource`    | Whether to update the Primary Source                               |
-| `shouldUpdateSecondaryDatasource`  | Whether to update the Secondary Source                             |
+| Key name                          | Description of the value                                           |
+| --------------------------------- | ------------------------------------------------------------------ |
+| `isReadOnly`                      | Whether the admin has selected this property as editable           |
+| `isVisible`                       | Whether the admin has selected this property as visible by default |
+| `shouldUpdatePrimaryDatasource`   | Whether to update the Primary Source                               |
+| `shouldUpdateSecondaryDatasource` | Whether to update the Secondary Source                             |
 
 ###
-

@@ -13,7 +13,7 @@ These are the major components required when installing and operating PDM Web to
 
 ### Static IP or Dynamic DNS for testing
 
-To connect from SharpSync to {yourserver}, a static IP address or domain name is required. This means that an IP address for a machine (your PDM server) stays the same or can be found using a name (domain name).&#x20;
+To connect from SharpSync to {yourserver}, a static IP address or domain name is required. This means that an IP address for a machine (your PDM server) stays the same or can be found using a name (domain name).
 
 {% hint style="info" %}
 If you don't own a static IP address (preferable), then a dynamic DNS client is preferred. SharpSync does not endorse any specific services, but [https://my.noip.com/](https://my.noip.com/) is a free service.
@@ -25,7 +25,7 @@ A domain name in turn points to a static IP address (your PDM server). A domain 
 
 > https://yourcompany.com.
 
-Once you've setup a domain name (either in your company or using a dynamic DNS service), you can use this new name in the SharpSync settings for PDM.&#x20;
+Once you've setup a domain name (either in your company or using a dynamic DNS service), you can use this new name in the SharpSync settings for PDM.
 
 {% hint style="warning" %}
 Be sure to test this name from another computer (PING or curl to login) outside your network before using it in SharpSync. If it doesn't work from a computer outside your network, it won't work in SharpSync
@@ -56,14 +56,14 @@ For the more adventurous amongst you there are free TLS certificates available f
 
 * Host the web API server in IIS, then add the API to the List of WebAPI servers in the Administration tool.
 
-<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Expose the API to the public internet. The API must be exposed and visible (using CURL login, see below) from computers outside your network
 {% endhint %}
 
 * Take note of the port number that is visible in the IIS configuration options (or if being forwarded from a reverse proxy, then take note of that port)
-* Test the connection from an _external machine (e.g. your phone or another computer outside your network)_ by connecting to the API using the following curl request&#x20;
+* Test the connection from an _external machine (e.g. your phone or another computer outside your network)_ by connecting to the API using the following curl request
 
 ```bash
 curl -L https://{yourdomainOrStaticIpAndPort}/api/{vaultName}/authenticate \
@@ -85,7 +85,7 @@ This must return a 200 OK Response with a token
 WARNING! DO NOT, under any circumstances, leave the default username of 'Admin' and password of 'Admin' enabled. This is a serious security vulnerability
 {% endhint %}
 
-* In SharpSync,  copy the URL of the Web2 API and enter it in the configuration options for SWPDM
+* In SharpSync, copy the URL of the Web2 API and enter it in the configuration options for SWPDM
 
 <figure><img src="../../.gitbook/assets/swpdm_module_auth_port_config.png" alt=""><figcaption></figcaption></figure>
 

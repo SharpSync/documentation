@@ -14,9 +14,7 @@ Description: The number of characters in the cell value must be between the lowe
   * Max length: 11
 * Result: Rule passes because the length of 'Description' is 11
 
-
-
-Observations:&#x20;
+Observations:
 
 * 'Description' is 11 characters long and falls within the ranges.
 * No orange border, indicating valid data.
@@ -33,9 +31,7 @@ Observations:&#x20;
   * Max length: 11
 * Result: Rule passes because the length of 'D' is 1
 
-
-
-Observations:&#x20;
+Observations:
 
 * 'D' is 1 character long and falls within the ranges.
 * No orange border, indicating valid data.
@@ -50,11 +46,9 @@ Observations:&#x20;
 * Rule values:
   * Min length: 1
   * Max length: 11
-* Result: ![](<../../../../.gitbook/assets/image (25).png>)
+* Result: ![](<../../../.gitbook/assets/image (34).png>)
 
-
-
-Observations:&#x20;
+Observations:
 
 * 'Descriptions' is 12 characters long and falls outside the ranges.
 * Orange border, indicating invalid data.

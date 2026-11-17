@@ -52,8 +52,7 @@ Fusion files (\*.f3d) are utilized to import Bills of Materials (BOMs) from desk
   * physicalProperties.centerOfMass.x
   * physicalProperties.centerOfMass.y
   * physicalProperties.centerOfMass.z
-  * (If there are other properties you would like supported, please reach out to us)\
-    &#x20;
+  * (If there are other properties you would like supported, please reach out to us)<br>
 * These properties should be the standard properties that exist in any given Fusion file. If it does not exist, a blank value will be used
 * Each value entered here will be available as an [`Accessor`](../fundamentals/property-mappings/adding-property-mapping.md) (Property) in the `Property Mappings` tab
 * Make sure to add the Qty / qty. column (this will be used later in the property mappings). (The exact naming is not important, as long as it reflects the quantity of parts in an assembly)
@@ -63,7 +62,7 @@ Fusion files (\*.f3d) are utilized to import Bills of Materials (BOMs) from desk
 * Click the `Save` button
 * On the main Data Source tab, make sure that the `Primary Component Identifier` matches with your `partNumber` custom property.
 
-The primary component identifier is the identifier that _is unique across data sources_. For `PartNumber` the assumption is this property exists in both Fusion _and_ your ERP solution.&#x20;
+The primary component identifier is the identifier that _is unique across data sources_. For `PartNumber` the assumption is this property exists in both Fusion _and_ your ERP solution.
 
 {% hint style="success" %}
 It does not have to be `partNumber`. It can be called anything as long as it exists as a Fusion custom property. If it does not exist, the `name` will be used as the fallback value
@@ -83,21 +82,21 @@ To install the add-in:
 * Extract to a convention location
 * In Fusion click Utilities > Addins > Script or add-in from device
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 * Select the folder where the files were extracted
 * Select > Run
 * Select > Run on startup
 
-The add-in is now ready to use  :thumbsup:
+The add-in is now ready to use :thumbsup:
 
 #### Login
 
-After installing the Fusion add-in, you'll need to login before being able to generate BOMs.&#x20;
+After installing the Fusion add-in, you'll need to login before being able to generate BOMs.
 
 * Clicking the login button
 * A new window will appear
-* Enter your credentials&#x20;
+* Enter your credentials
 * Once the `Connected` window displays, closed it
 * You've now successfully logged in.
 
@@ -116,14 +115,10 @@ Pushing data from Fusion to SharpSync is easy and straight forward. To push a Bi
 
 If SharpSync refuses the BOM, Fusion shows a message listing the problems, and nothing is saved. [BOM not saved](../fundamentals/troubleshooting/bom-not-saved.md) explains each message and how to fix it.
 
-
-
 In the example below, the hierarchy in SharpSync is displayed using the mapped `Number` property mapped in SharpSync.
 
 Notice that the component names are taken from the `Number` primary component identifier
 
 <figure><img src="../.gitbook/assets/swx_hierarchy_displayed.png" alt=""><figcaption></figcaption></figure>
-
-
 
 You're now ready to submit this to your ERP.

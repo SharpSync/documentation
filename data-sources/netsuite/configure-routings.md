@@ -6,15 +6,13 @@ icon: diagram-subtask
 
 Routings in NetSuite, or in any manufacturing context, refers to a sequence of operations or steps that a product must go through during the manufacturing process. These steps can include various operations such as assembly, machining, laser and inspection.
 
-<figure><img src="../../.gitbook/assets/image (30).png" alt=""><figcaption><p>NetSuite BOMs and their routing relationships</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption><p>NetSuite BOMs and their routing relationships</p></figcaption></figure>
 
 {% hint style="success" %}
 For the NetSuite module, SharpSync only adds routings to BOMs that do NOT ALREADY have routings. This is to prevent overwriting existing manufacturing processes which may have been defined already. Please engage us for upgrading this functionality should you have need for it.
 {% endhint %}
 
 {% hint style="info" %}
-
-
 Each assembly will contain 0:N Manufacturing Routings
 
 Each step has a name and is assigned to a Work Center
@@ -37,11 +35,9 @@ An individual routing
 * Must have default subsidiary
 {% endhint %}
 
-
-
 To configure routings for NetSuite in SharpSync, add 2 property mapping with the setting enabled:
 
-* `Is Manufacturing Operation` (let's refer to this as  `operationStep`)
+* `Is Manufacturing Operation` (let's refer to this as `operationStep`)
 * AND 1 more mapping
 * `Is Manufacturing Step` (let's refer to this as`manufacturingStep`)
 
@@ -173,8 +169,6 @@ To find your available manufacturing cost template ids you can simply select Fin
 
 _(Work in progress)_
 
-
-
 However for a different type of assembly you might not require the cutting part as that is subcontracted out, so you have a different set of steps (Let's call this Set 2):
 
 ```json
@@ -244,8 +238,3 @@ Then save the rule.
 You can now use / set routings by loading a BOM and edit the corresponding routings BOM cells.
 
 <figure><img src="../../.gitbook/assets/netsuite_select_routing_steps.png" alt=""><figcaption><p>Make a selection using Advanced Selection Lists</p></figcaption></figure>
-
-
-
-
-

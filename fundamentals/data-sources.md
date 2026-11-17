@@ -4,13 +4,13 @@ icon: uncharted
 
 # Data Sources
 
-<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
-`Data Source` is exactly that - a source of data you configure to read/write data from, or a source of data with an add-in to push data to SharpSync.&#x20;
+`Data Source` is exactly that - a source of data you configure to read/write data from, or a source of data with an add-in to push data to SharpSync.
 
 A primary source will be a Bill of Materials (BOM) structure and metadata (e.g., part number, description, revision). A secondary source will be Inventory records and BOM data.
 
-Each source may be registered as either a _Primary_ or a _Secondary_ Data Source.&#x20;
+Each source may be registered as either a _Primary_ or a _Secondary_ Data Source.
 
 It works as follows:
 
@@ -32,7 +32,7 @@ SharpSync is a synchronization tool. It synchronizes data between two Data Sourc
 
 A Primary (or alternative) component identifier is the meta data, part number or custom property that uniquely identifies the component item (part, assembly, item or drawing) in a Data Source.
 
-Typically this property (in a CAD environment) would be something like `Number`, `PartNumber`, `No`, `PartNo.`  or similar.
+Typically this property (in a CAD environment) would be something like `Number`, `PartNumber`, `No`, `PartNo.` or similar.
 
 Typically in an ERP system, this would be something like `Number`, `PartNo`, `ItemId`, `Id` or similar.
 
@@ -44,13 +44,13 @@ Typically in an ERP system, this would be something like `Number`, `PartNo`, `It
 
 Let's say we're working with a part called '123'. Our primary identifier is `'PartNumber'` and our alternative identifier is `'name'.`
 
-The way SharpSync works is that it searches the source for the _Primary_ identifier (in this case the primary identifier is `PartNumber`). So it  searches the source for a component identifier  `PartNumber` with a value of `123.`&#x20;
+The way SharpSync works is that it searches the source for the _Primary_ identifier (in this case the primary identifier is `PartNumber`). So it searches the source for a component identifier `PartNumber` with a value of `123.`
 
 If nothing is found using an exact match (i.e. no component identifier `PartNumber` with a value of `123`), it will search the source using the _Alternative Component Identifier_. In this case, the alternative identifier is`name`, so the source is searched for a component identifier `name` with a value of `123`.
 
 As an example of a Primary Identifier, we have included a screenshot from OnShape. This will of course vary from other platforms:
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="563"><figcaption><p>OnShape Property Map</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt="" width="563"><figcaption><p>OnShape Property Map</p></figcaption></figure>
 
 Onshape primary identifier can be set with dynamic parts in SharpSync, for example:
 
@@ -66,7 +66,7 @@ Onshape primary identifier can be set with conditional dynamic parts in SharpSyn
 {partNumber}{-R|category==CUSTOM}{revision|category==CUSTOM}
 ```
 
-will assign `P123-R01`  if the `category` field is equal to `CUSTOM`  and `P123`  if not.
+will assign `P123-R01` if the `category` field is equal to `CUSTOM` and `P123` if not.
 
 or (non equality)
 
@@ -74,7 +74,7 @@ or (non equality)
 {partNumber}{-R|category!=CUSTOM}{revision|category!=CUSTOM}
 ```
 
-will assign `P123-R01`  if the `category` field is not equal to `CUSTOM`  and `P123`  if it is.
+will assign `P123-R01` if the `category` field is not equal to `CUSTOM` and `P123` if it is.
 
 ### Core concept: Bom Revision Names
 
@@ -84,15 +84,11 @@ Some examples may be:
 
 <table><thead><tr><th width="504">Scheme name</th><th>Sample result</th></tr></thead><tbody><tr><td>{rowData.componentName}</td><td>A1</td></tr><tr><td>{rowData.componentName}_BOM</td><td>A1_BOM</td></tr><tr><td>{rowData.componentName}_{rowData.cells.revision}</td><td>A1_A or A1_B</td></tr></tbody></table>
 
-
-
-<figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption><p>Set the schema name. Use curly braces {} to capture dynamic fields from the row data</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption><p>Set the schema name. Use curly braces {} to capture dynamic fields from the row data</p></figcaption></figure>
 
 Some ERPs allows the management of different Bills of Materials for the same assembly at different stages of the design process, typically when a new revision occurs. To facilitate this, a scheme name has to be specified.
 
 In the example above, the name of the component may be used. In addition to this, you can use any [Accessor](property-mappings/) Name from a [Property Mapping](property-mappings/) to get dynamic values.
-
-
 
 What's important here is that, when specifying this Schema name, you should _not_ map the value in a property mapping. In other words, do not map the BOM Name or Code in a Property Mapping (you _can_, but you _shouldn't_). This is because, when not finding a BOM with a matching name, a _new_ BOM will be created, which is not what you'd want.
 
@@ -107,7 +103,7 @@ To complete a Data Source's setup, you have to complete at least the following t
 
 Select an individual Data Source to view the configuration setup for that source.
 
-<table data-full-width="false"><thead><tr><th width="317">Name</th><th width="108">Type</th><th width="119">Source</th><th>Sync</th><th>Status</th><th data-hidden>Documentation</th></tr></thead><tbody><tr><td><a href="../data-sources/autodesk-inventor.md">AutoDesk Inventor</a></td><td>CAD</td><td>Primary</td><td>➡️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/autodesk-fusion-in-progress.md">AutoDesk Fusion</a></td><td>CAD</td><td>Primary</td><td>➡️</td><td>[Alpha]</td><td></td></tr><tr><td><a href="../data-sources/editor/">CSV</a></td><td>Offline</td><td>Primary</td><td>➡️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/ms-dynamics-365-business-central/">MS Dynamics 365 Business Central</a></td><td>ERP</td><td>Secondary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/netsuite/">NetSuite</a></td><td>ERP</td><td>Secondary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/odoo/">Odoo</a></td><td>ERP</td><td>Secondary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/onshape/">Onshape</a></td><td>CAD</td><td>Primary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/propel-plm/">Propel PLM</a></td><td>ERP/PLM</td><td>Secondary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/solidworks.md">SOLIDWORKS</a></td><td>CAD</td><td>Primary</td><td>➡️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/solidworks-pdm.md">SOLIDWORKS PDM</a></td><td>PDM</td><td>Primary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="317">Name</th><th width="108">Type</th><th width="119">Source</th><th>Sync</th><th>Status</th><th data-hidden>Documentation</th></tr></thead><tbody><tr><td><a href="../data-sources/autodesk-inventor.md">AutoDesk Inventor</a></td><td>CAD</td><td>Primary</td><td>➡️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/autodesk-fusion-in-progress.md">AutoDesk Fusion</a></td><td>CAD</td><td>Primary</td><td>➡️</td><td>[Alpha]</td><td></td></tr><tr><td><a href="../data-sources/editor/">CSV</a></td><td>Offline</td><td>Primary</td><td>➡️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/ms-dynamics-365-business-central/">MS Dynamics 365 Business Central</a></td><td>ERP</td><td>Secondary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/netsuite/">NetSuite</a></td><td>ERP</td><td>Secondary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/odoo/">Odoo</a></td><td>ERP</td><td>Secondary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/onshape/">Onshape</a></td><td>CAD</td><td>Primary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/propel-plm/">Propel PLM</a></td><td>ERP/PLM</td><td>Secondary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/solidworks.md">SOLIDWORKS</a></td><td>CAD</td><td>Primary</td><td>➡️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr><tr><td><a href="../data-sources/solidworks-pdm/">SOLIDWORKS PDM</a></td><td>PDM</td><td>Primary</td><td>⬅️ ➡️️</td><td><span data-gb-custom-inline data-tag="emoji" data-code="2705">✅</span></td><td>Documentation</td></tr></tbody></table>
 
 {% hint style="info" %}
 If you want a primary offline CAD source to sync both ways (SolidWorks, Inventor, CSV), please contact us for a custom implementation
@@ -127,7 +123,7 @@ Another use may be that you require raw material for casted components. The situ
 
 For this we introduce pre-BOM-load generation rules, or _Row Component_ rules. These rules run:
 
-* _After_ the BOM is generated in the Primary Datasource, but&#x20;
+* _After_ the BOM is generated in the Primary Datasource, but
 * _Before_ the BOM is displayed on-screen. This is different to the client-side rules (Property Mapping Rules), which only run per-source, _after_ the BOM is displayed on-screen.
 
 Data Source support for server-side rules is currently only available for data source Onshape.

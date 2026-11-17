@@ -16,7 +16,7 @@ See the [Advanced Scripting ](../advanced-scripting/)section for more detail.
 
 In the image below, a graphical representation is shown of how changing a value with a preset rule results in values on-screen. The same principal applies for custom rules.
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 ### Example: Trimming or replacing text
 
@@ -30,7 +30,7 @@ Given the text `Revision-A`, the following Text Manipulation rule will return th
 return rowData.cells.revision.replace('ision', '');
 ```
 
-At this point the value of `s` is the same as the value of `rowData.cells.revision`, because it is the first rule to run. So this could also have been written as&#x20;
+At this point the value of `s` is the same as the value of `rowData.cells.revision`, because it is the first rule to run. So this could also have been written as
 
 ```javascript
 return s.replace('ision', '');
