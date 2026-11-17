@@ -7,12 +7,12 @@ icon: sparkle
 {% hint style="danger" %}
 This document is a work in progress.
 
-Check back here  frequently for updates.
+Check back here frequently for updates.
 {% endhint %}
 
 ### Install the SharpSync app for Dynamics 365 Business Central
 
-SharpSync connects to Business Central through the **SharpSync for Dynamics 365 Business Central** app, published by CADSharp on [Microsoft Marketplace](https://marketplace.microsoft.com/en-us/product/PUBID.cadsharp%7CAID.sharpsync-for-dynamics-365-bc%7CPAPPID.9ab23efc-f2ae-4a3e-8514-3a6cb62a713e). The app is free, but it needs a SharpSync subscription. It runs on Business Central online, version 26 or later.
+SharpSync connects to Business Central through the **SharpSync for Dynamics 365 Business Central** app, published by CADSharp on [Microsoft Marketplace](https://marketplace.microsoft.com/en-us/product/PUBID.cadsharp|AID.sharpsync-for-dynamics-365-bc|PAPPID.9ab23efc-f2ae-4a3e-8514-3a6cb62a713e). The app is free, but it needs a SharpSync subscription. It runs on Business Central online, version 26 or later.
 
 Install it while signed in to Business Central as an administrator. The permission set you need is usually `EXTENSION MGT. - ADMIN`.
 
@@ -23,12 +23,16 @@ To install the app from inside Business Central:
 3. On the **App overview** page, choose **Install App**.
 4. On the **Install extension** page, choose the language and then **Install**. Installing during business hours may disrupt other users. Your session refreshes when the installation is done.
 
-You can also start from the [Marketplace listing](https://marketplace.microsoft.com/en-us/product/PUBID.cadsharp%7CAID.sharpsync-for-dynamics-365-bc%7CPAPPID.9ab23efc-f2ae-4a3e-8514-3a6cb62a713e): choose **Get it now**, sign in with the account you use for Business Central, and follow the prompts.
+You can also start from the [Marketplace listing](https://marketplace.microsoft.com/en-us/product/PUBID.cadsharp|AID.sharpsync-for-dynamics-365-bc|PAPPID.9ab23efc-f2ae-4a3e-8514-3a6cb62a713e): choose **Get it now**, sign in with the account you use for Business Central, and follow the prompts.
 
 To check the installation, search for **Extension Management**. The app is listed with **Is Installed** checked and **Published As** set to `Global`.
 
 {% hint style="warning" %}
-**Installed an earlier version from a `.app` file?** Earlier versions were uploaded by hand, and Extension Management shows them with **Published As** set to `PTE`. That copy has the same app ID as the AppSource app, so Business Central won't install the AppSource app next to it. On the **Extension Management** page, select the old copy, choose **Uninstall**, then **Unpublish**, and install from AppSource as described above. Afterwards, check that the SharpSync user still has the `SSY SHARPSYNC` permission set (see the next section).
+**Installed an earlier version from a `.app` file?** Earlier versions were uploaded by hand, and Extension Management shows them with **Published As** set to `PTE`. That copy has the same app ID as the AppSource app, so Business Central won't install the AppSource app next to it.
+
+On the **Extension Management** page, select the old copy, choose **Uninstall**, then **Unpublish**, and install from AppSource as described above.
+
+Afterwards, check that the SharpSync user still has the `SSY SHARPSYNC` permission set (see the next section).
 {% endhint %}
 
 For more information, see Microsoft's [Install and Uninstall Extensions (Apps) in Business Central](https://learn.microsoft.com/en-us/dynamics365/business-central/ui-extensions-install-uninstall).
@@ -37,7 +41,7 @@ For more information, see Microsoft's [Install and Uninstall Extensions (Apps) i
 
 SharpSync calls Business Central as the user who signs in when you connect the datasource. Unless that user has the `SUPER` permission set, assign them:
 
-* the permission set `SSY SHARPSYNC` (name *SharpSync*), which the extension installs and which gives access to SharpSync's API pages;
+* the permission set `SSY SHARPSYNC` (name _SharpSync_), which the extension installs and which gives access to SharpSync's API pages;
 * permissions to read and change the records SharpSync syncs (items, resources, BOMs, production BOMs and routings), usually through the permission sets the user's role already has.
 
 To assign the permission set, search for **Users**, open the user, and add `SSY SHARPSYNC` under **User Permission Sets**.
@@ -49,7 +53,7 @@ To configure a Dynamics 365 Business Central datasource instance in SharpSync yo
 * The base API path of Dynamics 365 Business Central cloud which is: `https://api.businesscentral.dynamics.com`
 *   Dynamics 365 Business Central uses the OAuth 2.0 protocol to authenticate, therefore, a code grant url, a refresh token url and the OAuth scopes need to be supplied. **Both URLs must contain your organization's own Microsoft Entra tenant id.** You can find it in the [Microsoft Entra admin center](https://entra.microsoft.com) under Overview, as `Tenant ID` (also called the Directory ID). The URLs are of the form:
 
-    * Code Grant URL:&#x20;
+    * Code Grant URL:
 
     ```plaintext
     https://login.microsoftonline.com/<your-tenant-id>/oauth2/v2.0/authorize
@@ -60,15 +64,13 @@ To configure a Dynamics 365 Business Central datasource instance in SharpSync yo
     <pre data-overflow="wrap"><code>https://login.microsoftonline.com/&#x3C;your-tenant-id>/oauth2/v2.0/authorize?prompt=select_account
     </code></pre>
 
-    * Refresh Token URL:&#x20;
+    * Refresh Token URL:
 
     ```plaintext
     https://login.microsoftonline.com/<your-tenant-id>/oauth2/v2.0/token
     ```
 
-    {% hint style="danger" %}
-    SharpSync pre-fills both URLs with a tenant id that is **not yours**. If you leave them unchanged, sign-in appears to succeed but you are authenticated against the wrong directory, and the first request to Business Central fails with `Internal_CompanyNotFound`. The tenant id cannot go in the base API path instead: Business Central reads the tenant from the access token.
-    {% endhint %}
+    <div data-gb-custom-block data-tag="hint" data-style="danger" class="hint hint-danger"><p>SharpSync pre-fills both URLs with a tenant id that is <strong>not yours</strong>. If you leave them unchanged, sign-in appears to succeed but you are authenticated against the wrong directory, and the first request to Business Central fails with <code>Internal_CompanyNotFound</code>. The tenant id cannot go in the base API path instead: Business Central reads the tenant from the access token.</p></div>
 
     * Scopes:
 
@@ -94,7 +96,7 @@ To configure a Dynamics 365 Business Central datasource instance in SharpSync yo
 * On the right > Select Dynamics365 > Add
 * Change the `Server url` value to: `https://businesscentral.dynamics.com`
 * Change the `Primary Identifier` value to: `itemNumber`
-* Change the `Alternative Identifier`  value to: `resourceNumber`
+* Change the `Alternative Identifier` value to: `resourceNumber`
 * Click on the `UPDATE` button
 * Next, click the `CONFIGURE` button
 * On the first tab `Authentication`, select the `OAuth 2.0` authentication type, then replace the tenant id in both `OAuth Url` and `OAuth Token Url` with your own, as described in the previous section
