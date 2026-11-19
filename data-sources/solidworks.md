@@ -15,17 +15,25 @@ icon: uncharted
 SolidWorks files (\*.sldasm, \*.sldprt) are utilized to import Bills of Materials (BOMs) from desktop-based CAD software into SharpSync. (Drawing files' BOM's are not currently supported, but if demand is high enough we will consider it) Follow the steps below to begin importing data into SharpSync using CSV files.
 
 * [Prerequisites](solidworks.md#prerequisites)
+* [Turn the add-in on in SOLIDWORKS](solidworks.md#turn-the-add-in-on-in-solidworks)
 * [Setup Instructions](solidworks.md#setup-instructions)
-* [Push a Bill of Materials to SharpSync](solidworks.md#push-a-bill-of-materials-to-sharpsync)
+* [Send a Bill of Materials to SharpSync](solidworks.md#send-a-bill-of-materials-to-sharpsync)
 * [What the BOM includes](solidworks.md#what-the-bom-includes)
 * [When the BOM is not sent](solidworks.md#when-the-bom-is-not-sent)
 
 ### Prerequisites
 
 * An installation of SOLIDWORKS 2024 or later
-* Download the **SharpSync SOLIDWORKS Client** from the `Downloads` section in `SharpSync`. Its name ends with the add-in's version (for example `v3.1.1`). Close SOLIDWORKS and run the installer. It replaces any older version of the add-in
+* Download the **SharpSync SOLIDWORKS Client** from the `Downloads` section in `SharpSync`. Its name ends with the add-in's version (for example `3.2.2`). Close SOLIDWORKS and run the installer. Windows asks for permission to make changes, showing **CADSharp LLC** as the verified publisher. The installer installs the add-in for every user of the PC, in `C:\Program Files\CADSharp LLC\SharpSync SOLIDWORKS Add-in`, and replaces any earlier version of this add-in
+* Versions 3.1.1 and earlier could be installed for one Windows account only (`Just me`), which was their default. The new installer can't replace such an install, and stops with "SharpSync SOLIDWORKS Integration is installed for your Windows account only (Just me), so this installer can't replace it." If you see it, open `Settings` > `Apps` > `Installed apps` in Windows, find **SharpSync SOLIDWORKS Integration**, click `Uninstall`, then run the new installer again
 * An assembly or part file
 * Drawings Bill of Materials are not supported yet, but talk to us about integration
+
+### Turn the add-in on in SOLIDWORKS
+
+The installer turns the add-in on for the Windows user who ran it, so SOLIDWORKS loads it every time it starts. Open a part or assembly: the **SharpSync** tab is on the ribbon.
+
+If another Windows user of the same PC starts SOLIDWORKS, **SharpSync** is listed in `Tools` > `Add-Ins` but not ticked. That user ticks both its boxes once: the one before the name loads it now, and the one under `Start Up` loads it every time SOLIDWORKS starts.
 
 ### Setup Instructions
 
@@ -47,7 +55,7 @@ SolidWorks files (\*.sldasm, \*.sldprt) are utilized to import Bills of Material
 The primary component identifier is the identifier that is unique across data source domains. If this is `Number` or `No` or `PartNumber` then the assumption is this property exists in both SolidWorks and your ERP solution.
 
 {% hint style="success" %}
-&#x20;It does not have to be called `Number`. It can be called anything as long as it exists as a SolidWorks custom property. A file with no value in this property stops the push: see [When the BOM is not sent](solidworks.md#when-the-bom-is-not-sent)
+&#x20;It does not have to be called `Number`. It can be called anything as long as it exists as a SolidWorks custom property. A file with no value in this property stops the BOM from being sent: see [When the BOM is not sent](solidworks.md#when-the-bom-is-not-sent)
 {% endhint %}
 
 In the example below I've setup
@@ -61,23 +69,29 @@ In the example below I've setup
 
 After installing the SOLIDWORKS add-in, log in and check which identifier it will use. Make sure your SOLIDWORKS files have the required properties. (Flattened BOMs are not supported)
 
-* Click Tools > SharpSync > Login
-  * The SharpSync login page opens in a window. Log in the same way as on the SharpSync website
-  * If successful, the window will close
-* Click Tools > SharpSync > Settings
-  * The window shows the `Primary Component Identifier` of your CSV Data Source. You can't change it here: change it in the Data Source
-  * `VIEW LOGS` opens the folder that holds the add-in's log files
+The **SharpSync** tab has `Login`, `Logout` and `Send BOM`. The `Tools` > `SharpSync` menu has these and two more, `Settings` and `About`.
 
-### Push a Bill of Materials to SharpSync
+* `Login`: the SharpSync login page opens in a window. Log in the same way as on the SharpSync website. If successful, the window will close
+* `Logout`: logs you out of the add-in
+* `Settings`: shows the `Primary Component Identifier` of your CSV Data Source. You can't change it here: change it in the Data Source. `VIEW LOGS` opens the folder that holds the add-in's log files
+  * If you're not logged in, the login window opens first. If you close it without logging in, the add-in says "Settings were not opened as you are not logged in to SharpSync, please log in and try again."
+* `About`: shows the add-in's version, whether you're logged in or not. Its `SETTINGS` button opens `Settings`
+* `Send BOM`: sends the open file's BOM (see below)
 
-Pushing data from SolidWorks to SharpSync is easy and straight forward. To push a Bill of Materials (BOM) to SharpSync do the following:
+The SharpSync icons follow SOLIDWORKS's light or dark background (`Tools` > `Options` > `System Options` > `Colors`, the `Background` setting). If you change it, restart SOLIDWORKS to update them.
+
+### Send a Bill of Materials to SharpSync
+
+To send a Bill of Materials (BOM) to SharpSync:
 
 * Open a part or assembly file
-* Make sure you've logged in to SharpSync (Click the login button at least once)
-* Click the Push BOM button
+* Click the `Send BOM` button on the **SharpSync** tab
+* If you're not logged in, or your login has expired, the SharpSync login window opens first. Log in, and the BOM is sent
+* While the BOM is being sent, SOLIDWORKS's status bar says `Sending the BOM to SharpSync...`. Clicking `Send BOM` again during that time does nothing, so the BOM is sent once
+* SharpSync's BOMs list opens in your browser, with the BOM you sent expanded
 * The active configuration of the assembly is used to display data in SharpSync
 
-<figure><img src="../.gitbook/assets/swx_push_bom.png" alt=""><figcaption><p>Click the button to send the Bill of Materials to SharpSync</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/swx_send_bom.png" alt=""><figcaption><p>The SharpSync tab: click Send BOM to send the Bill of Materials to SharpSync</p></figcaption></figure>
 
 * The configuration for the assembly is loaded in SharpSync.
 * The version will always be shown as `current`.
@@ -110,19 +124,27 @@ The BOM follows your SOLIDWORKS settings, so it has the same rows as an indented
 | Sub-assembly with child display set to `Hide`    | A row, without its children                                                                                                      |
 | Sub-assembly with child display set to `Promote` | No row. Its children move up one level and their quantities multiply: a sub-assembly used twice that holds 4 bolts gives 8 bolts |
 
-Child display is in the sub-assembly's configuration properties, under `Bill of Materials Options` > `Child component display when used as subassembly`. It only applies to a sub-assembly: the assembly you open and push always gets a row with its children.
+Child display is in the sub-assembly's configuration properties, under `Bill of Materials Options` > `Child component display when used as subassembly`. It only applies to a sub-assembly: the assembly you open and send always gets a row with its children.
 
 #### Lightweight assemblies
 
-You can push an assembly opened in Lightweight mode. The add-in first resolves any lightweight components, without asking, because it can't read them otherwise. On a large assembly the push takes longer while the parts load. The components stay resolved afterwards.
+You can send the BOM of an assembly opened in Lightweight mode. The add-in first resolves any lightweight components, without asking, because it can't read them otherwise. On a large assembly, sending takes longer while the parts load. The components stay resolved afterwards.
 
-An assembly opened in `Large Design Review` can't be pushed. The add-in stops with `Could not read the components of...` and nothing is saved. Open the assembly in Resolved or Lightweight mode and push again.
+The BOM of an assembly opened in `Large Design Review` can't be sent. The add-in stops with `Could not read the components of...` and nothing is saved. Open the assembly in Resolved or Lightweight mode and send it again.
 
 ### When the BOM is not sent
 
-If there's a problem, the add-in shows one `BOM not sent` dialog that lists it, and nothing is saved. Fix the problem in your files, then click the Push BOM button again.
+If there's a problem, the add-in shows one `BOM not sent` dialog that lists it, and nothing is saved. Fix the problem, then click the `Send BOM` button again.
 
-The add-in checks your files first. A list stops at 25 lines, followed by "…and N more". Fix those and push again to see the rest.
+**You closed the login window without logging in:**
+
+```
+The BOM was not sent as you are not logged in to SharpSync, please log in and try again.
+```
+
+Click `Send BOM` again, and log in when the window opens.
+
+The add-in checks your files first. A list stops at 25 lines, followed by "…and N more". Fix those and send the BOM again to see the rest.
 
 **A file has no identifier.** Each file is named with its configuration:
 
@@ -150,6 +172,6 @@ Could not resolve bolt-1 (C:\Parts\bolt.sldprt), which is loaded lightweight. Se
 Could not read bolt-1 (C:\Parts\bolt.sldprt). Make sure the file can be opened and the assembly is fully loaded, then try again
 ```
 
-The add-in stops here rather than send a BOM with rows missing. Do what the message says, then push again.
+The add-in stops here rather than send a BOM with rows missing. Do what the message says, then send the BOM again.
 
 Once these pass, SharpSync checks the BOM's structure. [BOM not saved](../fundamentals/troubleshooting/bom-not-saved.md) explains each of its messages and how to fix it.
