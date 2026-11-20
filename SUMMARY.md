@@ -78,6 +78,7 @@
 * [MS Dynamics 365 Business Central](data-sources/ms-dynamics-365-business-central/README.md)
   * [Getting Started](data-sources/ms-dynamics-365-business-central/getting-started.md)
   * [Production BOMs](data-sources/ms-dynamics-365-business-central/production-boms.md)
+  * [Routings](data-sources/ms-dynamics-365-business-central/routings.md)
   * [Configure BOM Mode](data-sources/ms-dynamics-365-business-central/configure-bom-mode.md)
   * [Derivative Files and Links](data-sources/ms-dynamics-365-business-central/derivatives.md)
   * [Business Central Sync Limitations](data-sources/ms-dynamics-365-business-central/business-central-sync-limitations.md)

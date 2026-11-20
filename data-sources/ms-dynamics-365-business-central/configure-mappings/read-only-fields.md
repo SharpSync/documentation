@@ -44,6 +44,10 @@ In [production BOM mode](../configure-bom-mode.md) the rule is **enforced**. A m
 | Production BOM Line    | `versionCode`          | Version Code       | Identifies the version the line belongs to.                                       |
 | Production BOM Line    | `quantityPer`          | Quantity per       | Written from the quantity mapping, not from a field mapping.                      |
 
+## Routing fields
+
+Routing header and routing version fields are **display only**. A mapping to one of them with _Update MS Dynamics 365 On Submit_ on gets a **warning** at sync, not an error, and its value is not sent. The item's own _Routing No._ is not affected: it assigns the routing and is written. See [Routings](../routings.md).
+
 {% hint style="info" %}
 `Status` and `Version Code` are worth mapping for **display**. They are the only way to see in the comparison grid whether the BOM you loaded is `Certified` or `Under Development`, and which version it is. See [Production BOMs](../production-boms.md).
 {% endhint %}
